@@ -35,6 +35,7 @@ Origin: wing leading edge at the centreline. X: aft. Y: right wing. Z: up.
 | A1 | Mass of the aircraft without the wing | 440 g | Component selection (stage 3) |
 | A2 | Wing CLmax / airfoil CLmax | 0.85 | Test flights |
 | A3 | Wing complete by | 10 Dec 2026 | Zonal date from the user |
+| A5 | Build before selection | Only the stages that the abstract photos need, at minimum cost (user, 2026-11-22: exams, limited funds) | Selection result |
 | A4 | Wing mass estimates per method | see D-003 | Weighed material samples |
 
 ## Open questions
@@ -54,3 +55,4 @@ Origin: wing leading edge at the centreline. X: aft. Y: right wing. Z: up.
 | 2026-11-21 | Wing mass limit 145 g → 155 g (reduction set) → 160 g without servos | CAD volumes: 172 g projected, 156.4 g after the reduction set | D-013, D-023 |
 | 2026-11-21 | Tip rib inboard (y 489–492), 3 mm ring tip cap y 492–495; false spar full depth; aileron end ribs and horn rib | Span and fit problems found in CAD planning | D-014, D-015, D-016 |
 | 2026-11-21 | Wing CAD rev A built (`design/cad/Wing_revA.FCStd`) | Stages A–C | — |
+| 2026-11-22 | Wing rev B (foam blocks) modelled for comparison in `design/cad_revB/`; rev A unchanged. Rev B 247.7 g, fails R6 (9.11 m/s) and R12 heat (PLA). A/B choice in D-024 | User's concept (D-024) | D-024…D-032 |

@@ -187,3 +187,51 @@ MG90S on its side, shaft outboard, case y 118–146.5, shaft at x 138.5; 1 mm cl
 **Options:** (A) accept, limit 160 g; weigh the sheets and the film and correct the mass table; (B) aileron TE light balsa and 2 mm tip cap ring, about 154 g, less robust.
 **Claude's view:** A (1.3 g ≈ 0.2 % of the score, inside the ±5 g uncertainty of film and glue).
 **Decision:** A. **Decided by:** user. New limit 160 g without servos.
+
+## D-024: Foam-block wing construction (tier 1) — PROPOSED, waiting for the user
+**User's idea (sketch, 2026-11-22):** a few wide foam blocks with balsa airfoil plates on their faces, hollow film-covered bays between them, spar and D-box kept, printed LE and TE in the wing. Goals: easier build, more robust, lighter, more accurate.
+**Check:** no layout is lighter than rev A: +28 g to +114 g (score −4.6 to −16 %). The bays still need ribs to hold the film and the TE. Details: `design/studies/foam_block_wing.md`.
+**Options:** A rev A unchanged (51 points); B user's foam blocks (49.5); C rev A + foam tip blocks + printed removable jigs (57).
+**Claude's view:** C. **Decision (2026-11-22):** keep rev A unchanged as the reference, copy it, and model option B as wing rev B for a direct comparison (mass, score, gains, losses). The final choice between A and B follows the comparison. **Decided by:** user (against Claude's recommendation C; the model will give the measured numbers).
+**Comparison result (2026-11-22, `design/studies/revA_vs_revB.md`):** rev B as modelled (XPS 30 hollow, PLA LE/TE) 247.7 g without servos, +91.1 g against rev A; score 166.9 → 144.8 (−13.3 %); loaded stall 9.11 m/s (R6 fails by 0.11 m/s; rev A 8.86 m/s); PLA LE/TE fail the 60 °C heat check. Best variant (ASA Aero LE + balsa TE) 206.5 g, −7.7 %, 9.00 m/s. Claude's recommendation: rev A.
+**User's answer (2026-11-22):** no A/B choice. The user can build rev A, but its build is too complex for the time and money available before 10 Dec 2026 (exams; the abstract needs 5–10 construction photos). The user wants to spend the minimum before selection and build the full aircraft only after selection.
+**Status:** rev B not chosen (it fails R6 and the heat check). Rev A stays the reference design. Open: a staged, low-cost build plan for the abstract photos (photos must show the real aircraft during its construction, and the aircraft must match the abstract: rules, "Abstract Submission" item 1 and General Guideline 1).
+
+## D-025: Rev B foam (tier 1)
+Date: 2026-11-22. Stage: wing rev B (D-024).
+**Options (7 blocks, half ribs, ASA Aero LE/TE):** EPS 15 solid +39 g; EPS 20 solid +51 g; EPS 20 hollow +30 g; XPS 30 solid +75 g (stall 9.07 m/s, fails R6).
+**Claude's view:** EPS 20 solid. **User:** XPS 30 solid. **Check:** with the user's PLA LE/TE, XPS 30 solid = +100 g → 9.13 m/s (fails R6 by 0.13). Reported to the user.
+**Decision:** XPS 30, **all blocks hollow** (after the check). Wall 7 mm (tier 2, Claude): the option text "45 % removed, 10 mm walls" was wrong; 10 mm walls remove only 25–29 %, 7 mm remove 44–49 %. **Decided by:** user (foam, hollow), Claude (wall). **Reverse:** `WALL`, `RHO["xps"]` in `design/cad_revB/scripts/wing_params.py`.
+
+## D-026: Rev B block layout (tier 1)
+7 blocks with the plates at rev A rib faces: centre y ±54.5 (plates ±54.5–56), servo bays 111.5–164, mid 275.5–329.5, tips 440–490.5 (ring cap kept). Hollow bays 54 / 108.5 / 107.5 mm. Alternatives: 5 blocks (≈ −12 g, 273 mm bay), 3 blocks (≈ −18 g). **Decided by:** user ("recommended" = Claude's view). **Reverse:** `BLOCKS`, `C_FOAM`.
+
+## D-027: Rev B ribs in the hollow bays (tier 1)
+**Check:** 108 mm bays with no rib: film pillow 3.2 mm at 25 m/s (0.8 at 54 mm); hinge spar bow 1.1–5.6 mm under film tension 150 N/m *(interp.)* against a 2 mm hinge gap; D-box skin buckling margin 1.4 *(interp.)* outboard of y = 165 (no rib needed there).
+**Decision:** 1.5 mm light half ribs x 78.6–205 with cap strips at y ±220 and ±385 (2.2 g). **Decided by:** user ("recommended"). **Reverse:** `HALF_RIBS`.
+
+## D-028: Rev B printed LE/TE material (tier 1)
+**Options:** LW-PLA (lightest, HDT 53 °C fails heat), ASA Aero (HDT 85 °C, buy, H2D), PETG (heaviest).
+**Claude's view:** ASA Aero. **User:** "normal PLA for now but can buy later". **Check:** PLA HDT 57 °C, 3 °C below a 60 °C surface (fails R12); PLA LE + TE = 69.9 g against 11.2 g balsa.
+**Decision:** model in PLA; the mass table also gives ASA Aero and LW-PLA. **Decided by:** user, risk stated (heat). **Reverse:** density only, same STL files.
+Geometry (tier 2, Claude): LE in 5 segments 189.5 / 164.75 / 275.5 / 164.75 / 189.5 mm (joints at block centres y ±137.75, ±302.5; all fit the H2D, the centre piece is too long for the P1S); 14 locator keys 3 × 4 × 12 mm at the plates with 1.6 mm slots; 4 joiners 20 mm; TE x 250–280 in the fixed bays with 3 mm plate slots. Print fill: LE 0.50, TE 0.85, keys 1.0.
+
+## D-029: Rev B hinge spar (tier 1)
+Rev A balsa false spar (x 205–208, full span) in the aileron bays, with **span-wise grain**; printed TE only in the fixed bays. Printed hinge spar would be +33 g in PLA (+16 g ASA Aero). **Decided by:** delegated to Claude (the user answered "recommended" to options with no label).
+Note (rev A follow-up, not changed): rev A D-015 / `wing_params.py` say "vertical grain"; a 3 mm vertical-grain spar bows ≈ 20 mm under film tension at 53 mm. A 984 mm one-piece spar from 1000 mm stock has span-wise grain; correct the rev A note.
+
+## D-030: Rev B face plates (tier 1)
+1.5 mm light balsa; stepped outline (inner outline x < 80 under the D-box, outer outline x ≥ 80); holes = the foam cavity outlines (the plate is also the cavity template); servo-block plates have only the front cavity hole (frame glue faces solid, Ø8 wire hole in plate 110); outer tip plate solid. 14 plates = 9.9 g. **Decided by:** delegated to Claude ("recommended" to options with no label).
+
+## D-031: Rev B centre sheeting (tier 1, departs from D-008)
+**Check:** saddle load on XPS 30: 30 kPa preload, 70 kPa at a 10 g landing, against ≈ 250 kPa crush *(interp.)*.
+**Decision:** keep the bottom centre sheeting (saddle, wire exit Ø10 at x 130, y ±28), remove the top (−2.7 g). **Decided by:** delegated to Claude ("recommended" to options with no label; Claude's notebook view).
+
+## D-032: Rev B detail fits (tier 2)
+- Foam pieces split at the spar: front x 6–71.1 (inner outline), aft x 80.1–205 (outer outline; centre: bottom inset), TE piece x 208–250 (fixed bays, solid). Cavities cut by hot wire through a kerf in the spar face (covered by the webs).
+- Servo pocket in block S: x 108–158, full width between the plates, from the lower surface to z 10.76 (servo top + 1.5 mm). Frame tabs glue to the plate faces only (the rev A cap strips under them are gone): 4 × 36 mm² of epoxy.
+- Shear webs in pieces between the plates; rear web |y| ≤ 164 as rev A.
+- Plate 110 wire hole lowered to z 5.0 (inside the servo pocket; rev A mid-depth z 10.88 was above the pocket roof z 10.76).
+- Hinge slots at y 130 / 302.5 also cut in the foam of blocks S / M; glue these hinges with epoxy or foam-safe CA.
+- Glue 14 g *(interp.)*: rev A 8 g + 4 g foam bonds + 2 g spray adhesive for film on foam (the iron melts XPS).
+**Decided by:** Claude by rule. **Reverse:** `wing_params.py` rev B section.
