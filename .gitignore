@@ -1,0 +1,15 @@
+# competition rulebook (not ours to publish)
+*.pdf
+# FreeCAD backups
+*.FCBak
+# video build intermediates (regenerate with design/video/*.py); the published video is docs/media/wing_build.mp4
+design/video/frames/
+design/video/clips/
+design/video/audio/
+design/video/wing_build.mp4
+design/video/wing_build.en.vtt
+# local tooling
+.claude/
+__pycache__/
+*.pyc
+.DS_Store

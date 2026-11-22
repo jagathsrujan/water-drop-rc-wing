@@ -1,0 +1,208 @@
+WEBVTT
+
+00:00:00.300 --> 00:00:08.747
+This video shows how to build the balsa wing of our water-drop aircraft for the Boeing National Aeromodelling Competition.
+
+00:00:08.747 --> 00:00:18.233
+The wing has a span of 990 millimetres, a chord of 280 millimetres and an SD7062 airfoil, and it weighs about 157 grams without servos.
+
+00:00:18.233 --> 00:00:28.134
+All files, the bill of materials with Indian shop links, and notes on what to ask for in local shops are on the project web page and on GitHub.
+
+00:00:28.134 --> 00:00:31.527
+You will find the links at the end of this video.
+
+00:00:32.327 --> 00:00:34.065
+Here is the complete wing.
+
+00:00:34.065 --> 00:00:49.571
+It is a classic built-up structure: laser-cut ribs every 55 millimetres, a spar with carbon caps, a sheeted leading-edge D-box for torsion stiffness, a false spar that carries the aileron hinges, and 3D-printed PETG servo mounts.
+
+00:00:49.571 --> 00:00:54.383
+Each aileron is 325 millimetres long and is driven by an MG90S servo.
+
+00:00:55.183 --> 00:01:12.524
+You will need balsa sheets in 1.5, 2, 3 and 6 millimetre thickness, four pultruded carbon strips of 3 by 0.5 millimetres, iron-on covering film, CA hinges, a 1.2 millimetre steel pushrod, PETG filament, and two MG90S servos.
+
+00:01:12.524 --> 00:01:18.980
+You also need three glues: thin CA, a PVA wood glue such as Fevicol SH, and epoxy.
+
+00:01:19.780 --> 00:01:34.400
+For tools, you need a laser cutter or a sharp hobby knife, a flat building board at least 1.2 metres long, T-pins, a steel rule, sanding blocks, a covering iron and a heat gun, a scale that reads to 0.1 gram, and a 3D printer.
+
+00:01:35.200 --> 00:01:41.325
+Before you cut anything, weigh every balsa sheet and divide the mass by its volume to get the density.
+
+00:01:41.325 --> 00:01:51.893
+Use the lightest sheets, about 90 kilograms per cubic metre, for the sheeting, medium sheets for the ribs and webs, and the hardest sheets for the spar caps and trailing edges.
+
+00:01:51.893 --> 00:01:54.355
+This one step can save ten grams or more.
+
+00:01:55.155 --> 00:01:59.292
+Laser cut the ribs and the other flat parts from the DXF files.
+
+00:01:59.292 --> 00:02:04.702
+Each file is one sheet of 300 by 100 millimetres, with the grain along the long side.
+
+00:02:04.702 --> 00:02:06.611
+Cut only the layer called CUT.
+
+00:02:06.611 --> 00:02:10.939
+Make test cuts on scrap first: balsa needs low power and high speed.
+
+00:02:10.939 --> 00:02:16.221
+Keep a fire extinguisher near the machine, and never leave the laser running alone.
+
+00:02:17.021 --> 00:02:30.965
+Cut the long strips with a steel rule and a sharp knife: two spar caps of 3 by 6 millimetres from hard balsa, the 6 millimetre leading edge, the trailing-edge stock, and 6 millimetre cap strips from 1.5 millimetre sheet.
+
+00:02:30.965 --> 00:02:32.993
+The cut list gives every length.
+
+00:02:33.793 --> 00:02:35.296
+Three glues do three jobs.
+
+00:02:35.296 --> 00:02:40.671
+Thin CA wicks into tight joints and sets in seconds; use it for ribs, cap strips and hinges.
+
+00:02:40.671 --> 00:02:47.376
+PVA wood glue gives you time to adjust and sands easily; use it to laminate the tip ribs and to glue the sheeting.
+
+00:02:47.376 --> 00:02:51.423
+Epoxy bonds the carbon to the balsa and the printed parts to the wood.
+
+00:02:51.423 --> 00:02:55.006
+Mix equal amounts of resin and hardener, and use a thin layer.
+
+00:02:55.006 --> 00:02:58.590
+Work in fresh air, and protect your eyes and fingers from CA.
+
+00:02:59.390 --> 00:02:59.973
+Step one.
+
+00:02:59.973 --> 00:03:05.677
+Glue two carbon strips side by side onto each balsa spar cap with a thin layer of epoxy.
+
+00:03:05.677 --> 00:03:11.511
+Put a weight on them, on a flat surface covered with plastic film, and let the epoxy cure.
+
+00:03:12.311 --> 00:03:12.892
+Step two.
+
+00:03:12.892 --> 00:03:17.927
+Pin the bottom spar cap on the board over the plan, with the carbon face down.
+
+00:03:17.927 --> 00:03:26.706
+Support the rib noses on a 3.5 millimetre strip and the rib tails on an 8 millimetre strip, so that every rib sits at the correct angle.
+
+00:03:26.706 --> 00:03:31.418
+Slide the ribs onto the spar cap and glue them square, with a set square.
+
+00:03:31.418 --> 00:03:35.808
+The ribs at 110 millimetres from the centre are 3 millimetres thick.
+
+00:03:36.608 --> 00:03:37.466
+Step three.
+
+00:03:37.466 --> 00:03:48.621
+Glue the leading-edge stock to the front of the ribs, then the false spar at 205 millimetres, the aft rib pieces, and the trailing-edge wedges.
+
+00:03:48.621 --> 00:03:52.989
+Keep the trailing edge straight with pins on both sides.
+
+00:03:53.789 --> 00:03:54.373
+Step four.
+
+00:03:54.373 --> 00:03:58.289
+Glue the top spar cap into the rib notches with the carbon face up.
+
+00:03:58.289 --> 00:04:05.886
+Then glue the vertical-grain shear webs between the ribs: in front of the spar along the full span, and behind it near the centre.
+
+00:04:05.886 --> 00:04:08.282
+The webs make the spar into a strong box.
+
+00:04:09.082 --> 00:04:09.683
+Step five.
+
+00:04:09.683 --> 00:04:11.005
+Sand everything flush.
+
+00:04:11.005 --> 00:04:17.977
+Glue on the top D-box sheeting from the leading edge to 80 millimetres, then the centre sheeting and the cap strips.
+
+00:04:17.977 --> 00:04:23.626
+Wet the outer face of the sheeting lightly, so that it bends around the nose without cracking.
+
+00:04:24.426 --> 00:04:25.004
+Step six.
+
+00:04:25.004 --> 00:04:28.087
+Remove the wing from the board and turn it over.
+
+00:04:28.087 --> 00:04:35.151
+Add the bottom D-box sheeting, the bottom centre sheeting with the wire exit holes, and the bottom cap strips.
+
+00:04:35.151 --> 00:04:40.224
+Then glue the printed servo frames between the ribs at 110 and 165 millimetres.
+
+00:04:41.024 --> 00:04:41.761
+Step seven.
+
+00:04:41.761 --> 00:04:49.203
+Laminate each tip rib from two 1.5 millimetre layers with the grain crossed, and glue it on at 489 millimetres.
+
+00:04:49.203 --> 00:04:55.437
+Add the 3 millimetre ring tip cap, then sand the whole wing smooth with a long sanding block.
+
+00:04:56.237 --> 00:04:56.953
+Step eight.
+
+00:04:56.953 --> 00:05:02.943
+Build each aileron from its 3 millimetre leading edge, its ribs and the trailing-edge wedge.
+
+00:05:02.943 --> 00:05:08.412
+Sand a V bevel on the leading edge so that the aileron can move 20 degrees each way.
+
+00:05:08.412 --> 00:05:14.011
+Then cut the four hinge slots in the false spar and in the aileron with a knife blade.
+
+00:05:14.811 --> 00:05:16.972
+Cover the wing with iron-on film.
+
+00:05:16.972 --> 00:05:25.811
+Iron the edges down first, at about 110 to 120 degrees Celsius or as the film maker says, then shrink the open areas with the heat gun.
+
+00:05:25.811 --> 00:05:31.965
+Cover the ailerons separately, and cut the film away over the hinge slots and the servo hatch.
+
+00:05:32.765 --> 00:05:33.441
+Step nine.
+
+00:05:33.441 --> 00:05:40.882
+Push in the CA hinges, check that the aileron moves freely, then wick thin CA into both sides of each hinge.
+
+00:05:40.882 --> 00:05:43.588
+Glue the printed horns to the horn ribs.
+
+00:05:43.588 --> 00:05:51.638
+Screw each servo to its hatch, connect the 1.2 millimetre pushrod with Z bends, and fix the hatch with four M2 screws.
+
+00:05:52.438 --> 00:05:59.828
+Finally, add the rubber-band rub plates at the centre, centre the servos, and set the throws to plus or minus 15 degrees.
+
+00:05:59.828 --> 00:06:01.049
+Then weigh the wing.
+
+00:06:01.049 --> 00:06:04.286
+The target is less than 160 grams without the servos.
+
+00:06:05.086 --> 00:06:19.822
+Our design checks: span 990 millimetres, chord 280 millimetres, spar depth 39.2 millimetres, no overlapping parts, at least 1 millimetre of servo clearance, and a predicted mass of 157 grams.
+
+00:06:20.622 --> 00:06:32.133
+Every link for the materials, with notes on what to ask for in local shops and markets, is on the web page and in the GitHub repository: github.com/jagathsrujan/water-drop-rc-wing.
+
+00:06:32.133 --> 00:06:34.608
+Thank you for watching, and happy building.

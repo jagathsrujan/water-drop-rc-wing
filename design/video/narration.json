@@ -1,0 +1,191 @@
+[
+ {
+  "id": "00_intro",
+  "kind": "card",
+  "title": "Water-drop RC aircraft \u2014 balsa wing, rev A",
+  "text": "This video shows how to build the balsa wing of our water-drop aircraft for the Boeing National Aeromodelling Competition. The wing has a span of 990 millimetres, a chord of 280 millimetres and an S D 7062 airfoil, and it weighs about 157 grams without servos. All files, the bill of materials with Indian shop links, and notes on what to ask for in local shops are on the project web page and on GitHub. You will find the links at the end of this video.",
+  "audio": "audio/00_intro.aiff",
+  "dur": 31.227,
+  "seg": 32.027
+ },
+ {
+  "id": "01_overview",
+  "kind": "orbit",
+  "title": "The complete wing",
+  "text": "Here is the complete wing. It is a classic built-up structure: laser-cut ribs every 55 millimetres, a spar with carbon caps, a sheeted leading-edge D-box for torsion stiffness, a false spar that carries the aileron hinges, and 3D-printed P E T G servo mounts. Each aileron is 325 millimetres long and is driven by an M G 90 S servo.",
+  "audio": "audio/01_overview.aiff",
+  "dur": 22.056,
+  "seg": 22.856
+ },
+ {
+  "id": "02_materials",
+  "kind": "materials",
+  "title": "Materials",
+  "text": "You will need balsa sheets in 1.5, 2, 3 and 6 millimetre thickness, four pultruded carbon strips of 3 by 0.5 millimetres, iron-on covering film, C A hinges, a 1.2 millimetre steel pushrod, P E T G filament, and two M G 90 S servos. You also need three glues: thin C A, a P V A wood glue such as Fevicol S H, and epoxy.",
+  "audio": "audio/02_materials.aiff",
+  "dur": 23.797,
+  "seg": 24.597
+ },
+ {
+  "id": "03_tools",
+  "kind": "tools",
+  "title": "Tools",
+  "text": "For tools, you need a laser cutter or a sharp hobby knife, a flat building board at least 1.2 metres long, T-pins, a steel rule, sanding blocks, a covering iron and a heat gun, a scale that reads to 0.1 gram, and a 3D printer.",
+  "audio": "audio/03_tools.aiff",
+  "dur": 14.62,
+  "seg": 15.42
+ },
+ {
+  "id": "04_weigh",
+  "kind": "weigh",
+  "title": "Weigh and sort the balsa",
+  "text": "Before you cut anything, weigh every balsa sheet and divide the mass by its volume to get the density. Use the lightest sheets, about 90 kilograms per cubic metre, for the sheeting, medium sheets for the ribs and webs, and the hardest sheets for the spar caps and trailing edges. This one step can save ten grams or more.",
+  "audio": "audio/04_weigh.aiff",
+  "dur": 19.155,
+  "seg": 19.955
+ },
+ {
+  "id": "05_laser",
+  "kind": "laser",
+  "title": "Laser cutting the flat parts",
+  "text": "Laser cut the ribs and the other flat parts from the D X F files. Each file is one sheet of 300 by 100 millimetres, with the grain along the long side. Cut only the layer called CUT. Make test cuts on scrap first: balsa needs low power and high speed. Keep a fire extinguisher near the machine, and never leave the laser running alone.",
+  "audio": "audio/05_laser.aiff",
+  "dur": 21.066,
+  "seg": 21.866
+ },
+ {
+  "id": "06_strips",
+  "kind": "strips",
+  "title": "Strip stock",
+  "text": "Cut the long strips with a steel rule and a sharp knife: two spar caps of 3 by 6 millimetres from hard balsa, the 6 millimetre leading edge, the trailing-edge stock, and 6 millimetre cap strips from 1.5 millimetre sheet. The cut list gives every length.",
+  "audio": "audio/06_strips.aiff",
+  "dur": 15.972,
+  "seg": 16.772
+ },
+ {
+  "id": "07_glue",
+  "kind": "glue",
+  "title": "Which glue goes where",
+  "text": "Three glues do three jobs. Thin C A wicks into tight joints and sets in seconds; use it for ribs, cap strips and hinges. P V A wood glue gives you time to adjust and sands easily; use it to laminate the tip ribs and to glue the sheeting. Epoxy bonds the carbon to the balsa and the printed parts to the wood. Mix equal amounts of resin and hardener, and use a thin layer. Work in fresh air, and protect your eyes and fingers from C A.",
+  "audio": "audio/07_glue.aiff",
+  "dur": 24.797,
+  "seg": 25.597
+ },
+ {
+  "id": "08_spar",
+  "kind": "step",
+  "title": "Step 1 \u2014 Spar caps",
+  "text": "Step one. Glue two carbon strips side by side onto each balsa spar cap with a thin layer of epoxy. Put a weight on them, on a flat surface covered with plastic film, and let the epoxy cure.",
+  "audio": "audio/08_spar.aiff",
+  "dur": 12.121,
+  "seg": 12.921
+ },
+ {
+  "id": "09_ribs",
+  "kind": "step",
+  "title": "Step 2 \u2014 Ribs on the bottom spar cap",
+  "text": "Step two. Pin the bottom spar cap on the board over the plan, with the carbon face down. Support the rib noses on a 3.5 millimetre strip and the rib tails on an 8 millimetre strip, so that every rib sits at the correct angle. Slide the ribs onto the spar cap and glue them square, with a set square. The ribs at 110 millimetres from the centre are 3 millimetres thick.",
+  "audio": "audio/09_ribs.aiff",
+  "dur": 23.497,
+  "seg": 24.297
+ },
+ {
+  "id": "10_le_te",
+  "kind": "step",
+  "title": "Step 3 \u2014 Leading edge, false spar, trailing edge",
+  "text": "Step three. Glue the leading-edge stock to the front of the ribs, then the false spar at 205 millimetres, the aft rib pieces, and the trailing-edge wedges. Keep the trailing edge straight with pins on both sides.",
+  "audio": "audio/10_le_te.aiff",
+  "dur": 16.381,
+  "seg": 17.181
+ },
+ {
+  "id": "11_webs",
+  "kind": "step",
+  "title": "Step 4 \u2014 Top spar cap and shear webs",
+  "text": "Step four. Glue the top spar cap into the rib notches with the carbon face up. Then glue the vertical-grain shear webs between the ribs: in front of the spar along the full span, and behind it near the centre. The webs make the spar into a strong box.",
+  "audio": "audio/11_webs.aiff",
+  "dur": 14.493,
+  "seg": 15.293
+ },
+ {
+  "id": "12_top",
+  "kind": "step",
+  "title": "Step 5 \u2014 Top sheeting and cap strips",
+  "text": "Step five. Sand everything flush. Glue on the top D-box sheeting from the leading edge to 80 millimetres, then the centre sheeting and the cap strips. Wet the outer face of the sheeting lightly, so that it bends around the nose without cracking.",
+  "audio": "audio/12_top.aiff",
+  "dur": 14.544,
+  "seg": 15.344
+ },
+ {
+  "id": "13_flip",
+  "kind": "step",
+  "title": "Step 6 \u2014 Turn over: bottom sheeting and servo frames",
+  "text": "Step six. Remove the wing from the board and turn it over. Add the bottom D-box sheeting, the bottom centre sheeting with the wire exit holes, and the bottom cap strips. Then glue the printed servo frames between the ribs at 110 and 165 millimetres.",
+  "audio": "audio/13_flip.aiff",
+  "dur": 15.798,
+  "seg": 16.598
+ },
+ {
+  "id": "14_tips",
+  "kind": "step",
+  "title": "Step 7 \u2014 Tip ribs and tip caps",
+  "text": "Step seven. Laminate each tip rib from two 1.5 millimetre layers with the grain crossed, and glue it on at 489 millimetres. Add the 3 millimetre ring tip cap, then sand the whole wing smooth with a long sanding block.",
+  "audio": "audio/14_tips.aiff",
+  "dur": 14.413,
+  "seg": 15.213
+ },
+ {
+  "id": "15_ailerons",
+  "kind": "step",
+  "title": "Step 8 \u2014 Ailerons",
+  "text": "Step eight. Build each aileron from its 3 millimetre leading edge, its ribs and the trailing-edge wedge. Sand a V bevel on the leading edge so that the aileron can move 20 degrees each way. Then cut the four hinge slots in the false spar and in the aileron with a knife blade.",
+  "audio": "audio/15_ailerons.aiff",
+  "dur": 17.774,
+  "seg": 18.574
+ },
+ {
+  "id": "16_cover",
+  "kind": "cover",
+  "title": "Covering",
+  "text": "Cover the wing with iron-on film. Iron the edges down first, at about 110 to 120 degrees Celsius or as the film maker says, then shrink the open areas with the heat gun. Cover the ailerons separately, and cut the film away over the hinge slots and the servo hatch.",
+  "audio": "audio/16_cover.aiff",
+  "dur": 17.154,
+  "seg": 17.954
+ },
+ {
+  "id": "17_servo",
+  "kind": "servo",
+  "title": "Step 9 \u2014 Hinges, horns and servos",
+  "text": "Step nine. Push in the C A hinges, check that the aileron moves freely, then wick thin C A into both sides of each hinge. Glue the printed horns to the horn ribs. Screw each servo to its hatch, connect the 1.2 millimetre pushrod with Z bends, and fix the hatch with four M 2 screws.",
+  "audio": "audio/17_servo.aiff",
+  "dur": 18.873,
+  "seg": 19.673
+ },
+ {
+  "id": "18_final",
+  "kind": "step",
+  "title": "Step 10 \u2014 Finish and check",
+  "text": "Finally, add the rubber-band rub plates at the centre, centre the servos, and set the throws to plus or minus 15 degrees. Then weigh the wing. The target is less than 160 grams without the servos.",
+  "audio": "audio/18_final.aiff",
+  "dur": 11.848,
+  "seg": 12.648
+ },
+ {
+  "id": "19_checks",
+  "kind": "checks",
+  "title": "Design checks",
+  "text": "Our design checks: span 990 millimetres, chord 280 millimetres, spar depth 39.2 millimetres, no overlapping parts, at least 1 millimetre of servo clearance, and a predicted mass of 157 grams.",
+  "audio": "audio/19_checks.aiff",
+  "dur": 14.736,
+  "seg": 15.536
+ },
+ {
+  "id": "20_outro",
+  "kind": "outro",
+  "title": "Links and files",
+  "text": "Every link for the materials, with notes on what to ask for in local shops and markets, is on the web page and in the GitHub repository: github dot com, slash jagath srujan, slash water-drop R C wing. Thank you for watching, and happy building.",
+  "audio": "audio/20_outro.aiff",
+  "dur": 13.986,
+  "seg": 14.786
+ }
+]

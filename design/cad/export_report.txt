@@ -1,0 +1,14 @@
+STEP: <repo>/design/cad/Wing_revA.step (89 parts, MG90S placeholder included) 14.45 MB
+flat parts: 104 ; profile area check failures: [('TC_R', 5.15), ('TC_L', 5.15), ('WF0', 0.87), ('WF1', 0.86), ('WF2', 0.86), ('WF3', 0.87), ('WF4', 0.87), ('WF5', 0.87), ('WF6', 0.87), ('WF7', 0.86), ('WF8', 0.79), ('WF9', 0.87), ('WF10', 0.86), ('WF11', 0.86), ('WF12', 0.87), ('WF13', 0.87), ('WF14', 0.87), ('WF15', 0.87), ('WF16', 0.86), ('WF17', 0.79), ('WB0', 0.54), ('WB1', 0.53), ('WB2', 0.53), ('WB3', 0.54), ('WB4', 0.53), ('WB5', 0.53), ('FS00', 20.35), ('FS01', 21.06), ('FS02', 21.25), ('FS03', 21.25), ('FS04', 21.25), ('FS05', 21.25), ('FS06', 21.25), ('FS07', 21.25), ('FS08', 21.25), ('FS09', 21.25), ('FS10', 21.25), ('FS11', 21.25), ('FS12', 21.25), ('FS13', 21.25), ('FS14', 21.25), ('FS15', 21.25), ('FS16', 21.06), ('FS17', 20.35)]
+sheets by group (300 x 100): {'1.5mm_light': 2, '1.5mm_medium': 4, '1.5mm_selected-light': 3, '2mm_medium': 8, '3mm_light': 1, '3mm_medium': 3}
+DXF read-back: 208 cut loops compared with the model profiles; failures: none
+nesting bbox overlaps: none
+STL ServoFrame_R     2892 facets, solid True, bbox 46.0 x 52.5 x 10.0, volume 1252 mm3 (shape 1252)
+STL ServoFrame_L     2892 facets, solid True, bbox 46.0 x 52.5 x 10.0, volume 1252 mm3 (shape 1252)
+STL ServoHatch_R     2468 facets, solid True, bbox 46.0 x 49.0 x 16.6, volume 2345 mm3 (shape 2345)
+STL ServoHatch_L     2468 facets, solid True, bbox 46.0 x 49.0 x 16.6, volume 2345 mm3 (shape 2345)
+STL Horn_R            284 facets, solid True, bbox 25.5 x 18.5 x 1.5, volume 328 mm3 (shape 328)
+STL Horn_L            284 facets, solid True, bbox 25.5 x 18.5 x 1.5, volume 328 mm3 (shape 328)
+STL RubPlate_LE      3396 facets, solid True, bbox 20.5 x 30.0 x 25.1, volume 535 mm3 (shape 536)
+STL RubPlate_TE       324 facets, solid True, bbox 29.0 x 30.0 x 6.6, volume 435 mm3 (shape 435)
+cut list written; D-box developed widths top 78.0 / bottom 74.3 mm

@@ -1,0 +1,3 @@
+numpy
+matplotlib
+neuralfoil==0.3.3

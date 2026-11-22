@@ -1,0 +1,18 @@
+=== Wing rev A check, stage A ===
+parts: 67  solids: 117
+1 span (Y extent) = 990.00 mm  [req 990.0, <= 1000]
+  chord (X extent of structure) = 280.00 mm  [req 280.0]  XMin -0.000 XMax 280.000
+  dihedral 0: all parts symmetric about y = 0, chord line z = 0 along span (by construction)
+2 depth at x = 75.6 (outer) = 39.20 mm  [plan 39.1]
+3 spar: carbon top face z = 28.579, bottom face z = -7.391; max gap to sheeting top 0.21 mm, bottom 0.20 mm
+  spar cap outer-to-outer depth = 35.97 mm
+6 invalid solids: none
+  overlap test: 242 solid pairs with touching/overlapping boxes tested; overlaps > 1 mm3: 0
+7 wing mass without servos = 133.3 g  [limit 155 g, D-013]
+   medium     42.7 g
+   film       29.2 g
+   sheet      25.5 g
+   light      10.3 g
+   carbon      9.2 g
+   hard        8.3 g
+   glue        8.0 g
