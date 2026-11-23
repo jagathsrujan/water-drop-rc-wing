@@ -120,7 +120,7 @@ Joints between F1/F2/F3: printed sleeves 10 mm long at the formers, glued (T2). 
 | Stage | Content | Update |
 |---|---|---|
 | F-A | Parameter file with the reservoir link; reference bodies (reservoir, wing at +3°); pod outer shape (sections and lofts) and shell; print split | picture + §13 envelope checks |
-| F-S | Pod structure (user request 2026-11-22): printed internal cross bars / ribs and skin windows, FEM-guided, in the side session "pod-structure-opt" (Opus, xhigh); delivers `design/cad_fuselage/structure/` and `scripts/fus_struct.py`; integrated into the build after review (after F-B, before F-E) | study report + FEM pictures + mass saving |
+| F-S | ~~Pod structure (user request 2026-11-22): printed internal cross bars / ribs and skin windows, FEM-guided~~ **Removed 2026-11-23 by the user (D-065):** study files deleted; the pod stays as built in F-A … F-C (no ribs, no windows) | — |
 | F-B | Pod inner features: front stop, saddles, floor, belly opening, skids, servo wall, flag hole, seat lip, lead slots, band stubs, rear dowel, hatch with magnets, tail servo bay, receiver tray, socket block | pictures (iso, section Y 0, section X 80) + interface checks |
 | F-C | Tubes, tail block, stabilizer + elevator, fin + rudder, horns, pushrods and guides | picture + tail volume, SM |
 | F-D | Electronics placeholders, mass table, CG; firewall and battery positions set so that CG = X 80 with the battery in the middle of its range | CG, mass, score, R6 margin |
