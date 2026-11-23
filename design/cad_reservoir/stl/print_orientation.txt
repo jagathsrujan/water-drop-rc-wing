@@ -1,0 +1,11 @@
+P2_inner_flange.stl : stem up, convex flange underside on the bed (1.0 mm edge sag: raft or brim)
+P4_base_plate.stl : as modelled: lug and knuckle feet on the bed, supports under the seat face (sand the seat face)
+P5_nut.stl : flat ring on the bed
+P6_flap.stl : skin face on the bed, ribs and pockets up, tab and knuckle up
+P11a_fill_flange.stl : stem down on the bed, flange up
+P11c_fill_nut.stl : flat top on the bed, saddle side up
+P11d_fill_cap.stl : cap top wall on the bed, open end up (vent holes and flutes vertical)
+P15_funnel.stl : rim on the bed, spout up (ground support, not on the aircraft)
+P12a_saddle1.stl : foot on the bed, supports under the outer wings of the cradle
+P12b_saddle2.stl : foot on the bed, supports under the outer wings of the cradle
+P14_servo_arm.stl : flat on the bed (already in the horizontal plane)

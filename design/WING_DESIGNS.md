@@ -38,7 +38,7 @@ Details: rev A plan `design/02_wing_plan.md`; rev B plan `design/cad_revB/REVB_P
 
 | Item | Value |
 |---|---|
-| Wing mass without / with servos | **156.6 g / 184.0 g** (limit 160 g, D-023) |
+| Wing mass without / with servos | **156.6 g / 184.0 g** (no fixed limit, D-047) |
 | Empty aircraft (440 g + wing) / score | 597 g / **166.9** |
 | Loaded stall speed, ρ 1.05 (R6 ≤ 9.0 m/s) | **8.86 m/s** (margin +0.14); Chennai ρ 1.15: 8.46 m/s |
 | Pieces | 147 modelled (135 balsa, 2 carbon, 8 PETG, 2 steel) |

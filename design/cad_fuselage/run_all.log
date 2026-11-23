@@ -1,0 +1,398 @@
+## build_stageA.py
+RefRes objects: 33 (moving set 19, open state 5)
+Ref_Wing               valid=True solids=1 vol=  6844059.1 mm3  BB(mesh) X -0.01..279.62 Y -495.00..495.00 Z -14.65..26.24
+oml_nose               valid=True solids=1 vol=  1166700.0 mm3  BB(mesh) X -170.00..-35.00 Y -55.00..55.00 Z -117.00..-4.00
+oml_hatch              valid=True solids=1 vol=   409453.5 mm3  BB(mesh) X -35.00..-2.00 Y -55.00..55.00 Z -117.00..-4.00
+oml_open               valid=True solids=1 vol=  2973751.5 mm3  BB(mesh) X -2.00..280.00 Y -55.00..55.00 Z -117.00..-4.00
+oml_deck               valid=True solids=1 vol=    61469.8 mm3  BB(mesh) X 280.00..300.00 Y -36.65..36.65 Z -72.05..-15.66
+OML                    valid=True solids=1 vol=  4611372.0 mm3  BB(mesh) X -170.00..300.00 Y -55.00..55.00 Z -117.00..-4.00
+inner_nose             valid=True solids=1 vol=  1128836.7 mm3  BB(mesh) X -170.00..-35.00 Y -54.20..54.20 Z -116.20..-4.80
+inner_front            valid=True solids=1 vol=     2886.7 mm3  BB(mesh) X -171.00..-170.00 Y -27.20..27.20 Z -77.20..-22.80
+inner_hatch            valid=True solids=1 vol=   400060.0 mm3  BB(mesh) X -35.00..-2.00 Y -54.50..54.50 Z -116.20..-4.80
+inner_open             valid=True solids=1 vol=  3655685.8 mm3  BB(mesh) X -2.00..280.00 Y -54.50..54.50 Z -116.20..12.00
+inner_deck             valid=True solids=1 vol=    57248.8 mm3  BB(mesh) X 280.00..299.20 Y -36.15..36.15 Z -71.25..-16.16
+Inner                  valid=True solids=1 vol=  5244720.7 mm3  BB(mesh) X -171.00..299.20 Y -54.50..54.50 Z -116.20..12.00
+shell                  valid=True solids=1 vol=   102919.6 mm3  BB(mesh) X -170.00..300.00 Y -55.00..55.00 Z -117.00..-4.00
+shell_belly_hole       valid=True solids=1 vol=   100743.6 mm3  BB(mesh) X -170.00..300.00 Y -55.00..55.00 Z -117.00..-4.00
+F4_NoseHatch           valid=True solids=1 vol=    12290.6 mm3  BB(mesh) X -165.00..-2.00 Y -54.87..54.87 Z -23.46..-4.00
+pod_rest               valid=True solids=1 vol=    88454.8 mm3  BB(mesh) X -170.00..300.00 Y -55.00..55.00 Z -117.00..-4.00
+F1_PodNose             valid=True solids=1 vol=    30195.9 mm3  BB(mesh) X -170.00..-26.22 Y -55.00..55.00 Z -117.00..-7.00
+F2_PodCentre           valid=True solids=1 vol=    36448.2 mm3  BB(mesh) X -26.22..175.00 Y -55.00..55.00 Z -117.00..-4.00
+F3_PodAft              valid=True solids=1 vol=    21806.7 mm3  BB(mesh) X 175.00..300.00 Y -55.00..55.00 Z -117.00..-12.82
+pod build time 5.3 s
+stage F-A build done
+## checks (stage F-A)
+Fuselage rev A - check report, stage F-A  (2026-11-23 14:50)
+Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Wing +3 deg about +Y.
+Model: /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_fuselage/Fuselage_revA.FCStd ; parameters: scripts/fus_params.py (section 13 values read from res_params.py + result_stageA.json)
+
+== 0. Reservoir link (section 13 values read from the reservoir model; the model wins) ==
+bottle base X -25.723 ; BELLY_Z -117.0 ; FLOOR_Z -115.5 ; FLOOR_HOLE_RECT (47.0, 115.0, -20.0, 20.0) ; FILL_X_C -11.0 ; cap top Z -7.0
+saddle 1: sleeve X 5.98 .. 17.98, feet + strap pads X 1.98 .. 21.98 (section 13: X 8 .. 20) -> difference -2.02 mm
+saddle 2: sleeve X 157.98 .. 169.98, feet + strap pads X 139.28 .. 169.98 (section 13: X 160 .. 172) -> difference -2.02 mm
+front stop: X -29.22 .. -26.22 (section 13: X -27.2 .. -24.2) -> difference -2.02 mm ; it lies in F1 (split X -26), 0.00 mm ahead of the split
+release servo (RefRes mesh) Y 38.80 .. 51.00, Z -111.90 .. -80.40 ; res_params case Y 38.80 .. 51.00 (SERVO_Y_SHAFT +- W/2)
+
+== a. Belly: outer Z = BELLY_Z over X -35 .. 200 ==
+outer bottom Z at 353 samples (X step 2.5, Y 0/+-30/45): min -117.0000 max -117.0000 ; shell Z min in X -35..200: -117.0000 -> PASS
+floor skin inner face Z: -116.200 .. -116.200 (skin 0.8 mm). FLOOR_Z -115.5: the floor grid up to FLOOR_Z comes in F-B (0.70 mm)
+
+== b. Width and servo wall ==
+outer |Y| max at X 0 .. 280: 55.0000 (limit <= 55.0) -> PASS
+whole pod (mesh): X -170.00 .. 300.00, |Y| max 55.000, Z -117.00 .. -4.00
+right side-wall inner face, X 50..90 step 5, Z -111.90 (servo bottom) .. -80.40 (servo top), 21 levels: min Y 54.122 at X 50 Z -111.90 (limit >= 53.5) -> PASS
+  inner face at X 70, Z -111.9: Y 54.122
+  inner face at X 70, Z -111.4: Y 54.185
+  inner face at X 70, Z -110.5: Y 54.300
+  inner face at X 70, Z -100.0: Y 54.500
+  alternatives for the bottom corner radius Rb (inner face Y, analytic, same walls):
+    Rb 15.0: at Z -111.90 (servo bottom) 50.18 ; at Z -111.40 (arm bottom) 50.64 ; at Z -110.50 (arm plane) 51.37 -> below 53.5
+    Rb 10.0: at Z -111.90 (servo bottom) 52.79 ; at Z -111.40 (arm bottom) 53.08 ; at Z -110.50 (arm plane) 53.51 -> below 53.5
+    Rb  9.0: at Z -111.90 (servo bottom) 53.21 ; at Z -111.40 (arm bottom) 53.46 ; at Z -110.50 (arm plane) 53.81 -> below 53.5
+    Rb  8.0: at Z -111.90 (servo bottom) 53.59 ; at Z -111.40 (arm bottom) 53.79 ; at Z -110.50 (arm plane) 54.04 -> meets 53.5
+    Rb  6.0: at Z -111.90 (servo bottom) 54.12 ; at Z -111.40 (arm bottom) 54.18 ; at Z -110.50 (arm plane) 54.30 -> meets 53.5
+  release-servo arm tip sweep -45..+45 deg (Y max 53.26): distance to F2 0.92 mm (plan 9.2 asks >= 2 mm elsewhere; moving parts T2-8 >= 3 mm) -> INFO (limited by section 13: wall inner face Y 54.5 gives at most 1.24)
+  left side: safety pin pulled out (open state, Y min -52.00) to F2: 2.25 mm
+
+== c. Belly opening free ==
+shell volume inside the prism X 47..115, Y -20..20, all Z: 0.000000 mm3 -> PASS
+
+== d. Overlap (tol 1e-03 mm3) and minimum distance: pod parts / hatch <-> reservoir references and the wing ==
+  RefRes_P10_Flag                closed overlap F2 2.800 ; min distance 0.000 mm (nearest F2_PodCentre) -> FAIL
+  RefRes_P10_Flag_open           open   overlap F2 2.800 ; min distance 0.000 mm (nearest F2_PodCentre) -> FAIL
+  RefRes_P10_SafetyPin           closed overlap 0 ; min distance 5.200 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P10_SafetyPin_open      open   overlap 0 ; min distance 2.246 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P11a_FillFlange         closed overlap 0 ; min distance 4.700 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P11b_FillGasket         closed overlap 0 ; min distance 14.200 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P11c_FillNut            closed overlap 0 ; min distance 11.700 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P11d_FillCap            closed overlap 0 ; min distance 2.200 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P11e_CapSeal            closed overlap 0 ; min distance 3.700 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P11f_VentFlap           closed overlap 0 ; min distance 1.200 mm (nearest F4_NoseHatch) -> PASS
+  RefRes_P12a_Saddle1            closed overlap 0 ; min distance 0.700 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P12b_Saddle2            closed overlap 0 ; min distance 0.700 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P12c_FrontStop          closed overlap 0 ; min distance 4.200 mm (nearest F1_PodNose) -> PASS
+  RefRes_P13a_Strap1             closed overlap 0 ; min distance 2.300 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P13b_Strap2             closed overlap 0 ; min distance 2.300 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P14_LinkWire            closed overlap 0 ; min distance 5.300 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P14_QuickSnap           closed overlap 0 ; min distance 4.700 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P14_ServoArm            closed overlap 0 ; min distance 4.800 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P14_Servo_MG90S         closed overlap 0 ; min distance 3.500 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P1_Bottle               closed overlap 0 ; min distance 14.500 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P1c_Cap                 closed overlap 0 ; min distance 26.247 mm (nearest F3_PodAft) -> PASS
+  RefRes_P2_InnerFlange          closed overlap 0 ; min distance 14.727 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P3_OuterGasket          closed overlap 0 ; min distance 18.653 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P4_BasePlate            closed overlap 0 ; min distance 4.826 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P5_Nut                  closed overlap 0 ; min distance 13.086 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P6_Flap                 closed overlap 0 ; min distance 5.522 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P6_Flap_open            open   overlap 0 ; min distance 1.804 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P7_FlapGasket           closed overlap 0 ; min distance 8.237 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P7_FlapGasket_open      open   overlap 0 ; min distance 4.304 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P8_HingePin             closed overlap 0 ; min distance 10.945 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P9_ReleasePin           closed overlap 0 ; min distance 5.200 mm (nearest F2_PodCentre) -> PASS
+  RefRes_P9_ReleasePin_open      open   overlap 0 ; min distance 4.700 mm (nearest F2_PodCentre) -> PASS
+  RefRes_Water                   closed overlap 0 ; min distance 14.800 mm (nearest F2_PodCentre) -> PASS
+  Ref_Wing                       -      overlap 0 ; min distance 0.845 mm (nearest F2_PodCentre) -> PASS
+overlap check: FAIL (overlaps: RefRes_P10_Flag, RefRes_P10_Flag_open)
+  note: P10_Flag (and its open copy) crosses the left wall by design (section 13: flag through a hole in the left wall at X 54, Z -110.5); the flag hole is an F-B feature.
+
+== e. Wing seat, wing LE and hatch ==
+station: the side-wall top at mid-thickness, Y = W(x) - 0.25 (no shell at |Y| 50 in F-A: the 8 mm seat lip comes in F-B; aft of X ~226 the walls are inboard of |Y| 50); gap = vertical, normal gap = vertical x cos(slope)
+  X    2.0 Y 54.75: wall top Z   -5.045, wing lower Z   -4.045, gap 1.000 (normal 0.820)
+  X   12.0 Y 54.75: wall top Z   -8.668, wing lower Z   -7.668, gap 1.000 (normal 0.974)
+  X   22.0 Y 54.75: wall top Z  -10.502, wing lower Z   -9.502, gap 1.000 (normal 0.990)
+  X   32.0 Y 54.75: wall top Z  -11.709, wing lower Z  -10.709, gap 1.000 (normal 0.995)
+  X   42.0 Y 54.75: wall top Z  -12.561, wing lower Z  -11.561, gap 1.000 (normal 0.997)
+  X   52.0 Y 54.75: wall top Z  -13.165, wing lower Z  -12.165, gap 1.000 (normal 0.999)
+  X   62.0 Y 54.75: wall top Z  -13.589, wing lower Z  -12.589, gap 1.000 (normal 0.999)
+  X   72.0 Y 54.75: wall top Z  -13.876, wing lower Z  -12.876, gap 1.000 (normal 1.000)
+  X   82.0 Y 54.75: wall top Z  -14.051, wing lower Z  -13.051, gap 1.000 (normal 1.000)
+  X   92.0 Y 54.75: wall top Z  -14.136, wing lower Z  -13.136, gap 1.000 (normal 1.000)
+  X  102.0 Y 54.75: wall top Z  -14.144, wing lower Z  -13.144, gap 1.000 (normal 1.000)
+  X  112.0 Y 54.75: wall top Z  -14.086, wing lower Z  -13.086, gap 1.000 (normal 1.000)
+  X  122.0 Y 54.75: wall top Z  -13.977, wing lower Z  -12.977, gap 1.000 (normal 1.000)
+  X  132.0 Y 54.75: wall top Z  -13.832, wing lower Z  -12.832, gap 1.000 (normal 1.000)
+  X  142.0 Y 54.75: wall top Z  -13.664, wing lower Z  -12.664, gap 1.000 (normal 1.000)
+  X  152.0 Y 54.75: wall top Z  -13.485, wing lower Z  -12.485, gap 1.000 (normal 1.000)
+  X  162.0 Y 54.75: wall top Z  -13.309, wing lower Z  -12.309, gap 1.000 (normal 1.000)
+  X  172.0 Y 54.75: wall top Z  -13.145, wing lower Z  -12.145, gap 1.000 (normal 1.000)
+  X  182.0 Y 54.75: wall top Z  -13.003, wing lower Z  -12.003, gap 1.000 (normal 1.000)
+  X  192.0 Y 54.75: wall top Z  -12.894, wing lower Z  -11.894, gap 1.000 (normal 1.000)
+  X  202.0 Y 54.72: wall top Z  -12.829, wing lower Z  -11.829, gap 1.000 (normal 1.000)
+  X  212.0 Y 53.82: wall top Z  -12.818, wing lower Z  -11.818, gap 1.000 (normal 1.000)
+  X  222.0 Y 51.95: wall top Z  -12.875, wing lower Z  -11.875, gap 1.000 (normal 1.000)
+  X  232.0 Y 49.47: wall top Z  -13.009, wing lower Z  -12.009, gap 1.000 (normal 1.000)
+  X  242.0 Y 46.79: wall top Z  -13.240, wing lower Z  -12.240, gap 1.000 (normal 1.000)
+  X  252.0 Y 44.26: wall top Z  -13.590, wing lower Z  -12.590, gap 1.000 (normal 0.999)
+  X  262.0 Y 41.68: wall top Z  -14.100, wing lower Z  -13.100, gap 1.000 (normal 0.998)
+  X  272.0 Y 38.83: wall top Z  -14.836, wing lower Z  -13.836, gap 1.000 (normal 0.996)
+  X  279.5 Y 36.55: wall top Z  -15.641, wing lower Z  -14.641, gap 1.000 (normal 0.992)
+seat gap: vertical 1.000 .. 1.000, normal 0.820 .. 1.000 (limit 1.0 +- 0.3) -> PASS
+wing LE <-> hatch F4: 2.964 mm (limit >= 1.0) -> PASS
+wing <-> F2 (seat): 0.845 mm (normal gap near X 2, information)
+hatch inner face over the fill cap (X -20.0..-2.0, Y -9.0..9.0): Z min -4.800 ; cap top Z -7.0 -> clearance 2.200 mm (limit >= 2.0) -> PASS
+  nearest fill-unit part: vent-flap knob P11f top Z -6.000 -> hatch inner face 1.200 mm above it ; distance F4 <-> P11f 1.200 mm, F4 <-> P11d cap 2.200 mm (information)
+
+== f. Lift-out sweep: moving set +Z in 2 mm steps to +120, F4 and Ref_Wing removed; obstacles F1..F3 ==
+moving set (19): P10_Flag, P10_SafetyPin, P11a_FillFlange, P11b_FillGasket, P11c_FillNut, P11d_FillCap, P11e_CapSeal, P11f_VentFlap, P1_Bottle, P1c_Cap, P2_InnerFlange, P3_OuterGasket, P4_BasePlate, P5_Nut, P6_Flap, P7_FlapGasket, P8_HingePin, P9_ReleasePin, Water
+full moving set: first contact at dz 0 mm: P10_Flag <-> F2_PodCentre, overlap 2.800 mm3 -> FAIL
+without P10_Flag (safety pin + flag pulled before the lift-out): no contact up to +120 -> PASS
+
+== g. Validity, volumes, masses, build volume ==
+all solids isValid(): PASS
+  part              vol cm3            PLA  ASA Aero 0.53  ASA Aero 0.65  ASA Aero 0.80  build-volume (sorted BB sizes)
+  F1_PodNose          30.20         37.4 g         16.0 g         19.6 g         24.2 g  110.0 x 110.0 x 143.8 -> PASS
+  F2_PodCentre        36.45         45.2 g         19.3 g         23.7 g         29.2 g  110.0 x 113.0 x 201.2 -> PASS
+  F3_PodAft           21.81         27.0 g         11.6 g         14.2 g         17.4 g  104.2 x 110.0 x 125.0 -> PASS
+  F4_NoseHatch        12.29         15.2 g          6.5 g          8.0 g          9.8 g  19.5 x 109.7 x 163.0 -> PASS
+  total F1..F4       100.74        124.9 g         53.4 g         65.5 g         80.6 g
+build volume 256 mm cube: PASS
+plan section 5 (PLA, 0.5/0.8 walls, 505 mm, incl. ribs, floor grid, hatch rim, socket block): 187 g -> scaled to 470 mm: 174 g ; model shell only: 124.9 g (72 % of the scaled plan value)
+plan section 5 (ASA Aero 0.65, 0.5/0.8 walls, 505 mm, incl. ribs, floor grid, hatch rim, socket block): 102 g -> scaled to 470 mm: 95 g ; model shell only: 65.5 g (69 % of the scaled plan value)
+skin thickness normal to the surface on sloped skin (section plane value 0.8; measured at Y 0 in the XZ plane, information):
+  X   290.0 bottom (F3_PodAft): vertical 0.806, normal 0.565 mm
+  X   260.0 bottom (F3_PodAft): vertical 0.800, normal 0.662 mm
+  X   230.0 bottom (F3_PodAft): vertical 0.800, normal 0.704 mm
+  X  -165.0 bottom (F1_PodNose): vertical 0.800, normal 0.708 mm
+  X  -130.0 bottom (F1_PodNose): vertical 0.800, normal 0.751 mm
+  X  -160.0 top    (F4_NoseHatch): vertical 0.800, normal 0.776 mm
+
+== Summary ==
+  a         belly Z                                    PASS
+  b         width and servo wall                       PASS
+  c         belly opening free                         PASS
+  d         no overlap with the reservoir / wing       FAIL
+  e         wing seat, LE, hatch over the cap          PASS
+  f         lift-out sweep (full moving set)           FAIL
+  f_noflag  lift-out without the safety-pin flag       PASS
+  g         validity and build volume                  PASS
+check time 58 s
+## pictures (stage F-A)
+pictures done: ['stageA_iso.png', 'stageA_iso_nowing.png', 'stageA_section_X80.png', 'stageA_section_Y0.png', 'stageA_side.png', 'stageA_top_limits.png']
+## build_stageB.py
+ledge                  V    1560.7 mm3  X -170.0..-2.0  Y -55.0..55.0  Z -111.0..-4.0  solids 2
+magnet X -150: joint Z -19.14 slope 0.268, outer |Y| 32.91, magnet |Y| 24.91
+magnet X -20: joint Z -7.00 slope 0.000, outer |Y| 54.87, magnet |Y| 49.67
+ledge+pads             V    2742.9 mm3  X -170.0..-2.0  Y -55.0..55.0  Z -111.0..-4.0  solids 2
+F6_FrontStop           V   29545.3 mm3  X -29.2..-26.2  Y -54.5..54.5  Z -116.2..-7.0  solids 1
+F7_Firewall            V    8143.4 mm3  X -173.0..-170.0  Y -28.0..28.0  Z -78.0..-22.0  solids 1
+fw_ring                V    5045.9 mm3  X -170.0..-166.0  Y -28.0..28.0  Z -78.0..-22.0  solids 1
+battery_tray           V    6369.9 mm3  X -165.1..-36.0  Y -49.0..49.0  Z -117.0..-80.0  solids 1
+F9_BandStubs           V     565.5 mm3  X -8.0..-4.0  Y -69.0..69.0  Z -26.0..-22.0  solids 2
+F8_RearDowel           V    1560.2 mm3  X 292.5..297.5  Y -39.7..39.7  Z -24.5..-19.5  solids 1
+seat_lip               V    3766.4 mm3  X 2.0..280.0  Y -55.0..55.0  Z -111.0..0.0  solids 2
+servo tabs Z -101.40 .. -98.90, shelves Z -104.40 .. -101.40, case Y 38.80 .. 51.00
+F1_PodNose             V   45742.4 mm3  X -170.0..-26.2  Y -55.0..55.0  Z -117.0..-4.0  solids 1
+F2_PodCentre           V   57923.7 mm3  X -26.2..185.0  Y -55.0..57.5  Z -117.0..-4.0  solids 1
+F3_PodAft              V   36997.3 mm3  X 175.0..305.1  Y -55.0..55.0  Z -117.0..10.0  solids 1
+F4_NoseHatch           V   12618.2 mm3  X -170.0..-2.0  Y -55.0..55.0  Z -32.0..-3.0  solids 1
+F5a_SkidFront          V    3600.0 mm3  X -140.2..40.0  Y -49.0..49.0  Z -118.5..-92.8  solids 1
+F5b_SkidAft            V    2250.0 mm3  X 120.0..220.0  Y -49.0..49.0  Z -118.5..-112.1  solids 1
+F6_FrontStop           V   29545.3 mm3  X -29.2..-26.2  Y -54.5..54.5  Z -116.2..-7.0  solids 1
+F7_Firewall            V    8143.4 mm3  X -173.0..-170.0  Y -28.0..28.0  Z -78.0..-22.0  solids 1
+F8_RearDowel           V    1560.2 mm3  X 292.5..297.5  Y -39.7..39.7  Z -24.5..-19.5  solids 1
+F9_BandStubs           V     565.5 mm3  X -8.0..-4.0  Y -69.0..69.0  Z -26.0..-22.0  solids 2
+stage F-B build done
+## checks (stage F-B)
+Fuselage rev A - stage F-B check report
+============================================================
+
+1. Validity and build volume (printed parts <= 256 mm each side)
+  F1_PodNose      valid True solids 1  size 110.0 x 110.0 x 143.8  PASS
+  F2_PodCentre    valid True solids 1  size 112.5 x 113.0 x 211.2  PASS
+  F3_PodAft       valid True solids 1  size 104.2 x 110.0 x 130.1  PASS
+  F5a_SkidFront   valid True solids 1  size 15.0 x 18.5 x 160.0  PASS
+  F5b_SkidAft     valid True solids 1  size 6.4 x 15.0 x 100.0  PASS
+  F6_FrontStop    valid True solids 1  size 3.0 x 109.0 x 109.2  PASS
+  F7_Firewall     valid True solids 1  size 3.0 x 56.0 x 56.0  PASS
+  F8_RearDowel    valid True solids 1  size 5.0 x 5.0 x 79.5  PASS
+  F9_BandStubs    valid True solids 2  size 4.0 x 4.0 x 138.0  PASS
+  F4_NoseHatch    valid True solids 1  size 20.5 x 109.7 x 163.0  PASS
+
+2. Section 13 envelope
+  pod Z min (without skids) -117.000 (BELLY_Z -117.0) PASS
+  outer |Y| max at X 0-280 above Z -105 (pocket region excluded) 55.000 <= 55 PASS
+  outer |Y| max at X 0-175 below Z -105 (D-059 pocket) 57.500; material outside |Y| 55 at X 51.4..77.6, Z -115.7..-105.3 (allowed bulge, wing seat unaffected)
+  material inside the belly-opening prism 0.000 mm3 PASS
+
+3. Overlap with reservoir parts (closed + open) and the wing (mm3); min distance for features
+  worst total overlap 0.0000 mm3 PASS
+  min distance F2_PodCentre  - RefRes_P14_ServoArm        4.80 mm
+  min distance F2_PodCentre  - RefRes_P14_Servo_MG90S     0.00 mm
+  min distance F2_PodCentre  - RefRes_P1_Bottle           0.42 mm
+  min distance F2_PodCentre  - RefRes_P6_Flap_open        1.80 mm
+  min distance F6_FrontStop  - RefRes_P1_Bottle           0.51 mm
+  min distance F4_NoseHatch  - RefRes_P11f_VentFlap       2.20 mm
+  min distance F4_NoseHatch  - RefRes_P11d_FillCap        2.51 mm
+  min distance F4_NoseHatch  - Ref_Wing                   2.52 mm
+  min distance F3_PodAft     - RefRes_P1c_Cap             4.63 mm
+  min distance F2_PodCentre  - RefRes_P13a_Strap1         0.00 mm
+  min distance F2_PodCentre  - RefRes_P13b_Strap2         0.00 mm
+
+3b. Placeholders (bought parts): overlap with the pod parts and the reservoir (mm3), min distance to the reservoir
+  PH_TailServo_R     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
+  PH_TailServo_L     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
+  PH_Receiver        overlap pod 0.000, reservoir 0.000; min distance to reservoir 12.08 mm (RefRes_P1_Bottle) PASS
+  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 34.45 mm (RefRes_P1_Bottle) PASS
+  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 9.28 mm (RefRes_P1_Bottle) PASS
+  placeholders: PASS
+
+4. Release-servo arm sweep (+-45 deg) to the structure (>= 3 mm)
+  arm closed pose rotated 0..+90: min 4.80 mm; 0..-90: min 3.02 mm (the real sweep is one of them) PASS
+  flap open travel: first contact with F2 at 157 deg (flap stop = aft edge of the belly opening with the 1.2 mm lip); distance at 150 deg 1.80 mm; water stream free from 80 deg (reservoir check) PASS
+
+5. Reservoir lift-out +Z to 120 in 2 mm steps (wing, hatch, straps, safety pin removed; pod parts and placeholders stay)
+  first contact: none up to 120 PASS
+
+6. Hatch lift-off +Z 60 with the wing on; band paths
+  hatch first contact: none PASS
+  band paths to the hatch lift path (hatch at +0..+60, 3 mm steps) 9.89 mm (>= 3) PASS
+  band paths (lines; band radius 1 mm) to F4_NoseHatch         9.89 mm at X 2.6 Y -64.7 Z -8.1 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y -25.7 Z -2.3 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to F3_PodAft            1.32 mm at X 280.8 Y -38.3 Z -14.3 (brief item 9: aft deck to report, no limit given)
+
+7. Ground plane at the skids
+  skid plane Z -118.50; lowest valve part Z -113.50; clearance 5.00 mm (>= 3) PASS
+
+8. Masses (g)
+  F1_PodNose        45.74 cm3  PLA 56.7  ASA Aero 0.53 24.2  ASA Aero 0.65 29.7  ASA Aero 0.80 36.6
+  F2_PodCentre      57.92 cm3  PLA 71.8  ASA Aero 0.53 30.7  ASA Aero 0.65 37.7  ASA Aero 0.80 46.3
+  F3_PodAft         37.00 cm3  PLA 45.9  ASA Aero 0.53 19.6  ASA Aero 0.65 24.0  ASA Aero 0.80 29.6
+  F4_NoseHatch      12.62 cm3  PLA 15.6  ASA Aero 0.53 6.7  ASA Aero 0.65 8.2  ASA Aero 0.80 10.1
+  F5a_SkidFront      3.60 cm3  PETG 4.57
+  F5b_SkidAft        2.25 cm3  PETG 2.86
+  F6_FrontStop      29.55 cm3  balsa 3.55
+  F7_Firewall        8.14 cm3  ply 4.89
+  F8_RearDowel       1.56 cm3  birch 1.09
+  F9_BandStubs       0.57 cm3  carbon 0.88
+  magnets 8 x 0.42 g = 3.4 g (N35 D6x2, interp.)
+  TOTAL pod (PLA) + skids, stop, firewall, dowel, stubs, magnets: 211.3 g
+  TOTAL pod (ASA Aero 0.53) + skids, stop, firewall, dowel, stubs, magnets: 102.5 g
+  TOTAL pod (ASA Aero 0.65) + skids, stop, firewall, dowel, stubs, magnets: 120.9 g
+  TOTAL pod (ASA Aero 0.80) + skids, stop, firewall, dowel, stubs, magnets: 143.9 g
+  Note: the saddles are now in F2 (reservoir table P12a/b 8.78 g PETG moves to the pod).
+## pictures (stage F-B)
+pictures done: ['stageB_hatch_closeup.png', 'stageB_iso.png', 'stageB_iso_below.png', 'stageB_section_X260.png', 'stageB_section_X80.png', 'stageB_section_Xm6.png', 'stageB_section_Y0.png', 'stageB_servo_pocket_closeup.png', 'stageB_top.png']
+## build_stageC.py
+F10_Tubes            V  27703.2 mm3  X 235.1..725.0  Y -21.0..21.0  Z -45.0..-35.0  solids 2
+F11_TailBlock        V   8941.2 mm3  X 667.0..738.0  Y -22.3..22.3  Z -46.3..-22.0  solids 1
+F12_Stab             V  36530.7 mm3  X 647.0..739.4  Y -245.0..245.0  Z 43.5..46.5  solids 1
+F13_Elevator         V  12557.0 mm3  X 739.9..779.0  Y -245.0..245.0  Z 43.5..46.5  solids 2
+F14_Fin              V  12632.4 mm3  X 667.9..739.4  Y -1.5..1.5  Z -30.0..135.0  solids 2
+F15_Rudder           V   4904.3 mm3  X 739.9..778.0  Y -1.5..1.5  Z -28.0..135.0  solids 1
+F16_Joiner           V    229.5 mm3  X 742.8..758.5  Y -50.7..50.7  Z 44.2..45.8  solids 1
+F17_Horns            V    333.4 mm3  X 739.4..753.9  Y -25.8..15.0  Z 19.2..43.5  solids 2
+F18_Pushrods         V   3314.7 mm3  X 222.3..741.6  Y -37.0..37.0  Z -69.0..31.5  solids 2
+pushrod Elevator exits the pod at X 286.2 Y -34.6 Z -55.9 (exit slot D4, +-15 mm along the rod)
+pushrod Rudder exits the pod at X 289.3 Y 33.0 Z -56.7 (exit slot D4, +-15 mm along the rod)
+F3_PodAft            V  36954.0 mm3  X 175.0..305.1  Y -55.0..55.0  Z -117.0..-12.8  solids 1
+F19_GuideClips       V   1384.0 mm3  X 397.0..573.0  Y -34.4..30.2  Z -46.2..0.2  solids 4
+stage F-C build done
+## build_wing_asm.py
+wing rev A in the assembly: 89 parts, 866.2 cm3, +3.0 deg
+## checks (stage F-C)
+Fuselage rev A - stage F-C check report (tail)
+============================================================
+
+1. Validity
+  F10_Tubes        valid True solids 2  X 235.1..725.0 Y -21.0..21.0 Z -45.0..-35.0
+  F11_TailBlock    valid True solids 1  X 667.0..738.0 Y -22.3..22.3 Z -46.3..-22.0
+  F12_Stab         valid True solids 1  X 647.0..739.4 Y -245.0..245.0 Z 43.5..46.5
+  F13_Elevator     valid True solids 2  X 739.9..779.0 Y -245.0..245.0 Z 43.5..46.5
+  F14_Fin          valid True solids 2  X 667.9..739.4 Y -1.5..1.5 Z -30.0..135.0
+  F15_Rudder       valid True solids 1  X 739.9..778.0 Y -1.5..1.5 Z -28.0..135.0
+  F16_Joiner       valid True solids 1  X 742.8..758.5 Y -50.7..50.7 Z 44.2..45.8
+  F17_Horns        valid True solids 2  X 739.4..753.9 Y -25.8..15.0 Z 19.2..43.5
+  F18_Pushrods     valid True solids 2  X 222.3..741.6 Y -37.0..37.0 Z -69.0..31.5
+  F19_GuideClips   valid True solids 4  X 397.0..573.0 Y -34.4..30.2 Z -46.2..0.2
+  all valid PASS
+
+2. Overlaps (mm3): tail parts with each other, with the pod parts, the reservoir (closed), the wing and the placeholders
+  worst overlap 0.0000 mm3 PASS (contacts by design not tested: F12_Stab/F14_Fin, F13_Elevator/F16_Joiner, F13_Elevator/F17_Horns, F15_Rudder/F17_Horns, F17_Horns/F18_Pushrods, F18_Pushrods/PH_TailServoArms)
+
+3. Pushrods: clearance to the structure (key check 9: >= 2 mm; exit slots in F3 by design)
+  pushrods - F10_Tubes            6.10 mm at X 406.0 Y 26.7 Z -37.1
+  pushrods - F11_TailBlock       30.87 mm at X 662.9 Y 15.6 Z 5.8
+  pushrods - F12_Stab            12.15 mm at X 741.2 Y -25.0 Z 31.5
+  pushrods - F14_Fin             10.08 mm at X 739.9 Y 11.6 Z 19.7
+  pushrods - F15_Rudder          10.15 mm at X 741.4 Y 11.5 Z 20.0
+  pushrods - F13_Elevator        12.17 mm at X 741.2 Y -25.0 Z 31.5
+  pushrods - F8_RearDowel        28.17 mm at X 300.7 Y -34.3 Z -52.1
+  pushrods - F3_PodAft            1.00 mm at X 290.7 Y 32.9 Z -55.4 (exit slot r 2.0 round the r 1.0 rod)
+  pushrods - PH_TailServo_R       3.44 mm at X 222.6 Y 35.6 Z -68.9
+  pushrods - PH_TailServo_L       3.44 mm at X 222.7 Y -35.6 Z -68.9
+  pushrods - RefRes_P1c_Cap      20.33 mm at X 232.8 Y 34.5 Z -66.1
+  pushrods - RefRes_P1_Bottle    22.78 mm at X 231.0 Y 34.6 Z -66.4
+  minimum (without the F3 exit slots) 3.44 mm PASS
+  pushrod lengths: 528 mm, 527 mm; guides at X 400, 570
+
+4. Control surface travel (elevator +-20 deg, rudder +-25 deg, and the 4 combinations)
+  elevator -20, rudder -25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator -20, rudder  +0: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.48 mm, rudder-fixed 0.50 mm
+  elevator -20, rudder +25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator  +0, rudder -25: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.50 mm, rudder-fixed 0.48 mm
+  elevator  +0, rudder  +0: overlap 0.000 mm3; elevator-rudder 2.75 mm, elevator-fixed 0.50 mm, rudder-fixed 0.50 mm
+  elevator  +0, rudder +25: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.50 mm, rudder-fixed 0.48 mm
+  elevator +20, rudder -25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator +20, rudder  +0: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.48 mm, rudder-fixed 0.50 mm
+  elevator +20, rudder +25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  joiner in the rudder LE notch: 2.75 mm (neutral) PASS
+  travel without contact PASS
+
+5. Tail volumes and static margin (wing S 0.2772 m2, c 0.280 m, b 0.990 m; CG X 80)
+  Sh 6.468 dm2 (incl. elevator), AR 3.71, tail AC X 680.0, l_h 600 mm -> Vh 0.500 (>= 0.50) PASS
+  Sv 1.609 dm2 (fin above the plate, incl. rudder), fin AC X 700.2, l_v 620 mm -> Vv 0.0364 (>= 0.035) PASS
+  downwash gradient 0.45: NP X 125.9, SM 16.4 %
+  downwash gradient 0.55: NP X 113.6, SM 12.0 %
+  downwash gradient 0.65: NP X 101.2, SM 7.6 %
+  SM at downwash 0.65 >= 7 % PASS (final CG from F-D)
+
+6. Stabilizer and the wing wake (key check 13: >= 15 mm; wake centre-line at X 680, fuselage_sizing.wake_z)
+  loaded 10 m/s  alpha  12.7: wake Z (stab distance)    0.3 (43) |  -11.4 (55) |  -23.2 (67)
+  loaded 12      alpha   7.6: wake Z (stab distance)  -19.3 (63) |  -27.5 (71) |  -35.6 (79)
+  loaded 15      alpha   3.6: wake Z (stab distance)  -34.7 (78) |  -40.1 (84) |  -45.5 (89)
+  empty 12       alpha   0.7: wake Z (stab distance)  -45.8 (89) |  -49.2 (93) |  -52.6 (96)
+  empty 18       alpha  -1.8: wake Z (stab distance)  -55.5 (99) |  -57.2 (101) |  -58.8 (102)
+  wing stall     alpha  20.0: wake Z (stab distance)   28.5 (15) |   11.5 (32) |   -5.3 (49)
+  minimum distance stab - wake centre-line 15.0 mm PASS
+
+7. Tubes
+  tube X 235.1..725.0 (length 489.9); in the pod sockets 70.0 mm (>= 70) PASS; in the tail-block collars 45.0 mm (>= 40) PASS
+
+8. Ground at a nose-up touchdown on the aft belly corner (X 200, Z -117)
+   6 deg nose-up: lowest tail point 15.3 mm above the ground 
+   8 deg nose-up: lowest tail point -3.2 mm above the ground (contact)
+  10 deg nose-up: lowest tail point -21.8 mm above the ground (contact)
+  12 deg nose-up: lowest tail point -40.3 mm above the ground (contact)
+
+10. Wing rev A in the assembly (W_* parts, +3.0 deg): overlap with every fuselage and tail part, the placeholders and the reservoir (closed)
+  89 parts, X -0.5..279.6 Y -495.0..495.0 Z -23.5..26.2
+  worst overlap 0.0000 mm3 PASS
+  min distance wing - F2_PodCentre           0.84 mm at X 2.4 Y -54.5 Z -4.3
+  min distance wing - F3_PodAft              0.99 mm at X 279.6 Y 36.3 Z -14.7
+  min distance wing - F4_NoseHatch           2.02 mm at X -0.1 Y -13.0 Z -2.2
+  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y -46.5 Z -4.8
+  min distance wing - F8_RearDowel          14.55 mm at X 279.6 Y -39.7 Z -14.7
+  min distance wing - RefRes_P11d_FillCap    4.33 mm at X 1.0 Y -0.0 Z -3.9
+  min distance wing - F12_Stab             371.96 mm at X 279.6 Y -111.5 Z -14.7
+  min distance wing - F14_Fin              388.59 mm at X 279.6 Y -1.5 Z -14.7
+  (wing seat: 1.0 mm foam tape between the side-wall tops and the wing lower surface by design)
+
+9. Masses (g)
+  F10_Tubes          27.70 cm3  carbon    42.94
+  F11_TailBlock       8.94 cm3  PETG      11.36
+  F12_Stab           36.53 cm3  balsa      4.38
+  F13_Elevator       12.56 cm3  balsa      1.51
+  F14_Fin            12.63 cm3  balsa      1.52
+  F15_Rudder          4.90 cm3  balsa      0.59
+  F16_Joiner          0.23 cm3  steel      1.80
+  F17_Horns           0.33 cm3  G10 1.85   0.62
+  F18_Pushrods        3.31 cm3  carbon     5.14
+  F19_GuideClips      1.38 cm3  PETG       1.76
+  covering film 30 g/m2 x 2 sides x (Sh + Sv) 4.85; pushrod steel ends 4 x 0.4 = 1.6 (interp.)
+  TOTAL tail (F10-F19 + film + rod ends): 78.1 g (plan: tubes 33 + surfaces 25.5 + block 8 + pushrods 7 = 73.5 g)
+  without the tubes and the pushrods (surfaces, joiner, horns, film): 15.3 g (D-055 estimate 14 g)
+## pictures (stage F-C)
+pictures done: ['assembly_iso.png', 'assembly_iso_aft.png', 'stageC_iso.png', 'stageC_pushrod_exit.png', 'stageC_side.png', 'stageC_tail_iso.png', 'stageC_tail_rear.png', 'stageC_top.png']
+## saved /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_fuselage/Fuselage_revA.FCStd
+
+DONE

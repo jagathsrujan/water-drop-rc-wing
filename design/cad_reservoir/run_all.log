@@ -1,0 +1,269 @@
+## build_stageA.py
+iter 0: base X -23.700, water 1000.0 mL, centroid X 82.023, level Z -23.527
+iter 1: base X -25.723, water 1000.0 mL, centroid X 80.000, level Z -23.527
+P1_Bottle          valid=True vol=  21247.9 mm3  BB X -25.72..229.28 Y -40.00..40.00 Z -100.00..-20.00
+P1c_Cap            valid=True vol=   4137.9 mm3  BB X 215.28..231.28 Y -14.80..14.80 Z -74.80..-45.20
+Water              valid=True vol= 999999.7 mm3  BB X -25.42..229.28 Y -39.70..39.70 Z -99.70..-23.53
+RESULT_A {'base_x': -25.722591418050822, 'interior_ml': 1012.4338691752117, 'water_ml': 999.9997260221076, 'water_cx': 80.0, 'level_z': -23.526503372192376, 'water_com': (80.0, -1.2054288191626637e-10, -60.46952557858655), 'pet_vol': 21247.946421129538, 'top_z': -20.0}
+## build_stageB.py
+P2_InnerFlange     valid=True vol=    997.6 mm3  BB X 63.00..97.00 Y -9.25..9.25 Z -107.00..-97.70
+P3_OuterGasket     valid=True vol=    483.2 mm3  BB X 65.00..95.00 Y -15.00..15.00 Z -101.00..-97.08
+P4_BasePlate       valid=True vol=   5185.3 mm3  BB X 50.00..102.50 Y -16.00..16.00 Z -113.50..-97.75
+P5_Nut             valid=True vol=    490.1 mm3  BB X 69.00..91.00 Y -11.00..11.00 Z -106.70..-103.50
+P6_Flap            valid=True vol=   2045.6 mm3  BB X 51.50..102.50 Y -17.00..17.00 Z -113.50..-109.00
+P7_FlapGasket      valid=True vol=   1608.5 mm3  BB X 64.00..96.00 Y -16.00..16.00 Z -109.00..-107.00
+P8_HingePin        valid=True vol=     35.3 mm3  BB X 99.25..100.75 Y -10.00..10.00 Z -111.75..-110.25
+P9_ReleasePin      valid=True vol=     79.2 mm3  BB X 55.00..61.00 Y -6.00..21.00 Z -111.50..-109.50
+P10_SafetyPin      valid=True vol=     90.4 mm3  BB X 50.00..58.00 Y -22.00..9.00 Z -111.50..-109.50
+P10_Flag           valid=True vol=    160.0 mm3  BB X 44.00..64.00 Y -62.00..-22.00 Z -110.60..-110.40
+Water after flange cut: 999.6 mL (was 1000.0)
+## build_stageC.py
+P11a_FillFlange    valid=True vol=    731.5 mm3  BB X -19.25..-2.75 Y -8.25..8.25 Z -22.10..-9.50
+P11b_FillGasket    valid=True vol=    116.7 mm3  BB X -20.00..-2.00 Y -9.00..9.00 Z -21.03..-19.00
+P11c_FillNut       valid=True vol=    350.4 mm3  BB X -20.00..-2.00 Y -9.00..9.00 Z -20.00..-16.50
+P11d_FillCap       valid=True vol=   1185.1 mm3  BB X -20.00..-2.00 Y -9.00..9.00 Z -16.00..-7.00
+P11e_CapSeal       valid=True vol=     54.2 mm3  BB X -17.50..-4.50 Y -6.50..6.50 Z -9.50..-8.50
+P11f_VentFlap      valid=True vol=     54.8 mm3  BB X -15.25..-6.75 Y -4.25..4.25 Z -9.30..-6.00
+P15_Funnel         valid=True vol=   7649.7 mm3  BB X -46.00..24.00 Y -35.00..35.00 Z -19.50..55.50
+Ref_Wing           valid=True vol= 829602.4 mm3  BB X 0.03..279.62 Y -60.00..60.00 Z -14.65..26.24
+Ref_FuselageTop    valid=True vol=   5182.0 mm3  BB X -50.00..-1.00 Y -40.00..40.00 Z -4.00..-2.50
+## build_stageD.py
+P12a_Saddle1       valid=True vol=   3396.6 mm3  BB X 1.98..21.98 Y -40.00..40.00 Z -115.50..-80.25
+P12b_Saddle2       valid=True vol=   3521.9 mm3  BB X 139.28..169.98 Y -40.00..40.00 Z -115.50..-76.83
+P13a_Strap1        valid=True vol=   4744.6 mm3  BB X 1.98..21.98 Y -41.00..41.00 Z -113.90..-19.00
+P13b_Strap2        valid=True vol=   4744.6 mm3  BB X 139.28..159.28 Y -41.00..41.00 Z -113.90..-19.00
+P12c_FrontStop     valid=True vol=  19909.5 mm3  BB X -29.22..-26.22 Y -50.00..50.00 Z -111.00..-25.00
+P14_Servo_MG90S    valid=True vol=   7428.6 mm3  BB X 53.61..86.11 Y 38.80..51.00 Z -111.90..-80.40
+P14_QuickSnap      valid=True vol=     37.7 mm3  BB X 57.00..59.00 Y 21.00..33.00 Z -111.50..-109.50
+P14_LinkWire       valid=True vol=      2.8 mm3  BB X 57.60..58.40 Y 33.00..38.54 Z -110.90..-110.10
+P14_ServoArm       valid=True vol=     73.6 mm3  BB X 56.00..67.36 Y 36.54..47.90 Z -111.40..-109.60
+shaft (X,Y) (64.364, 44.9) arm tip closed (58.000038969321075, 38.53603896932107) wire length 5.54
+## checks (full)
+RESERVOIR rev A - check report stage R-A / R-B
+Bottle numbers are estimates (interp.) from res_params.py. Units mm, mm3, g.
+
+== 0. Solids ==
+isValid() all parts: PASS []
+
+== A. Bottle and water ==
+Bottle base X (shifted so that the water centroid = 80): -25.723  (nominal -23.7, shift -2.023)
+Interior volume (open neck to the cap, with punt): 1012.4 mL   (brim estimate in the plan 1032 to 1040 mL, interp.)
+Water volume modelled (before flange cut): 1000.00 mL; after the P2 flange cut: 999.56 mL; mass at 0.996 g/mL: 995.6 g
+Water centroid X (before flange cut): 80.000   target 80 +/- 1: PASS ; after the flange cut: 80.000
+Water free surface Z = -23.53; air under the top inner wall (Z -20.30): 3.23 mm deep
+Bottle top Z = -20.00; limit <= -18.0 (5 mm under the wing underside -13): PASS
+Bottle X range -25.72 .. 229.28 (neck lip), cap to 231.28; PET volume 21248 mm3 -> 29.3 g at 1.38 g/cm3 vs 22.0 g given (interp.)
+
+== Key check 1: insertion profile of P2 (end-on, long axis X, projected on the YZ plane) ==
+smallest enclosing circle of the projection: diameter 19.895 mm (centre y -0.00, z -101.83); limit <= 20.5 (neck bore 21.0 - 0.5): PASS
+clearance to the neck bore: 1.10 mm on the diameter
+
+== Key check 2: flow passage from the flange top to the seat face ==
+  Z   -98.9: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z   -99.5: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -100.5: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -102.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -104.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -106.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -106.9: bore diameter 14.000 (BB 14.000 x 14.000)
+  nut pocket D 23.0, plate hole D 17.4 (outside the stem, not in the flow); flap seat D = bore at the stem end
+minimum passage diameter 14.000, limit >= 14.0: PASS ; never smaller downstream: PASS
+stem end Z -107.000 vs seat face -107.000: flush PASS
+
+== Key check 3: lip and residual water ==
+flange top above the inner wall (radial): 1.200 mm (limit <= 1.2); vertex heights seen: [0.42, 1.2]
+flange rim above the inner wall: 0.423 mm (limit <= 0.5): PASS
+ramp: 0.78 mm rise over 1.5 mm = 27.4 deg (limit <= 30): PASS
+residual water (g) vs pitch, nose up, with the modelled lip top height 1.20 mm:
+  calc defaults (profile as in the calc, wall radius 40.0): 0 deg 2.8, 1 deg 3.1, 2 deg 4.7, 3 deg 6.8, 5 deg 12.2
+  modelled inner radii (wall radius 39.7, base X -25.72): 0 deg 2.8, 1 deg 3.0, 2 deg 4.4, 3 deg 6.4, 5 deg 11.5
+  limit <= 10 g at 0 to 3 deg: PASS
+
+== Key check 4: open state ==
+open angle 150 deg; flap in the cylinder D14 from the seat face down 60 mm: 0.000 mm3; flap gasket: 0.000 mm3: PASS
+open flap BB X 97.5..143.0, Z -137.0..-108.5 (hinge X 100 Z -111)
+sweep in 5 deg steps. Skin slab: Z -117.0..-115.5, opening = rectangle X 47..115, Y -20..20, a D40 circle at the flap (flap + 3 mm) :
+  angle : flap+gasket in the skin slab (mm3) | in the bore tube D14 x 60 (mm3)
+    0   :     0.00 |   556.61
+   20   :     0.00 |   590.58
+   40   :     0.00 |   762.86
+   60   :     0.00 |   877.43
+   80   :     0.00 |     0.00
+  100   :     0.00 |     0.00
+  120   :     0.00 |     0.00
+  140   :     0.00 |     0.00
+  160   :    27.08 |     0.00
+  170   :   699.78 |     0.00
+  175   :   830.49 |     0.00
+  180   :     0.00 |     0.00
+  200   :     0.00 |     0.00
+  220   :     0.00 |     0.00
+  240   :     0.00 |     0.00
+  260   :     0.00 |     0.00
+  280   :     0.00 |     0.00
+  300   :     0.00 |     0.00
+  320   :     0.00 |     0.00
+  340   :     0.00 |     0.00
+  360   :     0.00 |   556.61
+closed (0 deg): slab overlap 0.000 mm3 -> contact only PASS
+first angle where the flap or gasket touches the belly skin slab: 157 deg (1 deg refinement); largest clear open angle 156 deg
+bore tube D14 x 60 is free for every angle from 80 deg up to 180 deg (limit: free at 150 deg and above): PASS
+
+== Key check 5: release pin ==
+closed: pin tip Y -6.00; hook tab face at Y +3.3 -> travel to free the hook 9.30 mm (plan 9.5 incl. 0.2 margin); limit <= 14.1 (10 mm arm): PASS
+engagement of the pin in the hook tab (Y extent of pin inside the tab): 6.60 mm (limit >= 6): PASS
+retracted pin (12 mm): tip Y 6.00; free of the tab (Y 3.3): yes; Y extent inside the right lug (Y 4..9): 3.00 mm: PASS
+safety pin: closed tip Y 9.0 (right lug ends Y 9.0); open state: pulled out 30 mm, tip Y -21.0 (clear of the left lug Y -9.0)
+
+== Overlaps (closed state, pairwise common volume > 0.5 mm3 is reported) ==
+pairs with overlapping bounding boxes tested: 50
+  no pair above 0.5 mm3: PASS
+base plate (lug block, tongues, body) to the bottle shell: minimum distance 1.000 mm (gasket gap 1.0): PASS
+base plate minimum vertex radius from the bottle axis 41.00 (bottle outer 40.0, saddle 41.0)
+
+== Key check 1b: fill flange, end-on insertion through the neck ==
+enclosing circle of P11a (projection on YZ): diameter 19.273 mm (limit <= 20.5, plan estimate 19.2): PASS
+
+== Key check 6: fill unit parts and the wing ==
+  P11a_FillFlange  above Z -13: XMax -4.500 ; distance to the wing 8.39 mm: PASS
+  P11b_FillGasket  above Z -13: XMax none ; distance to the wing 15.15 mm: PASS
+  P11c_FillNut     above Z -13: XMax none ; distance to the wing 12.87 mm: PASS
+  P11d_FillCap     above Z -13: XMax -2.000 ; distance to the wing 4.87 mm: PASS
+  P11e_CapSeal     above Z -13: XMax -4.500 ; distance to the wing 7.67 mm: PASS
+  P11f_VentFlap    above Z -13: XMax -6.750 ; distance to the wing 9.42 mm: PASS
+fill unit rule (X <= -2.0 above Z -13, >= 3 mm from the wing): PASS
+wing reference: lowest Z of the wing lower surface at X 60..260 = -13.13 (plan -13); LE at X 0 Z 0
+
+== Fill flange on the straight cylinder ==
+cylinder starts at X -19.72 (base -25.72 + 6); flange front edge X -19.25: margin 0.47 mm: PASS
+  P11b_FillGasket  front edge X -20.00: ahead of the cylinder start by 0.28 mm
+  P11c_FillNut     front edge X -20.00: ahead of the cylinder start by 0.28 mm
+  P11d_FillCap     front edge X -19.99: ahead of the cylinder start by 0.27 mm
+fill hole in the fuselage top: D25 at X -11.0 spans X -23.5 .. 1.5; wing LE at X 0 (the hole reaches 1.5 mm aft of the LE)
+
+== Standing check: bottle on its base plane (base down, neck up) ==
+base plane X = -25.72; lowest X of each group (must be >= base plane; outlet unit, fill unit, pins, flag excluded by the plan, shown for information):
+  bottle and neck cap: -25.72 : PASS
+  outlet unit (info): 44.00 ; fill unit (info): -20.00 ; saddles 1.98 ; straps 1.98 ; front stop -29.22 (fuselage bulkhead, bears on the base, excluded)
+  fill unit and outlet unit sit on the side wall: nothing under the base plane. Old rev A vent valve reached X -54: gone.
+
+== Capacity: water that can be poured in place ==
+interior volume 1012.4 mL; fill flange lowest point (lip level) Z -22.10; top of the bore entrance Z -21.50; stem top / cap seal Z -9.5
+  pitch 0 deg, lip level (flange lowest point): plane Z -22.10; water below it 1007.3 mL; trapped air above it 5.2 mL; water that can rise in the bore up to the cap seal +0.9 mL
+  pitch 0 deg, top of the bore entrance: plane Z -21.50; water below it 1009.6 mL; trapped air above it 2.8 mL; water that can rise in the bore up to the cap seal +0.9 mL
+  pitch 0 deg: max fill (conservative: lip lowest point, plus the bore column) 1008.2 mL vs 1000 mL: PASS
+  pitch 0 deg: max fill (bore entrance top, plus the bore column) 1010.6 mL
+  pitch 5 deg, lip level (flange lowest point): plane Z -14.90; water below it 1011.3 mL; trapped air above it 1.1 mL; water that can rise in the bore up to the cap seal +0.9 mL
+  pitch 5 deg, top of the bore entrance: plane Z -13.72; water below it 1012.1 mL; trapped air above it 0.3 mL; water that can rise in the bore up to the cap seal +0.9 mL
+  pitch 5 deg: max fill (conservative: lip lowest point, plus the bore column) 1012.3 mL vs 1000 mL: PASS
+  pitch 5 deg: max fill (bore entrance top, plus the bore column) 1013.0 mL
+
+== Key check 7: widths ==
+  P1_Bottle        |Y| max 40.00 (limit 55): PASS
+  P1c_Cap          |Y| max 14.77 (limit 55): PASS
+  Water            |Y| max 39.70 (limit 55): PASS
+  P11a_FillFlange  |Y| max 8.25 (limit 55): PASS
+  P11b_FillGasket  |Y| max 9.00 (limit 55): PASS
+  P11c_FillNut     |Y| max 9.00 (limit 55): PASS
+  P11d_FillCap     |Y| max 9.00 (limit 55): PASS
+  P11e_CapSeal     |Y| max 6.50 (limit 55): PASS
+  P11f_VentFlap    |Y| max 4.25 (limit 55): PASS
+  P12a_Saddle1     |Y| max 40.00 (limit 55): PASS
+  P12b_Saddle2     |Y| max 40.00 (limit 55): PASS
+  P13a_Strap1      |Y| max 41.00 (limit 55): PASS
+  P13b_Strap2      |Y| max 41.00 (limit 55): PASS
+  P12c_FrontStop   |Y| max 50.00 (limit 55): PASS
+  outlet unit (P2..P10) |Y| max, excluding the flag tape: 17.00 ; safety pin ring Y min -22.0 ; release pin eye Y max 21.0
+  safety-pin flag (removable tape, hangs out of the side before flight): Y min -62.0
+  servo case with tabs and boss: Y 38.80 .. 51.00 (limit <= 52): PASS ; Z -111.90 .. -80.40 (limit >= -115.5): PASS
+  arm swept envelope at -45..+45 deg (outer rim of the tip disc): Y max 53.26 ; servo inside Y 52 -> 1.26 mm beyond 52, 0.00 mm beyond 54 (plan section 13 asks the fuselage for an inner wall >= Y 54 or a 9 mm arm)
+
+== R-D servo (upright, shaft down), arm and link ==
+shaft (X 64.36, Y 44.90); arm R 9 in the plane Z -110.5; tip closed (X 58.00, Y 38.54), after the 90 deg turn (X 58.00, Y 51.26): tip travel in Y 12.73
+wire (snap end to tip centre) length 5.54 mm (limit >= 5): PASS
+wire angle to the pin axis (Y): closed 0.0 deg, end of travel 0.0 deg (limit <= 20): PASS ; mid travel (arm along -X) 28.4 deg (information)
+snap end closed Y 33.00 (design 33.00)
+eye travel at the end of the 90 deg turn 12.73 mm (limit >= 12): PASS ; mid travel 7.03 mm
+servo turn needed to free the hook (eye pulled 9.5 mm): 62.3 deg of 90
+pull force on the eye 2.5 N (plan, interp.): at closed wire tension 2.50 N, lever 6.36 mm, servo torque 15.9 N mm = 9.0 % of 177 N mm; worst over the turn 24.4 N mm = 13.8 % (limit 50 %): PASS
+clearances of the servo group (>= 2 mm):
+  minimum over all servo-group / reservoir pairs incl. the floor (excluding the link contacts snap-eye, wire-arm, wire-snap, arm-spline): 3.60 mm at P14_Servo_MG90S / Ref_BellySkin: PASS
+  servo case to P1_Bottle      3.84 mm ; arm 21.60 ; wire 19.99
+  servo case to P4_BasePlate   22.80 mm ; arm 26.50 ; wire 23.21
+  servo case to P6_Flap        22.58 mm ; arm 25.37 ; wire 22.44
+  servo case to P13a_Strap1    31.65 mm ; arm 34.03 ; wire 35.62
+  servo case to P12a_Saddle1   34.02 mm ; arm 34.11 ; wire 35.78
+  servo case to Ref_BellySkin  3.60 mm ; arm 4.10 ; wire 4.60
+  swept arm (7 positions) to the bottle 21.60 mm, to the floor reference 4.10 mm: PASS ; to the servo case 0.00 (spline contact at the hub)
+saddle to bottle: radial gap 0.5 mm foam tape (by design); strap on the bottle (contact); saddles in X: S1 2.0..22.0, S2 139.3..170.0
+front stop X -29.22 .. -26.22 (base X -25.72, gap 0.5); fill cap to the stop plate: 10.94 mm
+
+== Key check 11: lowest points in the closed state (ground plane Z -117.0, limit: nothing below Z -114.0) ==
+  lowest parts: P12a_Saddle1 -115.50, P12b_Saddle2 -115.50, P13a_Strap1 -113.90, P13b_Strap2 -113.90, P4_BasePlate -113.50, P6_Flap -113.49
+  saddle feet stand on the floor (Z -115.5, structure that bears on the floor, exempt): P12a_Saddle1 -115.50, P12b_Saddle2 -115.50
+  lowest reservoir or servo part (saddle feet excluded): Z -113.90 (limit >= -114.0): PASS ; margin to the ground plane 3.10 mm
+  the 3 mm gap under the valve: lug / knuckle bottom Z -113.50 to the skin outer face -117.0 = 3.50 mm; belly opening X 47..115
+
+== Key check 9 extras ==
+bottle to the wing: 3D distance 6.86 mm; bottle top Z -20.00 vs wing lowest Z at X 60..260 -13.1: margin 6.9 mm (limit >= 5): PASS
+  P13a_Strap1    to the wing 9.44 mm
+  P13b_Strap2    to the wing 6.29 mm
+  P12a_Saddle1   to the wing 70.70 mm
+  P12b_Saddle2   to the wing 64.64 mm
+
+== Key check 8: masses ==
+part               group     material          vol mm3        g count
+P1_Bottle          A_Bottle  PET (given)       21247.9    22.00   yes  mass given 22 g (interp.); the modelled shell is only a picture body (29.3 g at 1.38 g/cm3)
+P1c_Cap            A_Bottle  PET                4137.9     0.00   yes  included in the bottle 22 g
+P2_InnerFlange     B_Outlet  PETG                997.6     1.27   yes  oval saddle flange + stem
+P3_OuterGasket     B_Outlet  silicone            483.2     0.56   yes  main seal
+P4_BasePlate       B_Outlet  PETG               5185.3     2.96   yes  x0.45 infill rule; saddle, seat face, lugs, knuckles
+P5_Nut             B_Outlet  PETG                490.1     0.62   yes  M17x1 cosmetic
+P6_Flap            B_Outlet  PETG               2045.6     2.60   yes  flap with hook tab and knuckle
+P7_FlapGasket      B_Outlet  EVA                1608.5     0.16   yes  EVA closed-cell foam 2.0 mm, 0.10 g/cm3 (interp.)
+P8_HingePin        B_Outlet  steel                35.3     0.28   yes  
+P9_ReleasePin      B_Outlet  steel                79.2     0.62   yes  
+P10_SafetyPin      B_Outlet  steel                90.4     0.71   yes  
+P10_Flag           B_Outlet  tape                160.0     0.19   yes  red flag tape
+P11a_FillFlange    C_Fill    PETG                731.5     0.93   yes  round flange D16.5, stem D13 / bore D10 to Z -9.5
+P11b_FillGasket    C_Fill    silicone            116.7     0.13   yes  outer saddle gasket 1.0 mm
+P11c_FillNut       C_Fill    PETG                350.4     0.45   yes  D18, top Z -16.5
+P11d_FillCap       C_Fill    PETG               1185.1     1.51   yes  cap with 6+1 vent holes, 12 flutes
+P11e_CapSeal       C_Fill    silicone             54.2     0.06   yes  cap seal ring
+P11f_VentFlap      C_Fill    silicone             54.8     0.06   yes  silicone umbrella vent flap
+P12a_Saddle1       D_Mount   PETG               3396.6     4.31   yes  saddle 1, cylinder
+P12b_Saddle2       D_Mount   PETG               3521.9     4.47   yes  saddle 2, shoulder (aft stop)
+P13a_Strap1        D_Mount   bought             4744.6     1.50   yes  hook-and-loop 20 mm (bought)
+P13b_Strap2        D_Mount   bought             4744.6     1.50   yes  hook-and-loop 20 mm (bought)
+P12c_FrontStop     D_Mount   balsa             19909.5     3.19    no  fuselage bulkhead, balsa 3 mm (not in the reservoir total)
+P14_Servo_MG90S    D_Servo   bought             7428.6    13.40    no  MG90S, excluded from the reservoir total
+P14_ServoArm       D_Servo   PETG                 73.6     0.09   yes  arm R10 in the horizontal plane, closed at -45 deg
+P14_QuickSnap      D_Servo   steel                37.7     0.30   yes  fishing snap placeholder 2 x 12
+P14_LinkWire       D_Servo   steel                 2.8     0.02   yes  wire D0.8, straight along Y
+P8_KickSpring      B_Outlet  steel (bought)        0.0     0.20   yes  not modelled, estimate
+subtotals (g): A_Bottle 22.00, B_Outlet 10.17, C_Fill 3.14, D_Mount 11.79, D_Servo 0.41
+TOTAL reservoir without the MG90S body and without the balsa front stop: 47.50 g  (no fixed limit, D-047)
+with the balsa front stop 3.19 g: 50.69 g ; with the MG90S 13.4 g as well: 64.09 g ; water 996 g (not in the budget)
+change from rev A (vent, 47.75 g): -0.25 g (fill unit 3.14 g)
+flap P6 mass 2.60 g (target <= 1.8 g): NOT MET (see report)
+
+== Key check 10 ==
+water centroid X 80.000 (target 80 +/- 1), water 1000.0 mL
+## pictures
+pictures done
+## exports
+STEP /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_reservoir/Reservoir_revA.step 27 parts 0.88 MB
+STL P2_inner_flange.stl      1282 facets  34.0 x 18.5 x 9.3 mm  stem up, convex flange underside on the bed (1.0 mm edge sag: raft or brim)
+STL P4_base_plate.stl        2890 facets  52.5 x 32.0 x 15.8 mm  as modelled: lug and knuckle feet on the bed, supports under the seat face (sand the seat face)
+STL P5_nut.stl                556 facets  22.0 x 22.0 x 3.2 mm  flat ring on the bed
+STL P6_flap.stl              1800 facets  51.0 x 34.0 x 4.5 mm  skin face on the bed, ribs and pockets up, tab and knuckle up
+STL P11a_fill_flange.stl     1208 facets  16.5 x 16.5 x 12.6 mm  stem down on the bed, flange up
+STL P11c_fill_nut.stl         624 facets  18.0 x 18.0 x 3.5 mm  flat top on the bed, saddle side up
+STL P11d_fill_cap.stl        3676 facets  18.0 x 18.0 x 9.0 mm  cap top wall on the bed, open end up (vent holes and flutes vertical)
+STL P15_funnel.stl           4930 facets  70.0 x 70.0 x 75.0 mm  rim on the bed, spout up (ground support, not on the aircraft)
+STL P12a_saddle1.stl          476 facets  20.0 x 80.0 x 35.2 mm  foot on the bed, supports under the outer wings of the cradle
+STL P12b_saddle2.stl         1060 facets  30.7 x 80.0 x 38.7 mm  foot on the bed, supports under the outer wings of the cradle
+STL P14_servo_arm.stl         850 facets  11.4 x 11.4 x 1.8 mm  flat on the bed (already in the horizontal plane)
+## saved /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_reservoir/Reservoir_revA.FCStd
+
+DONE

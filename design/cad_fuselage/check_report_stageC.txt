@@ -1,0 +1,101 @@
+Fuselage rev A - stage F-C check report (tail)
+============================================================
+
+1. Validity
+  F10_Tubes        valid True solids 2  X 235.1..725.0 Y -21.0..21.0 Z -45.0..-35.0
+  F11_TailBlock    valid True solids 1  X 667.0..738.0 Y -22.3..22.3 Z -46.3..-22.0
+  F12_Stab         valid True solids 1  X 647.0..739.4 Y -245.0..245.0 Z 43.5..46.5
+  F13_Elevator     valid True solids 2  X 739.9..779.0 Y -245.0..245.0 Z 43.5..46.5
+  F14_Fin          valid True solids 2  X 667.9..739.4 Y -1.5..1.5 Z -30.0..135.0
+  F15_Rudder       valid True solids 1  X 739.9..778.0 Y -1.5..1.5 Z -28.0..135.0
+  F16_Joiner       valid True solids 1  X 742.8..758.5 Y -50.7..50.7 Z 44.2..45.8
+  F17_Horns        valid True solids 2  X 739.4..753.9 Y -25.8..15.0 Z 19.2..43.5
+  F18_Pushrods     valid True solids 2  X 222.3..741.6 Y -37.0..37.0 Z -69.0..31.5
+  F19_GuideClips   valid True solids 4  X 397.0..573.0 Y -34.4..30.2 Z -46.2..0.2
+  all valid PASS
+
+2. Overlaps (mm3): tail parts with each other, with the pod parts, the reservoir (closed), the wing and the placeholders
+  worst overlap 0.0000 mm3 PASS (contacts by design not tested: F12_Stab/F14_Fin, F13_Elevator/F16_Joiner, F13_Elevator/F17_Horns, F15_Rudder/F17_Horns, F17_Horns/F18_Pushrods, F18_Pushrods/PH_TailServoArms)
+
+3. Pushrods: clearance to the structure (key check 9: >= 2 mm; exit slots in F3 by design)
+  pushrods - F10_Tubes            6.10 mm at X 406.0 Y 26.7 Z -37.1
+  pushrods - F11_TailBlock       30.87 mm at X 662.9 Y 15.6 Z 5.8
+  pushrods - F12_Stab            12.15 mm at X 741.2 Y -25.0 Z 31.5
+  pushrods - F14_Fin             10.08 mm at X 739.9 Y 11.6 Z 19.7
+  pushrods - F15_Rudder          10.15 mm at X 741.4 Y 11.5 Z 20.0
+  pushrods - F13_Elevator        12.17 mm at X 741.2 Y -25.0 Z 31.5
+  pushrods - F8_RearDowel        28.17 mm at X 300.7 Y -34.3 Z -52.1
+  pushrods - F3_PodAft            1.00 mm at X 290.7 Y 32.9 Z -55.4 (exit slot r 2.0 round the r 1.0 rod)
+  pushrods - PH_TailServo_R       3.44 mm at X 222.6 Y 35.6 Z -68.9
+  pushrods - PH_TailServo_L       3.44 mm at X 222.7 Y -35.6 Z -68.9
+  pushrods - RefRes_P1c_Cap      20.33 mm at X 232.8 Y 34.5 Z -66.1
+  pushrods - RefRes_P1_Bottle    22.78 mm at X 231.0 Y 34.6 Z -66.4
+  minimum (without the F3 exit slots) 3.44 mm PASS
+  pushrod lengths: 528 mm, 527 mm; guides at X 400, 570
+
+4. Control surface travel (elevator +-20 deg, rudder +-25 deg, and the 4 combinations)
+  elevator -20, rudder -25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator -20, rudder  +0: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.48 mm, rudder-fixed 0.50 mm
+  elevator -20, rudder +25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator  +0, rudder -25: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.50 mm, rudder-fixed 0.48 mm
+  elevator  +0, rudder  +0: overlap 0.000 mm3; elevator-rudder 2.75 mm, elevator-fixed 0.50 mm, rudder-fixed 0.50 mm
+  elevator  +0, rudder +25: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.50 mm, rudder-fixed 0.48 mm
+  elevator +20, rudder -25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  elevator +20, rudder  +0: overlap 0.000 mm3; elevator-rudder 1.43 mm, elevator-fixed 0.48 mm, rudder-fixed 0.50 mm
+  elevator +20, rudder +25: overlap 0.000 mm3; elevator-rudder 1.12 mm, elevator-fixed 0.48 mm, rudder-fixed 0.48 mm
+  joiner in the rudder LE notch: 2.75 mm (neutral) PASS
+  travel without contact PASS
+
+5. Tail volumes and static margin (wing S 0.2772 m2, c 0.280 m, b 0.990 m; CG X 80)
+  Sh 6.468 dm2 (incl. elevator), AR 3.71, tail AC X 680.0, l_h 600 mm -> Vh 0.500 (>= 0.50) PASS
+  Sv 1.609 dm2 (fin above the plate, incl. rudder), fin AC X 700.2, l_v 620 mm -> Vv 0.0364 (>= 0.035) PASS
+  downwash gradient 0.45: NP X 125.9, SM 16.4 %
+  downwash gradient 0.55: NP X 113.6, SM 12.0 %
+  downwash gradient 0.65: NP X 101.2, SM 7.6 %
+  SM at downwash 0.65 >= 7 % PASS (final CG from F-D)
+
+6. Stabilizer and the wing wake (key check 13: >= 15 mm; wake centre-line at X 680, fuselage_sizing.wake_z)
+  loaded 10 m/s  alpha  12.7: wake Z (stab distance)    0.3 (43) |  -11.4 (55) |  -23.2 (67)
+  loaded 12      alpha   7.6: wake Z (stab distance)  -19.3 (63) |  -27.5 (71) |  -35.6 (79)
+  loaded 15      alpha   3.6: wake Z (stab distance)  -34.7 (78) |  -40.1 (84) |  -45.5 (89)
+  empty 12       alpha   0.7: wake Z (stab distance)  -45.8 (89) |  -49.2 (93) |  -52.6 (96)
+  empty 18       alpha  -1.8: wake Z (stab distance)  -55.5 (99) |  -57.2 (101) |  -58.8 (102)
+  wing stall     alpha  20.0: wake Z (stab distance)   28.5 (15) |   11.5 (32) |   -5.3 (49)
+  minimum distance stab - wake centre-line 15.0 mm PASS
+
+7. Tubes
+  tube X 235.1..725.0 (length 489.9); in the pod sockets 70.0 mm (>= 70) PASS; in the tail-block collars 45.0 mm (>= 40) PASS
+
+8. Ground at a nose-up touchdown on the aft belly corner (X 200, Z -117)
+   6 deg nose-up: lowest tail point 15.3 mm above the ground 
+   8 deg nose-up: lowest tail point -3.2 mm above the ground (contact)
+  10 deg nose-up: lowest tail point -21.8 mm above the ground (contact)
+  12 deg nose-up: lowest tail point -40.3 mm above the ground (contact)
+
+10. Wing rev A in the assembly (W_* parts, +3.0 deg): overlap with every fuselage and tail part, the placeholders and the reservoir (closed)
+  89 parts, X -0.5..279.6 Y -495.0..495.0 Z -23.5..26.2
+  worst overlap 0.0000 mm3 PASS
+  min distance wing - F2_PodCentre           0.84 mm at X 2.4 Y -54.5 Z -4.3
+  min distance wing - F3_PodAft              0.99 mm at X 279.6 Y 36.3 Z -14.7
+  min distance wing - F4_NoseHatch           2.02 mm at X -0.1 Y -13.0 Z -2.2
+  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y -46.5 Z -4.8
+  min distance wing - F8_RearDowel          14.55 mm at X 279.6 Y -39.7 Z -14.7
+  min distance wing - RefRes_P11d_FillCap    4.33 mm at X 1.0 Y -0.0 Z -3.9
+  min distance wing - F12_Stab             371.96 mm at X 279.6 Y -111.5 Z -14.7
+  min distance wing - F14_Fin              388.59 mm at X 279.6 Y -1.5 Z -14.7
+  (wing seat: 1.0 mm foam tape between the side-wall tops and the wing lower surface by design)
+
+9. Masses (g)
+  F10_Tubes          27.70 cm3  carbon    42.94
+  F11_TailBlock       8.94 cm3  PETG      11.36
+  F12_Stab           36.53 cm3  balsa      4.38
+  F13_Elevator       12.56 cm3  balsa      1.51
+  F14_Fin            12.63 cm3  balsa      1.52
+  F15_Rudder          4.90 cm3  balsa      0.59
+  F16_Joiner          0.23 cm3  steel      1.80
+  F17_Horns           0.33 cm3  G10 1.85   0.62
+  F18_Pushrods        3.31 cm3  carbon     5.14
+  F19_GuideClips      1.38 cm3  PETG       1.76
+  covering film 30 g/m2 x 2 sides x (Sh + Sv) 4.85; pushrod steel ends 4 x 0.4 = 1.6 (interp.)
+  TOTAL tail (F10-F19 + film + rod ends): 78.1 g (plan: tubes 33 + surfaces 25.5 + block 8 + pushrods 7 = 73.5 g)
+  without the tubes and the pushrods (surfaces, joiner, horns, film): 15.3 g (D-055 estimate 14 g)

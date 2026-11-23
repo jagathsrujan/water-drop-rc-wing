@@ -85,7 +85,7 @@ Stages (an update with pictures after each):
 4. Aileron: x = 210 to 280, length 325 mm, gap 1 mm at each end.
 5. MG90S fits inside the skins in the y = 110 to 165 bay with ≥ 1 mm clearance.
 6. All solids `isValid()`. No parts overlap except at glue faces.
-7. Wing mass without servos ≤ 145 g (estimate in D-003: 137 g).
+7. Wing mass without servos: report it; no fixed limit since D-047 (estimate in D-003: 137 g; limit 145 g before D-013).
 
 ## 9. As built — rev A (2026-11-21)
 
@@ -93,7 +93,7 @@ The model is `design/cad/Wing_revA.FCStd` (rebuild: `design/cad/scripts/run_all.
 
 | Item | Plan | As built | Decision |
 |---|---|---|---|
-| Mass limit (key check 7) | 145 g | 160 g without servos (model 156.6 g) | D-013, D-023 |
+| Mass limit (key check 7) | 145 g | no fixed limit (160 g by D-023 until D-047); model 156.6 g without servos | D-013, D-023, D-047 |
 | Rib at y = ±440 | 3 mm | 2 mm at y = ±439.5 (face at 438.5 keeps the 1 mm aileron gap) | D-013 |
 | Lightening holes | aft of the spar | also forward of the spar, ≈ 33 % of the rib area | D-013, D-018 |
 | LE | hard balsa | medium balsa | D-013 |

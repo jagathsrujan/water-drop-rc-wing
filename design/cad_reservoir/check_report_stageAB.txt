@@ -1,0 +1,99 @@
+RESERVOIR rev A - check report stage R-A / R-B
+Bottle numbers are estimates (interp.) from res_params.py. Units mm, mm3, g.
+
+== 0. Solids ==
+isValid() all parts: PASS []
+
+== A. Bottle and water ==
+Bottle base X (shifted so that the water centroid = 80): -25.723  (nominal -23.7, shift -2.023)
+Interior volume (open neck to the cap, with punt): 1012.4 mL   (brim estimate in the plan 1032 to 1040 mL, interp.)
+Water volume modelled (before flange cut): 1000.00 mL; after the P2 flange cut: 999.56 mL; mass at 0.996 g/mL: 995.6 g
+Water centroid X (before flange cut): 80.000   target 80 +/- 1: PASS ; after the flange cut: 80.000
+Water free surface Z = -23.53; air under the top inner wall (Z -20.30): 3.23 mm deep
+Bottle top Z = -20.00; limit <= -18.0 (5 mm under the wing underside -13): PASS
+Bottle X range -25.72 .. 229.28 (neck lip), cap to 231.28; PET volume 21274 mm3 -> 29.4 g at 1.38 g/cm3 vs 22.0 g given (interp.)
+
+== Key check 1: insertion profile of P2 (end-on, long axis X, projected on the YZ plane) ==
+smallest enclosing circle of the projection: diameter 19.895 mm (centre y -0.00, z -101.83); limit <= 20.5 (neck bore 21.0 - 0.5): PASS
+clearance to the neck bore: 1.10 mm on the diameter
+
+== Key check 2: flow passage from the flange top to the seat face ==
+  Z   -98.9: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z   -99.5: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -100.5: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -102.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -104.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -106.0: bore diameter 14.000 (BB 14.000 x 14.000)
+  Z  -106.9: bore diameter 14.000 (BB 14.000 x 14.000)
+  nut pocket D 23.0, plate hole D 17.4 (outside the stem, not in the flow); flap seat D = bore at the stem end
+minimum passage diameter 14.000, limit >= 14.0: PASS ; never smaller downstream: PASS
+stem end Z -107.000 vs seat face -107.000: flush PASS
+
+== Key check 3: lip and residual water ==
+flange top above the inner wall (radial): 1.200 mm (limit <= 1.2); vertex heights seen: [0.42, 1.2]
+flange rim above the inner wall: 0.423 mm (limit <= 0.5): PASS
+ramp: 0.78 mm rise over 1.5 mm = 27.4 deg (limit <= 30): PASS
+residual water (g) vs pitch, nose up, with the modelled lip top height 1.20 mm:
+  calc defaults (profile as in the calc, wall radius 40.0): 0 deg 2.8, 1 deg 3.1, 2 deg 4.7, 3 deg 6.8, 5 deg 12.2
+  modelled inner radii (wall radius 39.7, base X -25.72): 0 deg 2.8, 1 deg 3.0, 2 deg 4.4, 3 deg 6.4, 5 deg 11.5
+  limit <= 10 g at 0 to 3 deg: PASS
+
+== Key check 4: open state ==
+open angle 160 deg; flap in the cylinder D14 from the seat face down 60 mm: 0.000 mm3; flap gasket: 0.000 mm3: PASS
+open flap BB X 97.5..146.3, Z -129.9..-108.5 (hinge X 100 Z -111)
+sweep in 5 deg steps. Skin slab: Z -111.0..-109.5, opening = rectangle X 48..106, Y +-12 and a D40 circle at the flap (flap + 3 mm):
+  angle : flap+gasket in the skin slab (mm3) | in the bore tube D14 x 60 (mm3)
+    0   :     0.00 |   615.75
+   20   :     0.00 |   655.27
+   40   :     0.00 |   826.70
+   60   :     0.00 |   930.29
+   80   :     0.00 |     0.00
+  100   :     0.00 |     0.00
+  120   :     0.00 |     0.00
+  140   :     0.00 |     0.00
+  160   :     0.00 |     0.00
+  170   :     0.00 |     0.00
+  175   :     0.00 |     0.00
+  180   :   143.27 |     0.00
+  200   :   290.44 |     0.00
+  220   :    23.89 |     0.00
+  240   :     0.00 |     0.00
+  260   :     0.00 |     0.00
+  280   :     0.00 |     0.00
+  300   :     0.00 |     0.00
+  320   :     0.00 |     0.00
+  340   :     0.00 |     0.00
+  360   :     0.00 |   615.75
+closed (0 deg): slab overlap 0.000 mm3 -> contact only PASS
+first angle where the flap or gasket touches the belly skin slab: 177 deg (1 deg refinement); largest clear open angle 176 deg
+bore tube D14 x 60 is free for every angle from 80 deg up to 180 deg (limit: free at 150 deg and above): PASS
+
+== Key check 5: release pin ==
+closed: pin tip Y -6.00; hook tab face at Y +3.3 -> travel to free the hook 9.30 mm (plan 9.5 incl. 0.2 margin); limit <= 14.1 (10 mm arm): PASS
+engagement of the pin in the hook tab (Y extent of pin inside the tab): 6.60 mm (limit >= 6): PASS
+retracted pin (12 mm): tip Y 6.00; free of the tab (Y 3.3): yes; Y extent inside the right lug (Y 4..9): 3.00 mm: PASS
+safety pin: closed tip Y 9.0 (right lug ends Y 9.0); open state: pulled out 30 mm, tip Y -21.0 (clear of the left lug Y -9.0)
+
+== Overlaps (closed state, pairwise common volume > 0.5 mm3 is reported) ==
+pairs with overlapping bounding boxes tested: 25
+  no pair above 0.5 mm3: PASS
+base plate (lug block, tongues, body) to the bottle shell: minimum distance 1.000 mm (gasket gap 1.0): PASS
+base plate minimum vertex radius from the bottle axis 41.00 (bottle outer 40.0, saddle 41.0)
+
+== Masses (rule: printed >4 mm thick: volume x 1.27 x 0.45; thinner: volume x 1.27; gaskets 1.15; steel 7.85) ==
+part               material          vol mm3        g  note
+P1_Bottle          PET (given)       21273.5    22.00  mass given (interp.); modelled 29.4 g
+P1c_Cap            PET                4137.9     0.00  included in the bottle 22 g
+P2_InnerFlange     PETG                997.6     1.27  
+P3_OuterGasket     silicone            483.2     0.56  
+P4_BasePlate       PETG               5185.3     2.96  x0.45 infill rule
+P5_Nut             PETG                490.1     0.62  
+P6_Flap            PETG               2754.9     3.50  
+P7_FlapGasket      silicone           1206.4     1.39  
+P8_HingePin        steel                35.3     0.28  
+P9_ReleasePin      steel                79.2     0.62  
+P10_SafetyPin      steel                90.4     0.71  
+P10_Flag           tape                160.0     0.19  
+P8_KickSpring      steel (bought)        0.0     0.20  not modelled, catalogue estimate
+TOTAL (bottle + outlet unit + pins + flag, no vent, saddles, straps, servo): 34.30 g ; plan budget for the whole reservoir 50 g
+water (not in the budget): 996 g

@@ -114,7 +114,7 @@ STEPS = [
   ["Cover first (see Covering), then push the CA hinges in, align, and wick thin CA into both sides.", "Epoxy the slot-in horn to the horn rib and the aileron LE; the hole is 16.5 mm below the hinge line.",
    "Screw each MG90S to its hatch lugs, connect the 1.2 mm pushrod with Z-bends (70.5 mm between holes), fix the hatch with 4 × M2 × 4."]),
  ("18_final", "Finish and check", "Epoxy rub plates",
-  ["Glue the band rub plates at the centre LE and TE.", "Centre the servos, set ±15° aileron throw (≈ ±20° servo).", "Weigh: target < 160 g without servos. Record it in the mass table."]),
+  ["Glue the band rub plates at the centre LE and TE.", "Centre the servos, set ±15° aileron throw (≈ ±20° servo).", "Weigh it without servos (model 156.6 g). Record it in the mass table."]),
 ]
 
 def steps_html():
@@ -134,7 +134,7 @@ sheet_rows = "".join("<tr><td>%s</td><td>%d cm³</td><td>≤ %.1f g</td><td>≈ 
 CHECKS = [("Span", "990.00 mm", "≤ 1000 mm (rule)"), ("Chord", "280.0 mm", "280 mm"), ("Airfoil depth at the spar (x = 75.6)", "39.20 mm", "39.1 mm (plan)"),
           ("Overlapping parts (> 1 mm³)", "0 of 276 neighbour pairs", "0"), ("Servo clearance to structure", "≥ 1.00 mm (arm ±35°)", "≥ 1 mm"),
           ("Aileron at ±20°", "no contact, 0.74 mm gap", "no contact"), ("Aileron length / end gaps", "325.00 / 1.00 mm", "325 / 1 mm"),
-          ("Mass without servos", "156.6 g", "≤ 160 g"), ("Mass with 2 × MG90S", "184.0 g", "—")]
+          ("Mass without servos", "156.6 g", "report (no fixed limit)"), ("Mass with 2 × MG90S", "184.0 g", "—")]
 check_rows = "".join("<tr><td>%s</td><td><b>%s</b></td><td class='muted'>%s</td><td class='ok'>✔</td></tr>" % tuple(map(e, c)) for c in CHECKS)
 MASS = []
 for r in csv.DictReader(open(os.path.join(CAD, "mass_table.csv"))):

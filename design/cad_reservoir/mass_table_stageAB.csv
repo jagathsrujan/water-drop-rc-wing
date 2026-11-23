@@ -1,0 +1,15 @@
+part,material,volume_mm3,mass_g,note
+P1_Bottle,PET (given),21273.5,22.0,mass given (interp.); modelled 29.4 g
+P1c_Cap,PET,4137.9,0.0,included in the bottle 22 g
+P2_InnerFlange,PETG,997.6,1.267,
+P3_OuterGasket,silicone,483.2,0.556,
+P4_BasePlate,PETG,5185.3,2.963,x0.45 infill rule
+P5_Nut,PETG,490.1,0.622,
+P6_Flap,PETG,2754.9,3.499,
+P7_FlapGasket,silicone,1206.4,1.387,
+P8_HingePin,steel,35.3,0.277,
+P9_ReleasePin,steel,79.2,0.622,
+P10_SafetyPin,steel,90.4,0.71,
+P10_Flag,tape,160.0,0.192,
+P8_KickSpring,steel (bought),0.0,0.2,"not modelled, catalogue estimate"
+TOTAL,,,34.296,stage A+B subtotal

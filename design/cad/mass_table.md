@@ -35,5 +35,5 @@ Densities (kg/m3): selected light sheet 90, light 100, medium 130, hard 160, car
 | MG90S servos (2 x 13.4 g, datasheet value *(interp.)*) + arms | | | 27.4 |
 | **Wing with servos** | | | **184.0** |
 
-Limit: 160 g without servos (D-023; 145 g in the plan, 155 g after D-013).
+No fixed mass limit (D-047). History: 145 g in the plan, 155 g after D-013, 160 g after D-023.
 Uncertainty: film and glue +-5 g; balsa density +-20 % between sheets. Weigh the sheets, correct `RHO` in `wing_params.py`, then run `run_all.py` again (this file is written again).

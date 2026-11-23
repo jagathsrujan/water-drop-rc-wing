@@ -1,0 +1,602 @@
+<meta charset="utf-8">
+<title>Bisleri Reservoir Layout</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: workshop bench sheet. Layout switch + 3D stage | data sheet. Same language as the valve page. */
+:root {
+  --bg: #eef1f3; --panel: #ffffff; --ink: #1b232b; --muted: #5b6874; --line: #d3dae0;
+  --accent: #c8352e; --water: #2f7fc4; --good: #2f7d4f; --warn: #a8641b;
+  --viewport: #e3e8ec; --grid: #b9c3cb;
+  --f-display: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171c; --panel: #1a2128; --ink: #e4e9ee; --muted: #9aa7b3; --line: #2c3640;
+    --accent: #ee5a4f; --water: #5aa6e6; --good: #5cbf85; --warn: #e0a250;
+    --viewport: #161d24; --grid: #34414d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12171c; --panel: #1a2128; --ink: #e4e9ee; --muted: #9aa7b3; --line: #2c3640;
+  --accent: #ee5a4f; --water: #5aa6e6; --good: #5cbf85; --warn: #e0a250;
+  --viewport: #161d24; --grid: #34414d; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 14px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 32px;
+}
+.wrap { max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: 30px; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 2px 0 0; max-width: 72ch; }
+.spec { font-family: var(--f-mono); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.spec b { color: var(--ink); font-weight: 500; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; align-items: start; }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+.stagecol { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg button { font: inherit; text-align: left; flex: 1 1 180px; min-width: 0; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+.seg button[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg .k { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.seg .n { font-weight: 600; }
+.tag { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--line); color: var(--muted); align-self: flex-start; }
+.tag.you { border-color: var(--water); color: var(--water); }
+.tag.rec { border-color: var(--accent); color: var(--accent); }
+.stage { position: relative; width: 100%; max-width: 100%; aspect-ratio: 4 / 3; min-height: 320px; background: var(--viewport); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.overlay { position: absolute; left: 10px; top: 8px; font-family: var(--f-mono); font-size: 11px; color: var(--muted); pointer-events: none; line-height: 1.6; }
+.overlay .big { font-size: 14px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.overlay .big b { color: var(--water); font-weight: 500; }
+.overlay .depth { color: var(--ink); }
+.hint { position: absolute; right: 10px; bottom: 8px; font-size: 11px; color: var(--muted); pointer-events: none; }
+.err { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+button.btn { font: inherit; font-weight: 600; padding: 7px 14px; border-radius: 5px; border: 1px solid var(--ink); background: var(--ink); color: var(--panel); cursor: pointer; }
+button.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); font-weight: 500; }
+button.btn:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chk { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: 13px; color: var(--muted); }
+.chk input { accent-color: var(--accent); }
+.range { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); flex: 1 1 240px; min-width: 0; }
+.range input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.range output { font-family: var(--f-mono); color: var(--ink); min-width: 3.5ch; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.sheet { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 24px; margin: 0; line-height: 1.1; }
+.sheet h3 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
+.sheet p { margin: 0; }
+.facts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--line); }
+.facts > * { padding: 7px 0; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--muted); font-size: 13px; padding-right: 10px; }
+.facts dd { margin: 0; text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+.facts dd.ok { color: var(--good); } .facts dd.warn { color: var(--warn); } .facts dd.bad { color: var(--accent); }
+.sheet ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.choice { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.choice .msg { font-family: var(--f-mono); font-size: 13px; flex: 1 1 260px; min-width: 0; overflow-wrap: anywhere; }
+.choice .lbl { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.note { font-size: 12px; color: var(--muted); max-width: 95ch; margin: 0; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Bisleri Reservoir Layout</h1>
+      <p class="sub">The 1 L Bisleri bottle with the V2 pin-latched release valve, below the wing at the CG. Compare the layouts, then push Drain to see how the water leaves and how much stays. The grey frame shows the fuselage depth from the belly to the wing.</p>
+    </div>
+    <div class="spec" aria-label="Design values">
+      <span>Water <b>996 g</b></span><span>Bottle <b>Ø80 × 255 mm, 1040 mL brim (interp.)</b></span><span>Wing <b>SD7062, chord 280</b></span><span>CG <b>x = 80 mm aft of LE (interp.)</b></span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="stagecol">
+      <div class="seg" role="group" aria-label="Layout">
+        <button type="button" id="btnH" aria-pressed="true"><span class="k">H3</span><span class="n">Horizontal bottle</span><span class="tag rec">Selected to model</span></button>
+        <button type="button" id="btnA" aria-pressed="false"><span class="k">Layout A (H1)</span><span class="n">Vertical, neck release + top port</span></button>
+        <button type="button" id="btnB" aria-pressed="false"><span class="k">Layout B</span><span class="n">Vertical upright, holes at both ends</span><span class="tag you">Your first idea</span></button>
+      </div>
+      <div class="stage" id="stage">
+        <div class="overlay">
+          <div class="big" id="ovState">FULL · <b>996 g</b> in the bottle</div>
+          <div id="ovTime">Release time: 0.0 s</div>
+          <div class="depth" id="ovDepth"></div>
+          <div>Red arrow = forward · dashed line = CG</div>
+        </div>
+        <div class="hint">Drag to turn · scroll or pinch to zoom</div>
+      </div>
+      <div class="controls">
+        <button class="btn" id="drainBtn" type="button">Drain</button>
+        <button class="btn ghost" id="refillBtn" type="button">Refill</button>
+        <label class="range" for="pitchRange" id="pitchWrap">Aircraft pitch at release <input id="pitchRange" type="range" min="-4" max="8" step="1" value="0"><output id="pitchOut">0°</output></label>
+      </div>
+      <div class="controls">
+        <label class="chk" for="sectionToggle"><input id="sectionToggle" type="checkbox" checked> Section view</label>
+        <label class="chk" for="explodeToggle"><input id="explodeToggle" type="checkbox"> Explode the fittings</label>
+        <label class="chk" for="wingToggle"><input id="wingToggle" type="checkbox" checked> Wing</label>
+        <label class="chk" for="fusToggle"><input id="fusToggle" type="checkbox" checked> Fuselage frame</label>
+        <button class="btn ghost" id="resetBtn" type="button">Reset view</button>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>Moving part</span>
+        <span><i style="background:#cfd4da"></i>Printed PETG</span>
+        <span><i style="background:#1d1d1d"></i>Washer / gasket / strap</span>
+        <span><i style="background:#aab2bb"></i>Steel</span>
+        <span><i style="background:#3a4048"></i>Servo MG90S</span>
+        <span><i style="background:#5e9f6e"></i>Original bottle cap</span>
+        <span><i style="background:var(--water)"></i>Water</span>
+      </div>
+    </div>
+    <article class="sheet" id="sheet" aria-live="polite"></article>
+  </div>
+
+  <section class="choice" aria-label="Your answer">
+    <span class="lbl">Your answer for D-037</span>
+    <span class="msg" id="choiceMsg"></span>
+    <button class="btn" id="copyBtn" type="button">Copy for Claude</button>
+  </section>
+  <p class="note">The bottle shape, the base dome and the neck are estimates until you measure a real Bisleri bottle. Drain times assume a vented bottle, Cd 0.6, real time. H3 water left is calculated for a 1.5 mm lip at the outlet (thin curved inner flange). Fuselage depth = belly (below the closed valve) to the wing underside at the CG. Source: design/logs/reservoir_log.md sections 10 to 12, D-034 to D-037.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function () {
+  "use strict";
+  // ---------- bottle (upright frame: base rim yu = 0, neck lip yu = H), interp. ----------
+  var H = 255, HP = 6, RP = 30;
+  var RI = [[0, 36], [6, 40], [185, 40], [228, 12.5], [235, 10.8], [255, 10.8]];
+  function Ri(y) {
+    if (y <= RI[0][0]) return RI[0][1];
+    for (var i = 1; i < RI.length; i++) if (y <= RI[i][0]) { var a = RI[i - 1], b = RI[i]; return a[1] + (b[1] - a[1]) * (y - a[0]) / (b[0] - a[0]); }
+    return RI[RI.length - 1][1];
+  }
+  function punt(r) { return r < RP ? HP * (1 - (r / RP) * (r / RP)) : 0; }
+  var FULL = 1000000; // mm3 (1000 mL = 996 g)
+  var CEN = (function () { var v = 0, m = 0; for (var y = 0.25; y < H; y += 0.5) { var a = Math.PI * Ri(y) * Ri(y); v += a; m += a * y; } return m / v; })();
+  var VX = CEN - 16; // vent: forward top end of the cylinder, ahead of the wing LE (x = 80)
+
+  var BORE = { A: 22, B: 14, H: 14 };
+  var SEAT = { A: -7, B: HP - 11, H: -51 };
+  var LIP_B = HP + 3, LIP_H = 1.5;
+  var V0A = Math.PI * 11 * 11 * 7;
+
+  // volume tables [level, volume]
+  var dy = 0.25, tabA = [], tabB = [], tabH = [];
+  (function () {
+    var v = V0A; tabA.push([0, v]);
+    for (var L = dy; L <= H - 8; L += dy) { var r = Ri(H - L + dy / 2); v += Math.PI * r * r * dy; tabA.push([L, v]); }
+    v = 0; tabB.push([0, 0]);
+    for (var y = dy; y <= H - 25; y += dy) {
+      var ym = y - dy / 2, r2 = Ri(ym), rb = ym < HP ? RP * Math.sqrt(1 - ym / HP) : 0, rin = Math.max(rb, ym > HP ? 7.5 : 0);
+      v += Math.PI * (r2 * r2 - rin * rin) * dy; tabB.push([y, v]);
+    }
+  })();
+  function segA(d, r) { if (d <= -r) return 0; if (d >= r) return Math.PI * r * r; return r * r * Math.acos(-d / r) + d * Math.sqrt(r * r - d * d); }
+  // H3: bottle axis along x at y = 0, neck aft, centroid at x = 0; aircraft pitch p (nose up +)
+  function buildTabH(p) {
+    var t = [], sp = Math.sin(p), cp = Math.cos(p);
+    for (var L = -70; L <= 70; L += 0.25) {
+      var v = 0;
+      for (var yu = 0.5; yu < 235; yu += 1) { var xb = CEN - yu; v += segA((L - xb * sp) / cp, Ri(yu)); }
+      t.push([L, v]);
+    }
+    return t;
+  }
+  function levelOf(tab, vol) {
+    if (vol <= tab[0][1]) return tab[0][0];
+    for (var i = 1; i < tab.length; i++) if (tab[i][1] >= vol) { var a = tab[i - 1], b = tab[i]; return a[0] + (b[0] - a[0]) * (vol - a[1]) / (Math.max(b[1] - a[1], 1e-9)); }
+    return tab[tab.length - 1][0];
+  }
+  function volOf(tab, L) {
+    if (L <= tab[0][0]) return tab[0][1];
+    for (var i = 1; i < tab.length; i++) if (tab[i][0] >= L) { var a = tab[i - 1], b = tab[i]; return a[1] + (b[1] - a[1]) * (L - a[0]) / (b[0] - a[0]); }
+    return tab[tab.length - 1][1];
+  }
+  function lipH(p) { return (-40 + LIP_H) * Math.cos(p); }
+  function outletH(p) { return SEAT.H * Math.cos(p); }
+  function residH(deg) { var p = deg * Math.PI / 180, t = buildTabH(p); return volOf(t, lipH(p)) / 1000 * 0.996; }
+  function simDrain(l, p) {
+    var tab = l === "A" ? tabA : l === "B" ? tabB : buildTabH(p), vol = FULL, t = 0, a = Math.PI * BORE[l] * BORE[l] / 4;
+    var lip = l === "B" ? LIP_B : l === "H" ? lipH(p) : -1e9, out = l === "H" ? outletH(p) : SEAT[l];
+    while (t < 90) {
+      var L = levelOf(tab, vol); if (L <= lip + 0.02 || vol <= 0) break;
+      vol -= 0.6 * a * Math.sqrt(2 * 9810 * Math.max(L - out, 0)) * 0.01; t += 0.01;
+    }
+    return t;
+  }
+  var RB = volOf(tabB, LIP_B) / 1000 * 0.996;
+  var TD = { A: simDrain("A", 0), B: simDrain("B", 0), H: simDrain("H", 0) };
+  var RH = { 0: residH(0), 2: residH(2), 5: residH(5) };
+
+  // fuselage frames [x0, x1, yBelly, yWingUnderside]
+  var FUS = { A: [-230, 110, SEAT.A - 14, H + 22], B: [-230, 110, SEAT.B - 14, H + 12], H: [-230, 150, SEAT.H - 12, 62] };
+  function depth(l) { return Math.round(FUS[l][3] - FUS[l][2]); }
+
+  var INFO = {
+    H: { name: "Horizontal bottle (H3)",
+      facts: [["Fuselage depth, belly to wing", "about " + depth("H") + " mm", "ok"], ["Outlet", "hole at mid-length bottom, Ø14 mm", "warn"], ["Drain time (vented, level)", TD.H.toFixed(1) + " s", "warn"],
+              ["Water left at 0° / 2° / 5° pitch", Math.round(RH[0]) + " / " + Math.round(RH[2]) + " / " + Math.round(RH[5]) + " g", RH[2] < 10 ? "warn" : "bad"],
+              ["New holes in the bottle", "2: outlet (bottom) and vent (top)", "warn"], ["Seals under water pressure", "outlet bulkhead (curved wall) + neck cap", "warn"], ["Fill", "through the neck, bottle stood on its base", "ok"]],
+      pro: ["Lowest fuselage: about " + (depth("A") - depth("H")) + " mm less than the vertical bottle, so less side panel mass and less drag", "The outlet is on the CG station, so the CG stays put if the aircraft is level", "Fill through the original neck cap: a factory seal", "Two light saddles and a strap hold the bottle; it lifts out for the weigh-in"],
+      con: ["The outlet seal is in the thin, curved bottom wall, at full pressure and in the landing zone: drop test first", "Water left grows quickly with nose-up pitch at release (see the slider)", "The inner flange goes in through the neck, so the bore is only about 14 mm: slower drain", "Needs a vent at the top that the same pin opens. It sits at the forward top end, ahead of the wing LE, so the wing needs no hole"] },
+    A: { name: "Vertical, neck release + top fill port",
+      facts: [["Fuselage depth, belly to wing", "about " + depth("A") + " mm", "bad"], ["Outlet", "neck, Ø22 mm", "ok"], ["Drain time (vented)", TD.A.toFixed(1) + " s", "ok"], ["Water left", "film only, about 1 to 7 g", "ok"],
+              ["New holes in the bottle", "1, at the top (air side)", "ok"], ["Seals under full water pressure", "1 (valve gasket on the neck)", "ok"], ["Fill", "top port, bottle neck down", "ok"]],
+      pro: ["Best drainage: the neck is the lowest point", "No new seal under water pressure", "No CG movement in X while it drains"],
+      con: ["Deep fuselage: more side panel mass, drag and crosswind area", "The fill cap is under the wing: fill out of the aircraft"] },
+    B: { name: "Vertical upright, holes at both ends",
+      facts: [["Fuselage depth, belly to wing", "about " + depth("B") + " mm", "bad"], ["Outlet", "hole in the base, Ø14 mm", "warn"], ["Drain time (vented)", TD.B.toFixed(1) + " s", "warn"], ["Water left", "ring around the base dome, about " + Math.round(RB) + " g", "bad"],
+              ["New holes in the bottle", "1, at the bottom", "bad"], ["Seals under full water pressure", "bulkhead in the thin base", "warn"], ["Fill", "original neck cap at the top", "ok"]],
+      pro: ["Fill through the original screw cap"],
+      con: ["The base dome traps a ring of water", "Deep fuselage", "New seal at full pressure and in the landing zone"] }
+  };
+
+  var lay = "H", pitchDeg = 0;
+  function renderSheet() {
+    var I = INFO[lay];
+    document.getElementById("sheet").innerHTML =
+      '<div><div style="font-family:var(--f-mono);font-size:12px;color:var(--muted)">' + (lay === "H" ? "H3" : "Layout " + lay) + '</div><h2>' + I.name + '</h2></div>' +
+      '<div><h3>Key numbers</h3><dl class="facts">' + I.facts.map(function (f) { return '<dt>' + f[0] + '</dt><dd class="' + f[2] + '">' + f[1] + '</dd>'; }).join("") + '</dl></div>' +
+      '<div><h3>For</h3><ul>' + I.pro.map(function (x) { return "<li>" + x + "</li>"; }).join("") + '</ul></div>' +
+      '<div><h3>Against</h3><ul>' + I.con.map(function (x) { return "<li>" + x + "</li>"; }).join("") + '</ul></div>' +
+      (lay === "H" ? '<div><h3>Test before we commit</h3><ul><li>Print the curved flange and nut, fit them to a Bisleri bottle with soft washers, fill it and drop it: no weep</li><li>Drain it level and at 3° nose-up, then weigh the water left: target under 10 g</li></ul></div>' : '');
+    document.getElementById("choiceMsg").textContent = lay === "H" ? "D-037: H3 horizontal bottle, after the seal and drain tests." : lay === "A" ? "D-037: keep the vertical bottle (Layout A)." : "D-037: Layout B, vertical upright with holes at both ends.";
+    document.getElementById("pitchWrap").hidden = lay !== "H";
+  }
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    var t = document.getElementById("choiceMsg").textContent, btn = this;
+    function done(ok) { btn.textContent = ok ? "Copied" : "Select the text and copy it"; setTimeout(function () { btn.textContent = "Copy for Claude"; }, 1800); }
+    function sel() { try { var r = document.createRange(); r.selectNodeContents(document.getElementById("choiceMsg")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {} }
+    try { navigator.clipboard.writeText(t).then(function () { done(true); }, function () { sel(); done(false); }); } catch (e) { sel(); done(false); }
+  });
+
+  var stage = document.getElementById("stage");
+  renderSheet();
+  if (!window.THREE || !THREE.OrbitControls) {
+    var d = document.createElement("div"); d.className = "err"; d.textContent = "The 3D view did not load. Check the network and reload the page. The data sheet still works.";
+    stage.appendChild(d); return;
+  }
+
+  // ---------- scene ----------
+  var renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.localClippingEnabled = true;
+  stage.insertBefore(renderer.domElement, stage.firstChild);
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(30, 4 / 3, 1, 6000);
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.08; controls.minDistance = 120; controls.maxDistance = 2200;
+  function resetView() {
+    if (lay === "H") { camera.position.set(330, 170, 560); controls.target.set(-20, 0, 0); }
+    else { camera.position.set(380, 210, 560); controls.target.set(-20, 115, 0); }
+    controls.update();
+  }
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x556070, 0.85));
+  var dl = new THREE.DirectionalLight(0xffffff, 0.75); dl.position.set(200, 400, 300); scene.add(dl);
+  var dl2 = new THREE.DirectionalLight(0xffffff, 0.25); dl2.position.set(-250, -100, -200); scene.add(dl2);
+  var grid = new THREE.GridHelper(900, 36); grid.material.transparent = true; grid.material.opacity = 0.5; scene.add(grid);
+
+  var M = {
+    petg: new THREE.MeshStandardMaterial({ color: 0xcfd4da, roughness: 0.65, side: THREE.DoubleSide }),
+    move: new THREE.MeshStandardMaterial({ color: 0xc8352e, roughness: 0.5, side: THREE.DoubleSide }),
+    servo: new THREE.MeshStandardMaterial({ color: 0x3a4048, roughness: 0.55 }),
+    steel: new THREE.MeshStandardMaterial({ color: 0xaab2bb, roughness: 0.3, metalness: 0.85 }),
+    seal: new THREE.MeshStandardMaterial({ color: 0x1d1d1d, roughness: 0.9, side: THREE.DoubleSide }),
+    cap: new THREE.MeshStandardMaterial({ color: 0x5e9f6e, roughness: 0.5 }),
+    bottle: new THREE.MeshStandardMaterial({ color: 0xd8ecff, roughness: 0.1, transparent: true, opacity: 0.18, depthWrite: false, side: THREE.DoubleSide }),
+    water: new THREE.MeshStandardMaterial({ color: 0x2f7fc4, roughness: 0.2, transparent: true, opacity: 0.5, depthWrite: false, side: THREE.DoubleSide }),
+    wing: new THREE.MeshStandardMaterial({ color: 0xf2f2ee, roughness: 0.7, transparent: true, opacity: 0.55, depthWrite: false, side: THREE.DoubleSide })
+  };
+  var waterClip = new THREE.Plane(new THREE.Vector3(0, -1, 0), 0);
+  var MH2O = M.water.clone(); MH2O.clippingPlanes = [waterClip];
+  var fusMat = new THREE.LineBasicMaterial({ color: 0x8a96a1, transparent: true, opacity: 0.8 });
+  var arrow = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), new THREE.Vector3(-120, 0, 170), 110, 0xc8352e, 20, 11); scene.add(arrow);
+  var cgMat = new THREE.LineDashedMaterial({ color: 0xc8352e, dashSize: 8, gapSize: 6 });
+  var cgLine = null;
+
+  function cssVar(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function applyTheme() {
+    scene.background = new THREE.Color(cssVar("--viewport") || "#e3e8ec");
+    grid.material.color = new THREE.Color(cssVar("--grid") || "#b9c3cb");
+    var acc = new THREE.Color(cssVar("--accent") || "#c8352e"); M.move.color = acc; arrow.setColor(acc); cgMat.color = acc;
+    var w = new THREE.Color(cssVar("--water") || "#2f7fc4"); M.water.color = w; MH2O.color = w; pMat.color = w;
+    fusMat.color = new THREE.Color(cssVar("--muted") || "#5b6874");
+  }
+
+  function mesh(g, m, x, y, z) { var o = new THREE.Mesh(g, m); o.position.set(x || 0, y || 0, z || 0); return o; }
+  function box(w, h, d, m, x, y, z) { return mesh(new THREE.BoxGeometry(w, h, d), m, x, y, z); }
+  function cyl(r, h, m, x, y, z, seg) { return mesh(new THREE.CylinderGeometry(r, r, h, seg || 48), m, x, y, z); }
+  function cylZ(r, h, m, x, y, z) { var o = cyl(r, h, m, 0, 0, 0, 20); o.rotation.x = Math.PI / 2; o.position.set(x, y, z); return o; }
+  function lathe(pts, m) { return new THREE.Mesh(new THREE.LatheGeometry(pts.map(function (p) { return new THREE.Vector2(Math.max(p[0], 0), p[1]); }), 72), m); }
+  function ring(ri, ro, y0, y1, m) { return lathe([[ri, y0], [ro, y0], [ro, y1], [ri, y1], [ri, y0]], m); }
+  function hex(r, y0, y1, m) { return cyl(r, y1 - y0, m, 0, (y0 + y1) / 2, 0, 6); }
+  function plate(shape, d, m, y) { var o = new THREE.Mesh(new THREE.ExtrudeGeometry(shape, { depth: d, bevelEnabled: false, curveSegments: 40 }), m); o.rotation.x = Math.PI / 2; o.position.y = y; return o; }
+  function rectShape(x0, x1, z0, z1, holes) {
+    var s = new THREE.Shape(); s.moveTo(x0, z0); s.lineTo(x1, z0); s.lineTo(x1, z1); s.lineTo(x0, z1); s.lineTo(x0, z0);
+    (holes || []).forEach(function (h) { var p = new THREE.Path(); p.absarc(h[0], h[1], h[2], 0, Math.PI * 2, true); s.holes.push(p); });
+    return s;
+  }
+  function servo() {
+    var g = new THREE.Group();
+    g.add(box(22.8, 22.7, 12.2, M.servo, -5.6, -11.35, 0)); g.add(box(32.5, 2.5, 12.2, M.servo, -5.6, -6, 0));
+    g.add(cyl(6, 4, M.servo, 0, 2, 0)); g.add(cyl(2.4, 3, M.steel, 0, 5.5, 0, 16)); return g;
+  }
+  var UP = new THREE.Vector3(0, 1, 0);
+  function makeRod(r, m) { return cyl(r, 1, m, 0, 0, 0, 10); }
+  function setRod(o, a, b) { var d = new THREE.Vector3().subVectors(b, a), L = d.length(); o.position.copy(a).addScaledVector(d, 0.5); o.scale.set(1, Math.max(L, 0.01), 1); o.quaternion.setFromUnitVectors(UP, d.normalize()); }
+
+  function bottleOuterPts() {
+    var p = [[0, HP + 0.3]];
+    for (var r = 3; r <= RP; r += 3) p.push([r, punt(r) + 0.3]);
+    p.push([36, 0], [39, 2], [40, 6]);
+    [60, 90, 120, 150].forEach(function (y) { p.push([40, y - 4], [38.2, y], [40, y + 4]); });
+    p.push([40, 185], [13, 228], [13, 231], [16, 231], [16, 233], [13.5, 233], [13.5, 255], [10.8, 255]);
+    return p;
+  }
+  function bottleInnerPts() { // closed interior solid (for H3 water)
+    var p = [[0, HP + 0.6]];
+    for (var r = 3; r <= RP; r += 3) p.push([r, punt(r) + 0.6]);
+    p.push([35.6, 0.4], [39.4, 6]);
+    p.push([39.4, 185], [12.2, 228], [10.5, 235], [10.5, 250], [0, 250]);
+    return p;
+  }
+
+  function buildV2(g, seat, rb) {
+    g.add(plate(rectShape(-27, 24, -14, 14, [[0, 0, rb]]), 3, M.petg, seat + 3));
+    [-9, 9].forEach(function (z) { g.add(box(6, 6, 6, M.petg, 20.5, seat - 3, z)); });
+    g.add(cylZ(1, 26, M.steel, 20.5, seat - 4, 0));
+    [-6.5, 6.5].forEach(function (z) { g.add(box(5, 10, 5, M.petg, -21.5, seat - 5, z)); });
+    var flap = new THREE.Group(); flap.position.set(20.5, seat - 4, 0);
+    var gk = ring(rb + 0.5, 16, 2.5, 4, M.seal); gk.position.x = -20.5; flap.add(gk);
+    flap.add(cyl(16, 3, M.move, -20.5, 1, 0)); flap.add(cylZ(2.6, 11, M.move, 0, 0, 0)); flap.add(box(5, 7, 7, M.move, -42, -3.5, 0));
+    g.add(flap);
+    var pin = new THREE.Group(); pin.add(cylZ(0.9, 34, M.steel, 0, 0, 0));
+    var eye = mesh(new THREE.TorusGeometry(3, 0.7, 8, 20), M.steel, 0, 0, 20); eye.rotation.y = Math.PI / 2; pin.add(eye);
+    pin.position.set(-21.5, seat - 8, 0); g.add(pin);
+    var S = new THREE.Vector3(-12, seat - 8, 58), sv = servo(); sv.position.set(S.x, S.y - 7, S.z); g.add(sv);
+    var arm = box(16, 2, 4, M.move, 0, 0, 0); g.add(arm);
+    var rod = makeRod(0.6, M.steel); g.add(rod);
+    return function (p) {
+      var pt = Math.min(1, p / 0.35), ft = Math.max(0, (p - 0.35) / 0.65);
+      pin.position.z = 22 * pt; flap.rotation.z = (1 - Math.pow(1 - ft, 2)) * 100 * Math.PI / 180;
+      var th = (-50 + 100 * pt) * Math.PI / 180, tip = new THREE.Vector3(S.x - 15 * Math.cos(th), S.y, S.z + 15 * Math.sin(th));
+      arm.position.set((S.x + tip.x) / 2, S.y, (S.z + tip.z) / 2); arm.rotation.y = -Math.atan2(tip.z - S.z, tip.x - S.x);
+      setRod(rod, tip, new THREE.Vector3(-21.5, seat - 8, pin.position.z + 23));
+      return { ft: ft, pinZ: pin.position.z };
+    };
+  }
+
+  // bulkhead fitting at a wall point; dir = +1: inside of the bottle is +y; -1: inside is -y
+  function buildBulkhead(g, yWall, dir, boreR, cap) {
+    var parts = [];
+    function add(o, ex) { g.add(o); parts.push([o, o.position.y, ex]); }
+    var inF = new THREE.Group();
+    inF.add(ring(boreR, 10.4, 0, 1.5 * dir, M.petg));
+    inF.add(ring(boreR, boreR + 2, 0, -9 * dir, M.petg));
+    inF.position.y = yWall + 1.5 * dir; add(inF, 40 * dir);
+    var wIn = ring(Math.max(boreR + 2.2, 8.2), 10.4, 0, 1.2 * dir, M.seal); wIn.position.y = yWall + 0.3 * dir; add(wIn, 22 * dir);
+    var wOut = ring(Math.max(boreR + 2.2, 8.2), 11, 0, -1.2 * dir, M.seal); wOut.position.y = yWall; add(wOut, -16 * dir);
+    var nut = hex(12.5, 0, 5, M.petg); nut.position.y = yWall - 1.2 * dir - (dir > 0 ? 5 : 0); add(nut, -32 * dir);
+    if (cap) { cap.position.y = yWall + 7.5 * -dir; add(cap, 30 * -dir); }
+    return function (e) { parts.forEach(function (p) { p[0].position.y = p[1] + p[2] * e; }); };
+  }
+
+  function buildWing(g, yChord) {
+    var s = new THREE.Shape(), c = 280, t = 0.14, n = 40, up = [], lo = [];
+    for (var i = 0; i <= n; i++) {
+      var xc = 0.5 * (1 - Math.cos(Math.PI * i / n));
+      var yt = 5 * t * (0.2969 * Math.sqrt(xc) - 0.126 * xc - 0.3516 * xc * xc + 0.2843 * Math.pow(xc, 3) - 0.1036 * Math.pow(xc, 4));
+      var yc = xc < 0.4 ? 0.04 / 0.16 * (0.8 * xc - xc * xc) : 0.04 / 0.36 * (0.2 + 0.8 * xc - xc * xc);
+      up.push([xc, yc + yt]); lo.push([xc, yc - yt]);
+    }
+    up.forEach(function (p, i) { var X = 80 - p[0] * c, Y = p[1] * c; if (i === 0) s.moveTo(X, Y); else s.lineTo(X, Y); });
+    for (var j = lo.length - 1; j >= 0; j--) s.lineTo(80 - lo[j][0] * c, lo[j][1] * c);
+    var gm = new THREE.ExtrudeGeometry(s, { depth: 240, bevelEnabled: false }); gm.translate(0, 0, -120);
+    var w = new THREE.Mesh(gm, M.wing); w.position.y = yChord + 4; w.rotation.z = -3 * Math.PI / 180;
+    var wg = new THREE.Group(); wg.add(w); g.add(wg); return wg;
+  }
+  function buildFus(g, f) {
+    var geo = new THREE.EdgesGeometry(new THREE.BoxGeometry(f[1] - f[0], f[3] - f[2], 100));
+    var l = new THREE.LineSegments(geo, fusMat); l.position.set((f[0] + f[1]) / 2, (f[2] + f[3]) / 2, 0); g.add(l); return l;
+  }
+
+  // particles
+  var N = 900, pos = new Float32Array(N * 3), vel = new Float32Array(N * 3), alive = new Uint8Array(N);
+  var pGeo = new THREE.BufferGeometry(); pGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  var pMat = new THREE.PointsMaterial({ color: 0x2f7fc4, size: 3, sizeAttenuation: true, transparent: true, opacity: 0.85, depthWrite: false });
+  var pts = new THREE.Points(pGeo, pMat); pts.frustumCulled = false; scene.add(pts);
+  function resetParticles() { for (var i = 0; i < N; i++) { alive[i] = 0; pos[i * 3 + 1] = -9999; } pGeo.attributes.position.needsUpdate = true; }
+  var acc = 0, floorY = -140;
+  function stepParticles(dt, rate, e, rad) {
+    acc += rate * 420 * dt;
+    for (var i = 0; i < N && acc >= 1; i++) {
+      if (alive[i]) continue; alive[i] = 1; acc -= 1;
+      var a = Math.random() * Math.PI * 2, r = Math.random() * rad * 0.8;
+      pos[i * 3] = e.x + Math.cos(a) * r; pos[i * 3 + 1] = e.y; pos[i * 3 + 2] = e.z + Math.sin(a) * r;
+      vel[i * 3] = -15 + Math.random() * 8; vel[i * 3 + 1] = -120 - Math.random() * 40; vel[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    if (acc > 8) acc = 8;
+    for (var j = 0; j < N; j++) {
+      if (!alive[j]) continue;
+      vel[j * 3] -= 120 * dt; vel[j * 3 + 1] -= 700 * dt;
+      pos[j * 3] += vel[j * 3] * dt; pos[j * 3 + 1] += vel[j * 3 + 1] * dt; pos[j * 3 + 2] += vel[j * 3 + 2] * dt;
+      if (pos[j * 3 + 1] < floorY) { alive[j] = 0; pos[j * 3 + 1] = -9999; }
+    }
+    pGeo.attributes.position.needsUpdate = true;
+  }
+
+  // ---------- layouts ----------
+  var root = null, air = null, waterMesh = null, surf = null, valveUpd = null, bulkUpds = [], wingGroup = null, fusLine = null, ventPlug = null, ventRod = null, emitLocal = new THREE.Vector3(), tabHnow = null;
+  function waterPtsA(L) {
+    var p = [[0, -7], [11, -7], [11, 0]], ys = [0];
+    RI.forEach(function (q) { var w = H - q[0]; if (w > 0 && w < L) ys.push(w); });
+    ys.push(L); ys.sort(function (a, b) { return a - b; });
+    ys.forEach(function (y) { p.push([Ri(H - y) - 0.4, y]); });
+    p.push([0, L]); return p;
+  }
+  function waterPtsB(L) {
+    var p = [], rin = L < HP ? RP * Math.sqrt(1 - L / HP) : 7.6;
+    p.push([rin, L]); if (L >= HP) p.push([7.6, HP + 0.4]);
+    for (var r = Math.ceil(rin); r <= RP; r += 2) p.push([r, punt(r) + 0.4]);
+    p.push([36, 0.4], [39.2, 2.4], [39.6, 6]);
+    RI.forEach(function (q) { if (q[0] > 6 && q[0] < L) p.push([Ri(q[0]) - 0.4, q[0]]); });
+    p.push([Ri(L) - 0.4, L], [rin, L]); return p;
+  }
+  function setWater(L) {
+    if (lay === "H") {
+      waterClip.constant = L;
+      var p = pitchDeg * Math.PI / 180, w2 = 39.4 * 39.4 - Math.pow(L / Math.cos(p), 2);
+      if (surf) { surf.visible = w2 > 1 && state.vol > 2000; if (surf.visible) { surf.scale.set(1, 1, 2 * Math.sqrt(w2)); surf.position.y = L; } }
+      return;
+    }
+    if (waterMesh) { root.remove(waterMesh); waterMesh.geometry.dispose(); waterMesh = null; }
+    if (L < 0.3 && lay === "B") return;
+    waterMesh = lathe(lay === "A" ? waterPtsA(L) : waterPtsB(L), M.water); root.add(waterMesh);
+  }
+
+  var state = { phase: "full", t: 0, vol: FULL, open: 0 };
+  function build() {
+    if (root) { scene.remove(root); root.traverse(function (o) { if (o.geometry) o.geometry.dispose(); }); }
+    root = new THREE.Group(); air = new THREE.Group(); root.add(air);
+    waterMesh = null; surf = null; bulkUpds = []; ventPlug = null; ventRod = null;
+    var bottle = lathe(bottleOuterPts(), M.bottle);
+    if (lay === "A") {
+      bottle.rotation.x = Math.PI; bottle.position.y = H; air.add(bottle);
+      air.add(lathe([[11, -4], [17.5, -4], [17.5, 18], [14, 18], [14, 0], [11, 0], [11, -4]], M.petg));
+      for (var i = 0; i < 3; i++) air.add(ring(17.5, 18.1, 2 + i * 5, 4.5 + i * 5, M.petg));
+      valveUpd = buildV2(air, SEAT.A, 11);
+      var fc = new THREE.Group(); fc.add(cyl(11, 10, M.petg, 0, 5, 0));
+      bulkUpds.push(buildBulkhead(air, H - HP, -1, 5.5, fc));
+      emitLocal.set(-6, SEAT.A - 6, 0); wingGroup = buildWing(air, H + 32); floorY = -140;
+    } else if (lay === "B") {
+      air.add(bottle);
+      air.add(cyl(14.8, 16, M.cap, 0, 247, 0)); air.add(cyl(15.2, 2, M.cap, 0, 240, 0));
+      bulkUpds.push(buildBulkhead(air, HP, 1, 7, null));
+      valveUpd = buildV2(air, SEAT.B, 7);
+      emitLocal.set(-6, SEAT.B - 6, 0); wingGroup = buildWing(air, H + 22); floorY = -140;
+    } else {
+      // H3: bottle along x, neck aft, water centroid at x = 0, axis at y = 0
+      var bg = new THREE.Group(); bg.rotation.z = Math.PI / 2; bg.position.x = CEN; // upright +y -> world -x
+      bg.add(bottle);
+      waterMesh = lathe(bottleInnerPts(), MH2O); bg.add(waterMesh);
+      var nc = cyl(14.8, 16, M.cap, 0, 247, 0); bg.add(nc);
+      air.add(bg);
+      surf = mesh(new THREE.BoxGeometry(179, 0.4, 1), M.water, CEN - 6 - 179 / 2, 0, 0); root.add(surf);
+      // outlet bulkhead at the bottom (y = -40) on the CG station, V2 below
+      bulkUpds.push(buildBulkhead(air, -40, 1, 7, null));
+      valveUpd = buildV2(air, SEAT.H, 7);
+      // vent at the top: bulkhead + plug that lifts on release
+      ventPlug = new THREE.Group(); ventPlug.add(cyl(7, 6, M.move, 0, 3, 0)); ventPlug.add(ring(4, 7, -0.6, 0, M.seal));
+      var vg = new THREE.Group(); vg.position.x = VX; air.add(vg); bulkUpds.push(buildBulkhead(vg, 40, -1, 4, ventPlug));
+      ventRod = [makeRod(0.35, M.steel), makeRod(0.35, M.steel)]; air.add(ventRod[0]); air.add(ventRod[1]);
+      // saddles + straps
+      [-70, 70].forEach(function (x) {
+        var s = mesh(new THREE.TorusGeometry(42, 2.2, 8, 40, Math.PI), M.petg, x, 0, 0); s.rotation.set(0, Math.PI / 2, Math.PI); air.add(s);
+        air.add(box(10, 4, 70, M.petg, x, -45, 0));
+        var st = mesh(new THREE.TorusGeometry(41.5, 1, 6, 40, Math.PI), M.seal, x, 0, 0); st.rotation.set(0, Math.PI / 2, 0); air.add(st);
+      });
+      emitLocal.set(-6, SEAT.H - 6, 0); wingGroup = buildWing(air, 70); floorY = -150;
+    }
+    fusLine = buildFus(air, FUS[lay]);
+    fusLine.visible = document.getElementById("fusToggle").checked;
+    wingGroup.visible = document.getElementById("wingToggle").checked;
+    var ex = document.getElementById("explodeToggle").checked ? 1 : 0; expl = explTarget = ex; bulkUpds.forEach(function (u) { u(ex); });
+    if (cgLine) { scene.remove(cgLine); cgLine.geometry.dispose(); }
+    var top = lay === "H" ? 140 : 360, bot = lay === "H" ? -150 : -135;
+    cgLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, bot, 0), new THREE.Vector3(0, top, 0)]), cgMat); cgLine.computeLineDistances(); scene.add(cgLine);
+    grid.position.y = lay === "H" ? -155 : -140;
+    arrow.position.set(-120, lay === "H" ? -150 : -138, 170);
+    air.rotation.z = lay === "H" ? pitchDeg * Math.PI / 180 : 0;
+    scene.add(root);
+    state = { phase: "full", t: 0, vol: FULL, open: 0 };
+    if (lay === "H") tabHnow = buildTabH(pitchDeg * Math.PI / 180);
+    setWater(curLevel());
+    var r = valveUpd(0); if (ventPlug) syncVent(r); resetParticles(); overlay();
+  }
+  function curTab() { return lay === "A" ? tabA : lay === "B" ? tabB : tabHnow; }
+  function curLevel() { return levelOf(curTab(), state.vol); }
+  function syncVent(r) {
+    if (!ventPlug || !ventRod) return;
+    ventPlug.position.y = 47.5 + 8 * Math.min(1, r.pinZ / 22) + (expl * 30);
+    var guide = new THREE.Vector3(VX * 0.4, 20, 48);
+    setRod(ventRod[0], new THREE.Vector3(-21.5, SEAT.H - 8, r.pinZ + 20), guide);
+    setRod(ventRod[1], guide, new THREE.Vector3(VX, ventPlug.position.y + 6, 0));
+  }
+
+  function overlay() {
+    var g = state.vol / 1000 * 0.996;
+    var st = state.phase === "full" ? "FULL" : state.phase === "done" ? "EMPTY" : "DRAINING";
+    var left = lay === "A" && state.phase === "done" ? "film only, about 1 to 7 g" : Math.round(g) + " g";
+    document.getElementById("ovState").innerHTML = st + " · <b>" + left + "</b> in the bottle";
+    document.getElementById("ovTime").textContent = "Release time: " + state.t.toFixed(1) + " s" + (state.phase === "done" ? " (end)" : "");
+    document.getElementById("ovDepth").textContent = "Fuselage depth, belly to wing: about " + depth(lay) + " mm" + (lay === "H" ? " · pitch " + pitchDeg + "°" : "");
+  }
+
+  function setLay(l) {
+    lay = l;
+    ["H", "A", "B"].forEach(function (k) { document.getElementById("btn" + k).setAttribute("aria-pressed", k === l ? "true" : "false"); });
+    renderSheet(); build(); resetView();
+  }
+  document.getElementById("btnH").addEventListener("click", function () { setLay("H"); });
+  document.getElementById("btnA").addEventListener("click", function () { setLay("A"); });
+  document.getElementById("btnB").addEventListener("click", function () { setLay("B"); });
+  document.getElementById("drainBtn").addEventListener("click", function () { if (state.phase === "full") state.phase = "opening"; });
+  document.getElementById("refillBtn").addEventListener("click", build);
+  document.getElementById("resetBtn").addEventListener("click", resetView);
+  var pr = document.getElementById("pitchRange"), po = document.getElementById("pitchOut");
+  pr.addEventListener("input", function () { pitchDeg = +pr.value; po.textContent = pitchDeg + "°"; build(); });
+  var clipPlane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
+  var secEl = document.getElementById("sectionToggle");
+  function applySection() { renderer.clippingPlanes = secEl.checked ? [clipPlane] : []; }
+  secEl.addEventListener("change", applySection); applySection();
+  var expl = 0, explTarget = 0;
+  document.getElementById("explodeToggle").addEventListener("change", function (e) { explTarget = e.target.checked ? 1 : 0; });
+  document.getElementById("wingToggle").addEventListener("change", function (e) { if (wingGroup) wingGroup.visible = e.target.checked; });
+  document.getElementById("fusToggle").addEventListener("change", function (e) { if (fusLine) fusLine.visible = e.target.checked; });
+
+  function resize() { var w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+  if (window.ResizeObserver) new ResizeObserver(resize).observe(stage); else window.addEventListener("resize", resize);
+  applyTheme();
+  if (window.matchMedia) { var mq = matchMedia("(prefers-color-scheme: dark)"); if (mq.addEventListener) mq.addEventListener("change", applyTheme); }
+  new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  build(); resetView(); resize();
+
+  var last = performance.now(), lastOv = 0, wpos = new THREE.Vector3();
+  function loop(now) {
+    var dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (expl !== explTarget) { expl = explTarget > expl ? Math.min(1, expl + dt * 2) : Math.max(0, expl - dt * 2); bulkUpds.forEach(function (u) { u(expl); }); }
+    var rate = 0, r;
+    if (state.phase === "opening" || state.phase === "drain") {
+      if (state.open < 1) { state.open = Math.min(1, state.open + dt / 0.6); r = valveUpd(state.open); if (ventPlug) syncVent(r); }
+      if (state.phase === "opening" && state.open >= 0.55) state.phase = "drain";
+    }
+    if (state.phase === "drain") {
+      var p = pitchDeg * Math.PI / 180, L = curLevel();
+      var lip = lay === "B" ? LIP_B : lay === "H" ? lipH(p) : -1e9, out = lay === "H" ? outletH(p) : SEAT[lay];
+      var a = Math.PI * BORE[lay] * BORE[lay] / 4, Q = 0.6 * a * Math.sqrt(2 * 9810 * Math.max(L - out, 0));
+      if (L <= lip + 0.02 || state.vol <= 0) {
+        state.phase = "done"; if (lay !== "A") state.vol = Math.max(0, volOf(curTab(), lip));
+      } else {
+        var floorV = lay === "A" ? 0 : volOf(curTab(), lip);
+        state.vol = Math.max(floorV, state.vol - Q * dt); state.t += dt; rate = Math.min(1, Q / 120000);
+        setWater(curLevel());
+      }
+    }
+    if (lay === "A" && state.phase === "done" && waterMesh) { root.remove(waterMesh); waterMesh.geometry.dispose(); waterMesh = null; }
+    if (lay === "H" && state.phase === "done") setWater(curLevel());
+    air.updateMatrixWorld(); wpos.copy(emitLocal).applyMatrix4(air.matrixWorld);
+    stepParticles(dt, rate, wpos, BORE[lay] / 2);
+    if (now - lastOv > 100) { overlay(); lastOv = now; }
+    controls.update(); renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>

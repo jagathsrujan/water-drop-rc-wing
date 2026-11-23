@@ -91,7 +91,7 @@ def run(stage="A"):
         pr("   OVERLAP", b)
     rows = mass_table(objs)
     tot = sum(r[5] for r in rows)
-    pr("7 wing mass without servos = %.1f g  [limit 160 g, D-023]" % tot)
+    pr("7 wing mass without servos = %.1f g  [no fixed limit, D-047]" % tot)
     by = {}
     for r in rows:
         by[r[1]] = by.get(r[1], 0.0) + r[5]
@@ -222,7 +222,7 @@ def write_mass_md():
     L += ["| **Wing without servos** | | | **%.1f** |" % total,
           "| MG90S servos (2 x 13.4 g, datasheet value *(interp.)*) + arms | | | %.1f |" % servo,
           "| **Wing with servos** | | | **%.1f** |" % (total + servo), "",
-          "Limit: 160 g without servos (D-023; 145 g in the plan, 155 g after D-013).",
+          "No fixed mass limit (D-047). History: 145 g in the plan, 155 g after D-013, 160 g after D-023.",
           "Uncertainty: film and glue +-5 g; balsa density +-20 % between sheets. Weigh the sheets, correct `RHO` in `wing_params.py`, "
           "then run `run_all.py` again (this file is written again)."]
     open(os.path.join(P.CAD, "mass_table.md"), "w").write("\n".join(L) + "\n")

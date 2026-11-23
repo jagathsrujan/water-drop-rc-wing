@@ -1,0 +1,77 @@
+Fuselage rev A - stage F-B check report
+============================================================
+
+1. Validity and build volume (printed parts <= 256 mm each side)
+  F1_PodNose      valid True solids 1  size 110.0 x 110.0 x 143.8  PASS
+  F2_PodCentre    valid True solids 1  size 112.5 x 113.0 x 211.2  PASS
+  F3_PodAft       valid True solids 1  size 104.2 x 110.0 x 130.1  PASS
+  F5a_SkidFront   valid True solids 1  size 15.0 x 18.5 x 160.0  PASS
+  F5b_SkidAft     valid True solids 1  size 6.4 x 15.0 x 100.0  PASS
+  F6_FrontStop    valid True solids 1  size 3.0 x 109.0 x 109.2  PASS
+  F7_Firewall     valid True solids 1  size 3.0 x 56.0 x 56.0  PASS
+  F8_RearDowel    valid True solids 1  size 5.0 x 5.0 x 79.5  PASS
+  F9_BandStubs    valid True solids 2  size 4.0 x 4.0 x 138.0  PASS
+  F4_NoseHatch    valid True solids 1  size 20.5 x 109.7 x 163.0  PASS
+
+2. Section 13 envelope
+  pod Z min (without skids) -117.000 (BELLY_Z -117.0) PASS
+  outer |Y| max at X 0-280 above Z -105 (pocket region excluded) 55.000 <= 55 PASS
+  outer |Y| max at X 0-175 below Z -105 (D-059 pocket) 57.500; material outside |Y| 55 at X 51.4..77.6, Z -115.7..-105.3 (allowed bulge, wing seat unaffected)
+  material inside the belly-opening prism 0.000 mm3 PASS
+
+3. Overlap with reservoir parts (closed + open) and the wing (mm3); min distance for features
+  worst total overlap 0.0000 mm3 PASS
+  min distance F2_PodCentre  - RefRes_P14_ServoArm        4.80 mm
+  min distance F2_PodCentre  - RefRes_P14_Servo_MG90S     0.00 mm
+  min distance F2_PodCentre  - RefRes_P1_Bottle           0.42 mm
+  min distance F2_PodCentre  - RefRes_P6_Flap_open        1.80 mm
+  min distance F6_FrontStop  - RefRes_P1_Bottle           0.51 mm
+  min distance F4_NoseHatch  - RefRes_P11f_VentFlap       2.20 mm
+  min distance F4_NoseHatch  - RefRes_P11d_FillCap        2.51 mm
+  min distance F4_NoseHatch  - Ref_Wing                   2.52 mm
+  min distance F3_PodAft     - RefRes_P1c_Cap             4.63 mm
+  min distance F2_PodCentre  - RefRes_P13a_Strap1         0.00 mm
+  min distance F2_PodCentre  - RefRes_P13b_Strap2         0.00 mm
+
+3b. Placeholders (bought parts): overlap with the pod parts and the reservoir (mm3), min distance to the reservoir
+  PH_TailServo_R     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
+  PH_TailServo_L     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
+  PH_Receiver        overlap pod 0.000, reservoir 0.000; min distance to reservoir 12.08 mm (RefRes_P1_Bottle) PASS
+  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 34.45 mm (RefRes_P1_Bottle) PASS
+  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 9.28 mm (RefRes_P1_Bottle) PASS
+  placeholders: PASS
+
+4. Release-servo arm sweep (+-45 deg) to the structure (>= 3 mm)
+  arm closed pose rotated 0..+90: min 4.80 mm; 0..-90: min 3.02 mm (the real sweep is one of them) PASS
+  flap open travel: first contact with F2 at 157 deg (flap stop = aft edge of the belly opening with the 1.2 mm lip); distance at 150 deg 1.80 mm; water stream free from 80 deg (reservoir check) PASS
+
+5. Reservoir lift-out +Z to 120 in 2 mm steps (wing, hatch, straps, safety pin removed; pod parts and placeholders stay)
+  first contact: none up to 120 PASS
+
+6. Hatch lift-off +Z 60 with the wing on; band paths
+  hatch first contact: none PASS
+  band paths to the hatch lift path (hatch at +0..+60, 3 mm steps) 9.89 mm (>= 3) PASS
+  band paths (lines; band radius 1 mm) to F4_NoseHatch         9.89 mm at X 2.6 Y -64.7 Z -8.1 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y -25.7 Z -2.3 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to F3_PodAft            1.32 mm at X 280.8 Y -38.3 Z -14.3 (brief item 9: aft deck to report, no limit given)
+
+7. Ground plane at the skids
+  skid plane Z -118.50; lowest valve part Z -113.50; clearance 5.00 mm (>= 3) PASS
+
+8. Masses (g)
+  F1_PodNose        45.74 cm3  PLA 56.7  ASA Aero 0.53 24.2  ASA Aero 0.65 29.7  ASA Aero 0.80 36.6
+  F2_PodCentre      57.92 cm3  PLA 71.8  ASA Aero 0.53 30.7  ASA Aero 0.65 37.7  ASA Aero 0.80 46.3
+  F3_PodAft         37.00 cm3  PLA 45.9  ASA Aero 0.53 19.6  ASA Aero 0.65 24.0  ASA Aero 0.80 29.6
+  F4_NoseHatch      12.62 cm3  PLA 15.6  ASA Aero 0.53 6.7  ASA Aero 0.65 8.2  ASA Aero 0.80 10.1
+  F5a_SkidFront      3.60 cm3  PETG 4.57
+  F5b_SkidAft        2.25 cm3  PETG 2.86
+  F6_FrontStop      29.55 cm3  balsa 3.55
+  F7_Firewall        8.14 cm3  ply 4.89
+  F8_RearDowel       1.56 cm3  birch 1.09
+  F9_BandStubs       0.57 cm3  carbon 0.88
+  magnets 8 x 0.42 g = 3.4 g (N35 D6x2, interp.)
+  TOTAL pod (PLA) + skids, stop, firewall, dowel, stubs, magnets: 211.3 g
+  TOTAL pod (ASA Aero 0.53) + skids, stop, firewall, dowel, stubs, magnets: 102.5 g
+  TOTAL pod (ASA Aero 0.65) + skids, stop, firewall, dowel, stubs, magnets: 120.9 g
+  TOTAL pod (ASA Aero 0.80) + skids, stop, firewall, dowel, stubs, magnets: 143.9 g
+  Note: the saddles are now in F2 (reservoir table P12a/b 8.78 g PETG moves to the pod).

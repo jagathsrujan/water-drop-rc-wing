@@ -139,7 +139,7 @@ History: the plan structure projected 172 g (limit 145 g). The user chose the re
 | 4 | Aileron | 325.00 mm, end gaps 1.00 / 1.00 mm, no contact at ±20° | as plan |
 | 5 | Servo clearance | ≥ 1.00 mm (body and arm ±35°) | ≥ 1 mm |
 | 6 | Solids / overlaps | 151 valid; 0 overlaps > 1 mm³ in 276 neighbour pairs | 0 |
-| 7 | Mass | 156.6 g | ≤ 160 g |
+| 7 | Mass | 156.6 g | report (no fixed limit, D-047) |
 | — | DXF | 208 cut loops read back = model profiles within 0.02 mm; FreeCAD importer reads mm, rib 199.0 × 36.8 mm = model | — |
 | — | STL | all 8 meshes closed; mesh volume = solid volume | — |
 
