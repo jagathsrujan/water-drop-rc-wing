@@ -1,5 +1,7 @@
 # 04 — Fuselage and tail: modelling plan (rev A)
 
+> **2026-11-23 (D-068):** the pod is now the balsa rev B v2 (`design/cad_fuselage_balsa/README.md`). This plan stays valid for the interface, the tail, the stations and the checks; the printed-pod construction below is the rev A reference.
+
 Status: **approved, gate 3 passed 2026-11-22** (user: "Approve, start"); masses corrected after gate 2 (§5); D-052…D-057 decided (D-055 built-up tail; PLA test aircraft with full water: risk accepted by the user). Gate 1 (brief R20–R26) and gate 2 (concept U, D-052) passed.
 Decisions in force: D-007 high wing, D-008 rubber bands on 2 dowels (front dowel: see D-053), D-033 reservoir first, D-039 FreeCAD, D-046 top removal, D-049 in-place fill, D-051 belly Z −117, **D-052 printed pod + twin Ø8/6 carbon tubes, tractor nose motor, conventional tail with elevator and rudder**.
 Binding interface: `design/03_reservoir_plan.md` §13 (and §14 as built). Notebook: `design/logs/fuselage_log.md`. Calculation: `design/calc/fuselage_sizing.py`.

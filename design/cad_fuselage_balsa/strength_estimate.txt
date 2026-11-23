@@ -1,0 +1,2 @@
+run('C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\strength_estimate.m')
+diary off

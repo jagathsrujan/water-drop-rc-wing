@@ -19,12 +19,12 @@ pod_rest               valid=True solids=1 vol=    88454.8 mm3  BB(mesh) X -170.
 F1_PodNose             valid=True solids=1 vol=    30195.9 mm3  BB(mesh) X -170.00..-26.22 Y -55.00..55.00 Z -117.00..-7.00
 F2_PodCentre           valid=True solids=1 vol=    36448.2 mm3  BB(mesh) X -26.22..175.00 Y -55.00..55.00 Z -117.00..-4.00
 F3_PodAft              valid=True solids=1 vol=    21806.7 mm3  BB(mesh) X 175.00..300.00 Y -55.00..55.00 Z -117.00..-12.82
-pod build time 5.3 s
+pod build time 9.7 s
 stage F-A build done
 ## checks (stage F-A)
-Fuselage rev A - check report, stage F-A  (2026-11-23 14:50)
+Fuselage rev A - check report, stage F-A  (2026-11-23 17:08)
 Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Wing +3 deg about +Y.
-Model: /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_fuselage/Fuselage_revA.FCStd ; parameters: scripts/fus_params.py (section 13 values read from res_params.py + result_stageA.json)
+Model: C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd ; parameters: scripts/fus_params.py (section 13 values read from res_params.py + result_stageA.json)
 
 == 0. Reservoir link (section 13 values read from the reservoir model; the model wins) ==
 bottle base X -25.723 ; BELLY_Z -117.0 ; FLOOR_Z -115.5 ; FLOOR_HOLE_RECT (47.0, 115.0, -20.0, 20.0) ; FILL_X_C -11.0 ; cap top Z -7.0
@@ -165,7 +165,7 @@ skin thickness normal to the surface on sloped skin (section plane value 0.8; me
   f         lift-out sweep (full moving set)           FAIL
   f_noflag  lift-out without the safety-pin flag       PASS
   g         validity and build volume                  PASS
-check time 58 s
+check time 87 s
 ## pictures (stage F-A)
 pictures done: ['stageA_iso.png', 'stageA_iso_nowing.png', 'stageA_section_X80.png', 'stageA_section_Y0.png', 'stageA_side.png', 'stageA_top_limits.png']
 ## build_stageB.py
@@ -232,8 +232,10 @@ Fuselage rev A - stage F-B check report
   PH_TailServo_R     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
   PH_TailServo_L     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
   PH_Receiver        overlap pod 0.000, reservoir 0.000; min distance to reservoir 12.08 mm (RefRes_P1_Bottle) PASS
-  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 34.45 mm (RefRes_P1_Bottle) PASS
-  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 9.28 mm (RefRes_P1_Bottle) PASS
+  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 32.99 mm (RefRes_P1_Bottle) PASS
+  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 6.28 mm (RefRes_P1_Bottle) PASS
+  PH_Motor           overlap pod 0.000, reservoir 0.000; min distance to reservoir 147.30 mm (RefRes_P1_Bottle) PASS
+  PH_PropDisc        overlap pod 0.000, reservoir 0.000; min distance to reservoir 179.28 mm (RefRes_P1_Bottle) PASS
   placeholders: PASS
 
 4. Release-servo arm sweep (+-45 deg) to the structure (>= 3 mm)
@@ -247,7 +249,7 @@ Fuselage rev A - stage F-B check report
   hatch first contact: none PASS
   band paths to the hatch lift path (hatch at +0..+60, 3 mm steps) 9.89 mm (>= 3) PASS
   band paths (lines; band radius 1 mm) to F4_NoseHatch         9.89 mm at X 2.6 Y -64.7 Z -8.1 (>= 3) PASS
-  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y -25.7 Z -2.3 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y 25.7 Z -2.3 (>= 3) PASS
   band paths (lines; band radius 1 mm) to F3_PodAft            1.32 mm at X 280.8 Y -38.3 Z -14.3 (brief item 9: aft deck to report, no limit given)
 
 7. Ground plane at the skids
@@ -317,7 +319,7 @@ Fuselage rev A - stage F-C check report (tail)
   pushrods - F15_Rudder          10.15 mm at X 741.4 Y 11.5 Z 20.0
   pushrods - F13_Elevator        12.17 mm at X 741.2 Y -25.0 Z 31.5
   pushrods - F8_RearDowel        28.17 mm at X 300.7 Y -34.3 Z -52.1
-  pushrods - F3_PodAft            1.00 mm at X 290.7 Y 32.9 Z -55.4 (exit slot r 2.0 round the r 1.0 rod)
+  pushrods - F3_PodAft            1.00 mm at X 284.8 Y -34.7 Z -55.2 (exit slot r 2.0 round the r 1.0 rod)
   pushrods - PH_TailServo_R       3.44 mm at X 222.6 Y 35.6 Z -68.9
   pushrods - PH_TailServo_L       3.44 mm at X 222.7 Y -35.6 Z -68.9
   pushrods - RefRes_P1c_Cap      20.33 mm at X 232.8 Y 34.5 Z -66.1
@@ -370,7 +372,7 @@ Fuselage rev A - stage F-C check report (tail)
   min distance wing - F2_PodCentre           0.84 mm at X 2.4 Y -54.5 Z -4.3
   min distance wing - F3_PodAft              0.99 mm at X 279.6 Y 36.3 Z -14.7
   min distance wing - F4_NoseHatch           2.02 mm at X -0.1 Y -13.0 Z -2.2
-  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y -46.5 Z -4.8
+  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y 69.0 Z -4.8
   min distance wing - F8_RearDowel          14.55 mm at X 279.6 Y -39.7 Z -14.7
   min distance wing - RefRes_P11d_FillCap    4.33 mm at X 1.0 Y -0.0 Z -3.9
   min distance wing - F12_Stab             371.96 mm at X 279.6 Y -111.5 Z -14.7
@@ -393,6 +395,6 @@ Fuselage rev A - stage F-C check report (tail)
   without the tubes and the pushrods (surfaces, joiner, horns, film): 15.3 g (D-055 estimate 14 g)
 ## pictures (stage F-C)
 pictures done: ['assembly_iso.png', 'assembly_iso_aft.png', 'stageC_iso.png', 'stageC_pushrod_exit.png', 'stageC_side.png', 'stageC_tail_iso.png', 'stageC_tail_rear.png', 'stageC_top.png']
-## saved /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_fuselage/Fuselage_revA.FCStd
+## saved C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd
 
 DONE

@@ -139,9 +139,13 @@ MOTOR_C = (0.0, -50.0)                   # thrust line Y, Z (2 deg down / 2 deg 
 XMOUNT = (16.0, 19.0)                    # X-mount hole circles, M3 holes D3.2
 FW_COOL = [(15.0, -62.0), (-15.0, -62.0)]   # cooling holes D12 (Y, Z)
 TRAY_Z, TRAY_T, TRAY_X, TRAY_HW = -80.0, 1.2, (-160.0, -36.0), 20.0   # battery tray plate (top Z -80)
-BATT = (72.0, 35.0, 22.0)                # placeholder battery L x W x H
-BATT_XC, BATT_XC_RANGE = -96.0, (-125.0, -67.0)   # centre and slide range (aft end >= 1 mm ahead of the stop plate)
-ESC = (45.0, 25.0, 10.0)                 # under the tray
+BATT = (75.0, 34.0, 17.0)                # Pro-Range 3S 1000 mAh 30C, 85 g, XT60 (Robu SKU 23749, D-066) L x W x H
+BATT_XC, BATT_XC_RANGE = -96.0, (-125.0, -68.5)   # centre and slide range (aft end >= 1 mm ahead of the stop plate; front end ahead of the tray)
+ESC = (60.0, 25.0, 8.0)                  # Hobbywing Skywalker 40A V2, 36 g, 5 V / 5 A SBEC (D-066), under the tray
+ESC_X0 = -92.0                           # ESC front end; aft end X -32 stays >= 2 mm ahead of the front stop F6 (X -29.2)
+MOTOR_D, MOTOR_L = 35.0, 30.0            # DYS D2830 1000 KV can + X-mount from the firewall face (interp.: Robu gives no drawing)
+COLLET = (12.0, 14.0)                    # collet prop adapter D x L ahead of the motor (interp.)
+PROP_D, PROP_T, PROP_X = 254.0, 8.0, -209.0   # HQProp 10x5 thin electric, fixed (D-066): swept disc centre plane X, hub thickness
 LEDGE_T, LEDGE_W = 1.2, 4.0              # hatch ledge under the hatch flanges
 MAGNET_D, MAGNET_H = 6.0, 2.0
 MAGNET_X = (-150.0, -20.0)

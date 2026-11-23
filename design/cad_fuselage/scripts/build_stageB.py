@@ -330,8 +330,18 @@ for n, s, c, note in objs:
 for n, s in ph.items():
     B.put(n, s, "Placeholder", P.COL_PH, 0, props=dict(Note="placeholder (bought part), not printed"))
 B.put("PH_Battery", box(P.BATT_XC - P.BATT[0] / 2, P.BATT_XC + P.BATT[0] / 2, -P.BATT[1] / 2, P.BATT[1] / 2, P.TRAY_Z, P.TRAY_Z + P.BATT[2]),
-      "Placeholder", (0.2, 0.5, 0.2), 0, props=dict(Note="3S 1000 mAh placeholder; slide X %.0f .. %.0f" % P.BATT_XC_RANGE))
-B.put("PH_ESC", box(-80.0, -80.0 + P.ESC[0], -P.ESC[1] / 2, P.ESC[1] / 2, P.TRAY_Z - P.TRAY_T - 2 - P.ESC[2], P.TRAY_Z - P.TRAY_T - 2),
-      "Placeholder", (0.2, 0.2, 0.6), 0, props=dict(Note="ESC 30 A placeholder under the tray"))
+      "Placeholder", (0.2, 0.5, 0.2), 0,
+      props=dict(Note="Pro-Range 3S 1000 mAh 30C, 85 g (D-066); slide X %.1f .. %.1f" % P.BATT_XC_RANGE, Mass_g="85"))
+B.put("PH_ESC", box(P.ESC_X0, P.ESC_X0 + P.ESC[0], -P.ESC[1] / 2, P.ESC[1] / 2, P.TRAY_Z - P.TRAY_T - 2 - P.ESC[2], P.TRAY_Z - P.TRAY_T - 2),
+      "Placeholder", (0.2, 0.2, 0.6), 0, props=dict(Note="Hobbywing Skywalker 40A V2, 36 g (D-066), under the tray", Mass_g="36"))
+# motor, collet adapter and fixed prop ahead of the firewall (D-066)
+fw_front = P.FIREWALL_X - P.FW_T
+myc, mzc = P.MOTOR_C
+motor = cyl_x(myc, mzc, P.MOTOR_D / 2, fw_front - P.MOTOR_L, fw_front)
+collet = cyl_x(myc, mzc, P.COLLET[0] / 2, fw_front - P.MOTOR_L - P.COLLET[1], fw_front - P.MOTOR_L)
+B.put("PH_Motor", motor.fuse(collet), "Placeholder", (0.55, 0.15, 0.15), 0,
+      props=dict(Note="DYS D2830 1000 KV + collet adapter, 52 + 5 g (interp.) (D-066)", Mass_g="57"))
+B.put("PH_PropDisc", cyl_x(myc, mzc, P.PROP_D / 2, P.PROP_X - P.PROP_T / 2, P.PROP_X + P.PROP_T / 2), "Placeholder", (0.9, 0.9, 0.2), 70,
+      props=dict(Note="HQProp 10x5 thin electric, fixed, swept disc; 14 g (D-066)", Mass_g="14"))
 d.recompute()
 print("stage F-B build done")

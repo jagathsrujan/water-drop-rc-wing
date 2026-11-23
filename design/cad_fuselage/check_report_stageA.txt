@@ -1,6 +1,6 @@
-Fuselage rev A - check report, stage F-A  (2026-11-23 14:50)
+Fuselage rev A - check report, stage F-A  (2026-11-23 17:08)
 Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Wing +3 deg about +Y.
-Model: /Users/jagathsrujan/Documents/iit madras boeing v2/design/cad_fuselage/Fuselage_revA.FCStd ; parameters: scripts/fus_params.py (section 13 values read from res_params.py + result_stageA.json)
+Model: C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd ; parameters: scripts/fus_params.py (section 13 values read from res_params.py + result_stageA.json)
 
 == 0. Reservoir link (section 13 values read from the reservoir model; the model wins) ==
 bottle base X -25.723 ; BELLY_Z -117.0 ; FLOOR_Z -115.5 ; FLOOR_HOLE_RECT (47.0, 115.0, -20.0, 20.0) ; FILL_X_C -11.0 ; cap top Z -7.0
@@ -141,4 +141,4 @@ skin thickness normal to the surface on sloped skin (section plane value 0.8; me
   f         lift-out sweep (full moving set)           FAIL
   f_noflag  lift-out without the safety-pin flag       PASS
   g         validity and build volume                  PASS
-check time 58 s
+check time 87 s

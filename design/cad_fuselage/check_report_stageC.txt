@@ -25,7 +25,7 @@ Fuselage rev A - stage F-C check report (tail)
   pushrods - F15_Rudder          10.15 mm at X 741.4 Y 11.5 Z 20.0
   pushrods - F13_Elevator        12.17 mm at X 741.2 Y -25.0 Z 31.5
   pushrods - F8_RearDowel        28.17 mm at X 300.7 Y -34.3 Z -52.1
-  pushrods - F3_PodAft            1.00 mm at X 290.7 Y 32.9 Z -55.4 (exit slot r 2.0 round the r 1.0 rod)
+  pushrods - F3_PodAft            1.00 mm at X 284.8 Y -34.7 Z -55.2 (exit slot r 2.0 round the r 1.0 rod)
   pushrods - PH_TailServo_R       3.44 mm at X 222.6 Y 35.6 Z -68.9
   pushrods - PH_TailServo_L       3.44 mm at X 222.7 Y -35.6 Z -68.9
   pushrods - RefRes_P1c_Cap      20.33 mm at X 232.8 Y 34.5 Z -66.1
@@ -78,7 +78,7 @@ Fuselage rev A - stage F-C check report (tail)
   min distance wing - F2_PodCentre           0.84 mm at X 2.4 Y -54.5 Z -4.3
   min distance wing - F3_PodAft              0.99 mm at X 279.6 Y 36.3 Z -14.7
   min distance wing - F4_NoseHatch           2.02 mm at X -0.1 Y -13.0 Z -2.2
-  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y -46.5 Z -4.8
+  min distance wing - F9_BandStubs          19.36 mm at X 3.3 Y 69.0 Z -4.8
   min distance wing - F8_RearDowel          14.55 mm at X 279.6 Y -39.7 Z -14.7
   min distance wing - RefRes_P11d_FillCap    4.33 mm at X 1.0 Y -0.0 Z -3.9
   min distance wing - F12_Stab             371.96 mm at X 279.6 Y -111.5 Z -14.7

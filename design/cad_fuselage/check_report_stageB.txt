@@ -37,8 +37,10 @@ Fuselage rev A - stage F-B check report
   PH_TailServo_R     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
   PH_TailServo_L     overlap pod 0.000, reservoir 0.000; min distance to reservoir 8.97 mm (RefRes_P1_Bottle) PASS
   PH_Receiver        overlap pod 0.000, reservoir 0.000; min distance to reservoir 12.08 mm (RefRes_P1_Bottle) PASS
-  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 34.45 mm (RefRes_P1_Bottle) PASS
-  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 9.28 mm (RefRes_P1_Bottle) PASS
+  PH_Battery         overlap pod 0.000, reservoir 0.000; min distance to reservoir 32.99 mm (RefRes_P1_Bottle) PASS
+  PH_ESC             overlap pod 0.000, reservoir 0.000; min distance to reservoir 6.28 mm (RefRes_P1_Bottle) PASS
+  PH_Motor           overlap pod 0.000, reservoir 0.000; min distance to reservoir 147.30 mm (RefRes_P1_Bottle) PASS
+  PH_PropDisc        overlap pod 0.000, reservoir 0.000; min distance to reservoir 179.28 mm (RefRes_P1_Bottle) PASS
   placeholders: PASS
 
 4. Release-servo arm sweep (+-45 deg) to the structure (>= 3 mm)
@@ -52,7 +54,7 @@ Fuselage rev A - stage F-B check report
   hatch first contact: none PASS
   band paths to the hatch lift path (hatch at +0..+60, 3 mm steps) 9.89 mm (>= 3) PASS
   band paths (lines; band radius 1 mm) to F4_NoseHatch         9.89 mm at X 2.6 Y -64.7 Z -8.1 (>= 3) PASS
-  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y -25.7 Z -2.3 (>= 3) PASS
+  band paths (lines; band radius 1 mm) to RefRes_P11d_FillCap  32.24 mm at X 22.1 Y 25.7 Z -2.3 (>= 3) PASS
   band paths (lines; band radius 1 mm) to F3_PodAft            1.32 mm at X 280.8 Y -38.3 Z -14.3 (brief item 9: aft deck to report, no limit given)
 
 7. Ground plane at the skids

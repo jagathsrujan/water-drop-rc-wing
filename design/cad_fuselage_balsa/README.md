@@ -1,0 +1,35 @@
+# Fuselage rev B — balsa pod, version 2 (designed for balsa construction)
+
+Laser-cut balsa and ply pod with printed PETG permanent jigs and hard points. The twin Ø10/8 carbon tubes, the tail, the electronics (D-066), the wing rev A and every reservoir interface value (plan 03 §13) are the same as rev A. Rev A (`design/cad_fuselage/`) is not changed. Status: **adopted fuselage (D-068, 2026-11-23)**; rev A stays as the printed reference.
+
+- Model: `Fuselage_revB_balsa.FCStd`. Rebuild in FreeCAD 1.1 (GUI): `BAL_SCRIPTS = "<repo>/design/cad_fuselage_balsa/scripts"` then `exec(open(BAL_SCRIPTS + "/run_all.py").read())` (about 2.5 min). Reads `Fuselage_revA.FCStd` for the reference bodies and never saves it.
+- Numbers: `scripts/bal_params.py`. Checks: `check_report.txt` (all PASS). Mass: `mass_table.md`. Strength: `strength_estimate.m` → `strength_estimate.txt` (MATLAB). Pictures: `img/`.
+- Clearance checks use hidden copies of the side layers without the hex holes (`PX_*`, conservative); mass uses the real panels.
+
+## Construction
+| Item | Build |
+|---|---|
+| Shape | Flat panels only. Sides and floor bend at the front stop (nose kink, X −29.2) and at the bulkhead (tail-cone kink, X 236): every kink sits on a former, no compound curves |
+| Sides | 1.5 mm medium balsa (grain X) + 1.0 mm inner layer glued with crossed grain = 2.5 mm; inner layer in 1.0 mm birch ply in the launch-grip zone (X 30–130, lower half); 348 hex cells 8 mm across flats, 2.5 mm webs, film on both faces. Solid at the grip zone, round the holes and ±5 mm at every former |
+| Right side at the release servo (X 44–96) | Single layer (§13: inner face ≥ Y 53.5) in 1.5 mm birch ply (balsa there fails the grip squeeze) + PETG D-059 arm pocket |
+| Floor | 1.5 mm balsa, grain across (§13: outer −117, inner −115.5), 2 balsa keels 5 × 3 and 6 × 6 corner longerons through the formers |
+| Cross members | 3 mm lite-ply U-formers at X 38, 105 (split round the belly opening), 170 (behind saddle 2), open at the top for the bottle lift-out; lower corners cut outside a 13 mm band round the bottle. Nose U-formers at X −130, −100 carry the battery tray. The wing closes the box when it is on |
+| Front stop | 3 mm lite-ply bearing ring r 25–42 + rim + 4 spokes (10 g nose-in load of the water) |
+| Bulkhead (X 236) and end former (X 302) | 3 mm birch ply ring + bar and 3 mm lite-ply end former, tubes glued through Ø10.3 holes with birch-ply rings; support span 69 mm. A removable printed fixture squares the end former to the tubes during the glue-up |
+| Printed permanent jig (PETG) | Nose ring: collar + glue sleeve, seats the 3 mm birch-ply firewall (thrust wedge in F-D) |
+| Saddles | Reservoir P12a/b outline as laser-cut 3 mm layers: lite-ply faces and every second layer, balsa core; strap bridges in lite-ply |
+| Other | PETG D-059 servo pocket + shelves; 1.5 mm birch-ply skids |
+| Top | Wing-seat capstrip 6 × 3; nose hatch 1.5 mm light balsa in two flat pieces on 3 × 3 ledges, 4 magnet pairs; aft deck 1.5 mm |
+
+## Result (densities interp.: medium balsa 0.14, light 0.10, birch ply 0.65, lite-ply 0.45, PETG 1.27 g/cm³; glue 10 % of wood)
+| | Rev A printed ASA Aero 0.65 | Rev B v1 (thin box) | Rev B v2 before the trims | **Rev B v2, adopted (D-068)** |
+|---|---|---|---|---|
+| Pod (same scope) | 120.9 g, no internal structure | 91.0 g | 141.6 g | **131.3 g** |
+| Empty aircraft | 677 g | 647 g | 698 g | **687 g** |
+| Score | 147 | 154 | 143 | **145** |
+| Loaded stall, Bengaluru | 9.14 m/s | 9.06 m/s | 9.20 m/s | **9.17 m/s** |
+| Strength (D-064 loads, ultimate 1.5 × limit) | removed FEM study: 6–65 × allowable without ribs | front stop, right side fail | margins ≥ 1.16 | **design loads ≥ 1.31** |
+
+Margins (allowable / ultimate stress, `strength_estimate.txt`): front stop ring 3.8, spokes 1.3; side in the grip zone 1.61; right side ply insert 1.93; frames ≥ 4.0; tail cone 19; floor over the skids 1.4–1.8; saddle bearing 9.5.
+Handling rule: a 20 N finger squeeze outside the grip zone (1.5 + 1.0 mm balsa) has margin 0.80 at ultimate (1.2 at the limit load); carry the aircraft by the grip zone or the wing.
+Biggest free saving: weigh every sheet and use light stock (0.10–0.12) for the inner layers, hatch and deck; set `RHO` in `bal_params.py`.
