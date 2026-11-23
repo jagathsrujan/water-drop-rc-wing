@@ -12,7 +12,7 @@ try:
     with contextlib.redirect_stdout(buf):
         import FreeCAD as App
         ns = {"__name__": "__main__", "BAL_SCRIPTS": SCRIPTS}
-        for f in ("build_balsa.py", "check_balsa.py") + (("make_pictures.py",) if App.GuiUp else ()):
+        for f in ("build_balsa.py", "check_balsa.py", "export_jigs.py") + (("make_pictures.py",) if App.GuiUp else ()):
             print("##", f)
             exec(open(os.path.join(SCRIPTS, f)).read(), dict(ns))
         import bal_params as BP

@@ -17,19 +17,35 @@ Laser-cut balsa and ply pod with printed PETG permanent jigs and hard points. Th
 | Front stop | 3 mm lite-ply bearing ring r 25–42 + rim + 4 spokes (10 g nose-in load of the water) |
 | Bulkhead (X 236) and end former (X 302) | 3 mm birch ply ring + bar and 3 mm lite-ply end former, tubes glued through Ø10.3 holes with birch-ply rings; support span 69 mm. A removable printed fixture squares the end former to the tubes during the glue-up |
 | Printed permanent jig (PETG) | Nose ring: collar + glue sleeve, seats the 3 mm birch-ply firewall (thrust wedge in F-D) |
-| Saddles | Reservoir P12a/b outline as laser-cut 3 mm layers: lite-ply faces and every second layer, balsa core; strap bridges in lite-ply |
+| Saddles | Reservoir P12a/b outline (thin cradle arc + base with the strap tunnel) as laser-cut 3 mm lite-ply layers glued face to face on the bottle wrapped in cling film (the bottle is the jig); strap bridges in lite-ply |
 | Other | PETG D-059 servo pocket + shelves; 1.5 mm birch-ply skids |
 | Top | Wing-seat capstrip 6 × 3; nose hatch 1.5 mm light balsa in two flat pieces on 3 × 3 ledges, 4 magnet pairs; aft deck 1.5 mm |
 
 ## Result (densities interp.: medium balsa 0.14, light 0.10, birch ply 0.65, lite-ply 0.45, PETG 1.27 g/cm³; glue 10 % of wood)
-| | Rev A printed ASA Aero 0.65 | Rev B v1 (thin box) | Rev B v2 before the trims | **Rev B v2, adopted (D-068)** |
+| | Rev A printed ASA Aero 0.65 | Rev B v1 (thin box) | Rev B v2 before the trims | **Rev B v2, adopted (D-068, D-069)** |
 |---|---|---|---|---|
-| Pod (same scope) | 120.9 g, no internal structure | 91.0 g | 141.6 g | **131.3 g** |
-| Empty aircraft | 677 g | 647 g | 698 g | **687 g** |
-| Score | 147 | 154 | 143 | **145** |
+| Pod (same scope) | 120.9 g, no internal structure | 91.0 g | 141.6 g | **133.1 g** |
+| Empty aircraft | 677 g | 647 g | 698 g | **689 g** |
+| Score | 147 | 154 | 143 | **144.5** |
 | Loaded stall, Bengaluru | 9.14 m/s | 9.06 m/s | 9.20 m/s | **9.17 m/s** |
 | Strength (D-064 loads, ultimate 1.5 × limit) | removed FEM study: 6–65 × allowable without ribs | front stop, right side fail | margins ≥ 1.16 | **design loads ≥ 1.31** |
 
 Margins (allowable / ultimate stress, `strength_estimate.txt`): front stop ring 3.8, spokes 1.3; side in the grip zone 1.61; right side ply insert 1.93; frames ≥ 4.0; tail cone 19; floor over the skids 1.4–1.8; saddle bearing 9.5.
 Handling rule: a 20 N finger squeeze outside the grip zone (1.5 + 1.0 mm balsa) has margin 0.80 at ultimate (1.2 at the limit load); carry the aircraft by the grip zone or the wing.
 Biggest free saving: weigh every sheet and use light stock (0.10–0.12) for the inner layers, hatch and deck; set `RHO` in `bal_params.py`.
+
+## Assembly: self-locating parts and removable jigs (D-069)
+**Stays in flight:** every former (nose frames, front stop, bay frames, bulkhead, end former) has 2 floor tabs and 2 side tabs (8 mm wide, former thickness long) that pass through laser-cut slots in the floor and the side laminate; sand them flush. Keels and longerons pass through notches in the formers. The PETG nose ring is the only printed part in the pod.
+
+**Removable jigs** (PLA, about 218 g of filament at 30 % infill; STL in `jigs/`, model orientation; all fit the 256 mm bed; checked: no overlap with the pod, tubes, reservoir or electronics, contact 0.00 mm where they locate):
+
+| Jig | Use | Print |
+|---|---|---|
+| J1a nose wedge, J1b tail wedge | Screw to a flat building board; the bay floor lies flat on the board, the wedges hold the nose floor (16°) and tail-cone floor (39°) at their angles; grooves clear the skids | flat bottom down |
+| J2 side squares ×4 (X 8–28, 140–160, both sides) | L-blocks against the outer side faces: sides vertical while the floor/former joints cure | base down |
+| J3 nose taper blocks L/R | Hold the nose sides at their plan angle between the front stop and the nose ring | base down |
+| J4 tube cradles ×2 (X 305–330, 600–620) | Hold both tubes parallel at Y ±16, Z −40 above the board; the first cradle's front face squares the end former. Glue the tubes into the bulkhead and end former with the cradles in place: this sets the tail incidence | base down |
+| J5 wing-seat gauges ×2 (X 0–140, 140–280) | Wing lower surface at +3° + 1 mm foam: sand the side tops and the capstrip until the gauge sits without rocking | flat top down |
+
+**Build order:** (1) laminate the side layers flat under weights; (2) screw J1 to the board, lay the floor, drop the formers into their slots, add keels and longerons; (3) add the sides onto the tabs with J2 and J3; (4) nose ring + firewall; (5) tubes through the bulkhead and end former on the J4 cradles; (6) aft deck, capstrip, sand with J5; (7) saddles on the cling-wrapped bottle, then glue them in; (8) film, skids.
+

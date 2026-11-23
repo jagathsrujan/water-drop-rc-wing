@@ -74,7 +74,7 @@ FIREWALL_X = (-173.0, -170.0)     # 3 mm birch ply plate inside the collar
 # tail-end jig: a removable printed fixture holds the end former square to the tubes during the glue-up (not in the model)
 END_X = (302.0, 305.0)            # 3 mm lite-ply end former (D-068 trim: replaces the PETG tail node), tubes glued through
 TUBE_RING_OD, TUBE_RING_T = 22.0, 3.0   # birch-ply rings round each tube hole: bulkhead aft face, end former front face
-SADDLE_LAYER = 3.0                # saddles: laser-cut layers along X, lite-ply / balsa alternating, lite-ply at both faces
+SADDLE_LAYER = 3.0                # saddles: laser-cut 3 mm lite-ply layers along X (P12a/b outline), glued face to face
 
 # ---------------- other parts ----------------
 TRAY_X, TRAY_T, TRAY_HW = (-150.0, NOSE_KINK - 0.03), 1.5, 20.0
@@ -104,3 +104,23 @@ GLUE_FRAC = 0.10                 # glue (laminating the sides too) + CA sealing,
 MAGNETS_G = 8 * 0.42
 
 LIFT_TRAVEL, LIFT_STEP = 120.0, 4.0
+
+# ---------------- self-locating laser-cut joints (stay in flight) ----------------
+TAB_W = 8.0                       # tab width; tab length = former thickness; tabs pass through the floor / side laminate
+SIDE_TAB_ZC = {"nose": -55.0, "U": -62.0, "split": -62.0, "stop": -62.0, "bulkhead": -62.0, "end": -40.0}
+FLOOR_TAB_Y = {"nose": 14.0, "U": 36.0, "split": 36.0, "stop": 36.0, "bulkhead": 36.0, "end": 10.0}
+# saddles: no pins (the cradle arc and base are 2 mm thick); the layers are glued on the cling-wrapped bottle
+
+# ---------------- removable printed assembly jigs (PLA, bench only, not in the mass table) ----------------
+BOARD_Z = FP.BELLY_Z              # flat building board = underside of the bay floor
+PRINT_BED = 256.0                 # Bambu P1S build volume (mm)
+JIG_NOSE_WEDGE_X = (X_FRONT, NOSE_KINK)            # J1a: under the sloped nose floor
+JIG_TAIL_WEDGE_X = (AFT_KINK, X_END)               # J1b: under the tail-cone floor
+JIG_SQUARE_X = [(8.0, 28.0), (140.0, 160.0)]       # J2: 90 deg side squares (clear of the stubs and the servo pocket bulge)
+JIG_SQUARE_OUT, JIG_SQUARE_TOP = 30.0, -77.0
+JIG_NOSE_X, JIG_NOSE_OUT, JIG_NOSE_TOP = (-165.0, -35.0), 15.0, -45.0   # J3: nose taper blocks against the outer nose sides
+JIG_TAIL_BLOCKS = [(X_END, X_END + 25.0), (600.0, 620.0)]              # J4: tube cradles; the first block's front face squares the end former
+JIG_TAIL_HW, JIG_TAIL_TOP = 30.0, -30.0
+JIG_SEAT_X = [(0.0, 140.0), (140.0, 280.0)]       # J5: wing-seat gauges (wing lower surface + 1 mm foam), 2 pieces
+JIG_SEAT_H, JIG_SEAT_RAIL = 12.0, (48.0, 58.0)    # gauge height above the seat line; rail |Y| range over the side tops
+RHO_PLA, JIG_INFILL = 1.24, 0.30                   # jig filament estimate

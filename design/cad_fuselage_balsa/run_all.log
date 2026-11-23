@@ -1,2 +1,301 @@
-build + check + pictures run step by step 2026-11-23 (D-068); saved C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
+## build_balsa.py
+hex cells: right 165, left 183
+JIG_J1a_NoseWedge    V    63109 mm3 X  -170.0.. -29.2 Y  -55.0.. 55.0 Z -117.0.. -78.0 solids 1
+JIG_J1b_TailWedge    V    52507 mm3 X   236.0.. 305.0 Y  -55.0.. 55.0 Z -117.0.. -62.0 solids 1
+JIG_J2_Square1R      V    12768 mm3 X     8.0..  28.0 Y   55.0.. 85.0 Z -117.0.. -77.0 solids 1
+JIG_J2_Square1L      V    12768 mm3 X     8.0..  28.0 Y  -85.0..-55.0 Z -117.0.. -77.0 solids 1
+JIG_J2_Square2R      V    12768 mm3 X   140.0.. 160.0 Y   55.0.. 85.0 Z -117.0.. -77.0 solids 1
+JIG_J2_Square2L      V    12768 mm3 X   140.0.. 160.0 Y  -85.0..-55.0 Z -117.0.. -77.0 solids 1
+JIG_J3_NoseTaperR    V    77597 mm3 X  -165.0.. -35.0 Y   29.0.. 69.2 Z -117.0.. -45.0 solids 1
+JIG_J3_NoseTaperL    V    77597 mm3 X  -165.0.. -35.0 Y  -69.2..-29.0 Z -117.0.. -45.0 solids 1
+JIG_J4_TubeCradle1   V    73767 mm3 X   305.0.. 330.0 Y  -30.0.. 30.0 Z -117.0.. -30.0 solids 1
+JIG_J4_TubeCradle2   V    65614 mm3 X   600.0.. 620.0 Y  -30.0.. 30.0 Z -117.0.. -30.0 solids 1
+JIG_J5_SeatGauge1    V    62180 mm3 X     0.0.. 140.0 Y  -58.0.. 58.0 Z  -14.1..   7.0 solids 1
+JIG_J5_SeatGauge2    V    61305 mm3 X   140.0.. 280.0 Y  -58.0.. 58.0 Z  -15.7..  -0.9 solids 1
+BS_SideR_PlyInsert   V     7545 mm3 X    44.0..  96.0 Y   53.5.. 55.0 Z -115.5.. -12.6 solids 1
+BS_SideR_Outer       V    44857 mm3 X  -170.0.. 305.0 Y   26.5.. 55.0 Z -115.5..  -5.0 solids 2
+BS_SideR_Inner       V    27722 mm3 X  -170.0.. 305.0 Y   25.5.. 53.5 Z -115.5..  -5.0 solids 2
+BS_SideR_InnerGrip   V     2184 mm3 X    30.0.. 130.0 Y   52.5.. 53.5 Z -115.5.. -70.0 solids 2
+BS_SideL_Outer       V    51153 mm3 X  -170.0.. 305.0 Y  -55.0..-26.5 Z -115.5..  -5.0 solids 1
+BS_SideL_Inner       V    29658 mm3 X  -170.0.. 305.0 Y  -53.5..-25.5 Z -115.5..  -5.0 solids 1
+BS_SideL_InnerGrip   V     4445 mm3 X    30.0.. 130.0 Y  -53.5..-52.5 Z -115.5.. -70.0 solids 1
+BS_Floor             V    68505 mm3 X  -170.0.. 305.0 Y  -55.0.. 55.0 Z -117.0.. -60.5 solids 1
+BS_Hatch             V    22063 mm3 X  -170.0..  -2.5 Y  -55.0.. 55.0 Z  -22.0..  -3.5 solids 1
+BS_AftDeck           V     7542 mm3 X   239.0.. 302.0 Y  -51.3.. 51.3 Z  -17.9.. -13.2 solids 1
+BS_Longerons         V     7926 mm3 X   -26.2.. 235.0 Y  -52.5.. 52.5 Z -115.5..-109.5 solids 4
+BS_SeatCapstrip      V     8533 mm3 X     0.0.. 236.0 Y  -52.5.. 52.5 Z  -17.1..  -5.0 solids 2
+BS_HatchLedges       V     2932 mm3 X  -165.0..  -2.5 Y  -52.5.. 52.5 Z  -24.4..  -5.0 solids 4
+BS_FrameN1           V     5851 mm3 X  -130.0..-127.0 Y  -36.2.. 36.2 Z  -89.9.. -16.8 solids 1
+BS_FrameN2           V    10627 mm3 X  -100.0.. -97.0 Y  -42.0.. 42.0 Z  -98.2.. -13.2 solids 1
+BS_FrameB1           V    10461 mm3 X    38.0..  41.0 Y  -55.0.. 55.0 Z -117.0.. -12.2 solids 1
+BS_FrameB2           V     8546 mm3 X   105.0.. 108.0 Y  -55.0.. 55.0 Z -117.0.. -14.0 solids 2
+BS_FrameB4           V    10376 mm3 X   170.0.. 173.0 Y  -55.0.. 55.0 Z -117.0.. -13.2 solids 1
+BS_FrontStop         V    18968 mm3 X   -29.2.. -26.2 Y  -55.0.. 55.0 Z -117.0..  -5.0 solids 1
+BS_Bulkhead          V     8855 mm3 X   236.0.. 239.0 Y  -55.0.. 55.0 Z -117.0.. -14.7 solids 2
+BS_Firewall          V     7849 mm3 X  -173.0..-170.0 Y  -26.8.. 26.8 Z  -76.8.. -21.7 solids 1
+BS_NoseRing          V     4113 mm3 X  -178.0..-165.0 Y  -28.0.. 28.0 Z  -78.0.. -20.5 solids 2
+BS_EndFormer         V     6976 mm3 X   302.0.. 305.0 Y  -31.1.. 31.1 Z  -64.4.. -17.9 solids 1
+BS_TubeRings         V     3562 mm3 X   239.0.. 302.0 Y  -27.0.. 27.0 Z  -51.0.. -29.0 solids 4
+BS_StubDoublers      V     2317 mm3 X   -16.0..   4.0 Y  -52.5.. 52.5 Z  -34.0.. -14.0 solids 2
+BS_BatteryTray       V     7080 mm3 X  -150.0.. -29.3 Y  -20.0.. 20.0 Z  -81.5.. -80.0 solids 1
+BS_FlapStop          V      720 mm3 X   115.0.. 125.0 Y  -24.0.. 24.0 Z -115.5..-114.0 solids 1
+BS_TailServoPads     V     1377 mm3 X   200.5.. 232.5 Y  -52.5.. 52.5 Z  -83.5.. -81.0 solids 4
+BS_Saddles           V     7199 mm3 X    -0.0.. 176.0 Y  -46.0.. 46.0 Z -115.5.. -76.8 solids 6
+BS_ServoPocketMount  V     1022 mm3 X    51.4..  86.6 Y   38.8.. 57.5 Z -115.5.. -89.4 solids 3
+BS_Skids             V     5685 mm3 X  -100.0.. 230.0 Y   -7.5..  7.5 Z -118.5.. -97.4 solids 2
+BS_Keels             V     7603 mm3 X   -26.2.. 234.5 Y  -29.0.. 29.0 Z -115.5..-112.5 solids 2
+BS_RearDowel         V     1560 mm3 X   292.5.. 297.5 Y  -39.7.. 39.7 Z  -24.5.. -19.5 solids 1
+BS_BandStubs         V      565 mm3 X    -8.0..  -4.0 Y  -69.0.. 69.0 Z  -26.0.. -22.0 solids 2
+balsa pod v2 build done: 34 parts, hex holes 348, hex area 19288 mm2
+## check_balsa.py
+Fuselage rev B (balsa pod) - check report  (2026-11-23 20:54)
+Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Model: C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
+Reference bodies copied from C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd (reservoir, wing rev A, tail, electronics placeholders).
+
+1. Validity
+  BS_SideR_PlyInsert   valid True solids 1  X 44.0..96.0  Y 53.5..55.0  Z -115.5..-12.6
+  BS_SideR_Outer       valid True solids 2  X -170.0..305.0  Y 26.5..55.0  Z -115.5..-5.0
+  BS_SideR_Inner       valid True solids 2  X -170.0..305.0  Y 25.5..53.5  Z -115.5..-5.0
+  BS_SideR_InnerGrip   valid True solids 2  X 30.0..130.0  Y 52.5..53.5  Z -115.5..-70.0
+  BS_SideL_Outer       valid True solids 1  X -170.0..305.0  Y -55.0..-26.5  Z -115.5..-5.0
+  BS_SideL_Inner       valid True solids 1  X -170.0..305.0  Y -53.5..-25.5  Z -115.5..-5.0
+  BS_SideL_InnerGrip   valid True solids 1  X 30.0..130.0  Y -53.5..-52.5  Z -115.5..-70.0
+  BS_Floor             valid True solids 1  X -170.0..305.0  Y -55.0..55.0  Z -117.0..-60.5
+  BS_Hatch             valid True solids 1  X -170.0..-2.5  Y -55.0..55.0  Z -22.0..-3.5
+  BS_AftDeck           valid True solids 1  X 239.0..302.0  Y -51.3..51.3  Z -17.9..-13.2
+  BS_Longerons         valid True solids 4  X -26.2..235.0  Y -52.5..52.5  Z -115.5..-109.5
+  BS_SeatCapstrip      valid True solids 2  X 0.0..236.0  Y -52.5..52.5  Z -17.1..-5.0
+  BS_HatchLedges       valid True solids 4  X -165.0..-2.5  Y -52.5..52.5  Z -24.4..-5.0
+  BS_FrameN1           valid True solids 1  X -130.0..-127.0  Y -36.2..36.2  Z -89.9..-16.8
+  BS_FrameN2           valid True solids 1  X -100.0..-97.0  Y -42.0..42.0  Z -98.2..-13.2
+  BS_FrameB1           valid True solids 1  X 38.0..41.0  Y -55.0..55.0  Z -117.0..-12.2
+  BS_FrameB2           valid True solids 2  X 105.0..108.0  Y -55.0..55.0  Z -117.0..-14.0
+  BS_FrameB4           valid True solids 1  X 170.0..173.0  Y -55.0..55.0  Z -117.0..-13.2
+  BS_FrontStop         valid True solids 1  X -29.2..-26.2  Y -55.0..55.0  Z -117.0..-5.0
+  BS_Bulkhead          valid True solids 2  X 236.0..239.0  Y -55.0..55.0  Z -117.0..-14.7
+  BS_Firewall          valid True solids 1  X -173.0..-170.0  Y -26.8..26.8  Z -76.8..-21.7
+  BS_NoseRing          valid True solids 2  X -178.0..-165.0  Y -28.0..28.0  Z -78.0..-20.5
+  BS_EndFormer         valid True solids 1  X 302.0..305.0  Y -31.1..31.1  Z -64.4..-17.9
+  BS_TubeRings         valid True solids 4  X 239.0..302.0  Y -27.0..27.0  Z -51.0..-29.0
+  BS_StubDoublers      valid True solids 2  X -16.0..4.0  Y -52.5..52.5  Z -34.0..-14.0
+  BS_BatteryTray       valid True solids 1  X -150.0..-29.3  Y -20.0..20.0  Z -81.5..-80.0
+  BS_FlapStop          valid True solids 1  X 115.0..125.0  Y -24.0..24.0  Z -115.5..-114.0
+  BS_TailServoPads     valid True solids 4  X 200.5..232.5  Y -52.5..52.5  Z -83.5..-81.0
+  BS_Saddles           valid True solids 6  X -0.0..176.0  Y -46.0..46.0  Z -115.5..-76.8
+  BS_ServoPocketMount  valid True solids 3  X 51.4..86.6  Y 38.8..57.5  Z -115.5..-89.4
+  BS_Skids             valid True solids 2  X -100.0..230.0  Y -7.5..7.5  Z -118.5..-97.4
+  BS_Keels             valid True solids 2  X -26.2..234.5  Y -29.0..29.0  Z -115.5..-112.5
+  BS_RearDowel         valid True solids 1  X 292.5..297.5  Y -39.7..39.7  Z -24.5..-19.5
+  BS_BandStubs         valid True solids 2  X -8.0..-4.0  Y -69.0..69.0  Z -26.0..-22.0
+  PASS
+
+2. Section 13 envelope
+  belly Z min (without skids) -117.000 (BELLY_Z -117.0) PASS
+  outer |Y| max at X 0-280 above Z -105 (pocket below) 55.000 <= 55.0 PASS
+  material inside the belly-opening prism 0.000 mm3 PASS
+  right side inner face Y 53.50 at X 50-90 (>= 53.5) PASS
+  floor top under the saddles Z -115.500 (FLOOR_Z -115.5) PASS
+
+3. Overlaps (mm3; glued contacts are 0)
+  pod-pod                  worst 0.0000 
+  pod-reservoir            worst 0.0000 
+  pod-placeholders         worst 0.0000 
+  pod-tail                 worst 0.0000 
+  pod-wing                 worst 0.0000 
+  placeholders-reservoir   worst 0.0000 
+  worst overlap 0.0000 mm3 PASS
+
+4. Release-servo arm sweep (+-90 deg about the shaft) to the pod (>= 3 mm)
+  0..+90: min 4.10 mm; 0..-90: min 3.04 mm (the real sweep is one of them)
+  PASS
+
+5. Release flap: open travel about the hinge pin (first contact with the pod)
+  hinge X 100.0 Z -111.0; distance at 150 deg 1.80 mm; first contact 157 deg
+  PASS (water stream free from 80 deg: reservoir check)
+
+6. Reservoir lift-out +Z to 120 in 4 mm steps (wing, hatch, straps, safety pin + flag removed: D-058; pod parts and placeholders stay)
+  moving set: P11a_FillFlange, P11b_FillGasket, P11c_FillNut, P11d_FillCap, P11e_CapSeal, P11f_VentFlap, P1_Bottle, P1c_Cap, P2_InnerFlange, P3_OuterGasket, P4_BasePlate, P5_Nut, P6_Flap, P7_FlapGasket, P8_HingePin, P9_ReleasePin, Water
+  first contact: none up to 120
+  PASS
+
+7. Hatch lift-off +Z 0..60 (3 mm steps) with the wing on
+  first contact: none; hatch - wing 2.68 mm; hatch - fill cap 2.00 mm (>= 1)
+  PASS
+
+8. Wing seat (1.0 mm foam tape by design)
+  wing - BS_SideR_Outer   0.78 mm
+  wing - BS_SideL_Outer   0.78 mm
+  wing - BS_SideR_Inner   0.78 mm
+  wing - BS_SeatCapstrip  0.78 mm
+  wing - BS_AftDeck       1.01 mm
+  wing - BS_Saddles       64.64 mm
+  wing - BS_FrontStop     26.07 mm
+  wing - BS_FrameB1       0.92 mm
+
+9. Ground: skid plane and the lowest valve part (section 13 check 11: >= 3 mm)
+  skid plane Z -118.50; lowest valve part Z -113.50; clearance 5.00 PASS
+  prop disc lowest Z -176.8: 58.3 mm below the skid plane (fixed prop, D-066)
+
+10. Pushrods to the pod (>= 2 mm; exit slots D4 in the aft side panels by design)
+  pushrods - BS_SideR_PlyInsert   127.52 mm (exit slot)
+  pushrods - BS_SideR_Outer       1.00 mm (exit slot)
+  pushrods - BS_SideR_Inner       1.00 mm (exit slot)
+  pushrods - BS_SideR_InnerGrip   93.79 mm (exit slot)
+  pushrods - BS_SideL_Outer       1.00 mm (exit slot)
+  pushrods - BS_SideL_Inner       1.00 mm (exit slot)
+  pushrods - BS_SideL_InnerGrip   93.76 mm (exit slot)
+  pushrods - BS_Floor             5.67 mm
+  pushrods - BS_Hatch             233.21 mm
+  pushrods - BS_AftDeck           33.87 mm
+  pushrods - BS_Longerons         43.66 mm
+  pushrods - BS_SeatCapstrip      48.51 mm
+  pushrods - BS_HatchLedges       232.82 mm
+  pushrods - BS_FrameN1           349.32 mm
+  pushrods - BS_FrameN2           319.31 mm
+  pushrods - BS_FrameB1           181.42 mm
+  pushrods - BS_FrameB2           114.49 mm
+  pushrods - BS_FrameB4           49.69 mm
+  pushrods - BS_FrontStop         248.53 mm
+  pushrods - BS_Bulkhead          9.28 mm
+  pushrods - BS_Firewall          392.42 mm
+  pushrods - BS_NoseRing          387.43 mm
+  pushrods - BS_EndFormer         2.97 mm
+  pushrods - BS_TubeRings         9.79 mm
+  pushrods - BS_StubDoublers      221.21 mm
+  pushrods - BS_BatteryTray       252.39 mm
+  pushrods - BS_FlapStop          108.17 mm
+  pushrods - BS_TailServoPads     12.74 mm
+  pushrods - BS_Saddles           53.53 mm
+  pushrods - BS_ServoPocketMount  139.89 mm
+  pushrods - BS_Skids             55.69 mm
+  pushrods - BS_Keels             44.06 mm
+  pushrods - BS_RearDowel         28.17 mm
+  pushrods - BS_BandStubs         230.57 mm
+  minimum without the exit slots 2.97 PASS
+  tubes X 235.1..725.0; glued in the bulkhead (X 236.0) and the end former (to X 305.0): support span 69.0 mm (rev A socket 70)
+
+11. Part sizes (laser bed / print volume)
+  BS_SideR_PlyInsert   52 x 2 x 103
+  BS_SideR_Outer       475 x 29 x 110
+  BS_SideR_Inner       475 x 28 x 110
+  BS_SideR_InnerGrip   100 x 1 x 46
+  BS_SideL_Outer       475 x 29 x 110
+  BS_SideL_Inner       475 x 28 x 110
+  BS_SideL_InnerGrip   100 x 1 x 46
+  BS_Floor             475 x 110 x 56
+  BS_Hatch             168 x 110 x 18
+  BS_AftDeck           63 x 103 x 5
+  BS_Longerons         261 x 105 x 6
+  BS_SeatCapstrip      236 x 105 x 12
+  BS_HatchLedges       162 x 105 x 19
+  BS_FrameN1           3 x 72 x 73
+  BS_FrameN2           3 x 84 x 85
+  BS_FrameB1           3 x 110 x 105
+  BS_FrameB2           3 x 110 x 103
+  BS_FrameB4           3 x 110 x 104
+  BS_FrontStop         3 x 110 x 112
+  BS_Bulkhead          3 x 110 x 102
+  BS_Firewall          3 x 54 x 55
+  BS_NoseRing          13 x 56 x 58
+  BS_EndFormer         3 x 62 x 46
+  BS_TubeRings         63 x 54 x 22
+  BS_StubDoublers      20 x 105 x 20
+  BS_BatteryTray       121 x 40 x 2
+  BS_FlapStop          10 x 48 x 2
+  BS_TailServoPads     32 x 105 x 2
+  BS_Saddles           176 x 92 x 39
+  BS_ServoPocketMount  35 x 19 x 26
+  BS_Skids             330 x 15 x 21
+  BS_Keels             261 x 58 x 3
+  BS_RearDowel         5 x 79 x 5
+  BS_BandStubs         4 x 138 x 4
+
+13. Removable assembly jigs (PLA, bench only): fit, contact, print size (bed 256 mm)
+  JIG_J1a_NoseWedge          overlap 0.0000 ; contact (mm): Floor 0.00; size 141 x 110 x 39 PASS
+  JIG_J1b_TailWedge          overlap 0.0000 ; contact (mm): Floor 0.00; size 110 x 69 x 55 PASS
+  JIG_J2_Square1R            overlap 0.0000 ; contact (mm): SideR_Outer 0.00, SideL_Outer 108.50; size 40 x 30 x 20 PASS
+  JIG_J2_Square1L            overlap 0.0000 ; contact (mm): SideR_Outer 108.50, SideL_Outer 0.00; size 40 x 30 x 20 PASS
+  JIG_J2_Square2R            overlap 0.0000 ; contact (mm): SideR_Outer 0.00, SideL_Outer 108.50; size 40 x 30 x 20 PASS
+  JIG_J2_Square2L            overlap 0.0000 ; contact (mm): SideR_Outer 108.50, SideL_Outer 0.00; size 40 x 30 x 20 PASS
+  JIG_J3_NoseTaperR          overlap 0.0000 ; contact (mm): SideR_Outer 0.00, SideL_Outer 55.67; size 130 x 72 x 40 PASS
+  JIG_J3_NoseTaperL          overlap 0.0000 ; contact (mm): SideR_Outer 55.67, SideL_Outer 0.00; size 130 x 72 x 40 PASS
+  JIG_J4_TubeCradle1         overlap 0.0000 ; contact (mm): F10_Tubes 0.15, EndFormer 0.00; size 87 x 60 x 25 PASS
+  JIG_J4_TubeCradle2         overlap 0.0000 ; contact (mm): F10_Tubes 0.15, EndFormer 295.00; size 87 x 60 x 20 PASS
+  JIG_J5_SeatGauge1          overlap 0.0000 ; contact (mm): SeatCapstrip 0.00, SideR_Outer 0.00, SideL_Outer 0.00; size 140 x 116 x 21 PASS
+  JIG_J5_SeatGauge2          overlap 0.0000 ; contact (mm): SeatCapstrip 0.00, SideR_Outer 0.00, SideL_Outer 0.00; size 140 x 116 x 15 PASS
+  filament estimate (PLA, 30 % infill): 218 g for all jigs
+  PASS
+
+12. Mass table
+  hex holes: 0.0193 m2 of side panel removed (both sides)
+  BS_SideR_PlyInsert   ply            7.55 cm3    4.90 g  1.5 mm birch ply insert in the outer layer, X 44 .. 96 (grip on the single layer)
+  BS_SideR_Outer       balsa_med     44.86 cm3    6.28 g  1.5 mm medium balsa, grain X, hex lightening under film
+  BS_SideR_Inner       balsa_med     27.72 cm3    3.88 g  1.0 mm medium balsa, grain vertical, laminated inside the outer layer
+  BS_SideR_InnerGrip   ply            2.18 cm3    1.42 g  1.0 mm birch ply inner layer in the launch-grip zone
+  BS_SideL_Outer       balsa_med     51.15 cm3    7.16 g  1.5 mm medium balsa, grain X, hex lightening under film
+  BS_SideL_Inner       balsa_med     29.66 cm3    4.15 g  1.0 mm medium balsa, grain vertical, laminated inside the outer layer
+  BS_SideL_InnerGrip   ply            4.44 cm3    2.89 g  1.0 mm birch ply inner layer in the launch-grip zone
+  BS_Floor             balsa_med     68.50 cm3    9.59 g  1.5 mm medium balsa, grain across (Y)
+  BS_Hatch             balsa_light   22.06 cm3    2.21 g  1.5 mm light balsa hatch, 2 flat pieces glued at the front-stop line, 4 magnet pairs
+  BS_AftDeck           balsa_med      7.54 cm3    1.06 g  1.5 mm aft deck, bulkhead to the tail node
+  BS_Longerons         balsa_med      7.93 cm3    1.11 g  6 x 6 balsa triangle stock, floor-side corners
+  BS_SeatCapstrip      balsa_med      8.53 cm3    1.19 g  6 x 3 balsa wing-seat capstrip (top longeron)
+  BS_HatchLedges       balsa_med      2.93 cm3    0.41 g  3 x 3 balsa hatch ledges
+  BS_FrameN1           liteply        5.85 cm3    2.63 g  3 mm lite-ply nose U, tray seat former; 2 floor + 2 side tabs
+  BS_FrameN2           liteply       10.63 cm3    4.78 g  3 mm lite-ply nose U, tray seat former; 2 floor + 2 side tabs
+  BS_FrameB1           liteply       10.46 cm3    4.71 g  3 mm lite-ply U (open top) former; 2 floor + 2 side tabs
+  BS_FrameB2           liteply        8.55 cm3    3.85 g  3 mm lite-ply split U (belly opening) former; 2 floor + 2 side tabs
+  BS_FrameB4           liteply       10.38 cm3    4.67 g  3 mm lite-ply U (open top) former; 2 floor + 2 side tabs
+  BS_FrontStop         liteply       18.97 cm3    8.54 g  3 mm lite-ply front stop: bearing ring r 25-42 + rim + 4 spokes (10 g nose-in), nose kink; 2 floor + 2 side tabs
+  BS_Bulkhead          ply            8.85 cm3    5.76 g  3 mm birch ply bulkhead ring + bar at the aft kink, tubes glued through; 2 floor + 2 side tabs
+  BS_Firewall          ply            7.85 cm3    5.10 g  3 mm birch ply firewall seated in the nose ring
+  BS_NoseRing          petg           4.11 cm3    5.22 g  PETG permanent jig: collar round the firewall + glue sleeve; thrust wedge in F-D
+  BS_EndFormer         liteply        6.98 cm3    3.14 g  3 mm lite-ply end former, tubes glued through D10.3 holes (D-068: replaces the PETG tail node); 2 floor + 2 side tabs
+  BS_TubeRings         ply            3.56 cm3    2.32 g  3 mm birch-ply rings round the tube holes (4)
+  BS_StubDoublers      ply            2.32 cm3    1.51 g  3 mm birch ply doublers at the band stubs
+  BS_BatteryTray       liteply        7.08 cm3    3.19 g  1.5 mm lite-ply tray |Y| 20 on the nose frames and the front stop
+  BS_FlapStop          ply            0.72 cm3    0.47 g  1.5 mm birch ply flap stop (D-061)
+  BS_TailServoPads     liteply        1.38 cm3    0.62 g  2.5 mm lite-ply tail-servo pads
+  BS_Saddles           liteply        7.20 cm3    3.24 g  3 mm lite-ply layers of the P12a/b outline + strap bridges, glued on the cling-wrapped bottle
+  BS_ServoPocketMount  petg           1.02 cm3    1.30 g  PETG D-059 arm pocket + release-servo shelves
+  BS_Skids             ply            5.68 cm3    3.70 g  1.5 mm birch ply skids, replaceable (D-068 trim, was PETG)
+  BS_Keels             balsa_med      7.60 cm3    1.06 g  2 floor keels 5 x 3 balsa grain X, through the formers
+  BS_RearDowel         birch          1.56 cm3    1.09 g  D5 rear band dowel
+  BS_BandStubs         carbon         0.57 cm3    0.88 g  D4 carbon front band stubs (D-053)
+  covering film 0.168 m2 x 30 g/m2 = 5.04 g; glue + CA sealing 10 % of wood 106.61 g = 10.66 g; magnets 3.36 g
+  TOTAL balsa pod (same scope as the rev A pod total: skin, formers, hard points, saddles, sockets, skids, stubs, dowel, magnets): 133.1 g
+  rev A pod: 120.9 g ASA Aero 0.65 / 211.3 g PLA -> balsa saves -12.2 g / 78.2 g
+  empty aircraft 689 g (rev A ASA Aero 677 g); loaded 1685 g; score 144.5; loaded stall at rho 1.05, CLmax 1.35: 9.17 m/s (R6 <= 9.0)
+  (receiver 8 g and wiring 15 g are estimates; tail, wing, reservoir and electronics as rev A / D-066)
+
+Summary
+  1 validity     PASS
+  2 envelope     PASS
+  3 overlaps     PASS
+  4 servo arm    PASS
+  5 flap         PASS
+  6 lift-out     PASS
+  7 hatch        PASS
+  9 ground       PASS
+  10 pushrods    PASS
+  13 jigs        PASS
+check time 130 s
+check done
+## export_jigs.py
+STL J1a_NoseWedge.stl 424 facets
+STL J1b_TailWedge.stl 452 facets
+STL J2_Square1R.stl 28 facets
+STL J2_Square1L.stl 28 facets
+STL J2_Square2R.stl 28 facets
+STL J2_Square2L.stl 28 facets
+STL J3_NoseTaperR.stl 44 facets
+STL J3_NoseTaperL.stl 44 facets
+STL J4_TubeCradle1.stl 220 facets
+STL J4_TubeCradle2.stl 220 facets
+STL J5_SeatGauge1.stl 204 facets
+STL J5_SeatGauge2.stl 148 facets
+## make_pictures.py
+pictures: ['assembly_iso.png', 'jigs_layout_iso.png', 'jigs_on_pod_iso.png', 'pod_bottom.png', 'pod_iso.png', 'pod_open_iso.png', 'pod_open_top.png', 'pod_side.png', 'pod_structure_iso.png']
+## saved C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
+
 DONE

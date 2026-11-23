@@ -251,6 +251,23 @@ CUTS = fuse_all(cuts)
 SIDE_O = SIDE_O.cut(CUTS)
 SIDE_I = SIDE_I.cut(CUTS)
 
+# ---------------- self-locating tabs: every former has 2 floor tabs and 2 side tabs through the skins ----------------
+WALL = OUT.cut(PLAN_IN2).cut(FLOOR_REG)
+FORMERS = [(n, x, k) for n, x, k in BP.FRAMES] + [("BS_FrontStop", FP.STOP_X[0], "stop"), ("BS_Bulkhead", BP.AFT_KINK, "bulkhead"),
+                                                   ("BS_EndFormer", BP.END_X[0], "end")]
+TABS = {}
+for n, x0, kind in FORMERS:
+    tw, yc_f, zc_s = BP.TAB_W / 2, BP.FLOOR_TAB_Y[kind], BP.SIDE_TAB_ZC[kind]
+    tl = []
+    for s in (1, -1):
+        tl.append(box(x0, x0 + BP.FRAME_T, s * yc_f - tw, s * yc_f + tw, -300, 100).common(OUT).common(FLOOR_REG))
+        tl.append(box(x0, x0 + BP.FRAME_T, *sorted((s * 20.0, s * 80.0)), zc_s - tw, zc_s + tw).common(WALL))
+    TABS[n] = fuse_all(tl)
+TAB_ALL = fuse_all(list(TABS.values()))
+SIDE_O = SIDE_O.cut(TAB_ALL)
+SIDE_I = SIDE_I.cut(TAB_ALL)
+FLOOR = FLOOR.cut(TAB_ALL)
+
 # ---------------- hex lightening (through both layers) ----------------
 R_hex = BP.HEX_AF / math.sqrt(3.0)                 # circumradius
 pitch_x = 1.5 * (BP.HEX_AF + BP.HEX_WEB) / math.sqrt(3.0)
@@ -423,21 +440,10 @@ for s in (1, -1):
 parts["BS_TailServoPads"] = (fuse_all(pads), "liteply", C_PLY, "2.5 mm lite-ply tail-servo pads")
 
 # ---------------- PETG hard points ----------------
-# saddles as laser-cut layers along X: lite-ply / balsa alternating, lite-ply at both faces (D-068 trim, was PETG)
-ply_l, bal_l = [], []
-for nm in ("RefRes_P12a_Saddle1", "RefRes_P12b_Saddle2"):
-    bb_ = src.getObject(nm).Shape.BoundBox
-    piece = SAD.common(box(bb_.XMin - 13, bb_.XMax + 13, -200, 200, -300, 100))
-    xa_, xb_ = piece.BoundBox.XMin, piece.BoundBox.XMax
-    n_l = max(3, int(round((xb_ - xa_) / BP.SADDLE_LAYER)))
-    n_l += (n_l + 1) % 2                                  # odd number of layers -> lite-ply at both faces
-    edges_ = [xa_ + (xb_ - xa_) * k / n_l for k in range(n_l + 1)]
-    for k in range(n_l):
-        sl = piece.common(xslab(edges_[k], edges_[k + 1]))
-        if sl.Volume > 1e-3:
-            (ply_l if k % 2 == 0 else bal_l).append(sl)
-parts["BS_SaddlePly"] = (fuse_all(ply_l), "liteply", C_PLY, "saddle layers in 3 mm lite-ply (faces + every second layer), strap bridges")
-parts["BS_SaddleBalsa"] = (fuse_all(bal_l), "balsa_med", C_BALSA, "saddle core layers in 3 mm balsa")
+# saddles: the reservoir P12a/b outline (thin cradle arc + base with the strap tunnel between them) as laser-cut
+# 3 mm lite-ply layers glued face to face; the layers are stacked and glued on the bottle wrapped in cling film
+# (the bottle is the alignment jig). D-068 trim, was PETG.
+parts["BS_Saddles"] = (SAD, "liteply", C_PLY, "3 mm lite-ply layers of the P12a/b outline + strap bridges, glued on the cling-wrapped bottle")
 cup = box(px0 - w, px1 + w, FP.Y_LIMIT - BP.T_SIDE_OUT, FP.POCKET_YIN + w, max(pz0 - w, zf), pz1 + w).cut(box(px0, px1, 50.0, FP.POCKET_YIN, pz0, pz1))
 servo = src.getObject("RefRes_P14_Servo_MG90S").Shape
 sb = servo.BoundBox
@@ -456,6 +462,56 @@ parts["BS_Skids"] = (fuse_all([skid_band.common(box(a_, b2, -BP.SKID_HW, BP.SKID
 parts["BS_Keels"] = (KEEL.cut(SAD), "balsa_med", C_BALSA, "2 floor keels 5 x 3 balsa grain X, through the formers")
 parts["BS_RearDowel"] = (src.getObject("F8_RearDowel").Shape.copy(), "birch", C_PLY, "D5 rear band dowel")
 parts["BS_BandStubs"] = (src.getObject("F9_BandStubs").Shape.copy(), "carbon", C_CARB, "D4 carbon front band stubs (D-053)")
+
+# tabs join their formers
+for n, tb in TABS.items():
+    s_, mat, col, note = parts[n]
+    parts[n] = (s_.fuse(tb).removeSplitter(), mat, col, note + "; 2 floor + 2 side tabs")
+
+# ---------------- removable printed assembly jigs (PLA, bench only) ----------------
+jigs = {}          # name -> (shape, note, checked_against_wing, bench_only)
+BZ = BP.BOARD_Z
+skids_shape = parts["BS_Skids"][0]
+for nm_, (xa, xb) in (("JIG_J1a_NoseWedge", BP.JIG_NOSE_WEDGE_X), ("JIG_J1b_TailWedge", BP.JIG_TAIL_WEDGE_X)):
+    wdg = prism_y(below(BP.BOTTOM)).common(PLAN).common(xslab(xa, xb)).common(box(-400, 600, -200, 200, BZ, 100)).cut(skids_shape)
+    hollow = prism_y(off(below(BP.BOTTOM), -3.0)).common(prism_z(off(PLAN_F, -4.0))).common(xslab(xa + 4, xb - 4))
+    wdg = wdg.cut(hollow.common(box(-400, 600, -200, 200, BZ - 1, 100)).cut(box(0.5 * (xa + xb) - 2, 0.5 * (xa + xb) + 2, -200, 200, -300, 100)))
+    xm = 0.5 * (xa + xb)
+    wdg = wdg.cut(fuse_all([cyl((xm, s * 12.0, BZ - 1), (xm, s * 12.0, 0), 2.0) for s in (1, -1)]))      # 2 screw holes to the board
+    jigs[nm_] = (wdg, "J1 building board: supports the sloped %s floor at its angle; screw to the board" % ("nose" if "Nose" in nm_ else "tail-cone"), True, False)
+for k, (xa, xb) in enumerate(BP.JIG_SQUARE_X):
+    for s, nm in ((1, "R"), (-1, "L")):
+        sq = box(xa, xb, *sorted((s * FP.Y_LIMIT, s * (FP.Y_LIMIT + BP.JIG_SQUARE_OUT))), BZ, BP.JIG_SQUARE_TOP)
+        sq = sq.cut(box(xa + 4, xb - 4, *sorted((s * (FP.Y_LIMIT + 4), s * (FP.Y_LIMIT + BP.JIG_SQUARE_OUT + 1))), BZ + 4, BP.JIG_SQUARE_TOP + 1))
+        jigs["JIG_J2_Square%d%s" % (k + 1, nm)] = (sq, "J2 side square: holds the side vertical to the floor (L-section)", True, False)
+nx0, nx1 = BP.JIG_NOSE_X
+nose_blk = prism_z(off(PLAN_F, BP.JIG_NOSE_OUT)).cut(PLAN).common(xslab(nx0, nx1)).common(box(-400, 600, -200, 200, BZ, BP.JIG_NOSE_TOP))
+nose_in = prism_z(off(PLAN_F, BP.JIG_NOSE_OUT - 3.0)).cut(prism_z(off(PLAN_F, 4.0))).common(xslab(nx0 + 4, nx1 - 4)).common(
+    box(-400, 600, -200, 200, BZ + 4, BP.JIG_NOSE_TOP + 1))
+nose_blk = nose_blk.cut(nose_in.cut(xslab(0.5 * (nx0 + nx1) - 2, 0.5 * (nx0 + nx1) + 2)))        # open box: face 4, wall 3, base 4, rib
+for s, nm in ((1, "R"), (-1, "L")):
+    half = box(-400, 600, 0, 200, -300, 100) if s > 0 else box(-400, 600, -200, 0, -300, 100)
+    jigs["JIG_J3_NoseTaper" + nm] = (nose_blk.common(half), "J3 nose taper block: holds the nose side at its plan angle", True, False)
+chan = []
+for s in (1, -1):
+    chan.append(cyl((200, s * FP.SOCK_Y, FP.SOCK_Z), (800, s * FP.SOCK_Y, FP.SOCK_Z), FP.TUBE_OD / 2 + 0.15))
+    chan.append(box(200, 800, s * FP.SOCK_Y - FP.TUBE_OD / 2 - 0.15, s * FP.SOCK_Y + FP.TUBE_OD / 2 + 0.15, FP.SOCK_Z, 100))
+CHAN = fuse_all(chan)
+for k, (xa, xb) in enumerate(BP.JIG_TAIL_BLOCKS):
+    blk = box(xa, xb, -BP.JIG_TAIL_HW, BP.JIG_TAIL_HW, BZ, BP.JIG_TAIL_TOP).cut(CHAN)
+    blk = blk.cut(box(xa + 5, xb - 5, -BP.JIG_TAIL_HW + 5, BP.JIG_TAIL_HW - 5, BZ - 1, FP.SOCK_Z - FP.TUBE_OD / 2 - 6))   # lighten
+    note = ("J4 tail jig: front face squares the end former; U-cradles hold both tubes parallel at Y +-16, Z -40" if k == 0
+            else "J4 tail jig: second tube cradle near the tail block")
+    jigs["JIG_J4_TubeCradle%d" % (k + 1)] = (blk, note, True, False)
+r0, r1 = BP.JIG_SEAT_RAIL
+for k, (xa, xb) in enumerate(BP.JIG_SEAT_X):
+    band = band_over_top(BP.JIG_SEAT_H).common(xslab(xa, xb))
+    rails = fuse_all([box(-400, 600, *sorted((s * r0, s * r1)), -300, 100) for s in (1, -1)] +
+                     [box(xc - 4, xc + 4, -r1, r1, -300, 100) for xc in (xa + 6, 0.5 * (xa + xb), xb - 6)])
+    jigs["JIG_J5_SeatGauge%d" % (k + 1)] = (band.common(rails), "J5 wing-seat gauge: wing lower surface + 1 mm foam, sand the side tops / capstrip to it", False, False)
+C_JIG = (0.95, 0.45, 0.70)
+for nm_, (sh, note, wing_chk, bench) in jigs.items():
+    put(nm_, ok(nm_, sh.removeSplitter()), "Jigs", C_JIG, 30, props=dict(Material="PLA_jig", Note=note, CheckWing=wing_chk, Bench=bench))
 
 # formers are notched for the keels; keels are cut at the saddles (the saddles sit on the floor)
 for n, (s_, mat, col, note) in parts.items():

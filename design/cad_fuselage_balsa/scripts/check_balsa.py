@@ -128,7 +128,7 @@ for sg in (1, -1):
     r.rotate(hc, V(0, 1, 0), sg * 150)
     if abs(r.BoundBox.ZMin - flap_open.ZMin) < 3 and abs(r.BoundBox.XMax - flap_open.XMax) < 3:
         sgn5 = sg
-pod_near = [S(n) for n in ("BS_Floor", "BS_FlapStop", "BS_Skids", "BS_Longerons", "BS_SaddlePly", "BS_SaddleBalsa", "BS_Keels", "BS_FrameB2")
+pod_near = [S(n) for n in ("BS_Floor", "BS_FlapStop", "BS_Skids", "BS_Longerons", "BS_Saddles", "BS_Keels", "BS_FrameB2")
             if d.getObject(n)]
 first, d150 = None, None
 for a in list(range(0, 140, 10)) + list(range(140, 181)):
@@ -187,7 +187,7 @@ out("  " + pf(results["7 hatch"]))
 
 out("\n8. Wing seat (1.0 mm foam tape by design)")
 wing = S("Ref_WingRevA")
-for n in ("BS_SideR_Outer", "BS_SideL_Outer", "BS_SideR_Inner", "BS_SeatCapstrip", "BS_AftDeck", "BS_SaddlePly", "BS_FrontStop", "BS_FrameB1"):
+for n in ("BS_SideR_Outer", "BS_SideL_Outer", "BS_SideR_Inner", "BS_SeatCapstrip", "BS_AftDeck", "BS_Saddles", "BS_FrontStop", "BS_FrameB1"):
     out("  wing - %-16s %.2f mm" % (n, wing.distToShape(S(n))[0]))
 
 out("\n9. Ground: skid plane and the lowest valve part (section 13 check 11: >= 3 mm)")
@@ -219,6 +219,36 @@ out("\n11. Part sizes (laser bed / print volume)")
 for n in POD:
     bb = S(n).BoundBox
     out("  %-20s %.0f x %.0f x %.0f" % (n, bb.XLength, bb.YLength, bb.ZLength))
+
+# ---------------- assembly jigs ----------------
+out("\n13. Removable assembly jigs (PLA, bench only): fit, contact, print size (bed %.0f mm)" % BP.PRINT_BED)
+JIGS = [o for o in d.Objects if o.Name.startswith("JIG_")]
+CONTACT = {"J1": ["BS_Floor"], "J2": ["BS_SideR_Outer", "BS_SideL_Outer"], "J3": ["BS_SideR_Outer", "BS_SideL_Outer"],
+           "J4": ["F10_Tubes", "BS_EndFormer"], "J5": ["BS_SeatCapstrip", "BS_SideR_Outer", "BS_SideL_Outer"]}
+jig_ok, fil = True, 0.0
+for o in JIGS:
+    s = o.Shape
+    fil += s.Volume / 1000.0 * BP.RHO_PLA * BP.JIG_INFILL
+    dims = sorted([s.BoundBox.XLength, s.BoundBox.YLength, s.BoundBox.ZLength])
+    fits = dims[2] <= BP.PRINT_BED and dims[1] <= BP.PRINT_BED
+    if o.Bench:
+        out("  %-26s bench part (shown 150 mm below the board); size %.0f x %.0f x %.0f %s" % (o.Name, dims[2], dims[1], dims[0], pf(fits)))
+        jig_ok = jig_ok and fits
+        continue
+    others = POD + RES + PH + TAIL + (["Ref_WingRevA"] if o.CheckWing else [])
+    worst, wn = 0.0, ""
+    for n in others:
+        v = FB.ovl(s, S(n))
+        if v > worst:
+            worst, wn = v, n
+    key = o.Name.split("_")[1][:2]
+    cdist = ", ".join("%s %.2f" % (n.replace("BS_", ""), s.distToShape(S(n))[0]) for n in CONTACT.get(key, []) if d.getObject(n))
+    ok_ = worst < TOL and fits
+    jig_ok = jig_ok and ok_
+    out("  %-26s overlap %.4f %s; contact (mm): %s; size %.0f x %.0f x %.0f %s" % (o.Name, worst, wn, cdist, dims[2], dims[1], dims[0], pf(ok_)))
+out("  filament estimate (PLA, %.0f %% infill): %.0f g for all jigs" % (BP.JIG_INFILL * 100, fil))
+results["13 jigs"] = jig_ok
+out("  " + pf(jig_ok))
 
 # ---------------- mass table ----------------
 out("\n12. Mass table")
