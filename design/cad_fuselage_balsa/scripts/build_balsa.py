@@ -166,7 +166,13 @@ for o in src.Objects:
             props=dict(ResState=getattr(o, "ResState", "closed"), MovingSet=bool(getattr(o, "MovingSet", False))),
             visible=o.Visibility)
 wing = Part.makeCompound([o.Shape.copy() for o in src.Objects if o.Name.startswith("W_")])
-put("Ref_WingRevA", wing, "Wing", (0.70, 0.78, 0.90), 60, props=dict(Note="wing rev A, 89 parts, +3 deg (from Fuselage_revA)"))
+put("Ref_WingRevA", wing, "CheckProxies", (0.70, 0.78, 0.90), 60,
+    props=dict(Note="wing rev A as one compound for the clearance checks (hidden)"), visible=False)
+# the real wing rev A: every part on its own (89 parts, +3 deg about Y through the origin, as in Fuselage_revA)
+for o in src.Objects:
+    if o.Name.startswith("W_"):
+        col = tuple(o.ViewObject.ShapeColor[:3]) if App.GuiUp else (0.85, 0.75, 0.55)
+        put(o.Name, o.Shape.copy(), "Wing", col, 0, props=dict(Note=getattr(o, "Label", o.Name)))
 for n in ("F10_Tubes", "F11_TailBlock", "F12_Stab", "F13_Elevator", "F14_Fin", "F15_Rudder", "F16_Joiner", "F17_Horns",
           "F18_Pushrods", "F19_GuideClips"):
     o = src.getObject(n)

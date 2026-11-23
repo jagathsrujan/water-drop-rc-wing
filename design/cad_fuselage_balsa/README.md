@@ -4,6 +4,7 @@ Laser-cut balsa and ply pod with printed PETG permanent jigs and hard points. Th
 
 - Model: `Fuselage_revB_balsa.FCStd`. Rebuild in FreeCAD 1.1 (GUI): `BAL_SCRIPTS = "<repo>/design/cad_fuselage_balsa/scripts"` then `exec(open(BAL_SCRIPTS + "/run_all.py").read())` (about 2.5 min). Reads `Fuselage_revA.FCStd` for the reference bodies and never saves it.
 - Numbers: `scripts/bal_params.py`. Checks: `check_report.txt` (all PASS). Mass: `mass_table.md`. Strength: `strength_estimate.m` → `strength_estimate.txt` (MATLAB). Pictures: `img/`.
+- **STEP for Onshape / SolidWorks:** `export/WaterDrop_revB_assembly.step` (AP214, mm, 24.9 MB): top assembly `WaterDrop_Aircraft_revB` with the subassemblies `Fuselage_BalsaPod` (34 parts), `Reservoir` (27, closed state, no water volume), `Wing_revA` (89 real wing parts at +3°), `Tail` (10), `Electronics` (8 placeholders incl. the swept prop disc); every part named and coloured. Jigs separately in `export/Jigs_revB.step`. Onshape: Import → keep "Create assembly" ticked. SolidWorks: File → Open → STEP (opens as an assembly with parts). Read back in FreeCAD: 168 bodies, 266 solids, all valid.
 - Clearance checks use hidden copies of the side layers without the hex holes (`PX_*`, conservative); mass uses the real panels.
 
 ## Construction

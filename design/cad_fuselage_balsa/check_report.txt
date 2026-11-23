@@ -1,4 +1,4 @@
-Fuselage rev B (balsa pod) - check report  (2026-11-23 20:54)
+Fuselage rev B (balsa pod) - check report  (2026-11-23 21:00)
 Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Model: C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
 Reference bodies copied from C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd (reservoir, wing rev A, tail, electronics placeholders).
 
@@ -229,4 +229,4 @@ Summary
   9 ground       PASS
   10 pushrods    PASS
   13 jigs        PASS
-check time 130 s
+check time 125 s

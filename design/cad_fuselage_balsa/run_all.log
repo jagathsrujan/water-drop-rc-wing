@@ -48,7 +48,7 @@ BS_RearDowel         V     1560 mm3 X   292.5.. 297.5 Y  -39.7.. 39.7 Z  -24.5..
 BS_BandStubs         V      565 mm3 X    -8.0..  -4.0 Y  -69.0.. 69.0 Z  -26.0.. -22.0 solids 2
 balsa pod v2 build done: 34 parts, hex holes 348, hex area 19288 mm2
 ## check_balsa.py
-Fuselage rev B (balsa pod) - check report  (2026-11-23 20:54)
+Fuselage rev B (balsa pod) - check report  (2026-11-23 21:00)
 Frame: wing frame, origin wing LE on the centreline, X aft, Y right, Z up, mm. Model: C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
 Reference bodies copied from C:\Projects\water-drop-rc-wing\design\cad_fuselage\Fuselage_revA.FCStd (reservoir, wing rev A, tail, electronics placeholders).
 
@@ -279,7 +279,7 @@ Summary
   9 ground       PASS
   10 pushrods    PASS
   13 jigs        PASS
-check time 130 s
+check time 125 s
 check done
 ## export_jigs.py
 STL J1a_NoseWedge.stl 424 facets
@@ -296,6 +296,9 @@ STL J5_SeatGauge1.stl 204 facets
 STL J5_SeatGauge2.stl 148 facets
 ## make_pictures.py
 pictures: ['assembly_iso.png', 'jigs_layout_iso.png', 'jigs_on_pod_iso.png', 'pod_bottom.png', 'pod_iso.png', 'pod_open_iso.png', 'pod_open_top.png', 'pod_side.png', 'pod_structure_iso.png']
+## export_step.py
+STEP WaterDrop_revB_assembly.step: {'Fuselage_BalsaPod': 34, 'Reservoir': 27, 'Wing_revA': 89, 'Tail': 10, 'Electronics': 8}, 24.9 MB
+STEP Jigs_revB.step: {'Jigs': 12}, 0.3 MB
 ## saved C:\Projects\water-drop-rc-wing\design\cad_fuselage_balsa\Fuselage_revB_balsa.FCStd
 
 DONE
