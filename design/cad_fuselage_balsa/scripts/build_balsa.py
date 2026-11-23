@@ -517,7 +517,8 @@ for k, (xa, xb) in enumerate(BP.JIG_SEAT_X):
     jigs["JIG_J5_SeatGauge%d" % (k + 1)] = (band.common(rails), "J5 wing-seat gauge: wing lower surface + 1 mm foam, sand the side tops / capstrip to it", False, False)
 C_JIG = (0.95, 0.45, 0.70)
 for nm_, (sh, note, wing_chk, bench) in jigs.items():
-    put(nm_, ok(nm_, sh.removeSplitter()), "Jigs", C_JIG, 30, props=dict(Material="PLA_jig", Note=note, CheckWing=wing_chk, Bench=bench))
+    put(nm_, ok(nm_, sh.removeSplitter()), "Jigs", C_JIG, 30, props=dict(Material="PLA_jig", Note=note, CheckWing=wing_chk, Bench=bench),
+        visible=False)                                    # hidden by default: the document opens on the aircraft
 
 # formers are notched for the keels; keels are cut at the saddles (the saddles sit on the floor)
 for n, (s_, mat, col, note) in parts.items():

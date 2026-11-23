@@ -30,8 +30,10 @@ pod = lambda o: o.Name.startswith("BS_")
 closed_res = lambda o: o.Name.startswith("RefRes_") and getattr(o, "ResState", "closed") == "closed"
 ph = lambda o: o.Name.startswith("PH_") and o.Name != "PH_PropDisc"
 tail = lambda o: o.Name[:3] in ("F10", "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19")
-show(lambda o: base[o.Name])
+show(lambda o: base[o.Name] and not o.Name.startswith("JIG_"))
 snap("assembly_iso", "viewIsometric")
+show(lambda o: base[o.Name] and not o.Name.startswith(("JIG_", "PH_PropDisc")))
+snap("aircraft_iso", "viewIsometric")
 show(lambda o: pod(o) or closed_res(o) or ph(o))
 snap("pod_iso", "viewIsometric")
 snap("pod_side", "viewFront")
