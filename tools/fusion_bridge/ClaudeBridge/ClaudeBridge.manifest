@@ -1,0 +1,13 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "addin",
+  "id": "bfbd7e7e-3cce-400f-af93-b503a60424cb",
+  "author": "water-drop-rc-wing",
+  "description": {
+    "": "Local bridge: runs Python from a client on 127.0.0.1 (token required) in the live Fusion GUI"
+  },
+  "version": "1.0.0",
+  "runOnStartup": true,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

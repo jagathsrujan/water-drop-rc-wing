@@ -1,0 +1,1359 @@
+[
+ {
+  "file": "balsa-light_1.5mm_sheet01.dxf",
+  "material": "balsa light",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "HN-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "HN-L",
+    "x": 147.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "HF",
+    "x": 3.0,
+    "y": 66.9,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-light_3mm_sheet01.dxf",
+  "material": "balsa light",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-TIPCAP-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-TIPCAP-L",
+    "x": 3.0,
+    "y": 45.8,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-light_3mm_sheet02.dxf",
+  "material": "balsa light",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "ELEV-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "ELEV-L",
+    "x": 3.0,
+    "y": 45.1,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-light_3mm_sheet03.dxf",
+  "material": "balsa light",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RUDDER",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "W-TIP-R",
+    "x": 3.0,
+    "y": 44.1,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-light_3mm_sheet04.dxf",
+  "material": "balsa light",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-TIP-L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet01.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RI-N1",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "LI-N1",
+    "x": 91.5,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-T1",
+    "x": 179.9,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet02.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LI-T1",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-M4",
+    "x": 107.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "LI-M2U",
+    "x": 214.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-M2U",
+    "x": 3.0,
+    "y": 78.2,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet03.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LI-M4",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-N2",
+    "x": 110.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "LI-M3U",
+    "x": 223.2,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet04.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LI-N2",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-M1",
+    "x": 116.1,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-M3U",
+    "x": 231.1,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet05.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LI-M1",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "LI-M5",
+    "x": 118.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1mm_sheet06.dxf",
+  "material": "balsa medium",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RI-M5",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet01.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "FL-M2",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "FL-M3",
+    "x": 116.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-R2",
+    "x": 229.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet02.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "FL-N2",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "FL-T1",
+    "x": 115.7,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-L2",
+    "x": 227.9,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet03.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LO-ML",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet04.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RO-M3L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "RO-M1L",
+    "x": 145.7,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "RO-TL",
+    "x": 221.6,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet05.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RO-NL",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "LO-NL",
+    "x": 148.6,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet06.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "LO-TL",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "DECK",
+    "x": 78.2,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "FL-N1",
+    "x": 185.8,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet07.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "FL-M1",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-R3",
+    "x": 116.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-L3",
+    "x": 155.1,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R2",
+    "x": 194.3,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L2",
+    "x": 233.4,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RO-M3U",
+    "x": 3.0,
+    "y": 68.9,
+    "rot90": false
+   },
+   {
+    "name": "RO-TU",
+    "x": 145.7,
+    "y": 68.9,
+    "rot90": false
+   },
+   {
+    "name": "LO-TU",
+    "x": 220.9,
+    "y": 68.9,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet08.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "WF-R3",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L3",
+    "x": 42.1,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R4",
+    "x": 81.2,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L4",
+    "x": 120.3,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R5",
+    "x": 159.4,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L5",
+    "x": 198.5,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R6",
+    "x": 237.6,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet09.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "WF-L6",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R7",
+    "x": 42.1,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L7",
+    "x": 81.2,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R8",
+    "x": 120.3,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L8",
+    "x": 159.4,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-R1",
+    "x": 198.5,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WR-L1",
+    "x": 237.6,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet10.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "WF-R1",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L1",
+    "x": 42.1,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-R9",
+    "x": 81.2,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "WF-L9",
+    "x": 120.3,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "FL-M4",
+    "x": 159.4,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "LO-MU",
+    "x": 3.0,
+    "y": 62.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_1.5mm_sheet11.dxf",
+  "material": "balsa medium",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "RO-M1U",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "RO-NU",
+    "x": 78.9,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "LO-NU",
+    "x": 3.0,
+    "y": 41.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet01.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R165-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R165-L",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A112-R",
+    "x": 208.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A112-L",
+    "x": 253.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A165-R",
+    "x": 208.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A165-L",
+    "x": 253.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet02.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R220-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R220-L",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A220-R",
+    "x": 208.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A220-L",
+    "x": 253.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A275-R",
+    "x": 208.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A275-L",
+    "x": 253.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet03.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R275-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R275-L",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A330-R",
+    "x": 208.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A330-L",
+    "x": 253.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A385-R",
+    "x": 208.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A385-L",
+    "x": 253.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet04.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R330-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R330-L",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "A437-R",
+    "x": 208.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "A437-L",
+    "x": 253.0,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet05.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R385-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R385-L",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet06.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-C",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R055-R",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet07.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R055-L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R440-R",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_2mm_sheet08.dxf",
+  "material": "balsa medium",
+  "t": 2.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R440-L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_3mm_sheet01.dxf",
+  "material": "balsa medium",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "STAB-R",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_3mm_sheet02.dxf",
+  "material": "balsa medium",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "STAB-L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_3mm_sheet03.dxf",
+  "material": "balsa medium",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "FIN",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "S1b",
+    "x": 172.6,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "FSP-C",
+    "x": 3.0,
+    "y": 77.5,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_3mm_sheet04.dxf",
+  "material": "balsa medium",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "S1c",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "S2b",
+    "x": 90.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "S2c",
+    "x": 177.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "W-R110-R",
+    "x": 3.0,
+    "y": 43.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "balsa-medium_3mm_sheet05.dxf",
+  "material": "balsa medium",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   100.0
+  ],
+  "parts": [
+   {
+    "name": "W-R110-L",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "FSP-R1",
+    "x": 3.0,
+    "y": 42.7,
+    "rot90": false
+   },
+   {
+    "name": "FSP-L1",
+    "x": 3.0,
+    "y": 61.7,
+    "rot90": false
+   },
+   {
+    "name": "FSP-R2",
+    "x": 3.0,
+    "y": 80.7,
+    "rot90": false
+   },
+   {
+    "name": "FSP-L2",
+    "x": 140.5,
+    "y": 80.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "lite-ply_1.5mm_sheet01.dxf",
+  "material": "lite-ply",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "TRAY",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "lite-ply_3mm_sheet01.dxf",
+  "material": "lite-ply",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "FS",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "B1",
+    "x": 118.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "B4",
+    "x": 3.0,
+    "y": 116.0,
+    "rot90": false
+   },
+   {
+    "name": "N2",
+    "x": 116.0,
+    "y": 116.0,
+    "rot90": true
+   },
+   {
+    "name": "N1",
+    "x": 202.8,
+    "y": 116.0,
+    "rot90": true
+   },
+   {
+    "name": "EF",
+    "x": 231.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "S1a",
+    "x": 3.0,
+    "y": 222.7,
+    "rot90": false
+   },
+   {
+    "name": "S1d",
+    "x": 90.0,
+    "y": 222.7,
+    "rot90": false
+   },
+   {
+    "name": "S2a",
+    "x": 177.0,
+    "y": 222.7,
+    "rot90": false
+   },
+   {
+    "name": "B2-R",
+    "x": 3.0,
+    "y": 262.7,
+    "rot90": true
+   },
+   {
+    "name": "B2-L",
+    "x": 108.9,
+    "y": 262.7,
+    "rot90": true
+   },
+   {
+    "name": "S1BR",
+    "x": 264.0,
+    "y": 222.7,
+    "rot90": false
+   },
+   {
+    "name": "S1BL",
+    "x": 214.9,
+    "y": 262.7,
+    "rot90": false
+   },
+   {
+    "name": "S2BR",
+    "x": 241.9,
+    "y": 262.7,
+    "rot90": false
+   },
+   {
+    "name": "S2BL",
+    "x": 268.9,
+    "y": 262.7,
+    "rot90": false
+   }
+  ]
+ },
+ {
+  "file": "lite-ply_3mm_sheet02.dxf",
+  "material": "lite-ply",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "S2d",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "TST",
+    "x": 90.0,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "birch-ply_1mm_sheet01.dxf",
+  "material": "birch ply",
+  "t": 1.0,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "LI-M2G",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "RI-M3G",
+    "x": 106.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "RI-M2G",
+    "x": 154.5,
+    "y": 3.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "birch-ply_1.5mm_sheet01.dxf",
+  "material": "birch ply",
+  "t": 1.5,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "RO-MP",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "SK3",
+    "x": 108.9,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "SK1",
+    "x": 221.9,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "SK2",
+    "x": 3.0,
+    "y": 58.0,
+    "rot90": false
+   },
+   {
+    "name": "HORN-E",
+    "x": 74.9,
+    "y": 58.0,
+    "rot90": true
+   },
+   {
+    "name": "HORN-R",
+    "x": 93.4,
+    "y": 58.0,
+    "rot90": false
+   },
+   {
+    "name": "FLAPSTOP",
+    "x": 110.9,
+    "y": 58.0,
+    "rot90": true
+   }
+  ]
+ },
+ {
+  "file": "birch-ply_3mm_sheet01.dxf",
+  "material": "birch ply",
+  "t": 3.0,
+  "sheet": [
+   300.0,
+   300.0
+  ],
+  "parts": [
+   {
+    "name": "BH",
+    "x": 3.0,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "FW",
+    "x": 111.2,
+    "y": 3.0,
+    "rot90": true
+   },
+   {
+    "name": "TR1R",
+    "x": 169.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "TR1L",
+    "x": 194.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "TR2R",
+    "x": 219.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "TR2L",
+    "x": 244.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "SD-R",
+    "x": 269.3,
+    "y": 3.0,
+    "rot90": false
+   },
+   {
+    "name": "SD-L",
+    "x": 3.0,
+    "y": 106.8,
+    "rot90": false
+   }
+  ]
+ }
+]
