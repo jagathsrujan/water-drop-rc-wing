@@ -171,13 +171,13 @@ page = f"""<!doctype html>
 <title>Balsa Wing Build</title>
 <meta name="description" content="Build and assembly tutorial for a 990 mm laser-cut balsa wing (SD7062, 157 g) for a water-drop RC aircraft: video, Indian BOM with shop links, DXF, STL, STEP and FreeCAD files.">
 <link rel="stylesheet" href="style.css"></head><body>
-<nav class="top"><b>water-drop-rc-wing</b><a href="#video">Video</a><a href="#design">Design</a><a href="#bom">Indian BOM</a><a href="#shopping">Shopping offline</a><a href="#tools">Tools</a><a href="#laser">Laser cutting</a><a href="#glues">Glues</a><a href="#build">Build steps</a><a href="#covering">Covering</a><a href="#servo">Servo</a><a href="#checks">Checks</a><a href="#downloads">Downloads</a><a href="{REPO}">GitHub ↗</a></nav>
+<nav class="top"><b>water-drop-rc-wing</b><a href="build-game/">Build game</a><a href="bom/">Rev B BOM</a><a href="#video">Video</a><a href="#design">Design</a><a href="#bom">Indian BOM</a><a href="#shopping">Shopping offline</a><a href="#tools">Tools</a><a href="#laser">Laser cutting</a><a href="#glues">Glues</a><a href="#build">Build steps</a><a href="#covering">Covering</a><a href="#servo">Servo</a><a href="#checks">Checks</a><a href="#downloads">Downloads</a><a href="{REPO}">GitHub ↗</a></nav>
 <header class="hero"><div class="wrap grid"><div>
 <div class="kicker">Boeing National Aeromodelling Competition 2026-27 · IIT Madras zone</div>
 <h1>A 157 g balsa wing for a water-drop RC aircraft</h1>
 <p class="lead">Laser-cut ribs, carbon-capped spar, sheeted D-box and printed PETG servo mounts. This page is the complete build tutorial: video, Indian bill of materials with shop links, what to ask for in local shops, and every file you need.</p>
 <div class="stats"><div class="stat"><b>990 mm</b><span>span</span></div><div class="stat"><b>280 mm</b><span>chord · SD7062</span></div><div class="stat"><b>156.6 g</b><span>without servos</span></div><div class="stat"><b>±15°</b><span>ailerons · MG90S</span></div></div>
-<a class="btn" href="#video">▶ Watch the build video</a><a class="btn ghost" href="#bom">Indian BOM</a><a class="btn ghost" href="{REPO}">Files on GitHub</a>
+<a class="btn" href="build-game/">▶ Build it in 3D: rev B build game</a><a class="btn ghost" href="bom/">Rev B BOM checklist</a><a class="btn ghost" href="downloads/build-kit.zip">Download the build kit (.zip)</a><a class="btn ghost" href="#video">Wing build video</a><a class="btn ghost" href="#bom">Indian BOM</a><a class="btn ghost" href="{REPO}">Files on GitHub</a>
 </div><div><img src="{I['wing_iso']}" alt="Isometric view of the wing"></div></div></header>
 
 <section id="video"><div class="wrap"><h2>Build and assembly video<small>6 min 35 s · narration with burned-in captions · the links mentioned in the video are in the <a href="#bom">BOM below</a> and on <a href="{REPO}">GitHub</a></small></h2>

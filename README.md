@@ -1,82 +1,97 @@
-# Water-drop RC aircraft — Boeing NAC 2026-27, IIT Madras zone
+# Water-drop RC aircraft
 
-A hand-launched electric aircraft that carries **1000 mL of water** in a sealed, removable reservoir and drops it on one pilot command over the release zone. Score = water mass × 100 / empty mass, so every part is designed light, and strong enough to survive every flight (one aircraft, repairs only).
+A hand-launched electric model aircraft that carries **1 litre of water** and drops it on one command from the
+pilot. Built for the **Boeing National Aeromodelling Competition 2026-27 (IIT Madras zone)**.
 
-**▶ Webpage with the wing build video, the Indian BOM and the wing files:** https://jagathsrujan.github.io/water-drop-rc-wing/
+The score is the water mass divided by the empty mass, so the aircraft is built as light as it can be while still
+surviving every flight. The current version, **rev B**, is a laser-cut balsa aircraft: about **721 g empty**
+(estimate until the parts are weighed), score about **138**.
 
-![Aircraft rev B: balsa wing, balsa pod, twin carbon boom, cruciform tail](design/cad_fuselage_balsa/img/aircraft_iso.png)
+![Rev B balsa aircraft: balsa wing, balsa pod, twin carbon booms, cruciform tail](design/cad_fusion_revB/img/aircraft_iso.png)
+
+## Start here
+
+| I want to... | Go to |
+|---|---|
+| **See how it goes together** | The **3D build game**: https://jagathsrujan.github.io/water-drop-rc-wing/build-game/ (or open [`docs/build-game/index.html`](docs/build-game/index.html) from a clone, works offline) |
+| **Buy the materials** | The **BOM checklist** with tick boxes: https://jagathsrujan.github.io/water-drop-rc-wing/bom/ · printable [`build-kit/BOM.pdf`](build-kit/BOM.pdf) |
+| **Cut, print and build** | The **build kit**: [`build-kit/`](build-kit/) (DXF, STL, PDF, guides) or the one-file download [`docs/downloads/build-kit.zip`](docs/downloads/build-kit.zip) |
+| **Ask a question about the design** | Paste [`ASK_AN_AGENT.md`](ASK_AN_AGENT.md) into a coding agent |
+| **Understand the design** | [`design/cad_fusion_revB/README.md`](design/cad_fusion_revB/README.md) and [`design/DECISIONS.md`](design/DECISIONS.md) |
 
 ## The aircraft
 
-| Part | Design | Status |
-|---|---|---|
-| **Wing rev A** | 990 mm span, 280 mm chord, SD7062, laser-cut balsa ribs, carbon-capped spar, sheeted D-box, MG90S ailerons; high wing on rubber bands, +3° incidence | Done: CAD, laser DXF, STL, cut list, BOM, build video |
-| **Reservoir rev A.2** | 1 L Bisleri bottle lying along the pod, neck aft; pin-latched trapdoor at the bottle bottom (rear hinge, MG90S pulls the pin), one-way vent in the fill cap, safety pin with a flag; filled in place through the nose hatch | Accepted for test prints |
-| **Fuselage pod rev B (balsa)** | Laser-cut balsa box with every kink on a former; cross-laminated sides with hex lightening under film; lite-ply U-formers open at the top so the bottle lifts out; keels, longerons, lite-ply front-stop ring for the 10 g nose-in load; PETG nose ring; tabs and slots on every former | Adopted (D-068); fit checks and hand strength estimate pass |
-| **Boom and tail** | 2 × Ø10/8 carbon tubes; cruciform built-up balsa tail (stabiliser above the wing wake), elevator and rudder, tail servos in the pod | Modelled (rev A tail, carried into rev B) |
-| **Electronics** | DYS D2830 1000 KV, Hobbywing Skywalker 40A V2 (5 A switching BEC), 3S 1000 mAh, fixed 10 × 5 prop, MG90S servos | Selected (D-066), shopping list from Robu.in |
-| **Assembly jigs** | Removable PLA jigs: floor wedges, side squares, nose taper blocks, tube cradles (sets the tail incidence), wing-seat gauges | STL ready (D-069) |
-
-## Key numbers (estimates until the parts are weighed)
-
-| Item | Value |
+| Part | What it is |
 |---|---|
-| Wing | 156.6 g, 184.0 g with 2 × MG90S |
-| Balsa pod (skin, formers, hard points, saddles, skids) | 133.1 g |
-| Tail (tubes, tail block, surfaces, pushrods) | 78.1 g |
-| Motor, prop, ESC, battery | 192 g |
-| **Empty aircraft** | **≈ 689 g** |
-| **Loaded (1000 mL)** | **≈ 1685 g** |
-| **Score** (996 g water) | **≈ 144.5** |
-| Loaded stall speed, Bengaluru / Chennai | ≈ 9.2 / 8.8 m/s (requirement R6 ≤ 9.0 in Bengaluru: still open) |
-| Static thrust limit (T/W ≤ 1.37 measured in Bengaluru) | ≈ 940 g |
-| Pod strength (hand estimate, ultimate = 1.5 × limit loads) | all design-load margins ≥ 1.31 |
+| **Wing** | 990 mm span, 280 mm chord, SD7062 airfoil. Laser-cut balsa ribs, carbon-capped spar, egg-crate false spar, sheeted D-box. MG90S servo in each wing for the ailerons. Sits on top of the pod on rubber bands at +3 deg. |
+| **Pod (fuselage)** | Laser-cut balsa box: two-layer sides, lite-ply formers that drop into floor slots, finger and dovetail joints, every part engraved with its name. Open at the top so the bottle lifts out. |
+| **Water reservoir** | A 1 L bottle lying in laser-cut saddles, with a printed outlet and a trap door that a servo opens. Filled through the nose hatch. |
+| **Tail** | Two 10 mm carbon tubes to a cruciform built-up balsa tail (fin, stabiliser, elevator, rudder). The tail servos sit in the pod. |
+| **Electronics** | DYS D2830 1000 KV motor, 10 x 5 prop, Hobbywing Skywalker 40A ESC, 3S 1000 mAh battery, 5 x MG90S servos. |
+| **Jigs** | 37 printed PLA jigs and a 5-piece printed jig base with locating pins: every pod jig drops onto pins, no measuring. |
 
-## Open in Onshape or SolidWorks
+| | |
+|---|---|
+| ![Pod](design/cad_fusion_revB/img/pod_iso.png) | ![Wing structure](design/cad_fusion_revB/img/wing_structure_iso.png) |
+| ![Jig base](design/cad_fusion_revB/img/jig_base_iso.png) | ![Tail](design/cad_fusion_revB/img/tail_iso.png) |
 
-[`design/cad_fuselage_balsa/export/WaterDrop_revB_assembly.step`](design/cad_fuselage_balsa/export/WaterDrop_revB_assembly.step) — the full aircraft as one STEP assembly (AP214, mm), with subassemblies `Fuselage_BalsaPod`, `Reservoir`, `Wing_revA`, `Tail`, `Electronics`; every part named and coloured.
-- **Onshape:** Import, keep "Create assembly" ticked.
-- **SolidWorks:** File → Open → STEP.
+## How to build it
 
-The jigs are in [`design/cad_fuselage_balsa/export/Jigs_revB.step`](design/cad_fuselage_balsa/export/Jigs_revB.step) and as STL in [`design/cad_fuselage_balsa/jigs/`](design/cad_fuselage_balsa/jigs/). Frame: origin at the wing leading edge on the centreline, X aft, Y right, Z up.
+1. **Buy** what is in [`build-kit/MATERIALS.md`](build-kit/MATERIALS.md) and the BOM: 41 laser sheets of balsa, ply
+   and lite-ply, strip stock, carbon, electronics, glue and film. Weigh the balsa and keep the light sheets for the
+   light parts.
+2. **Laser-cut** the 41 DXF sheets in [`build-kit/laser/`](build-kit/laser/). Give the shop
+   [`build-kit/LASER_BRIEF.md`](build-kit/LASER_BRIEF.md) and cut the kerf test first.
+3. **3D-print** the jigs, the jig base and the PETG parts ([`build-kit/PRINT_LIST.md`](build-kit/PRINT_LIST.md)).
+   Everything fits a 256 mm bed.
+4. **Play the build game once.** It walks through all 23 steps with the real parts in 3D and tells you when you pick
+   the wrong part, the wrong side, the wrong way round, the wrong order, forget a jig or a pin, glue a hinge gap or
+   bend a pushrod off neutral.
+5. **Build** with [`build-kit/BUILD_GUIDE.md`](build-kit/BUILD_GUIDE.md) on the bench (or the printable step list
+   in the game). The order is: laminate the sides, jig base, floor, formers, keels and longerons, sides, nose ring
+   and firewall, booms, deck and wing seat, saddles; then the wing on its cradles; ailerons; tail; covering;
+   hinges; linkages; electronics, balance (CG at 80 mm behind the wing leading edge) and final checks.
 
-## What is here
+## What is in each folder
 
 | Folder / file | Contents |
 |---|---|
-| [`design/cad_fuselage_balsa/`](design/cad_fuselage_balsa/) | **Current fuselage:** FreeCAD model, STEP assembly, jig STL, check report, mass table, MATLAB strength estimate, pictures, scripts ([README](design/cad_fuselage_balsa/README.md) with the build order) |
-| [`design/cad/`](design/cad/) | Wing rev A: FreeCAD model, STEP, laser DXF, PETG STL, cut list, mass table |
-| [`design/cad_reservoir/`](design/cad_reservoir/) | Reservoir rev A.2: model, STEP, STL, bench tests, mass table |
-| [`design/cad_fuselage/`](design/cad_fuselage/) | Fuselage rev A (printed pod, reference), tail, electronics placeholders; the balsa model reads its reference bodies from here |
-| [`design/cad_revB/`](design/cad_revB/) | Foam-block wing rev B, modelled for comparison (not adopted) |
-| [`design/DECISIONS.md`](design/DECISIONS.md) | Decision record D-001 … D-069: options, numbers, who decided |
-| [`design/DESIGN_BRIEF.md`](design/DESIGN_BRIEF.md) | Requirements R1–R26 and the change log |
-| [`design/FIXED_MASSES.md`](design/FIXED_MASSES.md) | Bought parts at catalogue mass (replace with weighed values) |
-| [`design/01_weather_design_inputs.md`](design/01_weather_design_inputs.md) … [`04_fuselage_plan.md`](design/04_fuselage_plan.md) | Weather inputs, wing, reservoir and fuselage plans |
-| [`design/logs/`](design/logs/) | Engineering notebooks; [`DESIGN_LOG.md`](design/logs/DESIGN_LOG.md) is the stage-by-stage summary |
-| [`design/aero/`](design/aero/), [`design/calc/`](design/calc/), [`design/studies/`](design/studies/) | Airfoil and lift studies, sizing scripts, trade studies |
-| [`bom/`](bom/) | Indian BOM for the wing ([`BOM_India.md`](bom/BOM_India.md)) and the electronics shopping list ([`BOM_Electronics_Robu.md`](bom/BOM_Electronics_Robu.md)) |
-| [`docs/`](docs/) | Webpage (GitHub Pages), wing build video, [`REPORT.md`](docs/REPORT.md) |
-| [`tools/`](tools/), [`design/video/`](design/video/) | Webpage / BOM generator, video scripts |
+| [`build-kit/`](build-kit/) | **Only what a builder needs:** laser DXF, STL, BOM PDF, build guide, laser brief, material quantities |
+| [`docs/`](docs/) | The website (GitHub Pages): [build game](docs/build-game/), [BOM checklist](docs/bom/), the wing build video page, [`downloads/build-kit.zip`](docs/downloads/) |
+| [`design/cad_fusion_revB/`](design/cad_fusion_revB/) | **The rev B model** (Autodesk Fusion): part scripts, laser DXF and nesting, jig STL, mass table, STEP, pictures |
+| [`design/cad_fuselage_balsa/`](design/cad_fuselage_balsa/), [`design/cad/`](design/cad/), [`design/cad_reservoir/`](design/cad_reservoir/), [`design/cad_fuselage/`](design/cad_fuselage/) | The FreeCAD reference models: balsa pod rev B, wing rev A, reservoir, printed pod rev A (and tail) |
+| [`design/cad_revB/`](design/cad_revB/) | A foam-block wing that was studied and not adopted |
+| [`design/DECISIONS.md`](design/DECISIONS.md), [`design/DESIGN_BRIEF.md`](design/DESIGN_BRIEF.md) | Every design decision (D-001 ... D-069) and the requirements (R1-R26) |
+| [`design/FIXED_MASSES.md`](design/FIXED_MASSES.md) | Bought parts and their masses (replace with weighed values) |
+| [`design/logs/`](design/logs/), [`design/aero/`](design/aero/), [`design/calc/`](design/calc/), [`design/studies/`](design/studies/) | Engineering notebooks, airfoil and sizing studies |
+| [`bom/`](bom/) | Indian shopping lists with shop links: wing materials ([`BOM_India.md`](bom/BOM_India.md)) and electronics ([`BOM_Electronics_Robu.md`](bom/BOM_Electronics_Robu.md)) |
+| [`tools/build_kit/`](tools/build_kit/) | Makes the game data, the BOM, the PDF and the build kit from the part data |
+| [`tools/fusion_bridge/`](tools/fusion_bridge/), [`tools/build_site.py`](tools/build_site.py) | The local Fusion bridge used to build the model; the website generator |
+| [`ASK_AN_AGENT.md`](ASK_AN_AGENT.md) | A prompt for a coding agent to answer questions about the build |
 
-## Rebuild the models (FreeCAD 1.1, GUI)
+## Key numbers (estimates until the parts are weighed)
 
-Set the scripts folder, then run its `run_all.py` in the FreeCAD Python console:
-
-| Model | Command |
+| | |
 |---|---|
-| Wing rev A | `WING_SCRIPTS = "<repo>/design/cad/scripts"; exec(open(WING_SCRIPTS + "/run_all.py").read())` |
-| Reservoir | `RES_SCRIPTS = "<repo>/design/cad_reservoir/scripts"; exec(open(RES_SCRIPTS + "/run_all.py").read())` |
-| Fuselage rev A (reference) | `FUS_SCRIPTS = "<repo>/design/cad_fuselage/scripts"; exec(open(FUS_SCRIPTS + "/run_all.py").read())` (≈ 10 min) |
-| **Fuselage rev B (balsa)** | `BAL_SCRIPTS = "<repo>/design/cad_fuselage_balsa/scripts"; exec(open(BAL_SCRIPTS + "/run_all.py").read())` (≈ 3 min: build, checks, jig STL, pictures, STEP) |
+| Empty aircraft (rev B, Fusion model) | about 721 g: pod 165 g, wing 157 g (+27 g servos), tail 78 g, motor + prop + ESC + battery 192 g |
+| Loaded (1000 mL) | about 1.72 kg |
+| Score (996 g water x 100 / empty mass) | about 138 |
+| CG | 80 mm behind the wing leading edge, empty and full (the water sits on the CG, so the drop does not move it) |
 
-Rev B reads its reference bodies from `Fuselage_revA.FCStd`, so rebuild rev A first if the reservoir, tail or electronics change. Webpage and BOM: `python3 tools/build_site.py`.
+Ideas to win back weight are in [`design/cad_fusion_revB/README.md`](design/cad_fusion_revB/README.md) (hex
+lightening of the pod sides, lighter balsa for the inner layers).
 
-## Next steps
+## Making the files again
 
-1. Buy the electronics (battery and prop are out of stock at Robu; see the shopping list) and weigh every part.
-2. Weigh the balsa sheets and set the densities in `design/cad_fuselage_balsa/scripts/bal_params.py`: light stock for the inner layers, hatch and deck saves another 6–8 g.
-3. Stage F-D: full mass table, CG at X 80, firewall and battery position.
-4. Stage F-E: laser-cut files for the pod, then build with the jigs.
+Everything in `build-kit/`, `docs/build-game/data.js` and `docs/bom/` is generated from the part data:
+
+```powershell
+python tools/build_kit/make_build_kit.py
+```
+
+It needs only Python 3 (and Chrome or Edge for the PDF), checks that every part named in the game and the BOM exists
+in the part data and that the quantities add up to the nesting, and prints the result. The model itself is rebuilt
+in Fusion through `tools/fusion_bridge/` (see [`design/cad_fusion_revB/README.md`](design/cad_fusion_revB/README.md));
+the FreeCAD reference models have their own `run_all.py` scripts.
 
 Prices in the BOMs are as listed online in November 2026; check before you order. No affiliation with any shop.

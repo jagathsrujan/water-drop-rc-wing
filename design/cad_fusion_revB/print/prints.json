@@ -1,0 +1,114 @@
+{
+ "NOSE-RING": {
+  "parts": [
+   "NOSE-RING"
+  ],
+  "vol_cm3": 4.596,
+  "lumps": 2,
+  "box_mm": [
+   13.0,
+   56.0,
+   57.5
+  ]
+ },
+ "SERVO-MOUNT": {
+  "parts": [
+   "SERVO-MOUNT"
+  ],
+  "vol_cm3": 1.104,
+  "lumps": 3,
+  "box_mm": [
+   35.2,
+   18.7,
+   26.1
+  ]
+ },
+ "TAIL-BLOCK": {
+  "parts": [
+   "TAILBLOCK",
+   "TB-WEB-R",
+   "TB-WEB-L",
+   "TB-COLLAR-R",
+   "TB-COLLAR-L"
+  ],
+  "vol_cm3": 9.094,
+  "lumps": 1,
+  "box_mm": [
+   71.0,
+   44.7,
+   24.3
+  ]
+ },
+ "SERVO-FRAME-R": {
+  "parts": [
+   "SERVO-FRAME-R"
+  ],
+  "vol_cm3": 0.696,
+  "lumps": 1,
+  "box_mm": [
+   46.2,
+   49.0,
+   1.7
+  ]
+ },
+ "SERVO-FRAME-L": {
+  "parts": [
+   "SERVO-FRAME-L"
+  ],
+  "vol_cm3": 0.696,
+  "lumps": 1,
+  "box_mm": [
+   46.2,
+   49.0,
+   1.7
+  ]
+ },
+ "SERVO-HATCH-R": {
+  "parts": [
+   "SERVO-HATCH-R"
+  ],
+  "vol_cm3": 1.736,
+  "lumps": 1,
+  "box_mm": [
+   46.1,
+   49.0,
+   1.5
+  ]
+ },
+ "SERVO-HATCH-L": {
+  "parts": [
+   "SERVO-HATCH-L"
+  ],
+  "vol_cm3": 1.736,
+  "lumps": 1,
+  "box_mm": [
+   46.1,
+   49.0,
+   1.5
+  ]
+ },
+ "AIL-HORN-R": {
+  "parts": [
+   "AIL-HORN-R"
+  ],
+  "vol_cm3": 0.328,
+  "lumps": 1,
+  "box_mm": [
+   26.4,
+   1.5,
+   18.4
+  ]
+ },
+ "AIL-HORN-L": {
+  "parts": [
+   "AIL-HORN-L"
+  ],
+  "vol_cm3": 0.328,
+  "lumps": 1,
+  "box_mm": [
+   26.4,
+   1.5,
+   18.4
+  ]
+ }
+}

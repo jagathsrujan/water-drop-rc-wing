@@ -13,3 +13,7 @@ design/video/wing_build.en.vtt
 __pycache__/
 *.pyc
 .DS_Store
+
+# the build-kit BOM is ours (generated)
+!build-kit/*.pdf
+!docs/bom/*.pdf
