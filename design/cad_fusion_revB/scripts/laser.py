@@ -125,7 +125,7 @@ NOT_LASER = ("Keel", "Longeron", "Capstrip", "Ledge", "LE", "DBOX", "CAP-", "TE-
 def grain_axis(name):
     """'u', 'v' or None (ply: any). Balsa grain runs along this local axis of the part outline."""
     n = name
-    if n[:3] in ("RO-", "LO-") or n.startswith(("HN-", "FSP-", "W-", "A1", "A2", "A3", "A4")):
+    if n[:3] in ("RO-", "LO-") or n.startswith(("HN-", "FSP-", "W-", "A1", "A2", "A3", "A4", "AH-")):
         return "u"
     if n[:3] in ("RI-", "LI-") or n.startswith(("FL-", "HF", "DECK", "WF-", "WR-", "STAB", "ELEV", "FIN", "RUDDER")):
         return "v"
@@ -137,7 +137,8 @@ def laser_parts():
     import wing
     import tail
     out = []
-    for src in (pod.all_parts()[0], wing.all_parts()[0], tail.all_parts()[0]):
+    import linkage
+    for src in (pod.all_parts()[0], wing.all_parts()[0], tail.all_parts()[0], linkage.wing_parts()[0]):
         for p in src:
             if p["mat"] not in LASER_MATS or p["name"].startswith(NOT_LASER):
                 continue

@@ -10,7 +10,7 @@ Balsa sheets 100 x 300 mm with the grain along the 300 side (parts are already t
 | balsa light 3.0 mm | 7 | 4 |
 | balsa medium 1.0 mm | 16 | 6 |
 | balsa medium 1.5 mm | 46 | 11 |
-| balsa medium 2.0 mm | 29 | 8 |
+| balsa medium 2.0 mm | 31 | 8 |
 | balsa medium 3.0 mm | 14 | 5 |
 | lite-ply 1.5 mm | 1 | 1 |
 | lite-ply 3.0 mm | 17 | 2 |
@@ -47,7 +47,7 @@ Balsa sheets 100 x 300 mm with the grain along the 300 side (parts are already t
 | `balsa-medium_2mm_sheet01.dxf` | W-R165-R, W-R165-L, A112-R, A112-L, A165-R, A165-L |
 | `balsa-medium_2mm_sheet02.dxf` | W-R220-R, W-R220-L, A220-R, A220-L, A275-R, A275-L |
 | `balsa-medium_2mm_sheet03.dxf` | W-R275-R, W-R275-L, A330-R, A330-L, A385-R, A385-L |
-| `balsa-medium_2mm_sheet04.dxf` | W-R330-R, W-R330-L, A437-R, A437-L |
+| `balsa-medium_2mm_sheet04.dxf` | W-R330-R, W-R330-L, A437-R, A437-L, AH-R, AH-L |
 | `balsa-medium_2mm_sheet05.dxf` | W-R385-R, W-R385-L |
 | `balsa-medium_2mm_sheet06.dxf` | W-C, W-R055-R |
 | `balsa-medium_2mm_sheet07.dxf` | W-R055-L, W-R440-R |

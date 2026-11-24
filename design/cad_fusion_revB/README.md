@@ -12,7 +12,7 @@ in this pass.**
 
 | | Fusion rev B | FreeCAD reference |
 |---|---|---|
-| Parts | 279 bodies; 151 laser parts on 41 sheets | — |
+| Parts | aircraft + 37 jigs; 153 laser parts on 41 sheets | — |
 | Pod | 165.1 g (no hex lightening, more tabs, tail-servo tray, laser saddles) | 133.1 g |
 | Wing (without servos) | 156.7 g | 156.6 g |
 | Tail | 78.4 g | 78.1 g |
@@ -82,6 +82,18 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 | Stabiliser halves → fin | 2 tabs per half through 4 slots in the fin (right and left tabs alternate) |
 | Fin → tail block | 2 root tabs into slots in the PETG plate |
 | Elevator joiner | wire laid in slots cut in the elevator halves |
+
+## Control linkages (`scripts/linkage.py`)
+
+| Surface | Servo / arm | Pushrod | Horn |
+|---|---|---|---|
+| Ailerons (×2) | MG90S flat in the bay between ribs 110 and 165; single arm down through a slot in the servo hatch, hole 12.7 mm from the shaft, 4 mm below the skin | 1.2 mm steel wire under the lower skin, parallel to X (70.5 mm between the holes), Z-bend at each end | PETG horn glued to the 2 mm horn rib **AH-R / AH-L** (laser, new) and the aileron LE; hole on the hinge line (X 209), so the throw is symmetric |
+| Elevator | 9 g servo (left) on the tail-servo tray, arm 8 mm outboard | 2 mm carbon rod, 1.2 mm steel Z-bend ends 6 mm long at both ends, through the left tail-cone exit slot | 1.5 mm G10 / ply horn under the left elevator |
+| Rudder | 9 g servo (right), arm 8 mm outboard | same, right exit slot | horn on the right of the rudder |
+
+Fit check (Fusion interference analysis): the wire ends touch the tail horns by 0.1–0.2 mm³; the real Z-bends clear them.
+![Aileron linkage](img/aileron_linkage.png)
+![Tail servo linkage](img/tail_servo_linkage.png)
 
 ## Assembly jigs (3D printed, removable)
 

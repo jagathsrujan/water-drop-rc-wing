@@ -305,6 +305,11 @@ def build_servo_bay():
         def yr(a, b):
             return (a, b) if s > 0 else (-b, -a)
         d = yprism("SERVO-HATCH-" + Sd, "Wing_Servo", lower_band(fx0, fx1, 0.0, P.HATCH_T), *yr(by0, by1), "petg")
+        import linkage
+        sx0, sx1, sy0, sy1 = linkage.hatch_slot()
+        hi_ = yr(by0, by1)[1]
+        wa, wb = sorted((hi_ - s * sy0, hi_ - s * sy1))
+        d["plane_cuts"] = [("xz", [[(sx0, 0.0, wa), (sx1, 0.0, wa), (sx1, 0.0, wb), (sx0, 0.0, wb)]])]   # arm slot
         # frame: front and rear rails over the full bay width, side rails between them
         a, b = yr(by0, by1)
         d = yprism("SERVO-FRAME-" + Sd, "Wing_Servo", lower_band(fx0, ox0, P.HATCH_T, P.HATCH_T + P.RING_T), a, b, "petg")

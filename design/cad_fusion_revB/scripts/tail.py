@@ -180,11 +180,7 @@ def build_tail():
         rounds.append(("BOOM-" + S, (FP.TUBE_X[0], y, FP.SOCK_Z), (FP.TUBE_X[1], y, FP.SOCK_Z), FP.TUBE_OD / 2, FP.TUBE_ID / 2, "carbon", "Tail_Booms"))
         rc = FP.TUBE_OD / 2 + 0.15
         rounds.append(("TB-COLLAR-" + S, (cx0, y, FP.SOCK_Z), (cx1 + 1.0, y, FP.SOCK_Z), rc + FP.TB_COLLAR_WALL, rc, "petg", "Tail_Block"))
-    for s, nm in ((1, "PUSHROD-RUD"), (-1, "PUSHROD-ELEV")):
-        a, b = POD.ROD_START[s], POD.ROD_END[s]
-        L = math.sqrt(sum((q - p) ** 2 for p, q in zip(a, b)))
-        b6 = tuple(q - (q - p) * 6.0 / L for p, q in zip(a, b))      # carbon rod stops 6 mm short: steel Z-bend end
-        rounds.append((nm, a, b6, FP.PUSHROD_D / 2, 0.0, "carbon", "Tail_Hardware"))
+    # pushrods, servo arms and Z-bends: linkage.py
     jr = FP.JOINER_D / 2
     jy, zj = FP.JOINER_HY, FP.STAB_Z
     rounds.append(("JOINER", (jx, -jy, zj), (jx, jy, zj), jr, 0.0, "steel", "Tail_Hardware"))
