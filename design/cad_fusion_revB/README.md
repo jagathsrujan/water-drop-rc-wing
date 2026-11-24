@@ -123,7 +123,7 @@ the surfaces reach their throw. Hinge the surfaces after covering and glue each 
 
 ## Assembly jigs (3D printed, removable)
 
-37 PLA jigs in `jigs/*.stl` (one file per jig, in its own flat frame: lay it on its largest flat face in the slicer;
+37 PLA jigs + the 5-segment jig base + locating pins in `jigs/*.stl` (one file per jig, in its own flat frame: lay it on its largest flat face in the slicer;
 3 walls, 20–30 % infill; all fit a 256 mm bed). They are in the Fusion model under `Jigs` (pod and tail) and
 `Wing/Jigs_Wing`. Every jig has its name engraved, 4.5 mm holes for 4 mm wood screws into the building board, and
 lightening windows. `jigs/fit_check.json` is the Fusion interference check of every jig against the aircraft
@@ -141,8 +141,31 @@ lightening windows. `jigs/fit_check.json` is the Fusion interference check of ev
 | TJ1 corner squares | 4 | fin / stabiliser corners, X 680–730 | fin at 90° to both stab halves while the through-tabs cure |
 | TJ2 stab level gauge | 1 | on both booms, X 650–665 | stab underside parallel to the booms (0° stab incidence); slots for the pushrods |
 
+### Jig base: every pod jig in the right place without measuring
+
+The pod jigs no longer need measuring or screwing to a board. They all plug into a **printed jig base**:
+
+| Part | Size (mm) | What |
+|---|---|---|
+| JB-A | 163 × 176 × 6 | nose: J1a wedge, J3 nose blocks |
+| JB-B | 180 × 176 × 6 | front bay: J2 squares (X 8–28, 140–160) |
+| JB-C | 180 × 176 × 6 | rear bay, tail cone, J1b wedge, J4a boom cradle |
+| JB-D1 | 140 × 28 × 6 | boom spine |
+| JB-D2 | 145 × 70 × 6 | boom spine, J4b boom cradle |
+| PIN-6x11 | Ø5.9 × 11 | locating pin, print 20 (+ spares) or cut 6 mm wooden dowel to 11 mm |
+
+- The segments join with **dovetail keys** (3 across the pod section, 1 on the spine). Slide them together on a
+  flat table; a drop of CA on each key makes it one rigid 808 mm base.
+- The base top **is** the building surface: Z −117, the underside of the bay floor. It has grooves for skids SK2 and
+  SK3, so the skids can go on early.
+- Every pod jig (J1a, J1b, J2 ×4, J3 ×2, J4a, J4b) has **two 6 mm holes** that line up with holes in the base.
+  Push a pin into each base hole and drop the jig on: it sits exactly where the model has it. Each jig's name is
+  engraved on the base where it goes.
+- Print the holes at Ø6.1 and the pins at Ø5.9; if a pin is loose, a drop of CA in the base hole fixes it.
+- The J5 seat gauges sit on the pod, and the wing and tail jigs are separate (wing board, booms).
+
 **Pod build order:** (1) laminate the side layers flat under weights (outer strips + inner pieces, engraved faces
-in); (2) screw J1a, J1b to the board, lay the floor pieces (dovetails), drop the formers into their slots, add keels and
+in); (2) key the jig base together, pin J1a and J1b on, lay the floor pieces (dovetails), drop the formers into their slots, add keels and
 longerons; (3) add the sides onto the tabs and finger joints with J2 and J3 in place; (4) nose ring + firewall;
 (5) booms through the bulkhead and end former on J4a/J4b, glue; (6) aft deck, capstrip, sand with J5;
 (7) saddle stacks on the cling-wrapped bottle (toothpick pins), then glue them in; (8) film, skids.

@@ -48,31 +48,36 @@ def windows_under(top, x_ranges, z_bot, inset_top=4.0, n=12, min_h=4.0):
     return out
 
 
-# ---------------- pod board jigs ----------------
+# ---------------- pod jigs: all located on the printed jig base by 6 mm pins ----------------
+PIN_R = 3.05                  # hole radius for a 6 mm pin (printed PIN-6x11 or 6 mm wooden dowel)
+PIN_L = 11.0                  # 6 mm in the base + 5 mm into the jig
+PINS = {}                     # jig name -> [(x, y)] world positions of its two pins
+FOOT = {}                     # jig name -> footprint bbox on the base (x0, x1, y0, y1)
+
+
+def _drop_near(wins, xs, gap=7.0):
+    """Remove lightening windows (XZ polygons) that come within gap of a pin x."""
+    return [w for w in wins if not any(G.bbox(w)[0] - gap < x < G.bbox(w)[1] + gap for x in xs)]
+
+
 def j1_wedges():
-    """J1a / J1b: wedges screwed to the board; the bay floor lies on the board, the wedges hold the nose floor and the
+    """J1a / J1b: wedges on the jig base; the bay floor lies on the base, the wedges hold the nose floor and the
     tail-cone floor at their angles. Width +-26 (inside the narrowest floor), groove for skid SK1."""
     hwid = 26.0
     fr = G.frame((0.0, hwid, 0.0), (1, 0, 0), (0, 0, 1))          # XZ profile, w = -Y  (w = 26 - Y)
     zb = POD.zb
-    # J1a: X -169.5 .. where the wedge is 3 mm high
     x_end_a = POD.XF + (BZ + 3.0 - zb(POD.XF)) / (zb(POD.K0) - zb(POD.XF)) * (POD.K0 - POD.XF)
     x_start_b = POD.K1 + 3.0 / (zb(POD.XE) - zb(POD.K1)) * (POD.XE - POD.K1)
-    for name, xa, xb, ribs in (("J1a-NOSE-WEDGE", POD.XF + 0.5, x_end_a, [-130.0, -100.0, -70.0]),
-                               ("J1b-TAIL-WEDGE", x_start_b, POD.XE - 0.5, [272.0])):
+    for name, xa, xb, ribs, pins in (("J1a-NOSE-WEDGE", POD.XF + 0.5, x_end_a, [-130.0, -100.0, -70.0], [-158.0, -62.0]),
+                                     ("J1b-TAIL-WEDGE", x_start_b, POD.XE - 0.5, [272.0], [250.0, 292.0])):
         poly = G.ccw([(xa, BZ), (xb, BZ), (xb, zb(xb)), (xa, zb(xa))])
-        edges = [xa + 6] + [r for r in ribs] + [xb - 6]
-        rng = []
-        for a, b in zip(edges, edges[1:]):
-            rng.append((a + (0 if a == xa + 6 else 2.0), b - (0 if b == xb - 6 else 2.0)))
-        wins = windows_under(zb, rng, BZ + 4.0, inset_top=4.0)
-        holes = []
-        for r in ribs:
-            if zb(r) - BZ > 6:
-                for y in (-18.0, 18.0):
-                    holes.append(("circle", (r, 0.0, hwid - y), SCREW_R))
-        d = add(name, "Jigs_Pod", poly, 2 * hwid, fr, wins, lbl(poly, wins, name.replace("-", " ", 1) + "\nBOARD SIDE DOWN", h=4.0))
-        d["plane_cuts"] = [("xz", holes)] if holes else []
+        edges = [xa + 6] + list(ribs) + [xb - 6]
+        rng = [(e0 + (0 if e0 == xa + 6 else 4.0), e1 - (0 if e1 == xb - 6 else 4.0)) for e0, e1 in zip(edges, edges[1:])]
+        wins = _drop_near(windows_under(zb, rng, BZ + 4.0, inset_top=4.0), pins)
+        PINS[name] = [(x, 0.0) for x in pins]
+        FOOT[name] = (xa, xb, -hwid, hwid)
+        d = add(name, "Jigs_Pod", poly, 2 * hwid, fr, wins, lbl(poly, wins, name.replace("-", " ", 1) + "\nON JIG BASE", h=4.0))
+        d["plane_cuts"] = [("xz", [("circle", (x, 0.0, hwid), PIN_R) for x in pins])]
         if name.startswith("J1a"):
             sa, sb = -100.5, xb
             groove = G.ccw([(sa, zb(sa) - 1.7), (sb, zb(sb) - 1.7), (sb, zb(sb) + 1.0), (sa, zb(sa) + 1.0)])
@@ -94,34 +99,48 @@ def j2_squares():
             fr = G.frame((xa, 0.0, 0.0), (0, 1, 0), (0, 0, 1))       # YZ profile, w = +X
             t = xb - xa
             name = "J2-%d%s-SQUARE" % (k + 1, S)
+            ya_, yb_ = s * (y0 + 12.0), s * (y0 + 25.0)          # two pins across the base, 13 mm apart
             d = add(name, "Jigs_Pod", L, t, fr, [], [])
             d["joins"] = [([gus], 0.0, 3.0), ([gus], t - 3.0, t)]
-            d["plane_cuts"] = [("xz", [("circle", (s * (y0 + 20.0), 0.0, t / 2), SCREW_R)])]
+            d["plane_cuts"] = [("xz", [("circle", (ya_, 0.0, t / 2), PIN_R), ("circle", (yb_, 0.0, t / 2), PIN_R)])]
             d["labels"] = [("J2-%d%s" % (k + 1, S), s * (y0 + 2.5), 0.5 * (BZ + 5 + top), 2.2)]
+            PINS[name] = [(0.5 * (xa + xb), ya_), (0.5 * (xa + xb), yb_)]
+            FOOT[name] = (xa, xb) + tuple(sorted((s * y0, s * (y0 + 30))))
 
 
 def j3_nose_blocks():
-    """J3: blocks against the outer nose sides, hold them at their plan angle between the front stop and the nose ring."""
+    """J3: blocks against the outer nose sides, hold them at their plan angle between the front stop and the nose ring.
+    Shell with 3 mm walls and two solid columns where the base pins go in."""
     xs, xe = BP.JIG_NOSE_X
     ztop = BP.JIG_NOSE_TOP
     t = ztop - BZ
     fr = G.frame((0.0, 0.0, BZ), (1, 0, 0), (0, 1, 0))               # XY footprint, w = Z - BZ
     hw = lambda x: POD.hw(x) + 0.3          # 0.3 clear of the tilted nose floor edge
+    px = [xs + 16.0, xe - 16.0]
     for s, S in ((1, "R"), (-1, "L")):
         poly = G.ccw([(xs, s * hw(xs)), (xe, s * hw(xe)), (xe, s * (hw(xe) + 12.0)), (xs, s * (hw(xs) + 12.0))])
         inner = TL.inset_convex(poly, 3.0)
-        holes = [("circle", x, s * (hw(x) + 6.0), SCREW_R) for x in (xs + 15.0, 0.5 * (xs + xe), xe - 15.0)]
+        cuts = [xs] + [c for x in px for c in (x - 7.0, x + 7.0)] + [xe]
+        pockets = []
+        for a0, a1 in zip(cuts[0::2], cuts[1::2]):
+            q = G.clip_rect(inner, a0, a1, -200, 200)
+            if len(q) >= 3:
+                pockets.append(q)
+        pins = [(x, s * (hw(x) + 6.0)) for x in px]
         name = "J3-%s-NOSE-TAPER" % S
-        d = add(name, "Jigs_Pod", poly, t, fr, holes, [])
-        d["pockets"] = [([inner], 4.0, t + 1.0)]
-        xm = 0.5 * (xs + xe) + 30.0
+        d = add(name, "Jigs_Pod", poly, t, fr, [("circle", x, y, PIN_R) for x, y in pins], [])
+        d["pockets"] = [(pockets, 4.0, t + 1.0)]
+        xm = 0.5 * (xs + xe)
         d["labels"] = [("J3-" + S, xm, s * (hw(xm) + 6.0), 4.0)]
         d["label_w"] = 4.0
+        PINS[name] = pins
+        b = G.bbox(poly)
+        FOOT[name] = b
 
 
 def j4_cradles():
     """J4: boom cradles. Both tubes lie parallel at Y +-16, Z -40; the front face of J4a squares the end former.
-    Glue the tubes into the bulkhead and end former with the cradles screwed down: this sets the tail incidence."""
+    Glue the tubes into the bulkhead and end former with the cradles pinned to the base: this sets the tail incidence."""
     zt_ = BP.JIG_TAIL_TOP - 4.0
     for k, (xa, xb) in enumerate(BP.JIG_TAIL_BLOCKS):
         hwj = 30.0
@@ -131,13 +150,96 @@ def j4_cradles():
         for s in (1, -1):
             cl.append(("circle", s * FP.SOCK_Y, FP.SOCK_Z, r))
             cl.append(G.rect(s * FP.SOCK_Y - r, s * FP.SOCK_Y + r, FP.SOCK_Z, zt_ + 1.0))
-        cl.append(G.rect(-22.0, 22.0, BZ + 6.0, FP.SOCK_Z - r - 6.0))
+        cl.append(G.rect(-17.0, 17.0, BZ + 6.0, FP.SOCK_Z - r - 6.0))
         fr = G.frame((xa, 0.0, 0.0), (0, 1, 0), (0, 0, 1))
         t = xb - xa
         name = "J4%s-BOOM-CRADLE" % "ab"[k]
         d = add(name, "Jigs_Pod", poly, t, fr, cl, [])
-        d["plane_cuts"] = [("xz", [("circle", (s * 26.0, 0.0, t / 2), SCREW_R) for s in (1, -1)])]
+        d["plane_cuts"] = [("xz", [("circle", (s * 23.5, 0.0, t / 2), PIN_R) for s in (1, -1)])]
         d["labels"] = [("J4" + "ab"[k] + (" FRONT = EF" if k == 0 else ""), 0.0, FP.SOCK_Z - r - 3.0, 2.5)]
+        PINS[name] = [(0.5 * (xa + xb), s * 23.5) for s in (1, -1)]
+        FOOT[name] = (xa, xb, -hwj, hwj)
+
+
+# ---------------- the printed jig base (5 segments, dovetail keys) ----------------
+BASE_T = 6.0
+BASE_HW, BOOM_HW, END_HW = 88.0, 14.0, 35.0
+BASE_X = (-178.0, 630.0)
+POD_END_X, END_PAD_X = 335.0, 595.0
+SEG_CUTS = [-178.0, -15.0, 165.0, 345.0, 485.0, 630.0]
+SEG_NAMES = ["JB-A", "JB-B", "JB-C", "JB-D1", "JB-D2"]
+SEG_KEYS = {-15.0: [-60.0, 0.0, 60.0], 165.0: [-60.0, 0.0, 60.0], 345.0: [0.0], 485.0: [0.0]}
+KEY = dict(w_neck=10.0, w_head=16.0, depth=10.0)
+
+
+def base_outline():
+    x0, x1 = BASE_X
+    return G.ccw([(x0, -BASE_HW), (POD_END_X, -BASE_HW), (POD_END_X, -BOOM_HW), (END_PAD_X, -BOOM_HW), (END_PAD_X, -END_HW),
+                  (x1, -END_HW), (x1, END_HW), (END_PAD_X, END_HW), (END_PAD_X, BOOM_HW), (POD_END_X, BOOM_HW),
+                  (POD_END_X, BASE_HW), (x0, BASE_HW)])
+
+
+def jig_base():
+    """The base the pod is built on: its top is the building surface (Z -117 = underside of the bay floor). Every pod
+    jig is located by two 6 mm pins in it; the segments key together with dovetails; grooves for the skids."""
+    fr = G.frame((0.0, 0.0, BZ - BASE_T), (1, 0, 0), (0, 1, 0))      # XY plate, w = Z - (BZ - 6)
+    full = base_outline()
+    pins = [p for v in PINS.values() for p in v]
+    keep = [(f[0] - 3, f[1] + 3, f[2] - 3, f[3] + 3) for f in FOOT.values()]
+    keep += [(x - 8, x + 8, y - 8, y + 8) for x, y in pins]
+    keep += [(c - 16, c + 16, -200, 200) for c in SEG_CUTS[1:-1]]
+    # lightening windows on a grid (cross members 8 wide every 42 mm, rails at Y 0, +-44..52, +-80..88)
+    wins = []
+    xs = [BASE_X[0] + 8 + 42 * i for i in range(13)]
+    for xa, xb in zip(xs, xs[1:]):
+        for ya, yb in ((6.0, 44.0), (52.0, 80.0), (-44.0, -6.0), (-80.0, -52.0)):
+            w = (xa + 4, xb - 4, ya, yb)
+            if w[1] > POD_END_X - 4:
+                continue
+            if any(w[0] < k[1] and k[0] < w[1] and w[2] < k[3] and k[2] < w[3] for k in keep):
+                continue
+            wins.append(G.rect(*w))
+    skids = [(-37.0, POD.K0 + 0.3), (POD.K0 + 0.3, 40.0), (120.0, 230.0)]      # SK1 tip dips below Z -117 from X -35
+    for i, name in enumerate(SEG_NAMES):
+        a, b = SEG_CUTS[i], SEG_CUTS[i + 1]
+        poly = G.clip_rect(full, a, b, -200, 200)
+        if b in SEG_KEYS:
+            j = G.find_edge(poly, lambda u, v: abs(u - b) < 1e-6)
+            P0 = poly[j]
+            poly = G.dovetail_edge(poly, j, [y - P0[1] for y in SEG_KEYS[b]], male=True, **KEY)
+        if a in SEG_KEYS:
+            j = G.find_edge(poly, lambda u, v: abs(u - a) < 1e-6)
+            P0 = poly[j]
+            poly = G.dovetail_edge(poly, j, [P0[1] - y for y in SEG_KEYS[a]], male=False, **KEY)
+        cl = [w for w in wins if a < G.bbox(w)[0] and G.bbox(w)[1] < b]
+        cl += [("circle", x, y, PIN_R) for x, y in pins if a + 1 < x < b - 1]
+        labs = []
+        for jn, f in FOOT.items():
+            cx, cy = 0.5 * (f[0] + f[1]), 0.5 * (f[2] + f[3])
+            if a + 8 < cx < b - 8:
+                txt = jn.split("-")[0] + ("-" + jn.split("-")[1] if jn.startswith(("J2", "J3")) else "")
+                ty = cy if abs(cy) < 30 else (cy - 0 if abs(cy) < 70 else cy)
+                labs.append((txt, cx, ty if not jn.startswith("J1") else 0.0, 3.0))
+        sp = G.label_spot(poly, cl, name + " < FWD", 5.0, prefer=(0.5 * (a + b), -66.0 if b <= POD_END_X + 10 else 0.0))
+        if sp:
+            labs.append((name + " < FWD", sp[0], sp[1], 5.0 if b <= POD_END_X + 10 else 3.5))
+        d = add(name, "Jigs_Base", poly, BASE_T, fr, cl, labs)
+        kd = KEY["depth"] + 2.0                                                  # run the groove over the dovetail keys too
+        grooves = [G.rect(max(s0, a - kd), min(s1, b + kd), -POD.BP.SKID_HW - 0.5, POD.BP.SKID_HW + 0.5)
+                   for s0, s1 in skids if s0 < b + kd and s1 > a - kd]
+        if grooves:
+            d["pockets"] = [(grooves, BASE_T - 1.7, BASE_T + 1.0)]
+
+
+def pin_rounds():
+    """The 6 mm locating pins (shown in place): 6 mm in the base, 5 mm up into the jig."""
+    out = []
+    k = 0
+    for jn, pts in PINS.items():
+        for x, y in pts:
+            k += 1
+            out.append(("PIN-%02d" % k, (x, y, BZ - BASE_T), (x, y, BZ - BASE_T + PIN_L), 2.95, 0.0, MAT, "Jigs_Base"))
+    return out
 
 
 def j5_seat_gauges():
@@ -240,10 +342,13 @@ def wing_cradles():
 
 def all_parts():
     del PARTS[:]
+    PINS.clear()
+    FOOT.clear()
     j1_wedges()
     j2_squares()
     j3_nose_blocks()
     j4_cradles()
+    jig_base()
     j5_seat_gauges()
     tj_tail()
     wing_cradles()
