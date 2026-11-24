@@ -108,6 +108,19 @@ the surfaces reach their throw. Hinge the surfaces after covering and glue each 
 ![Aileron linkage](img/aileron_linkage.png)
 ![Tail servo linkage](img/tail_servo_linkage.png)
 
+## Assembly behaviour in Fusion (`scripts/assemble.py`)
+
+- **Rigid airframe:** pod, wing, tail structure, booms, reservoir and electronics are one rigid group. Drag any part
+  and the whole aircraft moves together.
+- **Control surfaces** are their own components: `Aileron-R`, `Aileron-L` (LE, TE, ribs, horn, horn rib),
+  `Elevator` (both halves, joiner wire, horn) and `Rudder` (rudder, horn).
+- **Hinge joints:** each surface has an as-built revolute joint on its hinge line, limited to ±25° (rest 0°). Drag a
+  surface, or edit the joint angle (*Hinge Aileron-R*, …) to see its throw. The pushrods and servo arms stay on the
+  airframe: closed linkage loops are not driven.
+- The jigs are not in the rigid group; you can move them freely.
+
+![Surfaces at 20 degrees](img/surfaces_deflected.png)
+
 ## Assembly jigs (3D printed, removable)
 
 37 PLA jigs in `jigs/*.stl` (one file per jig, in its own flat frame: lay it on its largest flat face in the slicer;

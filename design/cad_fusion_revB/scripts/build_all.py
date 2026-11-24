@@ -1,11 +1,11 @@
-# Bridge job: the whole rev B aircraft in a fresh Fusion design: pod, wing (+3 deg), tail, reservoir, electronics.
+# Bridge job: the whole rev B aircraft in a fresh Fusion design: pod, wing (+3 deg), tail, reservoir, electronics,
+# control linkages and hinges, then the assembly set-up (rigid airframe + hinge joints on the control surfaces).
 import time
 _t0 = time.time()
 for _d in list(app.documents):
     _d.close(False)
 NEW_DOC = True
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\build_pod.py").read())
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\build_wing.py").read())
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\build_rest.py").read())
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\build_linkage.py").read())
+_S = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts"
+for _job in ("build_pod.py", "build_wing.py", "build_rest.py", "build_linkage.py", "assemble.py"):
+    exec(open(_S + "\\" + _job).read())
 print("ALL DONE in %.0f s" % (time.time() - _t0))
