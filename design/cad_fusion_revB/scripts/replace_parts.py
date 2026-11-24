@@ -22,3 +22,5 @@ for n in names:
     F.build_list(parent, [p], fails)
     done.append(n)
 print("rebuilt", done, "FAILED", fails)
+# rebuilt parts are new occurrences: renew the rigid groups and hinge joints so nothing is left loose
+exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\assemble.py").read())

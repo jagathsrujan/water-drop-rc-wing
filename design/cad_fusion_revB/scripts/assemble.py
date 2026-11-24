@@ -89,14 +89,28 @@ def axis_edge(part_name):
     return body.edges.item(best), bl
 
 
-# 3. rigid group of the fixed airframe
-fixed = ac.ObjectCollection.create()
-for nm in ("Pod", "Wing", "Tail", "Reservoir", "Electronics"):
-    o = occ_by_name(nm)
-    if o:
-        fixed.add(o)
-root.rigidGroups.add(fixed, True)
-print("rigid group: %d sub-assemblies" % fixed.count)
+# 3. rigid groups: the airframe, and the jig set (pod jigs + base + pins + tail jigs + seat gauges) as a second one.
+#    Fusion fixes a rigid group's members when it is made, so this step runs after every rebuild of parts.
+groups = {"Airframe": ("Pod", "Wing", "Tail", "Reservoir", "Electronics"), "Jig set": ("Jigs",)}
+moving = set(SURFACES)
+for gname, members in groups.items():
+    occs = ac.ObjectCollection.create()
+    for nm in members:
+        o = occ_by_name(nm)
+        if o:
+            occs.add(o)
+    rg = root.rigidGroups.add(occs, True)
+    rg.name = gname
+# every part must be either in a rigid group or inside a moving surface
+leaf = [o for o in root.allOccurrences if o.component.bRepBodies.count > 0]
+in_groups = set()
+for c in [root] + [o.component for o in root.allOccurrences]:
+    for g in c.rigidGroups:
+        for o in g.occurrences:
+            in_groups.add(o.fullPathName)
+free = [o.component.name for o in leaf if not any(o.fullPathName == p or o.fullPathName.startswith(p + "+") for p in in_groups)
+        and not any(("+" + m + ":") in ("+" + o.fullPathName) for m in moving)]
+print("rigid groups: %s; parts not held: %d %s" % (list(groups), len(free), free[:10]))
 
 # 4. revolute joints
 FIX = {"Aileron-R": "Wing", "Aileron-L": "Wing", "Elevator": "Tail", "Rudder": "Tail"}
