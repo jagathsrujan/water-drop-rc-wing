@@ -83,6 +83,39 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 | Fin → tail block | 2 root tabs into slots in the PETG plate |
 | Elevator joiner | wire laid in slots cut in the elevator halves |
 
+## Assembly jigs (3D printed, removable)
+
+37 PLA jigs in `jigs/*.stl` (one file per jig, in its own flat frame: lay it on its largest flat face in the slicer;
+3 walls, 20–30 % infill; all fit a 256 mm bed). They are in the Fusion model under `Jigs` (pod and tail) and
+`Wing/Jigs_Wing`. Every jig has its name engraved, 4.5 mm holes for 4 mm wood screws into the building board, and
+lightening windows. `jigs/fit_check.json` is the Fusion interference check of every jig against the aircraft
+(contacts only, apart from the J5 gauges, which stand where the wing goes: they are used before the wing).
+
+| Jig | Qty | Where | Use |
+|---|---|---|---|
+| J1a nose wedge | 1 | pod board, X −169.5 … −40 | holds the nose floor at its 15.5° slope; groove for skid SK1 |
+| J1b tail wedge | 1 | pod board, X 240 … 304.5 | holds the tail-cone floor at its 38.6° slope |
+| J2 side squares | 4 | X 8–28 and 140–160, both sides | L-squares: sides vertical while the floor and former joints cure |
+| J3 nose taper blocks | 2 | X −165 … −40, both sides | hold the nose sides at their plan angle (front stop to nose ring) |
+| J4a / J4b boom cradles | 2 | X 305–330, 600–620 | booms parallel at Y ±16, Z −40; J4a's front face squares the end former. **Sets the tail incidence** |
+| J5a / J5b seat gauges | 2 | on the side tops, X 0–140, 140–280 | wing lower surface at +3° + 1 mm foam: sand the side tops / capstrip until the gauge does not rock |
+| WC1–WC5 wing cradles | 10 × 2 halves | wing board, Y ±27.5, ±137.5, ±247.5, ±357.5, ±465 | top face = airfoil lower surface (−0.1 mm), LE stop at X 0; front and rear halves key together with a dovetail. Set the airfoil and zero twist |
+| TJ1 corner squares | 4 | fin / stabiliser corners, X 680–730 | fin at 90° to both stab halves while the through-tabs cure |
+| TJ2 stab level gauge | 1 | on both booms, X 650–665 | stab underside parallel to the booms (0° stab incidence); slots for the pushrods |
+
+**Pod build order:** (1) laminate the side layers flat under weights (outer strips + inner pieces, engraved faces
+in); (2) screw J1a, J1b to the board, lay the floor pieces (dovetails), drop the formers into their slots, add keels and
+longerons; (3) add the sides onto the tabs and finger joints with J2 and J3 in place; (4) nose ring + firewall;
+(5) booms through the bulkhead and end former on J4a/J4b, glue; (6) aft deck, capstrip, sand with J5;
+(7) saddle stacks on the cling-wrapped bottle (toothpick pins), then glue them in; (8) film, skids.
+
+**Wing build order:** screw the 20 cradle halves to a 1 m board along two lines (LE stops on one straight line);
+lay the bottom D-box sheet, bottom spar caps and the bottom centre sheeting in the cradles; ribs onto the caps,
+false-spar pieces onto the ribs (egg-crate), webs into the rib slots; top caps, LE, TE; top sheeting last.
+
+**Tail:** fin into the tail-block slots; stab halves through the fin slots with TJ2 under the stab and the four TJ1
+squares in the corners; then the elevators (joiner wire in its slots) and the rudder.
+
 ## Changes from the FreeCAD models (proposed; not yet in `DECISIONS.md`)
 
 1. **Pod sides:** split into strips and pieces to fit 100 mm balsa (see joints). No hex lightening in this pass.

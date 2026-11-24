@@ -104,7 +104,7 @@ FLOOR_SHIFT = [T_FL * tan_floor(k) for k in range(3)]
 # panel ends at a kink: the inside face of a tapered panel leans over the kink by T * tan(angle)
 SIDE_TRIM = {(0, "b"): KINK_TRIM + SIDE_SHIFT[0], (1, "a"): KINK_TRIM, (1, "b"): KINK_TRIM, (2, "a"): KINK_TRIM + SIDE_SHIFT[2]}
 FLOOR_TRIM = {(0, "b"): KINK_TRIM + FLOOR_SHIFT[0], (1, "a"): KINK_TRIM, (1, "b"): KINK_TRIM, (2, "a"): KINK_TRIM + FLOOR_SHIFT[2]}
-FLOOR_KEYS = {115.0: [-40.0, 40.0]}          # dovetail keys per floor joint (|Y| < 20 is the belly opening at X 115)
+FLOOR_KEYS = {115.0: [-40.0, 40.0], -115.0: [-20.0, 0.0, 20.0]}          # dovetail keys per floor joint (|Y| < 20 is the belly opening at X 115)
 
 ZD0 = zt(K1)
 ZD_SLOPE = (-15.7 - ZD0) / 44.0       # deck top plane through the TOP line at X 236 and 1 mm under the wing at X 280

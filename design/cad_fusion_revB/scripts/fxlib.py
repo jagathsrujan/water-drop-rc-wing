@@ -197,7 +197,7 @@ def add_pocket(occ_body, shapes, w0, w1):
     _prism_feature(occ.component, shapes, w0, w1, af.FeatureOperations.CutFeatureOperation, body)
 
 
-def part(parent, name, outline, t, fr, cutters=(), mat=None, labels=(), z0=0.0, note=""):
+def part(parent, name, outline, t, fr, cutters=(), mat=None, labels=(), z0=0.0, note="", label_w=None):
     """A prism part: outline (local u, v polygon, mm) extruded from local w = z0 to z0 + t, minus the cutters
     (polygons or ('circle', u, v, r), through). labels: [(text, u, v, height)] engraved ENGRAVE deep into the top
     face (w = z0 + t), text along +u. Returns (occurrence, body)."""
@@ -233,7 +233,7 @@ def part(parent, name, outline, t, fr, cutters=(), mat=None, labels=(), z0=0.0, 
         ei.participantBodies = [body]
         feats.extrudeFeatures.add(ei)
         sk2.isVisible = False
-    if labels:
+    if labels and label_w is None:
         engrave(comp, body, labels, z0 + t)
     if mat:
         set_material(body, mat)
@@ -448,11 +448,15 @@ def build_list(parent, parts, fails, fit_every=15):
         try:
             grp = group(parent, p["grp"])
             ob = part(grp, p["name"], p["outline"], p["t"], p["fr"], cutters=p["cutters"], mat=p["mat"],
-                      labels=p["labels"], z0=p["z0"])
+                      labels=p["labels"], z0=p["z0"], label_w=p.get("label_w"))
             for shapes, w0, w1 in p.get("joins", []):
                 add_join(ob, shapes, w0, w1)
             for shapes, w0, w1 in p.get("pockets", []):
                 add_pocket(ob, shapes, w0, w1)
+            for plane, shapes in p.get("plane_cuts", []):
+                cut_on_plane(ob, plane, shapes)
+            if p.get("label_w") is not None and p["labels"]:
+                engrave(ob[0].component, ob[1], p["labels"], p["label_w"])
             if p.get("joins") and p.get("mat"):
                 for b in ob[0].component.bRepBodies:      # a join that does not touch makes a new body: same material
                     set_material(b, p["mat"])
@@ -460,3 +464,40 @@ def build_list(parent, parts, fails, fit_every=15):
                 app.activeViewport.fit()
         except Exception as e:
             fails.append((p["name"], str(e).splitlines()[-1][:200]))
+
+
+def cut_on_plane(occ_body, plane, shapes, extent=600.0):
+    """Through-cut (both directions) on one of the component's origin planes ('xy', 'xz', 'yz').
+    shapes: polygons of component-space 3D points (mm) or ('circle', (x, y, z), r); they are projected on the plane."""
+    occ, body = occ_body
+    comp = occ.component
+    pl = {"xy": comp.xYConstructionPlane, "xz": comp.xZConstructionPlane, "yz": comp.yZConstructionPlane}[plane]
+    sk = comp.sketches.add(pl)
+    sk.isComputeDeferred = True
+    lines = sk.sketchCurves.sketchLines
+    for s in shapes:
+        if isinstance(s, tuple) and s[0] == "circle":
+            sk.sketchCurves.sketchCircles.addByCenterRadius(sk.modelToSketchSpace(P(*s[1])), s[2] * MM)
+            continue
+        pts = [sk.modelToSketchSpace(P(*q)) for q in s]
+        first = prev = None
+        for i in range(len(pts)):
+            a = prev.endSketchPoint if prev is not None else pts[i]
+            b = first.startSketchPoint if (i == len(pts) - 1 and first is not None) else pts[(i + 1) % len(pts)]
+            ln = lines.addByTwoPoints(a, b)
+            first = first or ln
+            prev = ln
+    sk.isComputeDeferred = False
+    sk.isVisible = False
+    ei = comp.features.extrudeFeatures.createInput(_all_profiles(sk), af.FeatureOperations.CutFeatureOperation)
+    ei.setSymmetricExtent(VI(extent), True)
+    ei.participantBodies = [body]
+    comp.features.extrudeFeatures.add(ei)
+
+
+def export_stl(occ, path):
+    em = design().exportManager
+    body = occ.component.bRepBodies.item(0)
+    opt = em.createSTLExportOptions(body, path)
+    opt.meshRefinement = af.MeshRefinementSettings.MeshRefinementHigh
+    em.execute(opt)
