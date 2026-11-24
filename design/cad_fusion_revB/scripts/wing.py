@@ -165,7 +165,7 @@ def build_ribs():
 
 
 # ---------------- false spar, webs ----------------
-FSP_SPLITS = [145.0, 357.5]
+FSP_SPLITS = [142.0, 357.5]
 KEY = dict(w_neck=5.0, w_head=8.0, depth=4.0)
 
 
@@ -192,6 +192,9 @@ def build_false_spar():
         # keys: male on the outboard end of the inner piece, female on the inboard end of the next piece
         if b < YE - 1:
             poly = G.dovetail_edge(poly, 1, [0.5 * (zu - zl)], male=True, **KEY)
+        if tag == "C":           # the centre piece keys into both outer pieces (left end too)
+            i = G.find_edge(poly, lambda u, v: abs(u - a) < 1e-6)
+            poly = G.dovetail_edge(poly, i, [0.5 * (zu - zl)], male=True, **KEY)
         if tag != "C" and a > 0:
             i = G.find_edge(poly, lambda u, v: abs(u - a) < 1e-6)
             poly = G.dovetail_edge(poly, i, [0.5 * (zu - zl)], male=False, **KEY)

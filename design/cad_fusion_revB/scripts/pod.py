@@ -106,6 +106,16 @@ SIDE_TRIM = {(0, "b"): KINK_TRIM + SIDE_SHIFT[0], (1, "a"): KINK_TRIM, (1, "b"):
 FLOOR_TRIM = {(0, "b"): KINK_TRIM + FLOOR_SHIFT[0], (1, "a"): KINK_TRIM, (1, "b"): KINK_TRIM, (2, "a"): KINK_TRIM + FLOOR_SHIFT[2]}
 FLOOR_KEYS = {115.0: [-40.0, 40.0], -115.0: [-20.0, 0.0, 20.0]}          # dovetail keys per floor joint (|Y| < 20 is the belly opening at X 115)
 
+def slot_shift(fr, t):
+    """A vertical (constant-X) tab through a panel of thickness t: how far its footprint on the far face is shifted
+    along the panel's u axis from the near face. The slot is opened on that one side only, so the tab still bears
+    on the other side over the full thickness."""
+    o, ux, vy, wz = fr
+    if abs(ux[0]) < 1e-9:
+        return 0.0
+    return -t * wz[0] / ux[0]
+
+
 ZD0 = zt(K1)
 ZD_SLOPE = (-15.7 - ZD0) / 44.0       # deck top plane through the TOP line at X 236 and 1 mm under the wing at X 280
 
@@ -240,7 +250,8 @@ def side_cutters(s, k, layer):
             continue
         a, b = slot_x(x0, x0 + FT, xa, xb)
         ua, ub = sorted((side_u(s, k, a), side_u(s, k, b)))
-        ua, ub = ua - SIDE_SHIFT[k], ub + SIDE_SHIFT[k]
+        du = slot_shift(side_frame(s, k), T_LAM)          # the tab's footprint on the inner face, shifted along u
+        ua, ub = min(ua, ua + du), max(ub, ub + du)
         for zc in SIDE_TABS[n]:
             cl.append(G.rect(ua, ub, zc - TAB_W / 2, zc + TAB_W / 2))
         if SIDE_TABS[n]:
@@ -401,7 +412,9 @@ def floor_cutters(k):
         if g["k"] != k:
             continue
         a, b = slot_x(x0, x0 + FT, xa, xb)
-        ua, ub = floor_u(k, a) - FLOOR_SHIFT[k], floor_u(k, b) + FLOOR_SHIFT[k]
+        ua, ub = floor_u(k, a), floor_u(k, b)
+        du = slot_shift(floor_frame(k), T_FL)
+        ua, ub = min(ua, ua + du), max(ub, ub + du)
         for y in FLOOR_TABS[n]:
             cl.append(G.rect(ua, ub, y - TAB_W / 2, y + TAB_W / 2))
         marks.append((n, 0.5 * (ua + ub) + 5.0, 14.0 if n not in ("B2",) else 30.0))
@@ -455,7 +468,7 @@ def build_floor():
                 du, dv = (Q[0] - P[0]) / L, (Q[1] - P[1]) / L
                 cents = [(floor_u(k, x) - P[0]) * du + (s * hw(x) - P[1]) * dv for x in xs]
                 tol = 0.0 if k == 1 else 0.2
-                poly = G.tabs_on_edge(poly, i, cents, TAB_W + 2 * (SIDE_SHIFT[k] + FLOOR_SHIFT[k]) + tol,
+                poly = G.tabs_on_edge(poly, i, cents, TAB_W + SIDE_SHIFT[k] + FLOOR_SHIFT[k] + tol,
                                       T_LAM + FLOOR_SHIFT[k] + tol, kind="notch")
             name = "FL-%s%d" % (seg, j + 1)
             pb = G.bbox(poly)

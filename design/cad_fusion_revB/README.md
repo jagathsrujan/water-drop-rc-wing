@@ -58,6 +58,7 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
   turned to its grain on the sheet. Ply / lite-ply 300 × 300.
 - **Labels:** every laser part carries its name and a direction hint (`< FWD`, `UP ^`, `< LE`). The floor and the
   side panels also carry the name of the former that goes into each group of slots.
+- **Joint check:** `scripts/check_joints.py` compares every dovetail pair (floor, hatch, false spar, jig base, wing cradles) point by point: no gaps, no overlaps.
 - **Slots** are drawn at the nominal stock thickness: set the laser's kerf offset so the tabs are a push fit. In the
   tapered nose and tail cone, the slots are opened by T·tan(angle), because the tabs cross those panels at an angle.
 
