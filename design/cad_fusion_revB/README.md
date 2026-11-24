@@ -92,6 +92,19 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 | Rudder | 9 g servo (right), arm 8 mm outboard | same, right exit slot | horn on the right of the rudder |
 
 Fit check (Fusion interference analysis): the wire ends touch the tail horns by 0.1–0.2 mm³; the real Z-bends clear them.
+
+**Hinges (CA hinges, 0.5 mm hinge sheet, 20 mm wide, in 0.8 mm slits; 0.5 mm hinge gap):**
+
+| Surface | Hinges | Fixed side | Moving side |
+|---|---|---|---|
+| Ailerons | 4 per side at Y ±130, ±247.5, ±302.5, ±420, 18 mm long | laser-cut slots through the false spar (X 205–208) | slit 9 mm deep in the aileron LE strip |
+| Elevator | 3 per half at Y ±75, ±150, ±215 (clear of the ribs and the joiner leg), 10.5 mm long | slit 6.5 mm into the stab TE member | slit 4.5 mm into the elevator LE member |
+| Rudder | 3 at Z −10, 70, 120, 10.5 mm long | slit into the fin TE member | slit into the rudder LE member |
+
+The slits run along the middle of the stock thickness, so they are cut by hand with a hinge-slotting knife (marked in
+the model as pockets; not in the DXF). Sand a 25° V-bevel on the aileron, elevator and rudder LEs (as rev A) so
+the surfaces reach their throw. Hinge the surfaces after covering and glue each hinge with thin CA from both sides.
+![Tail hinges](img/tail_hinges.png)
 ![Aileron linkage](img/aileron_linkage.png)
 ![Tail servo linkage](img/tail_servo_linkage.png)
 

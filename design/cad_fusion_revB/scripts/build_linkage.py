@@ -3,7 +3,7 @@ exec(open(r"C:\\Projects\\water-drop-rc-wing\\design\\cad_fusion_revB\\scripts\\
 G = rl("geo"); F = rl("fxlib"); W = rl("wing"); LK = rl("linkage")
 root = F.design().rootComponent
 top = F.group(root, "WaterDrop_revB")
-OLD = ("PUSHROD-", "ZBEND-", "ROD-END-", "SERVO-ARM-", "AIL-HORN-", "AH-")
+OLD = ("PUSHROD-", "ZBEND-", "ROD-END-", "SERVO-ARM-", "AIL-HORN-", "AH-", "HINGE-")
 for occ in list(root.allOccurrences):
     if occ.isValid and occ.component.name.startswith(OLD):
         occ.deleteMe()
@@ -16,4 +16,6 @@ for asm, (parts, rounds) in (("Wing", LK.wing_parts()), ("Tail", LK.tail_parts()
             F.tube(F.group(parent, grp), name, p0, p1, r, ri, mat)
         except Exception as e:
             fails.append((name, str(e)[:160]))
-print("linkages built; FAILED", fails)
+for asm, p in LK.hinge_parts():
+    F.build_list(F.group(top, asm), [p], fails)
+print("linkages and hinges built; FAILED", fails)

@@ -240,4 +240,9 @@ def electronics(servo_rel):
 def all_parts():
     del PARTS[:]
     rounds = build_tail()
+    import linkage
+    pk = linkage.hinge_pockets()
+    for p in PARTS:
+        if p["name"] in pk:
+            p["pockets"] = pk[p["name"]]
     return PARTS, rounds

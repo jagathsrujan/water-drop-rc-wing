@@ -132,3 +132,54 @@ if __name__ == "__main__":
             print(p["name"], [round(v, 1) for v in G.bbox(p["outline"])], round(p["t"], 2), [l[0] for l in p["labels"]])
         for r in rr:
             print(r[0], [round(v, 1) for v in r[1]], [round(v, 1) for v in r[2]])
+
+
+# ---------------- CA hinges (0.5 mm hinge sheet, 20 mm wide, in 0.8 mm slits across the 0.5 mm hinge gap) ----------------
+HINGE_T, SLIT_T, HINGE_W = 0.5, 0.8, 20.0
+ELEV_HINGE_Y = [75.0, 150.0, 215.0]        # clear of the elevator ribs (45, 90, 135, 180) and the joiner leg (|Y| 50)
+RUD_HINGE_Z = [-10.0, 70.0, 120.0]          # clear of the rudder ribs (10, 45, 90) and the joiner notch (Z 45)
+
+
+def hinge_pockets():
+    """{component name: [(shapes, w0, w1)]} slits cut into the existing parts (each in its own frame)."""
+    import tail as TL
+    out = {}
+    zh = W.ZH
+    y0, y1 = P.AIL_Y
+    for s, Sd in ((1, "R"), (-1, "L")):
+        b = y1 if s > 0 else -y0                       # AIL-LE frame: origin y = b, w = b - Y
+        sh = [G.rect(P.AIL_X[0] - 0.5, P.AIL_X[0] + 9.0, zh - SLIT_T / 2, zh + SLIT_T / 2)]
+        out["AIL-LE-" + Sd] = [(sh, *sorted((b - s * (yc + HINGE_W / 2), b - s * (yc - HINGE_W / 2)))) for yc in P.HINGE_Y]
+    w0, w1 = TL.T / 2 - SLIT_T / 2, TL.T / 2 + SLIT_T / 2
+    for s, Sd in ((1, "R"), (-1, "L")):
+        ys = [sorted((s * (y - HINGE_W / 2), s * (y + HINGE_W / 2))) for y in ELEV_HINGE_Y]
+        out["STAB-" + Sd] = [([G.rect(TL.XH0 - 6.5, TL.XH0 + 1.0, a, c) for a, c in ys], w0, w1)]
+        out["ELEV-" + Sd] = [([G.rect(TL.XH1 - 1.0, TL.XH1 + 4.5, a, c) for a, c in ys], w0, w1)]
+    zs = [(z - HINGE_W / 2, z + HINGE_W / 2) for z in RUD_HINGE_Z]
+    out["FIN"] = [([G.rect(TL.XH0 - 6.5, TL.XH0 + 1.0, a, c) for a, c in zs], w0, w1)]
+    out["RUDDER"] = [([G.rect(TL.XH1 - 1.0, TL.XH1 + 4.5, a, c) for a, c in zs], w0, w1)]
+    return out
+
+
+def hinge_parts():
+    """CA hinge plates: (assembly, part dict). Ailerons in the wing frame, tail in the aircraft frame."""
+    import tail as TL
+    out = []
+    zh = W.ZH
+    fr = G.frame((0.0, 0.0, zh - HINGE_T / 2), (1, 0, 0), (0, 1, 0))
+    for s, Sd in ((1, "R"), (-1, "L")):
+        for k, yc in enumerate(P.HINGE_Y):
+            y = s * yc
+            out.append(("Wing", dict(name="HINGE-AIL-%s%d" % (Sd, k + 1), grp="Wing_Aileron", outline=G.rect(P.HINGE_X - P.HINGE_HALF, P.HINGE_X + P.HINGE_HALF, y - HINGE_W / 2, y + HINGE_W / 2),
+                                     t=HINGE_T, fr=fr, mat="pet", cutters=[], labels=[], z0=0.0)))
+    fr = G.frame((0.0, 0.0, TL.FP.STAB_Z - HINGE_T / 2), (1, 0, 0), (0, 1, 0))
+    for s, Sd in ((1, "R"), (-1, "L")):
+        for k, yc in enumerate(ELEV_HINGE_Y):
+            y = s * yc
+            out.append(("Tail", dict(name="HINGE-ELEV-%s%d" % (Sd, k + 1), grp="Tail_Hardware", outline=G.rect(TL.XH0 - 6.0, TL.XH1 + 4.0, y - HINGE_W / 2, y + HINGE_W / 2),
+                                     t=HINGE_T, fr=fr, mat="pet", cutters=[], labels=[], z0=0.0)))
+    fr = G.frame((0.0, HINGE_T / 2, 0.0), (1, 0, 0), (0, 0, 1))
+    for k, zc in enumerate(RUD_HINGE_Z):
+        out.append(("Tail", dict(name="HINGE-RUD-%d" % (k + 1), grp="Tail_Hardware", outline=G.rect(TL.XH0 - 6.0, TL.XH1 + 4.0, zc - HINGE_W / 2, zc + HINGE_W / 2),
+                                 t=HINGE_T, fr=fr, mat="pet", cutters=[], labels=[], z0=0.0)))
+    return out

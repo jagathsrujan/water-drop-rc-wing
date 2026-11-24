@@ -335,6 +335,11 @@ def all_parts():
     build_strips()
     build_ailerons()
     boxes = build_servo_bay()
+    import linkage
+    pk = linkage.hinge_pockets()
+    for p in PARTS:
+        if p["name"] in pk:
+            p["pockets"] = pk[p["name"]]
     return PARTS, boxes
 
 
