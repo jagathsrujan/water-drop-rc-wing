@@ -212,3 +212,10 @@ allowable / ultimate stress (≥ 1 holds).
 100 × 1000 mm balsa sheets are sold in India (for example JustKraft BWS series, R5). The thicknesses offered and
 the grades were not verified online. Ask the shop for 1.5 mm and weigh the sheets: medium is about 21 g per
 100 × 1000 × 1.5 sheet.
+
+## 9. Decision (gate P1)
+
+**2026-11-26, the user: "Yes, 1.5 + A".** Single balsa stock **1.5 mm medium** (generic local grade; strength at
+ρ 0.12, mass at ρ 0.14). Ply **option A**: one 300 × 300 sheet of **1.5 mm birch ply**. The grip-zone inners go
+1.0 → 1.5. The firewall, stub doublers and tube rings become 2 × 1.5 laminated birch, and the front stop becomes
+2 × 1.5 birch (P2 re-designs it). No lite-ply. Expected empty mass 728.1 g, score 136.8, before the P2 lightening.
