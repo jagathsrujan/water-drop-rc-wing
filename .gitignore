@@ -17,3 +17,8 @@ __pycache__/
 # the build-kit BOM is ours (generated)
 !build-kit/*.pdf
 !docs/bom/*.pdf
+
+# STEP export is 110 MB (over the GitHub file limit): commit the zip (export_views.py writes both)
+design/cad_fusion_revB/export/*.step
+# Fusion build progress (written while a bridge job runs)
+design/cad_fusion_revB/check/build_progress.txt

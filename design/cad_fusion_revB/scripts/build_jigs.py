@@ -48,8 +48,8 @@ res = d.analyzeInterference(ii)
 hits = []
 for i in range(res.count):
     r = res.item(i)
-    n1 = r.entityOne.assemblyContext.component.name
-    n2 = r.entityTwo.assemblyContext.component.name
+    n1 = r.entityOne.assemblyContext.component.name if r.entityOne.assemblyContext else r.entityOne.name
+    n2 = r.entityTwo.assemblyContext.component.name if r.entityTwo.assemblyContext else r.entityTwo.name
     if (n1 in names) != (n2 in names) or (n1 in names and n2 in names):
         hits.append((n1, n2, round(r.interferenceBody.volume * 1000, 3)))
 hits.sort(key=lambda h: -h[2])

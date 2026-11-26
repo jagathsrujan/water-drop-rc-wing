@@ -7,8 +7,8 @@ the fin (right tabs and left tabs alternate). The fin root has 2 tabs into slots
 The elevator joiner wire lies in laser-cut slots in the elevator halves."""
 import math
 import geo as G
-import fus_params as FP
-import res_params as RP
+import lam
+from revb_params import FP, RP             # FreeCAD parameters + the optimisation overrides (revb_params.py)
 import pod as POD
 
 T = FP.T_SURF
@@ -22,6 +22,7 @@ PARTS = []
 
 
 def add(name, grp, outline, t, fr, mat, cutters=(), labels=(), z0=0.0, **kw):
+    mat = POD.SINGLE_STOCK.get(mat, mat)          # P1: one balsa stock
     d = dict(name=name, grp=grp, outline=outline, t=t, fr=fr, mat=mat, cutters=list(cutters), labels=list(labels), z0=z0)
     d.update(kw)
     PARTS.append(d)
@@ -221,8 +222,8 @@ def electronics(servo_rel):
     l, w, h = FP.ESC
     tz = FP.TRAY_Z - POD.BP.TRAY_T
     items.append(("box", "ESC", (FP.ESC_X0, FP.ESC_X0 + l, -w / 2, w / 2, tz - h, tz)))
-    rx = FP.RX
-    items.append(("box", "RECEIVER", (POD.BP.RX_X0, POD.BP.RX_X0 + rx[0], -rx[1] / 2, rx[1] / 2, FP.FLOOR_Z, FP.FLOOR_Z + rx[2])))
+    rx = FP.RX                    # P2 item 12: on the battery tray behind the battery, turned 90 deg (45 along X)
+    items.append(("box", "RECEIVER", (POD.BP.RX_X0, POD.BP.RX_X0 + rx[1], -rx[0] / 2, rx[0] / 2, FP.TRAY_Z, FP.TRAY_Z + rx[2])))
     L, W, H, TL = FP.TSERVO
     for s, S in ((1, "R"), (-1, "L")):
         yc_ = s * FP.TSERVO_YC
@@ -245,4 +246,6 @@ def all_parts():
     for p in PARTS:
         if p["name"] in pk:
             p["pockets"] = pk[p["name"]]
+    # P1: the 3 mm tail surfaces are 2 x 1.5 of the one stock, grain as before (open frames: no cross layer needed)
+    lam.apply(PARTS, {n: lam.parallel(2, "v") for n in ("STAB-R", "STAB-L", "FIN", "ELEV-R", "ELEV-L", "RUDDER")})
     return PARTS, rounds

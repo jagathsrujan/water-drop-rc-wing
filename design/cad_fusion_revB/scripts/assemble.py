@@ -99,6 +99,9 @@ for gname, members in groups.items():
         o = occ_by_name(nm)
         if o:
             occs.add(o)
+    if occs.count < 1:
+        print("rigid group %s: no members in the design (not built yet) - skipped" % gname)
+        continue
     rg = root.rigidGroups.add(occs, True)
     rg.name = gname
 # every part must be either in a rigid group or inside a moving surface

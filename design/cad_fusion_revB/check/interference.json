@@ -1,13 +1,293 @@
 [
  [
-  "FS",
-  "Ledge-R1",
-  0.01
+  "LE",
+  "J5a-SEAT-GAUGE",
+  5551.875
  ],
  [
-  "FS",
+  "DBOX-BOT",
+  "J5a-SEAT-GAUGE",
+  4572.322
+ ],
+ [
+  "FSP-C-2",
+  "J5b-SEAT-GAUGE",
+  1812.965
+ ],
+ [
+  "FSP-C-1",
+  "J5b-SEAT-GAUGE",
+  1801.224
+ ],
+ [
+  "CS-BF-R",
+  "J5b-SEAT-GAUGE",
+  1672.047
+ ],
+ [
+  "CS-BF-L",
+  "J5b-SEAT-GAUGE",
+  1672.047
+ ],
+ [
+  "TE-C",
+  "J5b-SEAT-GAUGE",
+  1513.084
+ ],
+ [
+  "W-R055-R",
+  "J5a-SEAT-GAUGE",
+  1432.523
+ ],
+ [
+  "W-R055-L",
+  "J5a-SEAT-GAUGE",
+  1432.523
+ ],
+ [
+  "CS-BF-R",
+  "J5a-SEAT-GAUGE",
+  1418.676
+ ],
+ [
+  "CS-BF-L",
+  "J5a-SEAT-GAUGE",
+  1418.676
+ ],
+ [
+  "W-R055-L",
+  "J5b-SEAT-GAUGE",
+  1229.888
+ ],
+ [
+  "W-R055-R",
+  "J5b-SEAT-GAUGE",
+  1229.548
+ ],
+ [
+  "CS-BA-R",
+  "J5b-SEAT-GAUGE",
+  1195.036
+ ],
+ [
+  "CS-BA-L",
+  "J5b-SEAT-GAUGE",
+  1195.036
+ ],
+ [
+  "WF-R1",
+  "J5a-SEAT-GAUGE",
+  756.059
+ ],
+ [
+  "WF-L1",
+  "J5a-SEAT-GAUGE",
+  756.059
+ ],
+ [
+  "WF-R1D",
+  "J5a-SEAT-GAUGE",
+  753.373
+ ],
+ [
+  "WF-L1D",
+  "J5a-SEAT-GAUGE",
+  753.373
+ ],
+ [
+  "CAP-B-BOT",
+  "J5a-SEAT-GAUGE",
+  710.18
+ ],
+ [
+  "DECK",
+  "WC1L-R",
+  640.703
+ ],
+ [
+  "DECK",
+  "WC1R-R",
+  614.617
+ ],
+ [
+  "CS-TA-R",
+  "J5b-SEAT-GAUGE",
+  549.002
+ ],
+ [
+  "CS-TA-L",
+  "J5b-SEAT-GAUGE",
+  549.002
+ ],
+ [
+  "WC1R-R",
+  "J5b-SEAT-GAUGE",
+  247.33
+ ],
+ [
+  "WC1L-R",
+  "J5b-SEAT-GAUGE",
+  247.33
+ ],
+ [
+  "WC1R-F",
+  "J5a-SEAT-GAUGE",
+  238.221
+ ],
+ [
+  "WC1L-F",
+  "J5a-SEAT-GAUGE",
+  238.221
+ ],
+ [
+  "W-C-1",
+  "J5b-SEAT-GAUGE",
+  211.467
+ ],
+ [
+  "W-C-2",
+  "J5b-SEAT-GAUGE",
+  211.467
+ ],
+ [
+  "W-C-1",
+  "J5a-SEAT-GAUGE",
+  201.225
+ ],
+ [
+  "W-C-2",
+  "J5a-SEAT-GAUGE",
+  201.225
+ ],
+ [
+  "WR-R1",
+  "J5a-SEAT-GAUGE",
+  146.201
+ ],
+ [
+  "WR-L1",
+  "J5a-SEAT-GAUGE",
+  146.201
+ ],
+ [
+  "CAP-C-BOT",
+  "J5a-SEAT-GAUGE",
+  122.477
+ ],
+ [
+  "BH-2b",
+  "WC1R-R",
+  105.129
+ ],
+ [
+  "BH-2b",
+  "WC1L-R",
+  105.129
+ ],
+ [
+  "HF",
+  "WC1R-F",
+  103.207
+ ],
+ [
+  "HF",
+  "WC1L-F",
+  103.207
+ ],
+ [
+  "BH-1a",
+  "WC1L-R",
+  73.746
+ ],
+ [
+  "BH-1b",
+  "WC1R-R",
+  73.746
+ ],
+ [
+  "BH-3b",
+  "WC1R-R",
+  56.673
+ ],
+ [
+  "BH-3b",
+  "WC1L-R",
+  56.673
+ ],
+ [
+  "BH-4a",
+  "WC1L-R",
+  40.376
+ ],
+ [
+  "BH-4b",
+  "WC1R-R",
+  40.376
+ ],
+ [
+  "WF-R2",
+  "J5a-SEAT-GAUGE",
+  32.249
+ ],
+ [
+  "WR-R2",
+  "J5a-SEAT-GAUGE",
+  32.093
+ ],
+ [
+  "WF-L2",
+  "J5a-SEAT-GAUGE",
+  31.867
+ ],
+ [
+  "WR-L2",
+  "J5a-SEAT-GAUGE",
+  31.683
+ ],
+ [
+  "WC1R-R",
+  "J5a-SEAT-GAUGE",
+  5.646
+ ],
+ [
+  "WC1L-R",
+  "J5a-SEAT-GAUGE",
+  5.646
+ ],
+ [
+  "FL-N1",
+  "BATTERY",
+  0.537
+ ],
+ [
+  "ROD-END-ELEV-HORN",
+  "HORN-E",
+  0.201
+ ],
+ [
+  "FS-1",
+  "Ledge-R1",
+  0.137
+ ],
+ [
+  "FS-1",
   "Ledge-L1",
-  0.01
+  0.137
+ ],
+ [
+  "RO-TL",
+  "PUSHROD-RUD",
+  0.132
+ ],
+ [
+  "ROD-END-RUD-HORN",
+  "HORN-R",
+  0.086
+ ],
+ [
+  "LO-TL",
+  "PUSHROD-ELEV",
+  0.022
  ],
  [
   "CAP-C-TOP",
@@ -15,9 +295,14 @@
   0.007
  ],
  [
-  "BH",
+  "BH-4b",
   "DECK",
-  0.005
+  0.003
+ ],
+ [
+  "BH-4a",
+  "DECK",
+  0.002
  ],
  [
   "SERVO-HATCH-R",
@@ -30,8 +315,13 @@
   0.002
  ],
  [
-  "RO-TL",
-  "PUSHROD-RUD",
+  "WF-R1D",
+  "DBOX-TOP",
+  0.001
+ ],
+ [
+  "WF-L1D",
+  "DBOX-TOP",
   0.001
  ],
  [
@@ -65,6 +355,11 @@
   0.001
  ],
  [
+  "RI-T1",
+  "PUSHROD-RUD",
+  0.0
+ ],
+ [
   "WF-R1",
   "DBOX-TOP",
   0.0
@@ -75,12 +370,22 @@
   0.0
  ],
  [
+  "WF-R1D",
+  "DBOX-BOT",
+  0.0
+ ],
+ [
   "WF-L1",
   "DBOX-TOP",
   0.0
  ],
  [
   "WF-L1",
+  "DBOX-BOT",
+  0.0
+ ],
+ [
+  "WF-L1D",
   "DBOX-BOT",
   0.0
  ],

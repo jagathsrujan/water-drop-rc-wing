@@ -12,7 +12,7 @@ import math
 import geo as G
 import wing as W
 import pod as POD
-import fus_params as FP
+from revb_params import FP                  # FreeCAD parameters + the optimisation overrides
 
 P, A, S = W.P, W.A, W.P.MG90S
 WIRE_R = P.PUSHROD_D / 2          # 0.6

@@ -9,7 +9,7 @@ Everything a builder needs, and nothing else. Generated from the part data by `t
 | [`LASER_BRIEF.md`](LASER_BRIEF.md) | For the laser shop: material, thickness, sheet size, layers, kerf, sheet by sheet |
 | [`MATERIALS.md`](MATERIALS.md), [`materials.csv`](materials.csv) | How much balsa, ply, lite-ply and strip stock to buy |
 | [`PRINT_LIST.md`](PRINT_LIST.md) | Every 3D print with material and quantity |
-| `laser/` | 41 DXF sheets (153 parts) + `kerf-test/` coupons |
+| `laser/` | 45 DXF sheets (226 parts) + `kerf-test/` coupons |
 | `print/jigs/` | 37 PLA jigs, 5 jig-base segments, the locating pin |
 | `print/aircraft/`, `print/reservoir/`, `print/wing/` | PETG parts of the aircraft |
 

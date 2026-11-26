@@ -172,7 +172,7 @@ def validate(R, S, idx):
                         problem("%s: pin of %s at X %.0f is in %s, label says %s" % (it["id"], jn, x, J.SEG_NAMES[k], segs))
     for n in R.order:
         e = R[n]
-        if e["kind"] in ("laser", "strip", "jig", "hinge") and n not in used:
+        if e["kind"] in ("laser", "laminate", "strip", "jig", "hinge") and n not in used and                 not (e.get("piece_of") and e["piece_of"] in used):        # a layer piece is built with its laminate
             problem("part %s (%s) is never built in the steps" % (n, e["kind"]))
         if e["kind"] == "print" and n not in used and not e.get("print_in"):
             problem("printed part %s is never built in the steps" % n)

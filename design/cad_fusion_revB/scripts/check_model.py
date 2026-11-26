@@ -20,7 +20,7 @@ for occ in root.allOccurrences:
     grp = [p.split(":")[0] for p in path]
     for b in occ.bRepBodies:          # proxies in assembly context (world positions)
         bb = b.boundingBox
-        rows.append(dict(name=comp.name, path="/".join(grp[1:-1]), material=b.material.name if b.material else "",
+        rows.append(dict(name=comp.name, body=b.name, path="/".join(grp[1:-1]), material=b.material.name if b.material else "",
                          vol_mm3=round(b.volume * 1000.0, 2), mass_g=round(b.physicalProperties.mass * 1000.0, 3),
                          bb=[round(v * 10, 2) for v in (bb.minPoint.x, bb.maxPoint.x, bb.minPoint.y, bb.maxPoint.y,
                                                          bb.minPoint.z, bb.maxPoint.z)]))

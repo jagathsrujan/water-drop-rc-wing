@@ -36,8 +36,11 @@ RES = 0.4                       # mm per pixel
 RHO = 0.14                      # g/cm3, P1 decision (generic medium)
 FILM_IN = 30.0                  # g/m2, film on the inner face over side holes (bal_params FILM_G_M2)
 GLUE_FRAC_POD = 0.10            # mass_summary.py: pod glue 10 % of the wood -> removed wood also removes its glue share
-FORMERS = {"N1": (-130.0, -127.0), "N2": (-100.0, -97.0), "FS": (-29.2, -26.2), "B1": (38.0, 41.0),
-           "B2": (105.0, 108.0), "B4": (170.0, 173.0), "BH": (236.0, 239.0), "EF": (302.0, 305.0)}
+os.environ["REVB_NO_HEX"] = "1"          # compute the cells on the part outlines without any earlier cells
+import pod as POD  # noqa: E402
+FORMERS = {n: (g["x0"], g["x1"]) for n, g in POD.GEOM.items()}      # the formers as modelled (P3: 4.5 / 6 mm thick)
+MODEL_JSON = os.path.join(DESIGN, "cad_fusion_revB", "scripts", "hex_cells.json")
+ADOPTED = ("Floor", "Aft deck", "Tail-servo tray", "Hatch", "Wing ribs")   # P2 gate: items 3-8 (tips: item 2 instead)
 JOINT_MARGIN = 3.0              # mm, solid band at the butt joints between side pieces of one layer (estimate)
 FORMER_T_NEW = 4.5             # P1: formers 3 x 1.5 -> the solid band follows the thicker former
 CACHE = os.path.join(os.environ.get("TEMP", HERE), "p2_registry.pkl")
@@ -188,7 +191,7 @@ def side_allowed(R, names_out, names_in, side):
     Z = V                                                     # frame y axis is world +Z for every side piece
     allowed &= (X >= BP.HEX_X[0]) & (X <= BP.HEX_X[1])
     for a, b in FORMERS.values():
-        allowed &= ~((X > a - BP.HEX_FRAME_CLEAR - 0.75) & (X < b + 0.75 + BP.HEX_FRAME_CLEAR))   # +0.75: 4.5 mm formers
+        allowed &= ~((X > a - BP.HEX_FRAME_CLEAR) & (X < b + BP.HEX_FRAME_CLEAR))
     s = +1 if side == "R" else -1
     for x0, x1, z0, z1, sd in BP.HEX_SOLID:
         if sd in (0, s):
@@ -292,6 +295,17 @@ def main():
         w.writeheader()
         w.writerows(rows)
     json.dump(cells_out, open(os.path.join(HERE, "p2_cells.json"), "w"), indent=0)
+    if "--model" in sys.argv:          # P3: write the adopted cells into the model (pod.py / wing.py read them)
+        model = {"sides": {k: {"af": BP.HEX_AF, "web": BP.HEX_WEB, "cells": v} for k, v in side_cells.items()}, "parts": {}}
+        for name, test, af, web, marg, t, note in GROUPS[1:]:
+            if not name.startswith(ADOPTED):
+                continue
+            for n, e in R.items():
+                if e.get("kind") == "laser" and test(n) and cells_out.get(n):
+                    model["parts"][n] = {"af": af, "web": web, "cells": cells_out[n]}
+        json.dump(model, open(MODEL_JSON, "w"), indent=0)
+        print("model cells ->", MODEL_JSON, sum(len(v["cells"]) for v in model["sides"].values()), "side cells,",
+              {k: len(v["cells"]) for k, v in model["parts"].items()})
     for r in rows:
         print("%-52s cells %4d  area %6.1f cm2  saved %6.2f g  (%s) %s" % (r["group"], r["cells"], r["area_cm2"],
               r["saved_g"], r["cell"], r["note"]))

@@ -2,38 +2,31 @@
 
 Computed by `tools/build_kit/make_build_kit.py` from the laser nesting and the strip-stock parts in the part data (not typed by hand). Buy 10-20 % extra balsa: some sheets will be too heavy or have bad grain.
 
-## Laser sheets (balsa, birch ply, lite-ply)
+## What to buy
+
+One balsa stock and one ply stock (optimisation P1, `design/optimisation/P1_single_stock.md`):
+
+| Stock | Needed | Buy (with 15 % spare) |
+|---|---|---|
+| **Balsa, medium grade, 1.5 mm, 100 x 1000 mm** | 21 sheets (15 for the laser = 44 laser sheets of 100 x 300, 6 for the strips and sheeting) | **25 sheets** |
+| **Birch ply (aircraft ply), 1.5 mm, 300 x 300 mm** | 1 sheet(s) | **1** |
+
+Weigh the balsa sheets when you buy them (medium is about 21 g per 100 x 1000 x 1.5 sheet): the lightest go to the D-box, sheeting and tail, the heaviest to the formers, bulkhead and spar caps.
+
+## Laser sheets (balsa, birch ply)
 
 | Material | Thickness | Laser sheets | Sheet size | Sheet area | Part area | Est. part mass | Buy |
 |---|---|---|---|---|---|---|---|
-| Balsa, LIGHT grade (about 100 kg/m3) | 1.5 mm | 1 | 100 x 300 mm | 0.030 m2 | 0.015 m2 | 2 g | 1 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Balsa, LIGHT grade (about 100 kg/m3) | 3 mm | 4 | 100 x 300 mm | 0.120 m2 | 0.030 m2 | 9 g | 2 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Balsa, MEDIUM grade (about 140 kg/m3) | 1 mm | 6 | 100 x 300 mm | 0.180 m2 | 0.076 m2 | 11 g | 2 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Balsa, MEDIUM grade (about 140 kg/m3) | 1.5 mm | 11 | 100 x 300 mm | 0.330 m2 | 0.178 m2 | 37 g | 4 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Balsa, MEDIUM grade (about 140 kg/m3) | 2 mm | 8 | 100 x 300 mm | 0.240 m2 | 0.064 m2 | 18 g | 3 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Balsa, MEDIUM grade (about 140 kg/m3) | 3 mm | 5 | 100 x 300 mm | 0.150 m2 | 0.047 m2 | 20 g | 2 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
-| Lite-ply (poplar ply) | 1.5 mm | 1 | 300 x 300 mm | 0.090 m2 | 0.005 m2 | 3 g | 1 sheet(s) 300 x 300 mm |
-| Lite-ply (poplar ply) | 3 mm | 2 | 300 x 300 mm | 0.180 m2 | 0.033 m2 | 44 g | 2 sheet(s) 300 x 300 mm |
-| Birch plywood (aircraft ply) | 1 mm | 1 | 300 x 300 mm | 0.090 m2 | 0.007 m2 | 4 g | 1 sheet(s) 300 x 300 mm |
-| Birch plywood (aircraft ply) | 1.5 mm | 1 | 300 x 300 mm | 0.090 m2 | 0.009 m2 | 9 g | 1 sheet(s) 300 x 300 mm |
-| Birch plywood (aircraft ply) | 3 mm | 1 | 300 x 300 mm | 0.090 m2 | 0.009 m2 | 17 g | 1 sheet(s) 300 x 300 mm |
-| **Total** | | **41** | | **1.590 m2** | | | |
+| Balsa, MEDIUM grade (about 140 kg/m3) | 1.5 mm | 44 | 100 x 300 mm | 1.320 m2 | 0.536 m2 | 113 g | 15 sheet(s) 100 x 1000 mm (each gives 3 laser sheets of 100 x 300) |
+| Birch plywood (aircraft ply) | 1.5 mm | 1 | 300 x 300 mm | 0.090 m2 | 0.039 m2 | 38 g | 1 sheet(s) 300 x 300 mm |
+| **Total** | | **45** | | **1.410 m2** | | | |
 
 ## Strip and sheet stock (cut by hand)
 
 | Stock | Pieces | Total length | Buy | Used for |
 |---|---|---|---|---|
-| balsa medium strip 3 x 5 mm | 2 | 523 mm | 1 x 1000 mm | Keel-R, Keel-L |
-| balsa medium triangle strip 6 x 6 mm | 4 | 442 mm | 1 x 1000 mm | Longeron-R1, Longeron-R2, Longeron-L1, Longeron-L2 |
-| balsa medium strip 3 x 6 mm | 2 | 474 mm | 1 x 1000 mm | Capstrip-R, Capstrip-L |
-| balsa medium strip 3 x 3 mm | 4 | 324 mm | 1 x 1000 mm | Ledge-R1, Ledge-R2, Ledge-L1, Ledge-L2 |
-| balsa medium leading-edge strip (shaped) 6 x 16.3 mm | 1 | 984 mm | 1 x 1000 mm | LE |
-| balsa light sheet 1.5 mm | 54 | 7251 mm (0.217 m2) | 3 sheet(s) 100 x 1000 mm | DBOX-TOP, DBOX-BOT, CS-TF-R, CS-TF-L, CS-BF-R, CS-BF-L, CS-TA-R, CS-TA-L, CS-BA-R, CS-BA-L, CAPS-R110-TF-R, CAPS-R110-TF-L, CAPS-R110-TA-R, CAPS-R110-TA-L, CAPS-R110-BF-R, CAPS-R110-BF-L, CAPS-R110-BA-R, CAPS-R110-BA-L, CAPS-R165-TF-R, CAPS-R165-TF-L, CAPS-R165-BF-R, CAPS-R165-BF-L, CAPS-R220-TF-R, CAPS-R220-TF-L, CAPS-R220-BF-R, CAPS-R220-BF-L, CAPS-R275-TF-R, CAPS-R275-TF-L, CAPS-R275-BF-R, CAPS-R275-BF-L, CAPS-R330-TF-R, CAPS-R330-TF-L, CAPS-R330-BF-R, CAPS-R330-BF-L, CAPS-R385-TF-R, CAPS-R385-TF-L, CAPS-R385-BF-R, CAPS-R385-BF-L, CAPS-R440-TF-R, CAPS-R440-TF-L, CAPS-R440-TA-R, CAPS-R440-TA-L, CAPS-R440-BF-R, CAPS-R440-BF-L, CAPS-R440-BA-R, CAPS-R440-BA-L, CAPS-TIP-TF-R, CAPS-TIP-TF-L, CAPS-TIP-TA-R, CAPS-TIP-TA-L, CAPS-TIP-BF-R, CAPS-TIP-BF-L, CAPS-TIP-BA-R, CAPS-TIP-BA-L |
-| carbon strip 3 x 0.5 mm (2 side by side per cap) | 4 | 3936 mm | 4 x 1000 mm | CAP-C-TOP, CAP-C-BOT |
-| balsa hard strip 3 x 6 mm | 2 | 1968 mm | 2 x 1000 mm | CAP-B-TOP, CAP-B-BOT |
-| balsa hard trailing-edge stock (wedge) 5.2 x 25 mm | 3 | 330 mm | 1 x 1000 mm | TE-C, TE-O-R, TE-O-L |
-| balsa medium strip (bevelled) 3 x 15 mm | 2 | 650 mm | 1 x 1000 mm | AIL-LE-R, AIL-LE-L |
-| balsa medium trailing-edge stock (wedge) 5.2 x 25 mm | 2 | 650 mm | 1 x 1000 mm | AIL-TE-R, AIL-TE-L |
+| balsa medium sheet 1.5 mm (strips and sheeting cut from it) | 76 | 13615 mm (0.404 m2) | 6 sheet(s) 100 x 1000 mm | Keel-R, Longeron-R1, Longeron-R2, Capstrip-R, Ledge-R1, Ledge-R2, Keel-L, Longeron-L1, Longeron-L2, Capstrip-L, Ledge-L1, Ledge-L2, LE, DBOX-TOP, DBOX-BOT, CAP-B-TOP, CAP-B-BOT, TE-C, TE-O-R, TE-O-L, CS-TF-R, CS-TF-L, CS-BF-R, CS-BF-L, CS-TA-R, CS-TA-L, CS-BA-R, CS-BA-L, CAPS-R110-TF-R, CAPS-R110-TF-L, CAPS-R110-TA-R, CAPS-R110-TA-L, CAPS-R110-BF-R, CAPS-R110-BF-L, CAPS-R110-BA-R, CAPS-R110-BA-L, CAPS-R165-TF-R, CAPS-R165-TF-L, CAPS-R165-BF-R, CAPS-R165-BF-L, CAPS-R220-TF-R, CAPS-R220-TF-L, CAPS-R220-BF-R, CAPS-R220-BF-L, CAPS-R275-TF-R, CAPS-R275-TF-L, CAPS-R275-BF-R, CAPS-R275-BF-L, CAPS-R330-TF-R, CAPS-R330-TF-L, CAPS-R330-BF-R, CAPS-R330-BF-L, CAPS-R385-TF-R, CAPS-R385-TF-L, CAPS-R385-BF-R, CAPS-R385-BF-L, CAPS-R440-TF-R, CAPS-R440-TF-L, CAPS-R440-TA-R, CAPS-R440-TA-L, CAPS-R440-BF-R, CAPS-R440-BF-L, CAPS-R440-BA-R, CAPS-R440-BA-L, CAPS-TIP-TF-R, CAPS-TIP-TF-L, CAPS-TIP-TA-R, CAPS-TIP-TA-L, CAPS-TIP-BF-R, CAPS-TIP-BF-L, CAPS-TIP-BA-R, CAPS-TIP-BA-L, AIL-LE-R, AIL-LE-L, AIL-TE-R, AIL-TE-L |
+| carbon strip 3 x 0.5 mm (2 side by side per cap) | 4 | 3948 mm | 4 x 1000 mm | CAP-C-TOP, CAP-C-BOT |
 
 Strip lengths are packed into 1000 mm lengths with 2 mm per saw cut. Sheet stock (D-box, centre sheeting, cap strips) is packed on 100 x 1000 mm sheets with the grain along the piece length.
 
@@ -41,84 +34,84 @@ Strip lengths are packed into 1000 mm lengths with 2 mm per saw cut. Sheet stock
 
 | Part | Material | Stock | Section (mm) | Length (mm) |
 |---|---|---|---|---|
-| Keel-R | balsa medium | strip | 3 x 5 | 261.7 |
-| Longeron-R1 | balsa medium | triangle strip | 6 x 6 | 72.2 |
-| Longeron-R2 | balsa medium | triangle strip | 6 x 6 | 139.0 |
-| Capstrip-R | balsa medium | strip | 3 x 6 | 237.0 |
-| Ledge-R1 | balsa medium | strip | 3 x 3 | 138.2 |
-| Ledge-R2 | balsa medium | strip | 3 x 3 | 23.7 |
-| Keel-L | balsa medium | strip | 3 x 5 | 261.7 |
-| Longeron-L1 | balsa medium | triangle strip | 6 x 6 | 65.7 |
-| Longeron-L2 | balsa medium | triangle strip | 6 x 6 | 165.0 |
-| Capstrip-L | balsa medium | strip | 3 x 6 | 237.0 |
-| Ledge-L1 | balsa medium | strip | 3 x 3 | 138.3 |
-| Ledge-L2 | balsa medium | strip | 3 x 3 | 23.7 |
-| LE | balsa medium | leading-edge strip (shaped) | 6 x 16.3 | 984.0 |
-| DBOX-TOP | balsa light | sheet | 1.5 x 78.4 | 984.0 |
-| DBOX-BOT | balsa light | sheet | 1.5 x 74.3 | 984.0 |
-| CAP-C-TOP | carbon | carbon strip | 0.5 x 6 | 984.0 |
-| CAP-B-TOP | balsa hard | strip | 3 x 6 | 984.0 |
-| CAP-C-BOT | carbon | carbon strip | 0.5 x 6 | 984.0 |
-| CAP-B-BOT | balsa hard | strip | 3 x 6 | 984.0 |
-| TE-C | balsa hard | trailing-edge stock (wedge) | 5.2 x 25 | 223.0 |
-| TE-O-R | balsa hard | trailing-edge stock (wedge) | 5.2 x 25 | 53.5 |
-| TE-O-L | balsa hard | trailing-edge stock (wedge) | 5.2 x 25 | 53.5 |
-| CS-TF-R | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 126.1 |
-| CS-TF-L | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 126.1 |
-| CS-BF-R | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 125.2 |
-| CS-BF-L | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 125.2 |
-| CS-TA-R | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 48.0 |
-| CS-TA-L | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 48.0 |
-| CS-BA-R | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 47.0 |
-| CS-BA-L | balsa light | sheet (grain chord-wise) | 1.5 x 56 | 47.0 |
-| CAPS-R110-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R110-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R110-TA-R | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-R110-TA-L | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-R110-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R110-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R110-BA-R | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| CAPS-R110-BA-L | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| CAPS-R165-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R165-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R165-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R165-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R220-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R220-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R220-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R220-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R275-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R275-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R275-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R275-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R330-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R330-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R330-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R330-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R385-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R385-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R385-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R385-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R440-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R440-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-R440-TA-R | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-R440-TA-L | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-R440-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R440-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-R440-BA-R | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| CAPS-R440-BA-L | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| CAPS-TIP-TF-R | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-TIP-TF-L | balsa light | cap strip | 1.5 x 6 | 126.1 |
-| CAPS-TIP-TA-R | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-TIP-TA-L | balsa light | cap strip | 1.5 x 6 | 48.0 |
-| CAPS-TIP-BF-R | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-TIP-BF-L | balsa light | cap strip | 1.5 x 6 | 125.2 |
-| CAPS-TIP-BA-R | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| CAPS-TIP-BA-L | balsa light | cap strip | 1.5 x 6 | 47.0 |
-| AIL-LE-R | balsa medium | strip (bevelled) | 3 x 15 | 325.0 |
-| AIL-LE-L | balsa medium | strip (bevelled) | 3 x 15 | 325.0 |
-| AIL-TE-R | balsa medium | trailing-edge stock (wedge) | 5.2 x 25 | 325.0 |
-| AIL-TE-L | balsa medium | trailing-edge stock (wedge) | 5.2 x 25 | 325.0 |
+| Keel-R | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 5 | 261.7 |
+| Longeron-R1 | balsa medium | L of two strips, 2 x 1.5 strips laminated | 6 x 6 | 72.2 |
+| Longeron-R2 | balsa medium | L of two strips, 2 x 1.5 strips laminated | 6 x 6 | 139.0 |
+| Capstrip-R | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 6 | 237.0 |
+| Ledge-R1 | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 3 | 138.2 |
+| Ledge-R2 | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 3 | 23.7 |
+| Keel-L | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 5 | 261.7 |
+| Longeron-L1 | balsa medium | L of two strips, 2 x 1.5 strips laminated | 6 x 6 | 65.7 |
+| Longeron-L2 | balsa medium | L of two strips, 2 x 1.5 strips laminated | 6 x 6 | 165.0 |
+| Capstrip-L | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 6 | 237.0 |
+| Ledge-L1 | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 3 | 138.3 |
+| Ledge-L2 | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 3 | 23.7 |
+| LE | balsa medium | leading-edge strip (shaped), 4 x 1.5 strips laminated | 6 x 16.3 | 987.0 |
+| DBOX-TOP | balsa medium | sheet | 1.5 x 78.4 | 987.0 |
+| DBOX-BOT | balsa medium | sheet | 1.5 x 74.3 | 987.0 |
+| CAP-C-TOP | carbon | carbon strip | 0.5 x 6 | 987.0 |
+| CAP-B-TOP | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 6 | 987.0 |
+| CAP-C-BOT | carbon | carbon strip | 0.5 x 6 | 987.0 |
+| CAP-B-BOT | balsa medium | strip, 2 x 1.5 strips laminated | 3 x 6 | 987.0 |
+| TE-C | balsa medium | trailing-edge stock (wedge), 4 x 1.5 strips laminated | 5.2 x 25 | 223.0 |
+| TE-O-R | balsa medium | trailing-edge stock (wedge), 4 x 1.5 strips laminated | 5.2 x 25 | 55.0 |
+| TE-O-L | balsa medium | trailing-edge stock (wedge), 4 x 1.5 strips laminated | 5.2 x 25 | 55.0 |
+| CS-TF-R | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 126.1 |
+| CS-TF-L | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 126.1 |
+| CS-BF-R | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 125.2 |
+| CS-BF-L | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 125.2 |
+| CS-TA-R | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 48.0 |
+| CS-TA-L | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 48.0 |
+| CS-BA-R | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 47.0 |
+| CS-BA-L | balsa medium | sheet (grain chord-wise) | 1.5 x 56 | 47.0 |
+| CAPS-R110-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R110-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R110-TA-R | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-R110-TA-L | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-R110-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R110-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R110-BA-R | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| CAPS-R110-BA-L | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| CAPS-R165-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R165-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R165-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R165-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R220-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R220-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R220-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R220-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R275-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R275-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R275-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R275-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R330-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R330-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R330-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R330-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R385-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R385-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R385-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R385-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R440-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R440-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-R440-TA-R | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-R440-TA-L | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-R440-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R440-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-R440-BA-R | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| CAPS-R440-BA-L | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| CAPS-TIP-TF-R | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-TIP-TF-L | balsa medium | cap strip | 1.5 x 6 | 126.1 |
+| CAPS-TIP-TA-R | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-TIP-TA-L | balsa medium | cap strip | 1.5 x 6 | 48.0 |
+| CAPS-TIP-BF-R | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-TIP-BF-L | balsa medium | cap strip | 1.5 x 6 | 125.2 |
+| CAPS-TIP-BA-R | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| CAPS-TIP-BA-L | balsa medium | cap strip | 1.5 x 6 | 47.0 |
+| AIL-LE-R | balsa medium | strip (bevelled), 2 x 1.5 strips laminated | 3 x 15 | 325.0 |
+| AIL-LE-L | balsa medium | strip (bevelled), 2 x 1.5 strips laminated | 3 x 15 | 325.0 |
+| AIL-TE-R | balsa medium | trailing-edge stock (wedge), 4 x 1.5 strips laminated | 5.2 x 25 | 325.0 |
+| AIL-TE-L | balsa medium | trailing-edge stock (wedge), 4 x 1.5 strips laminated | 5.2 x 25 | 325.0 |
 
 ## Hardware from the part data
 

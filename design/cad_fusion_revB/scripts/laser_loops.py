@@ -35,20 +35,21 @@ def loops_of(face):
 
 for occ in root.allOccurrences:
     comp = occ.component
-    if comp.name not in want or comp.bRepBodies.count == 0:
-        continue
-    body = comp.bRepBodies.item(0)
-    zmin = body.boundingBox.minPoint.z
-    best, ba = None, -1.0
-    for f in body.faces:
-        if f.geometry.surfaceType != 0:          # PlaneSurfaceType
+    for body in comp.bRepBodies:                  # one body per part, or one per layer piece of a laminate (lam.py)
+        nm = body.name if body.name in want else (comp.name if comp.bRepBodies.count == 1 else None)
+        if nm not in want:
             continue
-        if all(abs(v.geometry.z - zmin) < 1e-5 for v in f.vertices) and f.area > ba:
-            best, ba = f, f.area
-    if best is None:
-        continue
-    data[comp.name] = loops_of(best)
-    missing.discard(comp.name)
+        zmin = body.boundingBox.minPoint.z
+        best, ba = None, -1.0
+        for f in body.faces:
+            if f.geometry.surfaceType != 0:          # PlaneSurfaceType
+                continue
+            if all(abs(v.geometry.z - zmin) < 1e-5 for v in f.vertices) and f.area > ba:
+                best, ba = f, f.area
+        if best is None:
+            continue
+        data[nm] = loops_of(best)
+        missing.discard(nm)
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 json.dump(data, open(OUT, "w"))
 print("loops for %d parts in %.1f s; missing: %s" % (len(data), time.time() - t0, sorted(missing)))

@@ -6,63 +6,58 @@ Balsa sheets 100 x 300 mm with the grain along the 300 side (parts are already t
 
 | Group | Parts | Sheets |
 |---|---|---|
-| balsa light 1.5 mm | 3 | 1 |
-| balsa light 3.0 mm | 7 | 4 |
-| balsa medium 1.0 mm | 16 | 6 |
-| balsa medium 1.5 mm | 46 | 11 |
-| balsa medium 2.0 mm | 31 | 8 |
-| balsa medium 3.0 mm | 14 | 5 |
-| lite-ply 1.5 mm | 1 | 1 |
-| lite-ply 3.0 mm | 17 | 2 |
-| birch ply 1.0 mm | 3 | 1 |
-| birch ply 1.5 mm | 7 | 1 |
-| birch ply 3.0 mm | 8 | 1 |
+| balsa medium 1.5 mm | 198 | 44 |
+| birch ply 1.5 mm | 28 | 1 |
 
 ## Sheets
 
 | File | Parts |
 |---|---|
-| `balsa-light_1.5mm_sheet01.dxf` | HN-R, HN-L, HF |
-| `balsa-light_3mm_sheet01.dxf` | W-TIPCAP-R, W-TIPCAP-L |
-| `balsa-light_3mm_sheet02.dxf` | ELEV-R, ELEV-L |
-| `balsa-light_3mm_sheet03.dxf` | RUDDER, W-TIP-R |
-| `balsa-light_3mm_sheet04.dxf` | W-TIP-L |
-| `balsa-medium_1mm_sheet01.dxf` | RI-N1, LI-N1, RI-T1 |
-| `balsa-medium_1mm_sheet02.dxf` | LI-T1, RI-M4, LI-M2U, RI-M2U |
-| `balsa-medium_1mm_sheet03.dxf` | LI-M4, RI-N2, LI-M3U |
-| `balsa-medium_1mm_sheet04.dxf` | LI-N2, RI-M1, RI-M3U |
-| `balsa-medium_1mm_sheet05.dxf` | LI-M1, LI-M5 |
-| `balsa-medium_1mm_sheet06.dxf` | RI-M5 |
-| `balsa-medium_1.5mm_sheet01.dxf` | FL-M2, FL-M3, WR-R2 |
-| `balsa-medium_1.5mm_sheet02.dxf` | FL-N2, FL-T1, WR-L2 |
-| `balsa-medium_1.5mm_sheet03.dxf` | LO-ML |
-| `balsa-medium_1.5mm_sheet04.dxf` | RO-M3L, RO-M1L, RO-TL |
-| `balsa-medium_1.5mm_sheet05.dxf` | RO-NL, LO-NL |
-| `balsa-medium_1.5mm_sheet06.dxf` | LO-TL, DECK, FL-N1 |
-| `balsa-medium_1.5mm_sheet07.dxf` | FL-M1, WR-R3, WR-L3, WF-R2, WF-L2, RO-M3U, RO-TU, LO-TU |
-| `balsa-medium_1.5mm_sheet08.dxf` | WF-R3, WF-L3, WF-R4, WF-L4, WF-R5, WF-L5, WF-R6 |
-| `balsa-medium_1.5mm_sheet09.dxf` | WF-L6, WF-R7, WF-L7, WF-R8, WF-L8, WR-R1, WR-L1 |
-| `balsa-medium_1.5mm_sheet10.dxf` | WF-R1, WF-L1, WF-R9, WF-L9, FL-M4, LO-MU |
-| `balsa-medium_1.5mm_sheet11.dxf` | RO-M1U, RO-NU, LO-NU |
-| `balsa-medium_2mm_sheet01.dxf` | W-R165-R, W-R165-L, A112-R, A112-L, A165-R, A165-L |
-| `balsa-medium_2mm_sheet02.dxf` | W-R220-R, W-R220-L, A220-R, A220-L, A275-R, A275-L |
-| `balsa-medium_2mm_sheet03.dxf` | W-R275-R, W-R275-L, A330-R, A330-L, A385-R, A385-L |
-| `balsa-medium_2mm_sheet04.dxf` | W-R330-R, W-R330-L, A437-R, A437-L, AH-R, AH-L |
-| `balsa-medium_2mm_sheet05.dxf` | W-R385-R, W-R385-L |
-| `balsa-medium_2mm_sheet06.dxf` | W-C, W-R055-R |
-| `balsa-medium_2mm_sheet07.dxf` | W-R055-L, W-R440-R |
-| `balsa-medium_2mm_sheet08.dxf` | W-R440-L |
-| `balsa-medium_3mm_sheet01.dxf` | STAB-R |
-| `balsa-medium_3mm_sheet02.dxf` | STAB-L |
-| `balsa-medium_3mm_sheet03.dxf` | FIN, S1b, FSP-C |
-| `balsa-medium_3mm_sheet04.dxf` | S1c, S2b, S2c, W-R110-R |
-| `balsa-medium_3mm_sheet05.dxf` | W-R110-L, FSP-R1, FSP-L1, FSP-R2, FSP-L2 |
-| `lite-ply_1.5mm_sheet01.dxf` | TRAY |
-| `lite-ply_3mm_sheet01.dxf` | FS, B1, B4, N2, N1, EF, S1a, S1d, S2a, B2-R, B2-L, S1BR, S1BL, S2BR, S2BL |
-| `lite-ply_3mm_sheet02.dxf` | S2d, TST |
-| `birch-ply_1mm_sheet01.dxf` | LI-M2G, RI-M3G, RI-M2G |
-| `birch-ply_1.5mm_sheet01.dxf` | RO-MP, SK3, SK1, SK2, HORN-E, HORN-R, FLAPSTOP |
-| `birch-ply_3mm_sheet01.dxf` | BH, FW, TR1R, TR1L, TR2R, TR2L, SD-R, SD-L |
+| `balsa-medium_1.5mm_sheet01.dxf` | STAB-R-1, EF-1 |
+| `balsa-medium_1.5mm_sheet02.dxf` | STAB-R-2, EF-3 |
+| `balsa-medium_1.5mm_sheet03.dxf` | STAB-L-1, WR-L2, A437-L, AH-R |
+| `balsa-medium_1.5mm_sheet04.dxf` | STAB-L-2, WR-R3, AH-L |
+| `balsa-medium_1.5mm_sheet05.dxf` | LO-ML |
+| `balsa-medium_1.5mm_sheet06.dxf` | FIN-1, FL-M2 |
+| `balsa-medium_1.5mm_sheet07.dxf` | FIN-2, FL-M3 |
+| `balsa-medium_1.5mm_sheet08.dxf` | W-TIPCAP-R, W-TIPCAP-L |
+| `balsa-medium_1.5mm_sheet09.dxf` | RO-M3L, RO-NL, A330-L, A385-R, A385-L |
+| `balsa-medium_1.5mm_sheet10.dxf` | LO-NL, FL-N2, B2-R-2a, A275-R, A275-L, A330-R |
+| `balsa-medium_1.5mm_sheet11.dxf` | FL-T1, HN-R, TST-1, S1a-2 |
+| `balsa-medium_1.5mm_sheet12.dxf` | ELEV-R-1, ELEV-L-1, TRAY-2a |
+| `balsa-medium_1.5mm_sheet13.dxf` | ELEV-R-2, ELEV-L-2, WR-L3, B2-L-2b |
+| `balsa-medium_1.5mm_sheet14.dxf` | LO-MU, W-C-1, FSP-C-1, A165-R, A165-L |
+| `balsa-medium_1.5mm_sheet15.dxf` | W-C-2, W-R055-R, S1b-2 |
+| `balsa-medium_1.5mm_sheet16.dxf` | W-R055-L, W-R110-R-1, S1c-2 |
+| `balsa-medium_1.5mm_sheet17.dxf` | W-R110-R-2, W-R110-L-1, S1d-2 |
+| `balsa-medium_1.5mm_sheet18.dxf` | W-R110-L-2, W-R440-R, S2a-2 |
+| `balsa-medium_1.5mm_sheet19.dxf` | W-R440-L, W-TIP-R, S2b-2 |
+| `balsa-medium_1.5mm_sheet20.dxf` | W-TIP-L, W-R165-R, S1a-1, A220-R, A220-L |
+| `balsa-medium_1.5mm_sheet21.dxf` | BH-2a, HN-L, RO-NU, S2c-2 |
+| `balsa-medium_1.5mm_sheet22.dxf` | W-R165-L, W-R220-R, N2-2 |
+| `balsa-medium_1.5mm_sheet23.dxf` | W-R220-L, W-R275-R, N2-3 |
+| `balsa-medium_1.5mm_sheet24.dxf` | W-R275-L, W-R330-R, RI-N1 |
+| `balsa-medium_1.5mm_sheet25.dxf` | W-R330-L, W-R385-R, LI-N1 |
+| `balsa-medium_1.5mm_sheet26.dxf` | W-R385-L, RUDDER-1, N1-2, BH-2b |
+| `balsa-medium_1.5mm_sheet27.dxf` | RI-T1, LI-T1, N2-1, FSP-L2-1, S1BL-2, S2BR-1, S2BR-2, S2BL-1, S2BL-2 |
+| `balsa-medium_1.5mm_sheet28.dxf` | DECK, RI-N2, RO-M1L, HF, RI-M2U |
+| `balsa-medium_1.5mm_sheet29.dxf` | LI-N2, FL-M1, FSP-L1-2, WF-R2 |
+| `balsa-medium_1.5mm_sheet30.dxf` | B1-1a, B1-3b, RO-TL, FSP-C-2 |
+| `balsa-medium_1.5mm_sheet31.dxf` | RI-M4, LI-M4, LO-TL, FSP-R1-1, A437-R |
+| `balsa-medium_1.5mm_sheet32.dxf` | B4-1a, B4-3b, N1-1, FSP-R1-2 |
+| `balsa-medium_1.5mm_sheet33.dxf` | RI-M1, LI-M1, LI-M3U |
+| `balsa-medium_1.5mm_sheet34.dxf` | BH-3a, RUDDER-2, TRAY-1, LI-M2U, RO-TU |
+| `balsa-medium_1.5mm_sheet35.dxf` | BH-4b, BH-1a, N1-3, FSP-L1-1, B4-2b |
+| `balsa-medium_1.5mm_sheet36.dxf` | LO-NU, FL-N1, B1-1b, RO-M3U, S2d-2, B1-2b, S1BR-1, S1BR-2, S1BL-1 |
+| `balsa-medium_1.5mm_sheet37.dxf` | B1-3a, B4-1b, B4-3a, B1-2a, RO-M1U, EF-2 |
+| `balsa-medium_1.5mm_sheet38.dxf` | B4-2a, BH-1b, BH-4a, LI-M5, S1b-1, LO-TU |
+| `balsa-medium_1.5mm_sheet39.dxf` | RI-M5, FL-M4, BH-3b, B2-R-1, FSP-L2-2, WR-R2, TST-2a, A112-R, A112-L |
+| `balsa-medium_1.5mm_sheet40.dxf` | B2-R-3, B2-L-1, B2-L-3, S1c-1, S1d-1, FSP-R2-1, FSP-R2-2, RI-M3U, B2-R-2b |
+| `balsa-medium_1.5mm_sheet41.dxf` | S2a-1, S2b-1, S2c-1, S2d-1, WF-L2, WF-R3, WF-L3 |
+| `balsa-medium_1.5mm_sheet42.dxf` | WF-R4, WF-L4, WF-R5, WF-L5, WF-R6, WF-L6, WF-R7, B4-2c |
+| `balsa-medium_1.5mm_sheet43.dxf` | WF-L7, TRAY-2b, WF-R8, WF-L8, WR-R1, WR-L1, WF-R1, B1-2c |
+| `balsa-medium_1.5mm_sheet44.dxf` | WF-L1, WF-R9, WF-L9, WF-R1D, WF-L1D, B2-L-2a, TST-2b |
+| `birch-ply_1.5mm_sheet01.dxf` | FS-1, FS-2, RO-MP, LI-M2G, FW-1, FW-2, SK3, RI-M3G, SK1, SK2, RI-M2G, PAD-S1, PAD-S2, TR1R-1, TR1R-2, TR1L-1, TR1L-2, TR2R-1, TR2R-2, TR2L-1, TR2L-2, FLAPSTOP, SD-R-1, SD-R-2, SD-L-1, SD-L-2, HORN-E, HORN-R |
 
 ## Strip and sheet stock (not on the laser; cut to length)
 
@@ -80,61 +75,66 @@ Balsa sheets 100 x 300 mm with the grain along the 300 side (parts are already t
 | Capstrip-L | balsa medium | 236.0 x 12.1 | 6.0 |
 | Ledge-L1 | balsa medium | 137.2 x 19.3 | 3.0 |
 | Ledge-L2 | balsa medium | 23.7 x 3.0 | 3.0 |
-| LE | balsa medium | 6.0 x 16.3 | 984.0 |
-| DBOX-TOP | balsa light | 74.0 x 21.7 | 984.0 |
-| DBOX-BOT | balsa light | 74.0 x 5.5 | 984.0 |
-| CS-TF-R | balsa light | 125.0 x 16.3 | 56.0 |
-| CS-TF-L | balsa light | 125.0 x 16.3 | 56.0 |
-| CS-BF-R | balsa light | 125.0 x 9.2 | 56.0 |
-| CS-BF-L | balsa light | 125.0 x 9.2 | 56.0 |
-| CS-TA-R | balsa light | 47.0 x 11.4 | 56.0 |
-| CS-TA-L | balsa light | 47.0 x 11.4 | 56.0 |
-| CS-BA-R | balsa light | 47.0 x 3.1 | 56.0 |
-| CS-BA-L | balsa light | 47.0 x 3.1 | 56.0 |
-| CAPS-R110-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R110-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R110-TA-R | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-R110-TA-L | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-R110-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R110-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R110-BA-R | balsa light | 47.0 x 3.1 | 6.0 |
-| CAPS-R110-BA-L | balsa light | 47.0 x 3.1 | 6.0 |
-| CAPS-R165-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R165-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R165-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R165-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R220-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R220-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R220-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R220-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R275-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R275-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R275-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R275-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R330-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R330-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R330-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R330-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R385-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R385-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R385-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R385-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R440-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R440-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-R440-TA-R | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-R440-TA-L | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-R440-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R440-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-R440-BA-R | balsa light | 47.0 x 3.1 | 6.0 |
-| CAPS-R440-BA-L | balsa light | 47.0 x 3.1 | 6.0 |
-| CAPS-TIP-TF-R | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-TIP-TF-L | balsa light | 125.0 x 16.3 | 6.0 |
-| CAPS-TIP-TA-R | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-TIP-TA-L | balsa light | 47.0 x 11.4 | 6.0 |
-| CAPS-TIP-BF-R | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-TIP-BF-L | balsa light | 125.0 x 9.2 | 6.0 |
-| CAPS-TIP-BA-R | balsa light | 47.0 x 3.1 | 6.0 |
-| CAPS-TIP-BA-L | balsa light | 47.0 x 3.1 | 6.0 |
+| LE | balsa medium | 6.0 x 16.3 | 987.0 |
+| DBOX-TOP | balsa medium | 74.0 x 21.7 | 987.0 |
+| DBOX-BOT | balsa medium | 74.0 x 5.5 | 987.0 |
+| CAP-B-TOP | balsa medium | 6.0 x 3.0 | 987.0 |
+| CAP-B-BOT | balsa medium | 6.0 x 3.0 | 987.0 |
+| TE-C | balsa medium | 25.0 x 5.2 | 223.0 |
+| TE-O-R | balsa medium | 25.0 x 5.2 | 55.0 |
+| TE-O-L | balsa medium | 25.0 x 5.2 | 55.0 |
+| CS-TF-R | balsa medium | 125.0 x 16.3 | 56.0 |
+| CS-TF-L | balsa medium | 125.0 x 16.3 | 56.0 |
+| CS-BF-R | balsa medium | 125.0 x 9.2 | 56.0 |
+| CS-BF-L | balsa medium | 125.0 x 9.2 | 56.0 |
+| CS-TA-R | balsa medium | 47.0 x 11.4 | 56.0 |
+| CS-TA-L | balsa medium | 47.0 x 11.4 | 56.0 |
+| CS-BA-R | balsa medium | 47.0 x 3.1 | 56.0 |
+| CS-BA-L | balsa medium | 47.0 x 3.1 | 56.0 |
+| CAPS-R110-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R110-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R110-TA-R | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-R110-TA-L | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-R110-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R110-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R110-BA-R | balsa medium | 47.0 x 3.1 | 6.0 |
+| CAPS-R110-BA-L | balsa medium | 47.0 x 3.1 | 6.0 |
+| CAPS-R165-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R165-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R165-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R165-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R220-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R220-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R220-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R220-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R275-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R275-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R275-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R275-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R330-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R330-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R330-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R330-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R385-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R385-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R385-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R385-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R440-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R440-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-R440-TA-R | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-R440-TA-L | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-R440-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R440-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-R440-BA-R | balsa medium | 47.0 x 3.1 | 6.0 |
+| CAPS-R440-BA-L | balsa medium | 47.0 x 3.1 | 6.0 |
+| CAPS-TIP-TF-R | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-TIP-TF-L | balsa medium | 125.0 x 16.3 | 6.0 |
+| CAPS-TIP-TA-R | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-TIP-TA-L | balsa medium | 47.0 x 11.4 | 6.0 |
+| CAPS-TIP-BF-R | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-TIP-BF-L | balsa medium | 125.0 x 9.2 | 6.0 |
+| CAPS-TIP-BA-R | balsa medium | 47.0 x 3.1 | 6.0 |
+| CAPS-TIP-BA-L | balsa medium | 47.0 x 3.1 | 6.0 |
 | AIL-LE-R | balsa medium | 3.0 x 15.1 | 325.0 |
 | AIL-LE-L | balsa medium | 3.0 x 15.1 | 325.0 |
 | AIL-TE-R | balsa medium | 25.0 x 5.2 | 325.0 |

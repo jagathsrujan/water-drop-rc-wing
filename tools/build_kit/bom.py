@@ -169,6 +169,28 @@ def print_rows(R):
     return rows
 
 
+# ---------------------------------------------------------------- what to buy (P1: one balsa stock, one ply stock)
+SPARE = 0.15
+
+
+def buy_summary(bom):
+    """One line per stock bought: balsa 1.5 mm (laser sheets, 3 per 100 x 1000, + the sheets the strips are cut from),
+    birch ply 1.5 mm (300 x 300), with the spare."""
+    bal_laser = sum(g["sheets"] for g in bom["sheets"] if g["material"].startswith("balsa"))
+    bal_strip = sum(st["n"] for st in bom["stock"] if st["kind"] == "sheet")
+    ply = sum(g["sheets"] for g in bom["sheets"] if not g["material"].startswith("balsa"))
+    need = ceil_div(bal_laser, 3) + bal_strip
+    buy = int(math.ceil(need * (1 + SPARE)))
+    return ["## What to buy", "",
+            "One balsa stock and one ply stock (optimisation P1, `design/optimisation/P1_single_stock.md`):", "",
+            "| Stock | Needed | Buy (with %d %% spare) |" % round(100 * SPARE), "|---|---|---|",
+            "| **Balsa, medium grade, 1.5 mm, 100 x 1000 mm** | %d sheets (%d for the laser = %d laser sheets of 100 x 300, "
+            "%d for the strips and sheeting) | **%d sheets** |" % (need, ceil_div(bal_laser, 3), bal_laser, bal_strip, buy),
+            "| **Birch ply (aircraft ply), 1.5 mm, 300 x 300 mm** | %d sheet(s) | **%d** |" % (ply, ply), "",
+            "Weigh the balsa sheets when you buy them (medium is about 21 g per 100 x 1000 x 1.5 sheet): the lightest "
+            "go to the D-box, sheeting and tail, the heaviest to the formers, bulkhead and spar caps.", ""]
+
+
 # ---------------------------------------------------------------- strip and sheet stock purchase
 def stock_summary(strips):
     """Group strip parts into what you buy: (description, section) -> pieces, total length, stock lengths."""
@@ -176,7 +198,9 @@ def stock_summary(strips):
     for s in strips:
         n = s["name"]
         mat = ("%s %s" % (s["material"], s["grade"])).strip()
-        if s["stock"].startswith("sheet") or s["stock"] == "cap strip":
+        if s.get("layers"):           # P1 single stock: every balsa strip and sheet piece comes from the 1.5 mm sheet
+            key = ("%s sheet 1.5 mm (strips and sheeting cut from it)" % mat, "sheet")
+        elif s["stock"].startswith("sheet") or s["stock"] == "cap strip":
             key = ("%s sheet %g mm" % (mat, s["t"]), "sheet")
         elif n.startswith("CAP-C"):
             key = ("carbon strip 3 x 0.5 mm (2 side by side per cap)", "carbon")
@@ -193,7 +217,9 @@ def stock_summary(strips):
         elif kind == "sheet":
             pieces = []
             for r in rows:
-                if r["stock"] == "cap strip":
+                if r.get("layers"):
+                    pieces += [(lw, r["length"]) for lw in r["layers"]]
+                elif r["stock"] == "cap strip":
                     pieces.append((r["w"], r["length"]))          # 6 mm wide, grain along the strip
                 elif "chord" in r["stock"]:
                     pieces.append((r["w"], r["length"]))          # grain chord-wise: length along the grain
@@ -332,7 +358,8 @@ def build(R, nest, strips, S, used):
             laser.append(dict(id=q["name"], name=q["name"], assembly=e["assembly"], material=s["material"], t=s["t"],
                               sheet=s["file"], size="%.0f x %.0f" % (u1 - u0, v1 - v0), area=round(e["area_mm2"] / 100.0, 1),
                               mass=e.get("mass_g"), hint=e["hint"]["text"] if e.get("hint") else "",
-                              step=step_of.get(q["name"], (0, ""))[0]))
+                              step=step_of.get(q["name"], step_of.get(e.get("piece_of"), (0, "")))[0],
+                              piece_of=e.get("piece_of", "")))
     strip_rows = []
     for s in strips:
         strip_rows.append(dict(id=s["name"], name=s["name"], assembly=s["assembly"], material=("%s %s" % (s["material"], s["grade"])).strip(),
@@ -492,7 +519,8 @@ def write_materials(bom, KIT):
     L = ["# Material quantities", "",
          "Computed by `tools/build_kit/make_build_kit.py` from the laser nesting and the strip-stock parts in the part data "
          "(not typed by hand). Buy 10-20 % extra balsa: some sheets will be too heavy or have bad grain.", "",
-         "## Laser sheets (balsa, birch ply, lite-ply)", "",
+         ] + buy_summary(bom) + [
+         "## Laser sheets (balsa, birch ply)", "",
          "| Material | Thickness | Laser sheets | Sheet size | Sheet area | Part area | Est. part mass | Buy |", "|---|---|---|---|---|---|---|---|"]
     tot = collections.Counter()
     for g in bom["sheets"]:

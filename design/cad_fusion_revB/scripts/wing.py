@@ -10,9 +10,12 @@ Changes for building (manufacturability / strength), see ../README.md:
   outboard tab low, so the two webs at a rib never clash).
 - Spar caps (3 x 6 hard balsa + 0.5 x 6 carbon) run through notches in the ribs, as rev A.
 - Every laser part (ribs, aileron ribs, webs, false spar, tip ring) carries its engraved name and an LE arrow."""
+import json
 import math
+import os
 import geo as G
-import wing_params as P
+import lam
+from revb_params import WP as P            # wing_params + the optimisation overrides (revb_params.py)
 
 A = G.Airfoil(P.AIRFOIL, P.CHORD)
 SK = P.SKIN_T
@@ -63,7 +66,11 @@ def rib_name(y):
 PARTS = []
 
 
+SINGLE_STOCK = {"balsa_light": "balsa_med", "balsa_hard": "balsa_med", "liteply": "balsa_med"}   # P1: one balsa stock
+
+
 def add(name, grp, outline, t, fr, mat, cutters=(), labels=(), z0=0.0, **kw):
+    mat = SINGLE_STOCK.get(mat, mat)
     d = dict(name=name, grp=grp, outline=outline, t=t, fr=fr, mat=mat, cutters=list(cutters), labels=list(labels), z0=z0)
     d.update(kw)
     PARTS.append(d)
@@ -237,6 +244,13 @@ def build_webs():
                 nm = "W%s-%s%d" % (kind, S, j + 1)
                 labs = [(nm, 0.5 * (ya + yb), zm + (8.0 if zu - zm > 12 else 0.0), 2.5)] if yb - ya > 20 else []
                 yz_plate(nm, "Wing_Spars", poly, xr[0], WEB_T, "balsa_med", [], labs, s)
+                if kind == "F" and j == 0:
+                    # P2 item 11: root-bay web doubled - a second 1.5 web glued on its front face between the ribs
+                    xd = xr[0] - WEB_T
+                    zl2, zu2 = rng(zl_in, xd, xr[0], mode=max), rng(zu_in, xd, xr[0], mode=min)
+                    dbl = G.rect(ya + 0.1, yb - 0.1, zl2, zu2)
+                    nd = nm + "D"
+                    yz_plate(nd, "Wing_Spars", dbl, xd, WEB_T, "balsa_med", [], [(nd, 0.5 * (ya + yb), zm, 2.5)], s)
 
 
 # ---------------- strip stock, sheeting, TE, ailerons ----------------
@@ -343,7 +357,26 @@ def all_parts():
     for p in PARTS:
         if p["name"] in pk:
             p["pockets"] = pk[p["name"]]
+    add_hex(PARTS)
+    # P1: 3 mm parts are 2 x 1.5 of the one stock (grain as before, laminated parallel)
+    lam.apply(PARTS, {n: lam.parallel(2, "u") for n in ("W-C", "W-R110-R", "W-R110-L", "FSP-C", "FSP-R1", "FSP-L1",
+                                                          "FSP-R2", "FSP-L2")})
     return PARTS, boxes
+
+
+HEX_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hex_cells.json")
+
+
+def add_hex(parts):
+    """P2 item 8: extra lightening cells (design/optimisation/p2_cutouts.py -> hex_cells.json)."""
+    if os.environ.get("REVB_NO_HEX") or not os.path.exists(HEX_FILE):
+        return
+    H = json.load(open(HEX_FILE)).get("parts", {})
+    for p in parts:
+        if p["name"] in H:
+            for u, v in H[p["name"]]["cells"]:
+                p["cutters"].append(G.hexagon(u, v, H[p["name"]]["af"]))
+            p["hex"] = (len(H[p["name"]]["cells"]), H[p["name"]]["af"])
 
 
 if __name__ == "__main__":

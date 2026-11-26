@@ -37,3 +37,9 @@ def rl(name):
         else:
             return importlib.reload(m)
     return importlib.import_module(name)
+
+
+# modules the part files import with "from X import ..." are not reloaded by rl() of the part file: reload them first
+for _m in ("geo", "revb_params", "lam"):
+    if _m in sys.modules:
+        rl(_m)

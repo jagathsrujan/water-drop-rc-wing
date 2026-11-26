@@ -10,8 +10,7 @@ import math
 import geo as G
 import pod as POD
 import tail as TL
-import fus_params as FP
-import bal_params as BP
+from revb_params import FP, BP            # FreeCAD parameters + the optimisation overrides
 
 BZ = FP.BELLY_Z                       # -117
 SCREW_R = 2.25                        # 4.5 mm clearance for 4 mm wood screws

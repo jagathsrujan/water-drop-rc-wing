@@ -13,11 +13,13 @@ Manufacturing rules used here (see ../README.md):
 - Saddle layers have floor tabs, keel notches and 3 pin holes (2 mm toothpicks) so the stack self-aligns.
 - Every laser part has its name engraved (0.2 mm) on the face that stays visible while building, with a FWD / UP hint;
   the floor and sides carry the mating former's name next to its slots."""
+import json
 import math
+import os
 import geo as G
-import bal_params as BP
-import fus_params as FP
-import res_params as RP
+import lam
+import revb_params as RV
+from revb_params import BP, FP, RP          # FreeCAD parameters + the optimisation overrides (revb_params.py)
 
 K0, K1 = BP.NOSE_KINK, BP.AFT_KINK
 XF, XE = BP.X_FRONT, BP.X_END
@@ -25,7 +27,9 @@ SEGS = [(XF, K0), (K0, K1), (K1, XE)]
 SEGN = "NMT"
 T_OUT, T_IN, T_FL = BP.T_SIDE_OUT, BP.T_SIDE_IN, BP.T_FLOOR
 T_LAM = T_OUT + T_IN
-FT = BP.FRAME_T
+FT = BP.FRAME_T                    # (rev B FreeCAD value; the Fusion formers use FTK below)
+FTK = {n: k * lam.STOCK for n, (k, _m) in RV.FORMER.items()}     # former thickness: n layers x 1.5 (P1)
+SINGLE_STOCK = {"balsa_light": "balsa_med", "balsa_hard": "balsa_med", "liteply": "balsa_med"}   # P1: one balsa stock
 SPLIT_Z = -40.0                   # outer side layer: lower / upper strip joint
 TAB_W = BP.TAB_W
 KINK_TRIM = 0.3                   # side and floor pieces stop 0.3 short of a kink (miter overlap of the laminate)
@@ -126,9 +130,10 @@ def zdeck(x):
 
 # ---------------- formers ----------------
 FORMERS = [  # name, x0 (front face), kind, material
-    ("N1", -130.0, "nose", "liteply"), ("N2", -100.0, "nose", "liteply"),
-    ("FS", K0, "stop", "liteply"), ("B1", 38.0, "U", "liteply"), ("B2", 105.0, "split", "liteply"),
-    ("B4", FP.SADDLE2_X[1] + 0.05, "U", "liteply"), ("BH", K1, "bulkhead", "ply"), ("EF", BP.END_X[0], "end", "liteply")]
+    ("N1", -130.0, "nose", RV.FORMER["N1"][1]), ("N2", -100.0, "nose", RV.FORMER["N2"][1]),
+    ("FS", K0, "stop", RV.FORMER["FS"][1]), ("B1", 38.0, "U", RV.FORMER["B1"][1]), ("B2", 105.0, "split", RV.FORMER["B2"][1]),
+    ("B4", FP.SADDLE2_X[1] + 0.05, "U", RV.FORMER["B4"][1]), ("BH", K1, "bulkhead", RV.FORMER["BH"][1]),
+    ("EF", BP.END_X[1] - FTK["EF"], "end", RV.FORMER["EF"][1])]       # EF keeps its aft face on the pod end (J4a squares it)
 FLOOR_TABS = {"N1": [0.0, -20.0, 20.0], "N2": [0.0, -24.0, 24.0], "FS": [0.0, -40.0, 40.0], "B1": [0.0, -38.0, 38.0],
               "B2": [-36.0, 36.0], "B4": [0.0, -38.0, 38.0], "BH": [0.0, -30.0, 30.0], "EF": [-12.0, 12.0]}
 TOP_TABS = {"BH": [-25.0, 25.0], "EF": [-12.0, 12.0]}
@@ -142,7 +147,7 @@ LEDGE_X = [(-165.0, K0 - 1.0), (FP.STOP_X[1], -2.5)]
 
 def former_geom(name, x0, kind):
     k = seg_of(x0 + 1.5)
-    x1 = x0 + FT
+    x1 = x0 + FTK[name]
     h = min(hi(x0, k), hi(x1, k))
     zfl = max(zf(x0, k), zf(x1, k))
     if kind in ("bulkhead", "end"):
@@ -193,6 +198,7 @@ PARTS = []
 
 
 def add(name, grp, outline, t, fr, mat, cutters=(), labels=(), z0=0.0, **kw):
+    mat = SINGLE_STOCK.get(mat, mat)
     d = dict(name=name, grp=grp, outline=outline, t=t, fr=fr, mat=mat, cutters=list(cutters), labels=list(labels), z0=z0)
     d.update(kw)
     PARTS.append(d)
@@ -248,7 +254,7 @@ def side_cutters(s, k, layer):
         g = GEOM[n]
         if g["k"] != k:
             continue
-        a, b = slot_x(x0, x0 + FT, xa, xb)
+        a, b = slot_x(x0, g["x1"], xa, xb)
         ua, ub = sorted((side_u(s, k, a), side_u(s, k, b)))
         du = slot_shift(side_frame(s, k), T_LAM)          # the tab's footprint on the inner face, shifted along u
         ua, ub = min(ua, ua + du), max(ub, ub + du)
@@ -411,7 +417,7 @@ def floor_cutters(k):
         g = GEOM[n]
         if g["k"] != k:
             continue
-        a, b = slot_x(x0, x0 + FT, xa, xb)
+        a, b = slot_x(x0, g["x1"], xa, xb)
         ua, ub = floor_u(k, a), floor_u(k, b)
         du = slot_shift(floor_frame(k), T_FL)
         ua, ub = min(ua, ua + du), max(ub, ub + du)
@@ -491,8 +497,9 @@ def strip_notches(g):
             cl.append(G.rect(y0, y1, zfl - 2.0, FLOOR_TOP + BP.KEEL_H + 0.2))
     for s, segs in LONG_SEGS.items():
         if any(over(a, b) for a, b in segs):
-            t = BP.LONGERON + 0.3
-            cl.append([(s * (h + 1), zfl - 1), (s * (h - t - 1), zfl - 1), (s * (h + 1), zfl + t + 1)])
+            t, e = BP.LONGERON + 0.3, lam.STOCK + 0.3          # L-section longeron (P1)
+            cl.append(G.ccw([(s * (h + 1), zfl - 1), (s * (h - t), zfl - 1), (s * (h - t), zfl + e), (s * (h - e), zfl + e),
+                             (s * (h - e), zfl + t), (s * (h + 1), zfl + t)]))
     if over(*CAP_X):
         for s in (1, -1):
             y0, y1 = sorted((s * (h - BP.LIP_W - 0.2), s * (h + 1)))
@@ -565,11 +572,11 @@ def build_formers():
                 yr = (BP.SPLIT_HW, g["hi"]) if s > 0 else (-g["hi"], -BP.SPLIT_HW)
                 poly = former_outline(n, g, kind, yr)
                 nm = "%s-%s" % (n, S)
-                add(nm, "Pod_Formers", poly, FT, fr, mat, cl, lbl(poly, cl, nm + "\nUP ^", h=3.0), former=n)
+                add(nm, "Pod_Formers", poly, FTK[n], fr, mat, cl, lbl(poly, cl, nm + "\nUP ^", h=3.0), former=n)
             continue
         poly = former_outline(n, g, kind)
         prefer = (0.0, 0.5 * (g["zfl"] + RP.AXIS_Z - BP.U_R)) if kind in ("U",) else None
-        add(n, "Pod_Formers", poly, FT, fr, mat, cl, lbl(poly, cl, n + " UP ^", h=4.0, prefer=prefer), former=n)
+        add(n, "Pod_Formers", poly, FTK[n], fr, mat, cl, lbl(poly, cl, n + " UP ^", h=4.0, prefer=prefer), former=n)
 
 
 # ---------------- saddles and strap bridges ----------------
@@ -590,6 +597,8 @@ def build_saddles():
         if len(win) >= 3 and abs(G.area(win)) > 20:
             cl.append(win)
     pins = [("circle", -38.5, -88.0, 1.05), ("circle", 38.5, -88.0, 1.05), ("circle", 0.0, -103.0, 1.05)]
+    # P2 item 10: the saddle feet bear on a 1.5 birch pad on the skid line (floor crushing): notch the layers over it
+    cl.append(G.rect(-RV.PAD_W / 2 - 0.2, RV.PAD_W / 2 + 0.2, FLOOR_TOP - 2.0, FLOOR_TOP + lam.STOCK + 0.1))
     for n, (sa, sb) in SADDLES:
         nl = int(round((sb - sa) / BP.SADDLE_LAYER))
         for j in range(nl):
@@ -616,11 +625,12 @@ def build_strips():
         y0, y1 = sorted((s * BP.KEEL_Y, s * (BP.KEEL_Y + BP.KEEL_W)))
         add("Keel-%s" % S, "Pod_Strips", G.rect(KEEL_X[0], KEEL_X[1], y0, y1), BP.KEEL_H, fr_xy, "balsa_med")
         for j, (a, b) in enumerate(LONG_SEGS[s]):
-            wi = BP.KEEL_Y * 0 + (FP.Y_LIMIT - T_LAM)
-            t = BP.LONGERON
-            tri = [(s * wi, FLOOR_TOP), (s * (wi - t), FLOOR_TOP), (s * wi, FLOOR_TOP + t)]
+            wi = FP.Y_LIMIT - T_LAM
+            t, e = BP.LONGERON, lam.STOCK          # P1: an L of two 1.5 strips (6 and 4.5 wide) replaces the 6 x 6 triangle
+            ell = [(s * wi, FLOOR_TOP), (s * (wi - t), FLOOR_TOP), (s * (wi - t), FLOOR_TOP + e), (s * (wi - e), FLOOR_TOP + e),
+                   (s * (wi - e), FLOOR_TOP + t), (s * wi, FLOOR_TOP + t)]
             fr = G.frame((a, 0.0, 0.0), (0, 1, 0), (0, 0, 1))
-            add("Longeron-%s%d" % (S, j + 1), "Pod_Strips", G.ccw(tri), b - a, fr, "balsa_med")
+            add("Longeron-%s%d" % (S, j + 1), "Pod_Strips", G.ccw(ell), b - a, fr, "balsa_med")
         # wing-seat capstrip: bent 6 x 3 strip under the seat line, X 0 .. 236
         wi = FP.Y_LIMIT - T_LAM
         xs = [CAP_X[0]] + [x for x, _ in BP.TOP if CAP_X[0] < x < CAP_X[1]] + [CAP_X[1]]
@@ -681,9 +691,10 @@ def build_small():
     tz = FP.TRAY_Z - BP.TRAY_T
     x0, x1 = BP.TRAY_X[0], FP.STOP_X[0] - 0.2
     tray = G.rect(x0, x1, -BP.TRAY_HW, BP.TRAY_HW)
-    fx = [GEOM[n]["x0"] + FT / 2 for n in ("N1", "N2")]
-    tray = G.tabs_on_edge(tray, 2, [x1 - x for x in fx], FT, 5.0)
-    tray = G.tabs_on_edge(tray, 0, [x - x0 for x in fx], FT, 5.0)
+    fx = [0.5 * (GEOM[n]["x0"] + GEOM[n]["x1"]) for n in ("N1", "N2")]
+    ftw = FTK["N1"]
+    tray = G.tabs_on_edge(tray, 2, [x1 - x for x in fx], ftw, 5.0)
+    tray = G.tabs_on_edge(tray, 0, [x - x0 for x in fx], ftw, 5.0)
     fr = G.frame((0.0, 0.0, tz), (1, 0, 0), (0, 1, 0))
     add("TRAY", "Pod_Parts", tray, BP.TRAY_T, fr, "liteply", [], lbl(tray, [], "TRAY < FWD", h=4.0))
     # tail servo tray
@@ -792,6 +803,75 @@ def build_servo_mount():
     return dict(case=(cx0, cx1, ys0, ys0 + m["W"], tz0 - 3.7, tz0 - 3.7 + m["H"]), tabs=(tx0, tx1, tz0, tz0 + m["TAB_T"]))
 
 
+def build_pads():
+    """P2 item 10: one 1.5 birch bearing pad under each saddle, on the floor top over the skid line."""
+    fr = G.frame((0.0, 0.0, FLOOR_TOP), (1, 0, 0), (0, 1, 0))
+    for n, (a, b) in sorted(RV.PAD_X.items()):
+        pad = G.rect(a, b, -RV.PAD_W / 2, RV.PAD_W / 2)
+        add("PAD-" + n, "Pod_Parts", pad, lam.STOCK, fr, "ply", [], lbl(pad, [], "PAD-" + n, h=3.0))
+
+
+# ---------------- lightening cells (P2 items 3-7), computed by design/optimisation/p2_cutouts.py ----------------
+HEX_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hex_cells.json")
+
+
+def hex_cells():
+    if os.environ.get("REVB_NO_HEX") or not os.path.exists(HEX_FILE):
+        return {}
+    return json.load(open(HEX_FILE))
+
+
+def add_hex(parts):
+    H = hex_cells()
+    if not H:
+        return
+    for p in parts:
+        n = p["name"]
+        cells, af = [], None
+        if n[:3] in ("RO-", "LO-", "RI-", "LI-") and p["mat"] == "balsa_med":
+            grp = H.get("sides", {}).get("%s-%s" % (n[0], n[3]))
+            if grp:
+                af = grp["af"]
+                cells = [c for c in grp["cells"] if G.point_in_poly(tuple(c), p["outline"])]
+        elif n in H.get("parts", {}):
+            af = H["parts"][n]["af"]
+            cells = H["parts"][n]["cells"]
+        for u, v in cells:
+            p["cutters"].append(G.hexagon(u, v, af))
+        if cells:
+            p["hex"] = (len(cells), af)
+
+
+# ---------------- laminates (P1): one 1.5 mm stock, n layers, pieces <= 100 mm across the grain ----------------
+def lam_spec():
+    S, U, L = {}, lam.urange, lam.layer
+    for n in ("N1", "N2", "EF"):
+        S[n] = lam.cross(3, "v")                             # 0/90/0, outer layers vertical grain
+    g = GEOM["B2"]
+    zm = 0.5 * (g["zfl"] + g["ztp"])
+    for n in ("B2-R", "B2-L"):                                # 34 x 103: the horizontal-grain layer in 2 pieces
+        S[n] = [L("v"), L("u", U(v1=zm), U(v0=zm)), L("v")]
+    for n in ("B1", "B4"):                                    # 110 x 104 U-frames
+        zs = RP.AXIS_Z - 15.0
+        S[n] = [L("v", U(b=10.0), U(a=10.0)),
+                L("u", U(v1=zs), U(b=0.0, v0=zs), U(a=0.0, v0=zs)),
+                L("v", U(b=-10.0), U(a=-10.0))]
+    zt_, zb_ = TUBE_Z + TUBE_R + 3.0, TUBE_Z - TUBE_R - 3.0   # bulkhead 105 x 101, 0/90/90/0
+    S["BH"] = [L("v", U(b=6.0), U(a=6.0)), L("u", U(v1=zt_), U(v0=zt_)), L("u", U(v1=zb_), U(v0=zb_)),
+               L("v", U(b=-6.0), U(a=-6.0))]
+    S["FS"] = lam.cross(2, "u")                               # birch 2 x 1.5, face grain crossed (P2 item 9)
+    for n in ("FW", "SD-R", "SD-L", "TR1R", "TR1L", "TR2R", "TR2L"):
+        S[n] = lam.cross(2, "u")                              # birch 3 mm -> 2 x 1.5
+    for sd in ("S1", "S2"):
+        for c in "abcd":
+            S[sd + c] = lam.cross(2, "u")
+        for c in "RL":
+            S[sd + "B" + c] = lam.parallel(2, "u")
+    S["TST"] = [L("v"), L("u", U(v1=0.0), U(v0=0.0))]       # 30 x 110
+    S["TRAY"] = [L("u"), L("v", U(b=-80.0), U(a=-80.0))]    # 121 x 50
+    return S
+
+
 def all_parts():
     del PARTS[:]
     build_sides()
@@ -801,7 +881,10 @@ def all_parts():
     build_strips()
     build_top()
     build_small()
+    build_pads()
     servo = build_servo_mount()
+    add_hex(PARTS)
+    lam.apply(PARTS, lam_spec())
     return PARTS, build_hard(), servo
 
 

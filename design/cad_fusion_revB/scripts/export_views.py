@@ -60,4 +60,7 @@ if globals().get("DO_EXPORT", True):
     em.execute(em.createSTEPExportOptions(step, root))
     f3d = os.path.join(EXP, "WaterDrop_revB_fusion.f3d")
     em.execute(em.createFusionArchiveExportOptions(f3d, root))
+    import zipfile
+    with zipfile.ZipFile(step + ".zip", "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:   # the .step is > 100 MB
+        z.write(step, os.path.basename(step))
     print("exported STEP %.1f MB, f3d %.1f MB in %.0f s" % (os.path.getsize(step) / 1e6, os.path.getsize(f3d) / 1e6, time.time() - t1))

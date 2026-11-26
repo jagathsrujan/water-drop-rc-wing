@@ -4,6 +4,8 @@ Every part is its own component, built flat in its own frame (sketch on the comp
 the stock thickness) and placed by the occurrence transform: this keeps each laser part a true flat pattern
 (its top-face outline is the cut file) and puts the engraved label on the top face."""
 import math
+import os
+import time
 import adsk.core as ac
 import adsk.fusion as af
 
@@ -202,6 +204,35 @@ def part(parent, name, outline, t, fr, cutters=(), mat=None, labels=(), z0=0.0, 
     (polygons or ('circle', u, v, r), through). labels: [(text, u, v, height)] engraved ENGRAVE deep into the top
     face (w = z0 + t), text along +u. Returns (occurrence, body)."""
     occ, comp = _new_comp(parent, name, fr)
+    body = _prism_body(comp, name, outline, t, cutters, mat, labels, z0, label_w)
+    return occ, body
+
+
+def part_layers(parent, p, mat=None):
+    """A laminated part (lam.py): one component named p['name'], one body per layer piece (B1-1a, B1-2, ...),
+    each with its own outline, the part's cutters and its own engraved name. Returns (occurrence, [bodies])."""
+    import lam
+    occ, comp = _new_comp(parent, p["name"], p["fr"])
+    bodies = []
+    for q in lam.expand(p):
+        # layer pieces are not engraved in the 3D model (engraved text is the slowest Fusion feature); their names are
+        # engraved in the laser files, which take the labels from the part data
+        bodies.append(_prism_body(comp, q["name"], q["outline"], q["t"], p["cutters"], mat or p["mat"], [], q["z0"]))
+    return occ, bodies
+
+
+def add_pocket_layers(occ_bodies, shapes, w0, w1, t=1.5):
+    """A blind pocket in a laminated part: cut into every layer body that the w range w0..w1 reaches."""
+    occ, bodies = occ_bodies
+    for b in bodies:
+        bb = b.boundingBox
+        lo, hi = bb.minPoint.z * 10.0, bb.maxPoint.z * 10.0
+        a, c = max(w0, lo), min(w1, hi)
+        if c - a > 1e-3:
+            _prism_feature(occ.component, shapes, a, c, af.FeatureOperations.CutFeatureOperation, b)
+
+
+def _prism_body(comp, name, outline, t, cutters, mat, labels, z0=0.0, label_w=None):
     feats = comp.features
     base = comp.xYConstructionPlane
     if abs(z0) > 1e-9:
@@ -238,9 +269,10 @@ def part(parent, name, outline, t, fr, cutters=(), mat=None, labels=(), z0=0.0, 
     if mat:
         set_material(body, mat)
     STATS["parts"] += 1
-    if STATS["parts"] % 3 == 0:
+    if STATS["parts"] % REFRESH_EVERY == 0:      # redrawing the growing model is slow: refresh now and then only
         refresh()
-    return occ, body
+        progress("%d parts, last %s" % (STATS["parts"], name))
+    return body
 
 
 def engrave(comp, body, labels, w_top):
@@ -330,6 +362,17 @@ MATS = {   # key: (name, density g/cm3, colour RGB 0-255)
     "elec": ("Electronics (lumped)", 1.00, (70, 70, 80)),
 }
 _MCACHE, _ACACHE = {}, {}
+REFRESH_EVERY = 25
+PROGRESS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "check", "build_progress.txt")
+
+
+def progress(msg):
+    """A line in check/build_progress.txt (the bridge returns a job's output only when it ends)."""
+    try:
+        with open(PROGRESS_FILE, "a") as f:
+            f.write("%s %s\n" % (time.strftime("%H:%M:%S"), msg))
+    except Exception:
+        pass
 
 
 def _base_material():
@@ -442,11 +485,18 @@ def box(parent, name, x0, x1, y0, y1, z0, z1, mat=None):
     return part(parent, name, G.rect(x0, x1, y0, y1), z1 - z0, fr, mat=mat)
 
 
-def build_list(parent, parts, fails, fit_every=15):
+def build_list(parent, parts, fails, fit_every=60):
     """Build a list of part dicts (pod.py / wing.py format) under parent, one sub-group per p['grp']."""
     for i, p in enumerate(parts):
         try:
             grp = group(parent, p["grp"])
+            if p.get("layers"):
+                ob = part_layers(grp, p)
+                for shapes, w0, w1 in p.get("pockets", []):
+                    add_pocket_layers(ob, shapes, w0, w1)
+                if i % fit_every == 0:
+                    app.activeViewport.fit()
+                continue
             ob = part(grp, p["name"], p["outline"], p["t"], p["fr"], cutters=p["cutters"], mat=p["mat"],
                       labels=p["labels"], z0=p["z0"], label_w=p.get("label_w"))
             for shapes, w0, w1 in p.get("joins", []):

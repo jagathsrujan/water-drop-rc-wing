@@ -4,12 +4,13 @@ Structure: every body of design/cad_fusion_revB/check/bodies.json at the centre 
 its centroid). Masses as in bodies.json except (a) the PETG join bodies that the pod build tagged as steel
 (NOSE-RING, SERVO-MOUNT: P2 finding 1), re-massed at PETG 1.27 g/cm3, and (b) the electronics placeholders, whose
 volume-based masses are replaced by the catalogue masses of design/FIXED_MASSES.md at the placeholder positions.
-Film and glue lines of mass_table.md are put at the centroid of their assembly. Water: 996 g at the bottle's
+Film and glue lines of mass_table.md (mass_summary.group) are put at the centroid of their assembly. Water: 996 g at the bottle's
 centroid X 80 (the reservoir build places it there:
 design/cad_reservoir/scripts/res_params.py X_CG, checked by res_check.py). Plain Python:  python design/optimisation/p2_cg.py
 """
 import json
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 B = json.load(open(os.path.join(HERE, "..", "cad_fusion_revB", "check", "bodies.json")))
@@ -20,10 +21,13 @@ FIXED = {  # placeholder name: catalogue mass g (FIXED_MASSES.md)
     "RELEASE-SERVO": 13.4, "SERVO-W-R": 13.7, "SERVO-W-L": 13.7,   # wing: 2 x MG90S + arms = 27.4 g
     "RECEIVER": 13.5,                                               # not selected: placeholder mass kept (estimate)
 }
-EXTRA = {"Pod": 5.0 + 12.5 + 3.4, "Wing": 29.2 + 8.0 + 1.2 + 0.8, "Tail": 4.8 + 1.6 + 1.0}   # film, glue, magnets, screws...
+sys.path.insert(0, os.path.join(HERE, "..", "cad_fusion_revB", "scripts"))
+import mass_summary as MS  # noqa: E402  same film / glue / lamination-glue lines as mass_table.md
+EXTRA = {g: sum(e[1] for e in MS.group(g)[2]) for g in ("Pod", "Wing", "Tail")}
 
 
-def main():
+def empty():
+    """empty mass g, moment sums and the per-assembly [m, m x, m z] of the model (no water)."""
     tot = mx = mz = 0.0
     asm = {}
     for b in B:
@@ -46,6 +50,11 @@ def main():
         a = asm[k]
         xc, zc = a[1] / a[0], a[2] / a[0]
         tot += v; mx += v * xc; mz += v * zc
+    return tot, mx, mz, asm
+
+
+def main():
+    tot, mx, mz, asm = empty()
     x_e, z_e = mx / tot, mz / tot
     xw = 80.0
     x_l = (mx + WATER * xw) / (tot + WATER)

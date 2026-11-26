@@ -3,31 +3,35 @@
 The balsa rev B aircraft (pod rev B, wing rev A, twin boom, cruciform tail) remodelled from scratch in Autodesk Fusion,
 built live in the Fusion window through a local bridge (`tools/fusion_bridge/`). The FreeCAD models stay the reference:
 every number comes from their parameter files (`bal_params.py`, `fus_params.py`, `res_params.py`, `wing_params.py`),
-nothing is retyped. Status: **model complete, not yet built or weighed; the hex lightening of the pod sides is left out
-in this pass.**
+nothing is retyped. Status: **model complete with the optimisation P1/P2 changes (P3, 2026-11-26): one balsa stock
+(1.5 mm medium) and one birch-ply stock (1.5 mm), laminated formers and tail, hex lightening; not yet built or
+weighed.**
 
 ![Aircraft in Fusion](img/aircraft_iso.png)
 
 ## Result
 
-| | Fusion rev B | FreeCAD reference |
-|---|---|---|
-| Parts | aircraft + 37 jigs; 153 laser parts on 41 sheets | — |
-| Pod | 165.1 g (no hex lightening, more tabs, tail-servo tray, laser saddles) | 133.1 g |
-| Wing (without servos) | 156.7 g | 156.6 g |
-| Tail | 78.4 g | 78.1 g |
-| Empty aircraft / score | ≈ 721 g / ≈ 138 | 689 g / 144.5 |
-| Interference (Fusion analysis, all bodies) | largest 0.01 mm³ (surface contacts only) | — |
+| | Fusion rev B, P3 (optimised) | Fusion rev B before P1/P2 | FreeCAD reference |
+|---|---|---|---|
+| Stock | balsa 1.5 medium + birch ply 1.5 only | balsa light/medium 1–3, lite-ply, birch 1–3 | — |
+| Laser parts / sheets | 226 parts (113 of them layer pieces of 41 laminated parts) on 44 balsa 300 × 100 + 1 birch 300 × 300 | 153 parts on 41 sheets | — |
+| Pod | 135.8 g | 165.1 g | 133.1 g |
+| Wing (without servos) | 159.5 g | 156.7 g | 156.6 g |
+| Tail | 75.7 g | 78.4 g | 78.1 g |
+| **Empty aircraft / score** (direct sum, `mass_table.md`) | **702.6 g / 141.8** | ≈ 721 g / ≈ 138 | 689 g / 144.5 |
+| CG empty / with 996 g water | X 82.4 / X 81.0 mm | — | — |
+| Interference (Fusion analysis, all bodies) | contacts only, largest 0.54 mm³ (battery corner on the sloped nose floor) | 0.01 mm³ | — |
 
-The pod is 32 g heavier. The first things to try for that: the hex lightening (≈ 7 g), weighing the sheets and using
-light stock for the inner layers (rev B estimate 6–8 g), and lighter saddles.
+Masses use the design densities (balsa 0.14, birch 0.65 g/cm³) and include lamination glue (40 g/m² per
+interface, *estimate*): weigh the sheets and a test laminate to firm them up. The optimisation reports are in
+[`design/optimisation/`](../optimisation/) (P1 stock, P2 lightening, P3 implementation).
 
 ## Files
 
 | Path | What |
 |---|---|
 | `export/WaterDrop_revB_fusion.f3d` | Fusion archive (open in Fusion: File → Open → Open from my computer) |
-| `export/WaterDrop_revB_fusion.step` | STEP, one component per part, named as on the laser parts |
+| `export/WaterDrop_revB_fusion.step.zip` | STEP (zipped: 110 MB unzipped), one component per part, named as on the laser parts |
 | `dxf/*.dxf` | Laser sheets: layer **CUT**, **ENGRAVE** (part names, single-stroke), **SHEET** (outline, do not cut) |
 | `dxf/nesting.json`, `cut_list.md` | What is on each sheet; strip stock cut to length |
 | `mass_table.md` | Mass from the Fusion bodies with the same densities, film and glue rules as the FreeCAD tables |
@@ -55,7 +59,9 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 ## Manufacturing rules
 
 - **Sheet sizes:** balsa 100 × 300 mm with the grain along 300; every balsa part is ≤ 100 mm across the grain and is
-  turned to its grain on the sheet. Ply / lite-ply 300 × 300.
+  turned to its grain on the sheet. Birch ply 300 × 300. One stock each: balsa 1.5 mm medium, birch ply 1.5 mm;
+  thicker parts are laminated from 1.5 mm layers (`lam.py`, checked by `lam_check.py`), and the sheets are packed
+  with a MaxRects nester (`laser.py`).
 - **Labels:** every laser part carries its name and a direction hint (`< FWD`, `UP ^`, `< LE`). The floor and the
   side panels also carry the name of the former that goes into each group of slots.
 - **Joint check:** `scripts/check_joints.py` compares every dovetail pair (floor, hatch, false spar, jig base, wing cradles) point by point: no gaps, no overlaps.
@@ -71,7 +77,7 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 | Bulkhead, end former → aft deck | 2 tabs each up through the deck |
 | Sides → floor | finger joint: tabs on the bottom edge of both side layers drop into notches in the floor edge |
 | Floor pieces | dovetail keys (3 per joint; 2 at X 115 beside the belly opening) |
-| Side laminate | outer 1.5 mm in a lower and an upper strip (joint at Z −40), inner 1.0 mm in pieces ≤ 100 mm wide with vertical grain: every joint is bridged by the other layer |
+| Side laminate | outer 1.5 mm in a lower and an upper strip (joint at Z −40), inner 1.5 mm in pieces ≤ 100 mm wide with vertical grain: every joint is bridged by the other layer |
 | Battery tray → nose formers | tabs into notches in the former legs |
 | Tail-servo tray → sides | 2 tabs per side through the side laminate (new: replaces the rev B pads) |
 | Saddles | 4 layers, each with 2 floor tabs, keel notches and 3 pin holes (2 mm toothpicks) |
@@ -88,7 +94,7 @@ Then `check_model.py` (with `DO_INTERFERENCE = True`), `laser_loops.py`, `export
 
 | Surface | Servo / arm | Pushrod | Horn |
 |---|---|---|---|
-| Ailerons (×2) | MG90S flat in the bay between ribs 110 and 165; single arm down through a slot in the servo hatch, hole 12.7 mm from the shaft, 4 mm below the skin | 1.2 mm steel wire under the lower skin, parallel to X (70.5 mm between the holes), Z-bend at each end | PETG horn glued to the 2 mm horn rib **AH-R / AH-L** (laser, new) and the aileron LE; hole on the hinge line (X 209), so the throw is symmetric |
+| Ailerons (×2) | MG90S flat in the bay between ribs 110 and 165; single arm down through a slot in the servo hatch, hole 12.7 mm from the shaft, 4 mm below the skin | 1.2 mm steel wire under the lower skin, parallel to X (70.5 mm between the holes), Z-bend at each end | PETG horn glued to the 3 mm (2 × 1.5) horn rib **AH-R / AH-L** (laser, new) and the aileron LE; hole on the hinge line (X 209), so the throw is symmetric |
 | Elevator | 9 g servo (left) on the tail-servo tray, arm 8 mm outboard | 2 mm carbon rod, 1.2 mm steel Z-bend ends 6 mm long at both ends, through the left tail-cone exit slot | 1.5 mm G10 / ply horn under the left elevator |
 | Rudder | 9 g servo (right), arm 8 mm outboard | same, right exit slot | horn on the right of the rudder |
 
@@ -180,6 +186,11 @@ squares in the corners; then the elevators (joiner wire in its slots) and the ru
 
 ## Changes from the FreeCAD models (proposed; not yet in `DECISIONS.md`)
 
+Items 1–4 are the first Fusion pass; the optimisation (P1/P2, implemented in P3) then replaced the lite-ply and the
+1/2/3 mm stocks with laminated 1.5 mm balsa and birch and added the hex lightening
+([`design/optimisation/P3_fusion.md`](../optimisation/P3_fusion.md)).
+
+
 1. **Pod sides:** split into strips and pieces to fit 100 mm balsa (see joints). No hex lightening in this pass.
 2. **Pod:** a 3 mm lite-ply tail-servo tray between the sides replaces the rev B pads; the front-stop ring, the U
    formers and the bulkhead follow rev B. The saddles are laser-cut layers with lightening windows; the two inner
@@ -192,8 +203,8 @@ squares in the corners; then the elevators (joiner wire in its slots) and the ru
 
 ## Not done yet
 
-- Hex lightening of the side laminate (rev B saved about 7 g with it).
-- Hatch magnets (4 pairs): their seats are not modelled.
+- Hatch magnets (4 pairs D6 × 2, 3.4 g, in the mass): their seats are not modelled. The hatch is 1.5 mm and the
+  ledges 3 mm wide, so a 6 mm magnet fits neither as it is: each pair needs a small seat (for example a birch pad on
+  the ledge) at the hatch corners near X −150 and X −20. To be designed.
 - Hinge slots in the aileron and elevator LE strips are cut by hand (the false spar slots are laser-cut).
-- Removable assembly jigs (rev B J1–J5) for this version.
 - The wing servo bay, horns and guide clips are simplified. Electronics and the reservoir are envelopes only.

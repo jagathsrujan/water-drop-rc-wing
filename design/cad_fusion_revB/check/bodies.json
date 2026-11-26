@@ -1,44 +1,47 @@
 [
  {
   "name": "RO-NL",
+  "body": "RO-NL",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 11839.84,
-  "mass_g": 1.658,
+  "vol_mm3": 9792.53,
+  "mass_g": 1.371,
   "bb": [
    -170.0,
-   -29.71,
+   -29.8,
    26.53,
-   54.85,
-   -115.23,
+   54.84,
+   -115.21,
    -40.0
   ]
  },
  {
   "name": "RO-NU",
+  "body": "RO-NU",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 5552.18,
-  "mass_g": 0.777,
+  "vol_mm3": 5270.29,
+  "mass_g": 0.738,
   "bb": [
    -170.0,
-   -29.71,
+   -29.8,
    26.53,
-   54.85,
+   54.84,
    -40.0,
-   -5.09
+   -5.1
   ]
  },
  {
   "name": "RI-N1",
+  "body": "RI-N1",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 5398.45,
-  "mass_g": 0.756,
+  "vol_mm3": 7452.02,
+  "mass_g": 1.043,
   "bb": [
    -169.72,
-   -91.53,
-   25.54,
+   -91.43,
+   25.05,
    41.49,
    -98.05,
    -12.58
@@ -46,25 +49,27 @@
  },
  {
   "name": "RI-N2",
+  "body": "RI-N2",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6191.92,
-  "mass_g": 0.867,
+  "vol_mm3": 7617.58,
+  "mass_g": 1.066,
   "bb": [
    -91.72,
    -29.52,
-   40.5,
-   53.38,
-   -115.23,
-   -5.09
+   40.01,
+   53.36,
+   -115.21,
+   -5.1
   ]
  },
  {
   "name": "RO-M1L",
+  "body": "RO-M1L",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 8129.75,
-  "mass_g": 1.138,
+  "vol_mm3": 6436.5,
+  "mass_g": 0.901,
   "bb": [
    -28.92,
    44.0,
@@ -76,10 +81,11 @@
  },
  {
   "name": "RO-M1U",
+  "body": "RO-M1U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 3413.02,
-  "mass_g": 0.478,
+  "vol_mm3": 3312.1,
+  "mass_g": 0.464,
   "bb": [
    -28.92,
    44.0,
@@ -91,6 +97,7 @@
  },
  {
   "name": "RO-MP",
+  "body": "RO-MP",
   "path": "Pod/Pod_Sides",
   "material": "Birch ply",
   "vol_mm3": 7536.42,
@@ -106,10 +113,11 @@
  },
  {
   "name": "RO-M3L",
+  "body": "RO-M3L",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 15647.73,
-  "mass_g": 2.191,
+  "vol_mm3": 14163.87,
+  "mass_g": 1.983,
   "bb": [
    96.0,
    235.7,
@@ -121,10 +129,11 @@
  },
  {
   "name": "RO-M3U",
+  "body": "RO-M3U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 5484.88,
-  "mass_g": 0.768,
+  "vol_mm3": 5283.79,
+  "mass_g": 0.74,
   "bb": [
    96.0,
    235.7,
@@ -136,14 +145,15 @@
  },
  {
   "name": "RI-M1",
+  "body": "RI-M1",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6323.9,
-  "mass_g": 0.885,
+  "vol_mm3": 7748.36,
+  "mass_g": 1.085,
   "bb": [
    -28.92,
    30.0,
-   52.5,
+   52.0,
    53.5,
    -117.0,
    -5.0
@@ -151,14 +161,15 @@
  },
  {
   "name": "RI-M2U",
+  "body": "RI-M2U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 761.46,
-  "mass_g": 0.107,
+  "vol_mm3": 1109.07,
+  "mass_g": 0.155,
   "bb": [
    30.0,
    44.0,
-   52.5,
+   52.0,
    53.5,
    -70.0,
    -11.3
@@ -166,14 +177,15 @@
  },
  {
   "name": "RI-M2G",
+  "body": "RI-M2G",
   "path": "Pod/Pod_Sides",
   "material": "Birch ply",
-  "vol_mm3": 606.93,
-  "mass_g": 0.395,
+  "vol_mm3": 893.55,
+  "mass_g": 0.581,
   "bb": [
    30.0,
    44.0,
-   52.5,
+   52.0,
    53.5,
    -115.5,
    -70.0
@@ -181,14 +193,15 @@
  },
  {
   "name": "RI-M3U",
+  "body": "RI-M3U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 1848.23,
-  "mass_g": 0.259,
+  "vol_mm3": 2741.92,
+  "mass_g": 0.384,
   "bb": [
    96.0,
    130.0,
-   52.5,
+   52.0,
    53.5,
    -70.0,
    -13.9
@@ -196,14 +209,15 @@
  },
  {
   "name": "RI-M3G",
+  "body": "RI-M3G",
   "path": "Pod/Pod_Sides",
   "material": "Birch ply",
-  "vol_mm3": 1511.2,
-  "mass_g": 0.982,
+  "vol_mm3": 2252.82,
+  "mass_g": 1.464,
   "bb": [
    96.0,
    130.0,
-   52.5,
+   52.0,
    53.5,
    -115.5,
    -70.0
@@ -211,14 +225,15 @@
  },
  {
   "name": "RI-M4",
+  "body": "RI-M4",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6579.72,
-  "mass_g": 0.921,
+  "vol_mm3": 8907.32,
+  "mass_g": 1.247,
   "bb": [
    130.0,
    195.0,
-   52.5,
+   52.0,
    53.5,
    -117.0,
    -12.96
@@ -226,14 +241,15 @@
  },
  {
   "name": "RI-M5",
+  "body": "RI-M5",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 4126.85,
-  "mass_g": 0.578,
+  "vol_mm3": 5534.12,
+  "mass_g": 0.775,
   "bb": [
    195.0,
    235.7,
-   52.5,
+   52.0,
    53.5,
    -117.0,
    -12.9
@@ -241,85 +257,123 @@
  },
  {
   "name": "RO-TL",
+  "body": "RO-TL",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 4929.59,
-  "mass_g": 0.69,
+  "vol_mm3": 4334.04,
+  "mass_g": 0.607,
   "bb": [
-   236.62,
+   236.79,
    305.0,
    28.59,
-   54.59,
-   -114.18,
+   54.53,
+   -114.04,
    -40.0
   ]
  },
  {
-  "name": "LO-NL",
+  "name": "RO-TU",
+  "body": "RO-TU",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 11840.45,
-  "mass_g": 1.658,
+  "vol_mm3": 2424.34,
+  "mass_g": 0.339,
+  "bb": [
+   236.79,
+   305.0,
+   28.59,
+   54.53,
+   -40.0,
+   -13.18
+  ]
+ },
+ {
+  "name": "RI-T1",
+  "body": "RI-T1",
+  "path": "Pod/Pod_Sides",
+  "material": "Balsa medium",
+  "vol_mm3": 6768.68,
+  "mass_g": 0.948,
+  "bb": [
+   236.28,
+   304.49,
+   27.18,
+   53.12,
+   -114.04,
+   -13.18
+  ]
+ },
+ {
+  "name": "LO-NL",
+  "body": "LO-NL",
+  "path": "Pod/Pod_Sides",
+  "material": "Balsa medium",
+  "vol_mm3": 9959.41,
+  "mass_g": 1.394,
   "bb": [
    -170.0,
-   -29.71,
-   -54.85,
+   -29.8,
+   -54.84,
    -26.53,
-   -115.23,
+   -115.21,
    -40.0
   ]
  },
  {
   "name": "LO-NU",
+  "body": "LO-NU",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 5552.91,
-  "mass_g": 0.777,
+  "vol_mm3": 5271.02,
+  "mass_g": 0.738,
   "bb": [
    -170.0,
-   -29.71,
-   -54.85,
+   -29.8,
+   -54.84,
    -26.53,
    -40.0,
-   -5.09
+   -5.1
   ]
  },
  {
   "name": "LI-N1",
+  "body": "LI-N1",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 5399.04,
-  "mass_g": 0.756,
+  "vol_mm3": 7618.56,
+  "mass_g": 1.067,
   "bb": [
    -169.72,
-   -91.53,
+   -91.43,
    -41.49,
-   -25.54,
+   -25.05,
    -98.05,
    -12.58
   ]
  },
  {
   "name": "LI-N2",
+  "body": "LI-N2",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6192.52,
-  "mass_g": 0.867,
+  "vol_mm3": 7617.88,
+  "mass_g": 1.067,
   "bb": [
    -91.72,
    -29.52,
-   -53.38,
-   -40.5,
-   -115.23,
-   -5.09
+   -53.36,
+   -40.01,
+   -115.21,
+   -5.1
   ]
  },
  {
   "name": "LO-ML",
+  "body": "LO-ML",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 29577.2,
-  "mass_g": 4.141,
+  "vol_mm3": 26143.42,
+  "mass_g": 3.66,
   "bb": [
    -28.92,
    235.7,
@@ -331,10 +385,11 @@
  },
  {
   "name": "LO-MU",
+  "body": "LO-MU",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 10965.98,
-  "mass_g": 1.535,
+  "vol_mm3": 10579.43,
+  "mass_g": 1.481,
   "bb": [
    -28.92,
    235.7,
@@ -346,190 +401,171 @@
  },
  {
   "name": "LI-M1",
+  "body": "LI-M1",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6324.51,
-  "mass_g": 0.885,
+  "vol_mm3": 7748.3,
+  "mass_g": 1.085,
   "bb": [
    -28.92,
    30.0,
    -53.5,
-   -52.5,
+   -52.0,
    -117.0,
    -5.0
   ]
  },
  {
   "name": "LI-M2U",
+  "body": "LI-M2U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 2792.65,
-  "mass_g": 0.391,
+  "vol_mm3": 3825.72,
+  "mass_g": 0.536,
   "bb": [
    30.0,
    80.0,
    -53.5,
-   -52.5,
+   -52.0,
    -70.0,
    -11.3
   ]
  },
  {
   "name": "LI-M2G",
+  "body": "LI-M2G",
   "path": "Pod/Pod_Sides",
   "material": "Birch ply",
-  "vol_mm3": 4421.72,
-  "mass_g": 2.874,
+  "vol_mm3": 6599.7,
+  "mass_g": 4.29,
   "bb": [
    30.0,
    130.0,
    -53.5,
-   -52.5,
+   -52.0,
    -117.0,
    -70.0
   ]
  },
  {
   "name": "LI-M3U",
+  "body": "LI-M3U",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 2744.19,
-  "mass_g": 0.384,
+  "vol_mm3": 4085.56,
+  "mass_g": 0.572,
   "bb": [
    80.0,
    130.0,
    -53.5,
-   -52.5,
+   -52.0,
    -70.0,
    -13.9
   ]
  },
  {
   "name": "LI-M4",
+  "body": "LI-M4",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 6580.15,
-  "mass_g": 0.921,
+  "vol_mm3": 8906.38,
+  "mass_g": 1.247,
   "bb": [
    130.0,
    195.0,
    -53.5,
-   -52.5,
+   -52.0,
    -117.0,
    -12.96
   ]
  },
  {
   "name": "LI-M5",
+  "body": "LI-M5",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 4127.45,
-  "mass_g": 0.578,
+  "vol_mm3": 5532.94,
+  "mass_g": 0.775,
   "bb": [
    195.0,
    235.7,
    -53.5,
-   -52.5,
+   -52.0,
    -117.0,
    -12.9
   ]
  },
  {
   "name": "LO-TL",
+  "body": "LO-TL",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 4930.19,
-  "mass_g": 0.69,
+  "vol_mm3": 4335.41,
+  "mass_g": 0.607,
   "bb": [
-   236.62,
+   236.79,
    305.0,
-   -54.59,
+   -54.53,
    -28.59,
-   -114.18,
+   -114.04,
    -40.0
   ]
  },
  {
-  "name": "LI-T1",
-  "path": "Pod/Pod_Sides",
-  "material": "Balsa medium",
-  "vol_mm3": 5002.34,
-  "mass_g": 0.7,
-  "bb": [
-   236.28,
-   304.49,
-   -53.18,
-   -27.65,
-   -114.18,
-   -13.18
-  ]
- },
- {
-  "name": "RI-T1",
-  "path": "Pod/Pod_Sides",
-  "material": "Balsa medium",
-  "vol_mm3": 5001.74,
-  "mass_g": 0.7,
-  "bb": [
-   236.28,
-   304.49,
-   27.65,
-   53.18,
-   -114.18,
-   -13.18
-  ]
- },
- {
   "name": "LO-TU",
+  "body": "LO-TU",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 2568.24,
-  "mass_g": 0.36,
+  "vol_mm3": 2508.08,
+  "mass_g": 0.351,
   "bb": [
-   236.62,
+   236.79,
    305.0,
-   -54.59,
+   -54.53,
    -28.59,
    -40.0,
    -13.18
   ]
  },
  {
-  "name": "RO-TU",
+  "name": "LI-T1",
+  "body": "LI-T1",
   "path": "Pod/Pod_Sides",
   "material": "Balsa medium",
-  "vol_mm3": 2567.64,
-  "mass_g": 0.359,
+  "vol_mm3": 6853.21,
+  "mass_g": 0.959,
   "bb": [
-   236.62,
-   305.0,
-   28.59,
-   54.59,
-   -40.0,
+   236.28,
+   304.49,
+   -53.12,
+   -27.18,
+   -114.04,
    -13.18
   ]
  },
  {
   "name": "FL-N1",
+  "body": "FL-N1",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 5723.6,
-  "mass_g": 0.801,
+  "vol_mm3": 5676.2,
+  "mass_g": 0.795,
   "bb": [
    -170.0,
    -108.82,
-   -46.0,
-   46.0,
+   -38.55,
+   38.55,
    -94.84,
    -76.55
   ]
  },
  {
   "name": "FL-N2",
+  "body": "FL-N2",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 11870.74,
-  "mass_g": 1.662,
+  "vol_mm3": 10803.76,
+  "mass_g": 1.513,
   "bb": [
    -115.0,
    -29.51,
@@ -541,10 +577,11 @@
  },
  {
   "name": "FL-M1",
+  "body": "FL-M1",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 9153.68,
-  "mass_g": 1.282,
+  "vol_mm3": 9011.77,
+  "mass_g": 1.262,
   "bb": [
    -28.92,
    34.0,
@@ -556,10 +593,11 @@
  },
  {
   "name": "FL-M2",
+  "body": "FL-M2",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 9965.05,
-  "mass_g": 1.395,
+  "vol_mm3": 9609.4,
+  "mass_g": 1.345,
   "bb": [
    28.0,
    121.0,
@@ -571,10 +609,11 @@
  },
  {
   "name": "FL-M3",
+  "body": "FL-M3",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 13535.03,
-  "mass_g": 1.895,
+  "vol_mm3": 12937.42,
+  "mass_g": 1.811,
   "bb": [
    115.0,
    206.0,
@@ -586,10 +625,11 @@
  },
  {
   "name": "FL-M4",
+  "body": "FL-M4",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 5552.78,
-  "mass_g": 0.777,
+  "vol_mm3": 5410.87,
+  "mass_g": 0.758,
   "bb": [
    200.0,
    235.7,
@@ -601,10 +641,11 @@
  },
  {
   "name": "FL-T1",
+  "body": "FL-T1",
   "path": "Pod/Pod_Floor",
   "material": "Balsa medium",
-  "vol_mm3": 10458.65,
-  "mass_g": 1.464,
+  "vol_mm3": 9926.92,
+  "mass_g": 1.39,
   "bb": [
    236.23,
    305.0,
@@ -616,12 +657,29 @@
  },
  {
   "name": "N1",
+  "body": "N1-1",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 5751.83,
-  "mass_g": 2.588,
+  "material": "Balsa medium",
+  "vol_mm3": 2679.31,
+  "mass_g": 0.375,
   "bb": [
    -130.0,
+   -128.5,
+   -35.67,
+   35.67,
+   -89.02,
+   -17.17
+  ]
+ },
+ {
+  "name": "N1",
+  "body": "N1-2",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2679.12,
+  "mass_g": 0.375,
+  "bb": [
+   -128.5,
    -127.0,
    -35.67,
    35.67,
@@ -630,13 +688,46 @@
   ]
  },
  {
-  "name": "N2",
+  "name": "N1",
+  "body": "N1-3",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 10606.45,
-  "mass_g": 4.773,
+  "material": "Balsa medium",
+  "vol_mm3": 2679.14,
+  "mass_g": 0.375,
+  "bb": [
+   -127.0,
+   -125.5,
+   -35.67,
+   35.67,
+   -89.02,
+   -17.17
+  ]
+ },
+ {
+  "name": "N2",
+  "body": "N2-1",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 5101.47,
+  "mass_g": 0.714,
   "bb": [
    -100.0,
+   -98.5,
+   -41.43,
+   41.43,
+   -97.34,
+   -13.55
+  ]
+ },
+ {
+  "name": "N2",
+  "body": "N2-2",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 5101.28,
+  "mass_g": 0.714,
+  "bb": [
+   -98.5,
    -97.0,
    -41.43,
    41.43,
@@ -645,13 +736,46 @@
   ]
  },
  {
-  "name": "FS",
+  "name": "N2",
+  "body": "N2-3",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 19119.88,
-  "mass_g": 8.604,
+  "material": "Balsa medium",
+  "vol_mm3": 5101.3,
+  "mass_g": 0.714,
+  "bb": [
+   -97.0,
+   -95.5,
+   -41.43,
+   41.43,
+   -97.34,
+   -13.55
+  ]
+ },
+ {
+  "name": "FS",
+  "body": "FS-1",
+  "path": "Pod/Pod_Formers",
+  "material": "Birch ply",
+  "vol_mm3": 9710.54,
+  "mass_g": 6.312,
   "bb": [
    -29.22,
+   -27.72,
+   -55.0,
+   55.0,
+   -117.0,
+   -5.0
+  ]
+ },
+ {
+  "name": "FS",
+  "body": "FS-2",
+  "path": "Pod/Pod_Formers",
+  "material": "Birch ply",
+  "vol_mm3": 9710.34,
+  "mass_g": 6.312,
+  "bb": [
+   -27.72,
    -26.22,
    -55.0,
    55.0,
@@ -661,28 +785,174 @@
  },
  {
   "name": "B1",
+  "body": "B1-1a",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 11132.62,
-  "mass_g": 5.01,
+  "material": "Balsa medium",
+  "vol_mm3": 2949.09,
+  "mass_g": 0.413,
   "bb": [
    38.0,
+   39.5,
+   -55.0,
+   10.0,
+   -117.0,
+   -12.54
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-1b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2515.18,
+  "mass_g": 0.352,
+  "bb": [
+   38.0,
+   39.5,
+   10.0,
+   55.0,
+   -117.0,
+   -12.54
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-2a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3654.97,
+  "mass_g": 0.512,
+  "bb": [
+   39.5,
    41.0,
    -55.0,
    55.0,
    -117.0,
-   -12.45
+   -75.0
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-2b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 903.44,
+  "mass_g": 0.126,
+  "bb": [
+   39.5,
+   41.0,
+   -55.0,
+   -40.3,
+   -75.0,
+   -12.54
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-2c",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 904.06,
+  "mass_g": 0.127,
+  "bb": [
+   39.5,
+   41.0,
+   40.3,
+   55.0,
+   -75.0,
+   -12.54
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-3a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2544.19,
+  "mass_g": 0.356,
+  "bb": [
+   41.0,
+   42.5,
+   -55.0,
+   -10.0,
+   -117.0,
+   -12.54
+  ]
+ },
+ {
+  "name": "B1",
+  "body": "B1-3b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2919.73,
+  "mass_g": 0.409,
+  "bb": [
+   41.0,
+   42.5,
+   -10.0,
+   55.0,
+   -117.0,
+   -12.54
   ]
  },
  {
   "name": "B2-R",
+  "body": "B2-R-1",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 4572.98,
-  "mass_g": 2.058,
+  "material": "Balsa medium",
+  "vol_mm3": 2237.72,
+  "mass_g": 0.313,
   "bb": [
    105.0,
+   106.5,
+   21.0,
+   55.0,
+   -117.0,
+   -14.07
+  ]
+ },
+ {
+  "name": "B2-R",
+  "body": "B2-R-2a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 1535.24,
+  "mass_g": 0.215,
+  "bb": [
+   106.5,
    108.0,
+   21.0,
+   55.0,
+   -117.0,
+   -64.78
+  ]
+ },
+ {
+  "name": "B2-R",
+  "body": "B2-R-2b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 700.21,
+  "mass_g": 0.098,
+  "bb": [
+   106.5,
+   108.0,
+   42.73,
+   55.0,
+   -64.78,
+   -14.07
+  ]
+ },
+ {
+  "name": "B2-R",
+  "body": "B2-R-3",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2237.55,
+  "mass_g": 0.313,
+  "bb": [
+   108.0,
+   109.5,
    21.0,
    55.0,
    -117.0,
@@ -691,13 +961,62 @@
  },
  {
   "name": "B2-L",
+  "body": "B2-L-1",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 4573.22,
-  "mass_g": 2.058,
+  "material": "Balsa medium",
+  "vol_mm3": 2238.06,
+  "mass_g": 0.313,
   "bb": [
    105.0,
+   106.5,
+   -55.0,
+   -21.0,
+   -117.0,
+   -14.07
+  ]
+ },
+ {
+  "name": "B2-L",
+  "body": "B2-L-2a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 1535.58,
+  "mass_g": 0.215,
+  "bb": [
+   106.5,
    108.0,
+   -55.0,
+   -21.0,
+   -117.0,
+   -64.78
+  ]
+ },
+ {
+  "name": "B2-L",
+  "body": "B2-L-2b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 700.39,
+  "mass_g": 0.098,
+  "bb": [
+   106.5,
+   108.0,
+   -55.0,
+   -42.73,
+   -64.78,
+   -14.07
+  ]
+ },
+ {
+  "name": "B2-L",
+  "body": "B2-L-3",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2237.89,
+  "mass_g": 0.313,
+  "bb": [
+   108.0,
+   109.5,
    -55.0,
    -21.0,
    -117.0,
@@ -706,14 +1025,111 @@
  },
  {
   "name": "B4",
+  "body": "B4-1a",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 11026.06,
-  "mass_g": 4.962,
+  "material": "Balsa medium",
+  "vol_mm3": 2909.81,
+  "mass_g": 0.407,
   "bb": [
    170.03,
+   171.53,
+   -55.0,
+   10.0,
+   -117.0,
+   -13.27
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-1b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2505.06,
+  "mass_g": 0.351,
+  "bb": [
+   170.03,
+   171.53,
+   10.0,
+   55.0,
+   -117.0,
+   -13.27
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-2a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3625.63,
+  "mass_g": 0.508,
+  "bb": [
+   171.53,
    173.03,
    -55.0,
+   55.0,
+   -117.0,
+   -75.0
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-2b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 893.31,
+  "mass_g": 0.125,
+  "bb": [
+   171.53,
+   173.03,
+   -55.0,
+   -40.3,
+   -75.0,
+   -13.27
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-2c",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 893.98,
+  "mass_g": 0.125,
+  "bb": [
+   171.53,
+   173.03,
+   40.3,
+   55.0,
+   -75.0,
+   -13.27
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-3a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2504.91,
+  "mass_g": 0.351,
+  "bb": [
+   173.03,
+   174.53,
+   -55.0,
+   -10.0,
+   -117.0,
+   -13.27
+  ]
+ },
+ {
+  "name": "B4",
+  "body": "B4-3b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2909.61,
+  "mass_g": 0.407,
+  "bb": [
+   173.03,
+   174.53,
+   -10.0,
    55.0,
    -117.0,
    -13.27
@@ -721,193 +1137,190 @@
  },
  {
   "name": "BH",
+  "body": "BH-1a",
   "path": "Pod/Pod_Formers",
-  "material": "Birch ply",
-  "vol_mm3": 11766.33,
-  "mass_g": 7.648,
+  "material": "Balsa medium",
+  "vol_mm3": 3094.79,
+  "mass_g": 0.433,
   "bb": [
    236.0,
+   237.5,
+   -49.64,
+   6.0,
+   -111.8,
+   -13.51
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-1b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2610.24,
+  "mass_g": 0.365,
+  "bb": [
+   236.0,
+   237.5,
+   6.0,
+   52.83,
+   -111.8,
+   -13.51
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-2a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 4308.93,
+  "mass_g": 0.603,
+  "bb": [
+   237.5,
    239.0,
-   -51.25,
-   53.91,
-   -114.19,
-   -13.34
+   -49.64,
+   52.83,
+   -111.8,
+   -31.85
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-2b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 1397.21,
+  "mass_g": 0.196,
+  "bb": [
+   237.5,
+   239.0,
+   -49.64,
+   52.83,
+   -31.85,
+   -13.52
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-3a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2132.33,
+  "mass_g": 0.299,
+  "bb": [
+   239.0,
+   240.5,
+   -49.64,
+   52.83,
+   -111.8,
+   -48.15
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-3b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3572.92,
+  "mass_g": 0.5,
+  "bb": [
+   239.0,
+   240.5,
+   -49.64,
+   52.83,
+   -48.15,
+   -13.52
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-4a",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 2495.22,
+  "mass_g": 0.349,
+  "bb": [
+   240.5,
+   242.0,
+   -49.64,
+   -6.0,
+   -111.8,
+   -13.51
+  ]
+ },
+ {
+  "name": "BH",
+  "body": "BH-4b",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3209.47,
+  "mass_g": 0.449,
+  "bb": [
+   240.5,
+   242.0,
+   -6.0,
+   52.83,
+   -111.8,
+   -13.51
   ]
  },
  {
   "name": "EF",
+  "body": "EF-1",
   "path": "Pod/Pod_Formers",
-  "material": "Lite-ply",
-  "vol_mm3": 6502.42,
-  "mass_g": 2.926,
+  "material": "Balsa medium",
+  "vol_mm3": 3192.15,
+  "mass_g": 0.447,
   "bb": [
+   300.5,
    302.0,
-   305.0,
-   -27.34,
+   -26.81,
    30.0,
    -61.58,
    -17.14
   ]
  },
  {
-  "name": "S1BR",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 295.99,
-  "mass_g": 0.133,
+  "name": "EF",
+  "body": "EF-2",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3191.96,
+  "mass_g": 0.447,
   "bb": [
-   -0.02,
-   23.98,
-   43.0,
-   46.0,
-   -117.0,
-   -109.5
+   302.0,
+   303.5,
+   -26.81,
+   30.0,
+   -61.58,
+   -17.14
   ]
  },
  {
-  "name": "S1BL",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 296.14,
-  "mass_g": 0.133,
+  "name": "EF",
+  "body": "EF-3",
+  "path": "Pod/Pod_Formers",
+  "material": "Balsa medium",
+  "vol_mm3": 3191.98,
+  "mass_g": 0.447,
   "bb": [
-   -0.02,
-   23.98,
-   -46.0,
-   -43.0,
-   -117.0,
-   -109.5
+   303.5,
+   305.0,
+   -26.81,
+   30.0,
+   -61.58,
+   -17.14
   ]
  },
  {
-  "name": "S2BR",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 295.9,
-  "mass_g": 0.133,
-  "bb": [
-   143.98,
-   167.98,
-   43.0,
-   46.0,
-   -117.0,
-   -109.5
-  ]
- },
- {
-  "name": "S2BL",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 296.05,
-  "mass_g": 0.133,
-  "bb": [
-   143.98,
-   167.98,
-   -46.0,
-   -43.0,
-   -117.0,
-   -109.5
-  ]
- },
- {
-  "name": "S2a",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 3936.54,
-  "mass_g": 1.771,
-  "bb": [
-   157.98,
-   160.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S2c",
+  "name": "S1a",
+  "body": "S1a-1",
   "path": "Pod/Pod_Saddles",
   "material": "Balsa medium",
-  "vol_mm3": 3936.62,
-  "mass_g": 0.551,
+  "vol_mm3": 1930.14,
+  "mass_g": 0.27,
   "bb": [
-   163.98,
-   166.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S1d",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 3936.65,
-  "mass_g": 1.771,
-  "bb": [
-   14.98,
-   17.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S2b",
-  "path": "Pod/Pod_Saddles",
-  "material": "Balsa medium",
-  "vol_mm3": 3936.52,
-  "mass_g": 0.551,
-  "bb": [
-   160.98,
-   163.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S1b",
-  "path": "Pod/Pod_Saddles",
-  "material": "Balsa medium",
-  "vol_mm3": 3936.65,
-  "mass_g": 0.551,
-  "bb": [
-   8.98,
-   11.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S2d",
-  "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 3936.52,
-  "mass_g": 1.771,
-  "bb": [
-   166.98,
-   169.98,
-   -42.0,
-   42.0,
-   -117.0,
-   -80.0
-  ]
- },
- {
-  "name": "S1c",
-  "path": "Pod/Pod_Saddles",
-  "material": "Balsa medium",
-  "vol_mm3": 3936.76,
-  "mass_g": 0.551,
-  "bb": [
-   11.98,
-   14.98,
+   5.98,
+   7.48,
    -42.0,
    42.0,
    -117.0,
@@ -916,12 +1329,13 @@
  },
  {
   "name": "S1a",
+  "body": "S1a-2",
   "path": "Pod/Pod_Saddles",
-  "material": "Lite-ply",
-  "vol_mm3": 3936.67,
-  "mass_g": 1.772,
+  "material": "Balsa medium",
+  "vol_mm3": 1929.94,
+  "mass_g": 0.27,
   "bb": [
-   5.98,
+   7.48,
    8.98,
    -42.0,
    42.0,
@@ -930,7 +1344,360 @@
   ]
  },
  {
+  "name": "S1b",
+  "body": "S1b-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1930.11,
+  "mass_g": 0.27,
+  "bb": [
+   8.98,
+   10.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1b",
+  "body": "S1b-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.92,
+  "mass_g": 0.27,
+  "bb": [
+   10.48,
+   11.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1c",
+  "body": "S1c-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1930.26,
+  "mass_g": 0.27,
+  "bb": [
+   11.98,
+   13.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1c",
+  "body": "S1c-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1930.07,
+  "mass_g": 0.27,
+  "bb": [
+   13.48,
+   14.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1d",
+  "body": "S1d-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1930.11,
+  "mass_g": 0.27,
+  "bb": [
+   14.98,
+   16.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1d",
+  "body": "S1d-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.92,
+  "mass_g": 0.27,
+  "bb": [
+   16.48,
+   17.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S1BR",
+  "body": "S1BR-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.55,
+  "mass_g": 0.021,
+  "bb": [
+   -0.02,
+   23.98,
+   44.5,
+   46.0,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S1BR",
+  "body": "S1BR-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.48,
+  "mass_g": 0.021,
+  "bb": [
+   -0.02,
+   23.98,
+   43.0,
+   44.5,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S1BL",
+  "body": "S1BL-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.67,
+  "mass_g": 0.021,
+  "bb": [
+   -0.02,
+   23.98,
+   -44.5,
+   -43.0,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S1BL",
+  "body": "S1BL-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.6,
+  "mass_g": 0.021,
+  "bb": [
+   -0.02,
+   23.98,
+   -46.0,
+   -44.5,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S2a",
+  "body": "S2a-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.94,
+  "mass_g": 0.27,
+  "bb": [
+   157.98,
+   159.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2a",
+  "body": "S2a-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.75,
+  "mass_g": 0.27,
+  "bb": [
+   159.48,
+   160.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2b",
+  "body": "S2b-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.92,
+  "mass_g": 0.27,
+  "bb": [
+   160.98,
+   162.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2b",
+  "body": "S2b-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.72,
+  "mass_g": 0.27,
+  "bb": [
+   162.48,
+   163.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2c",
+  "body": "S2c-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1930.07,
+  "mass_g": 0.27,
+  "bb": [
+   163.98,
+   165.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2c",
+  "body": "S2c-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.88,
+  "mass_g": 0.27,
+  "bb": [
+   165.48,
+   166.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2d",
+  "body": "S2d-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.92,
+  "mass_g": 0.27,
+  "bb": [
+   166.98,
+   168.48,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2d",
+  "body": "S2d-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 1929.72,
+  "mass_g": 0.27,
+  "bb": [
+   168.48,
+   169.98,
+   -42.0,
+   42.0,
+   -117.0,
+   -80.0
+  ]
+ },
+ {
+  "name": "S2BR",
+  "body": "S2BR-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.48,
+  "mass_g": 0.021,
+  "bb": [
+   143.98,
+   167.98,
+   44.5,
+   46.0,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S2BR",
+  "body": "S2BR-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.41,
+  "mass_g": 0.021,
+  "bb": [
+   143.98,
+   167.98,
+   43.0,
+   44.5,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S2BL",
+  "body": "S2BL-1",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.6,
+  "mass_g": 0.021,
+  "bb": [
+   143.98,
+   167.98,
+   -44.5,
+   -43.0,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
+  "name": "S2BL",
+  "body": "S2BL-2",
+  "path": "Pod/Pod_Saddles",
+  "material": "Balsa medium",
+  "vol_mm3": 147.53,
+  "mass_g": 0.021,
+  "bb": [
+   143.98,
+   167.98,
+   -46.0,
+   -44.5,
+   -117.0,
+   -109.5
+  ]
+ },
+ {
   "name": "Keel-R",
+  "body": "Keel-R",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 3925.84,
@@ -946,36 +1713,39 @@
  },
  {
   "name": "Longeron-R1",
+  "body": "Longeron-R1",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
-  "vol_mm3": 1300.01,
-  "mass_g": 0.182,
+  "vol_mm3": 1137.51,
+  "mass_g": 0.159,
   "bb": [
    -28.22,
    44.0,
-   46.5,
-   52.5,
+   46.0,
+   52.0,
    -115.5,
    -109.5
   ]
  },
  {
   "name": "Longeron-R2",
+  "body": "Longeron-R2",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
-  "vol_mm3": 2502.0,
-  "mass_g": 0.35,
+  "vol_mm3": 2189.25,
+  "mass_g": 0.306,
   "bb": [
    96.0,
    235.0,
-   46.5,
-   52.5,
+   46.0,
+   52.0,
    -115.5,
    -109.5
   ]
  },
  {
   "name": "Capstrip-R",
+  "body": "Capstrip-R",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 4248.0,
@@ -983,29 +1753,31 @@
   "bb": [
    0.0,
    236.0,
-   46.5,
-   52.5,
+   46.0,
+   52.0,
    -17.1,
    -5.0
   ]
  },
  {
   "name": "Ledge-R1",
+  "body": "Ledge-R1",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 1235.1,
   "mass_g": 0.173,
   "bb": [
-   -164.53,
-   -29.19,
-   23.56,
-   52.35,
+   -164.43,
+   -29.09,
+   23.07,
+   51.86,
    -24.4,
    -5.12
   ]
  },
  {
   "name": "Ledge-R2",
+  "body": "Ledge-R2",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 213.5,
@@ -1013,14 +1785,15 @@
   "bb": [
    -26.22,
    -2.5,
-   49.5,
-   52.5,
+   49.0,
+   52.0,
    -8.0,
    -5.0
   ]
  },
  {
   "name": "Keel-L",
+  "body": "Keel-L",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 3925.84,
@@ -1036,36 +1809,39 @@
  },
  {
   "name": "Longeron-L1",
+  "body": "Longeron-L1",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
-  "vol_mm3": 1183.01,
-  "mass_g": 0.166,
+  "vol_mm3": 1035.13,
+  "mass_g": 0.145,
   "bb": [
    -28.22,
    37.5,
-   -52.5,
-   -46.5,
+   -52.0,
+   -46.0,
    -115.5,
    -109.5
   ]
  },
  {
   "name": "Longeron-L2",
+  "body": "Longeron-L2",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
-  "vol_mm3": 2970.0,
-  "mass_g": 0.416,
+  "vol_mm3": 2598.75,
+  "mass_g": 0.364,
   "bb": [
    70.0,
    235.0,
-   -52.5,
-   -46.5,
+   -52.0,
+   -46.0,
    -115.5,
    -109.5
   ]
  },
  {
   "name": "Capstrip-L",
+  "body": "Capstrip-L",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 4248.0,
@@ -1073,29 +1849,31 @@
   "bb": [
    0.0,
    236.0,
-   -52.5,
-   -46.5,
+   -52.0,
+   -46.0,
    -17.1,
    -5.0
   ]
  },
  {
   "name": "Ledge-L1",
+  "body": "Ledge-L1",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 1235.1,
   "mass_g": 0.173,
   "bb": [
-   -164.53,
-   -29.19,
-   -52.35,
-   -23.56,
+   -164.43,
+   -29.09,
+   -51.86,
+   -23.07,
    -24.4,
    -5.12
   ]
  },
  {
   "name": "Ledge-L2",
+  "body": "Ledge-L2",
   "path": "Pod/Pod_Strips",
   "material": "Balsa medium",
   "vol_mm3": 213.5,
@@ -1103,18 +1881,51 @@
   "bb": [
    -26.22,
    -2.5,
-   -52.5,
-   -49.5,
+   -52.0,
+   -49.0,
    -8.0,
    -5.0
   ]
  },
  {
-  "name": "HF",
+  "name": "HN-R",
+  "body": "HN-R",
   "path": "Pod/Pod_Top",
-  "material": "Balsa light",
-  "vol_mm3": 4354.45,
-  "mass_g": 0.435,
+  "material": "Balsa medium",
+  "vol_mm3": 6555.42,
+  "mass_g": 0.918,
+  "bb": [
+   -169.98,
+   -29.52,
+   -6.0,
+   54.94,
+   -21.98,
+   -3.55
+  ]
+ },
+ {
+  "name": "HN-L",
+  "body": "HN-L",
+  "path": "Pod/Pod_Top",
+  "material": "Balsa medium",
+  "vol_mm3": 6112.42,
+  "mass_g": 0.856,
+  "bb": [
+   -169.98,
+   -29.52,
+   -54.94,
+   0.0,
+   -21.98,
+   -3.55
+  ]
+ },
+ {
+  "name": "HF",
+  "body": "HF",
+  "path": "Pod/Pod_Top",
+  "material": "Balsa medium",
+  "vol_mm3": 3689.56,
+  "mass_g": 0.517,
   "bb": [
    -28.92,
    -2.5,
@@ -1126,87 +1937,93 @@
  },
  {
   "name": "DECK",
+  "body": "DECK",
   "path": "Pod/Pod_Top",
   "material": "Balsa medium",
-  "vol_mm3": 8083.79,
-  "mass_g": 1.132,
+  "vol_mm3": 6180.62,
+  "mass_g": 0.865,
   "bb": [
    236.06,
    305.0,
-   -52.29,
-   52.29,
+   -51.75,
+   51.75,
    -18.64,
    -13.18
   ]
  },
  {
-  "name": "HN-L",
-  "path": "Pod/Pod_Top",
-  "material": "Balsa light",
-  "vol_mm3": 8602.96,
-  "mass_g": 0.86,
-  "bb": [
-   -169.98,
-   -29.52,
-   -54.94,
-   0.0,
-   -21.98,
-   -3.55
-  ]
- },
- {
-  "name": "HN-R",
-  "path": "Pod/Pod_Top",
-  "material": "Balsa light",
-  "vol_mm3": 8962.35,
-  "mass_g": 0.896,
-  "bb": [
-   -169.98,
-   -29.52,
-   -6.0,
-   54.94,
-   -21.98,
-   -3.55
-  ]
- },
- {
-  "name": "TRAY",
-  "path": "Pod/Pod_Parts",
-  "material": "Lite-ply",
-  "vol_mm3": 7317.22,
-  "mass_g": 3.293,
-  "bb": [
-   -150.0,
-   -29.42,
-   -25.0,
-   25.0,
-   -81.5,
-   -80.0
-  ]
- },
- {
   "name": "TST",
+  "body": "TST-1",
   "path": "Pod/Pod_Parts",
-  "material": "Lite-ply",
-  "vol_mm3": 7894.94,
-  "mass_g": 3.553,
+  "material": "Balsa medium",
+  "vol_mm3": 3667.35,
+  "mass_g": 0.513,
   "bb": [
    202.0,
    232.0,
    -55.0,
    55.0,
    -84.0,
+   -82.5
+  ]
+ },
+ {
+  "name": "TST",
+  "body": "TST-2a",
+  "path": "Pod/Pod_Parts",
+  "material": "Balsa medium",
+  "vol_mm3": 1832.16,
+  "mass_g": 0.257,
+  "bb": [
+   202.0,
+   232.0,
+   -55.0,
+   0.0,
+   -82.5,
+   -81.0
+  ]
+ },
+ {
+  "name": "TST",
+  "body": "TST-2b",
+  "path": "Pod/Pod_Parts",
+  "material": "Balsa medium",
+  "vol_mm3": 1832.13,
+  "mass_g": 0.256,
+  "bb": [
+   202.0,
+   232.0,
+   0.0,
+   55.0,
+   -82.5,
    -81.0
   ]
  },
  {
   "name": "FW",
+  "body": "FW-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 7845.87,
-  "mass_g": 5.1,
+  "vol_mm3": 3923.06,
+  "mass_g": 2.55,
   "bb": [
    -173.0,
+   -171.5,
+   -26.8,
+   26.8,
+   -76.8,
+   -21.7
+  ]
+ },
+ {
+  "name": "FW",
+  "body": "FW-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 3922.87,
+  "mass_g": 2.55,
+  "bb": [
+   -171.5,
    -170.0,
    -26.8,
    26.8,
@@ -1216,6 +2033,7 @@
  },
  {
   "name": "NOSE-RING",
+  "body": "NOSE-RING",
   "path": "Pod/Pod_Parts",
   "material": "PETG",
   "vol_mm3": 3365.52,
@@ -1231,21 +2049,23 @@
  },
  {
   "name": "NOSE-RING",
+  "body": "Body2",
   "path": "Pod/Pod_Parts",
-  "material": "Steel",
-  "vol_mm3": 1230.63,
-  "mass_g": 9.66,
+  "material": "PETG",
+  "vol_mm3": 1218.41,
+  "mass_g": 1.547,
   "bb": [
    -170.0,
    -165.0,
-   -25.35,
-   25.35,
+   -24.85,
+   24.85,
    -76.34,
    -22.1
   ]
  },
  {
   "name": "FLAPSTOP",
+  "body": "FLAPSTOP",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
   "vol_mm3": 718.73,
@@ -1261,43 +2081,94 @@
  },
  {
   "name": "SD-R",
+  "body": "SD-R-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 1156.42,
-  "mass_g": 0.752,
+  "vol_mm3": 576.84,
+  "mass_g": 0.375,
   "bb": [
    -16.0,
    4.0,
-   49.5,
-   52.5,
+   50.5,
+   52.0,
+   -34.0,
+   -14.0
+  ]
+ },
+ {
+  "name": "SD-R",
+  "body": "SD-R-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 576.64,
+  "mass_g": 0.375,
+  "bb": [
+   -16.0,
+   4.0,
+   49.0,
+   50.5,
    -34.0,
    -14.0
   ]
  },
  {
   "name": "SD-L",
+  "body": "SD-L-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 1156.76,
-  "mass_g": 0.752,
+  "vol_mm3": 577.18,
+  "mass_g": 0.375,
   "bb": [
    -16.0,
    4.0,
-   -52.5,
-   -49.5,
+   -50.5,
+   -49.0,
+   -34.0,
+   -14.0
+  ]
+ },
+ {
+  "name": "SD-L",
+  "body": "SD-L-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 576.99,
+  "mass_g": 0.375,
+  "bb": [
+   -16.0,
+   4.0,
+   -52.0,
+   -50.5,
    -34.0,
    -14.0
   ]
  },
  {
   "name": "TR1R",
+  "body": "TR1R-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 888.6,
-  "mass_g": 0.578,
+  "vol_mm3": 443.78,
+  "mass_g": 0.288,
   "bb": [
-   239.0,
    242.0,
+   243.5,
+   5.0,
+   27.0,
+   -51.0,
+   -29.0
+  ]
+ },
+ {
+  "name": "TR1R",
+  "body": "TR1R-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 443.74,
+  "mass_g": 0.288,
+  "bb": [
+   243.5,
+   245.0,
    5.0,
    27.0,
    -51.0,
@@ -1306,13 +2177,30 @@
  },
  {
   "name": "TR1L",
+  "body": "TR1L-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 888.6,
-  "mass_g": 0.578,
+  "vol_mm3": 443.85,
+  "mass_g": 0.289,
   "bb": [
-   239.0,
    242.0,
+   243.5,
+   -27.0,
+   -5.0,
+   -51.0,
+   -29.0
+  ]
+ },
+ {
+  "name": "TR1L",
+  "body": "TR1L-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 443.81,
+  "mass_g": 0.288,
+  "bb": [
+   243.5,
+   245.0,
    -27.0,
    -5.0,
    -51.0,
@@ -1321,13 +2209,30 @@
  },
  {
   "name": "TR2R",
+  "body": "TR2R-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 888.6,
-  "mass_g": 0.578,
+  "vol_mm3": 443.74,
+  "mass_g": 0.288,
+  "bb": [
+   297.5,
+   299.0,
+   5.0,
+   27.0,
+   -51.0,
+   -29.0
+  ]
+ },
+ {
+  "name": "TR2R",
+  "body": "TR2R-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 443.7,
+  "mass_g": 0.288,
   "bb": [
    299.0,
-   302.0,
+   300.5,
    5.0,
    27.0,
    -51.0,
@@ -1336,13 +2241,30 @@
  },
  {
   "name": "TR2L",
+  "body": "TR2L-1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
-  "vol_mm3": 888.6,
-  "mass_g": 0.578,
+  "vol_mm3": 443.81,
+  "mass_g": 0.288,
+  "bb": [
+   297.5,
+   299.0,
+   -27.0,
+   -5.0,
+   -51.0,
+   -29.0
+  ]
+ },
+ {
+  "name": "TR2L",
+  "body": "TR2L-2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 443.77,
+  "mass_g": 0.288,
   "bb": [
    299.0,
-   302.0,
+   300.5,
    -27.0,
    -5.0,
    -51.0,
@@ -1351,6 +2273,7 @@
  },
  {
   "name": "SK1",
+  "body": "SK1",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
   "vol_mm3": 1640.52,
@@ -1366,6 +2289,7 @@
  },
  {
   "name": "SK2",
+  "body": "SK2",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
   "vol_mm3": 1545.55,
@@ -1381,6 +2305,7 @@
  },
  {
   "name": "SK3",
+  "body": "SK3",
   "path": "Pod/Pod_Parts",
   "material": "Birch ply",
   "vol_mm3": 2469.82,
@@ -1395,15 +2320,48 @@
   ]
  },
  {
+  "name": "PAD-S1",
+  "body": "PAD-S1",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 897.29,
+  "mass_g": 0.583,
+  "bb": [
+   -8.0,
+   32.0,
+   -7.5,
+   7.5,
+   -115.5,
+   -114.0
+  ]
+ },
+ {
+  "name": "PAD-S2",
+  "body": "PAD-S2",
+  "path": "Pod/Pod_Parts",
+  "material": "Birch ply",
+  "vol_mm3": 849.85,
+  "mass_g": 0.552,
+  "bb": [
+   132.0,
+   169.9,
+   -7.5,
+   7.5,
+   -115.5,
+   -114.0
+  ]
+ },
+ {
   "name": "SERVO-MOUNT",
+  "body": "SERVO-MOUNT",
   "path": "Pod/Pod_Parts",
   "material": "PETG",
-  "vol_mm3": 605.0,
-  "mass_g": 0.768,
+  "vol_mm3": 643.42,
+  "mass_g": 0.817,
   "bb": [
    51.4,
    77.6,
-   52.6,
+   52.1,
    57.5,
    -115.5,
    -105.3
@@ -1411,10 +2369,11 @@
  },
  {
   "name": "SERVO-MOUNT",
+  "body": "Body2",
   "path": "Pod/Pod_Parts",
-  "material": "Steel",
+  "material": "PETG",
   "vol_mm3": 220.5,
-  "mass_g": 1.731,
+  "mass_g": 0.28,
   "bb": [
    53.11,
    58.11,
@@ -1426,10 +2385,11 @@
  },
  {
   "name": "SERVO-MOUNT",
+  "body": "Body3",
   "path": "Pod/Pod_Parts",
-  "material": "Steel",
+  "material": "PETG",
   "vol_mm3": 220.5,
-  "mass_g": 1.731,
+  "mass_g": 0.28,
   "bb": [
    81.61,
    86.61,
@@ -1441,10 +2401,11 @@
  },
  {
   "name": "SERVO-MOUNT",
+  "body": "Body4",
   "path": "Pod/Pod_Parts",
-  "material": "Steel",
+  "material": "PETG",
   "vol_mm3": 28.8,
-  "mass_g": 0.226,
+  "mass_g": 0.037,
   "bb": [
    55.01,
    56.21,
@@ -1456,10 +2417,11 @@
  },
  {
   "name": "SERVO-MOUNT",
+  "body": "Body5",
   "path": "Pod/Pod_Parts",
-  "material": "Steel",
+  "material": "PETG",
   "vol_mm3": 28.8,
-  "mass_g": 0.226,
+  "mass_g": 0.037,
   "bb": [
    83.51,
    84.71,
@@ -1470,7 +2432,56 @@
   ]
  },
  {
+  "name": "TRAY",
+  "body": "TRAY-1",
+  "path": "Pod/Pod_Parts",
+  "material": "Balsa medium",
+  "vol_mm3": 5440.89,
+  "mass_g": 0.762,
+  "bb": [
+   -146.0,
+   -29.42,
+   -25.0,
+   25.0,
+   -83.0,
+   -81.5
+  ]
+ },
+ {
+  "name": "TRAY",
+  "body": "TRAY-2a",
+  "path": "Pod/Pod_Parts",
+  "material": "Balsa medium",
+  "vol_mm3": 3095.37,
+  "mass_g": 0.433,
+  "bb": [
+   -146.0,
+   -80.0,
+   -25.0,
+   25.0,
+   -81.5,
+   -80.0
+  ]
+ },
+ {
+  "name": "TRAY",
+  "body": "TRAY-2b",
+  "path": "Pod/Pod_Parts",
+  "material": "Balsa medium",
+  "vol_mm3": 2345.53,
+  "mass_g": 0.328,
+  "bb": [
+   -80.0,
+   -29.42,
+   -20.0,
+   20.0,
+   -81.5,
+   -80.0
+  ]
+ },
+ {
   "name": "STUB-R",
+  "body": "STUB-R",
   "path": "Pod/Pod_Hard",
   "material": "Carbon",
   "vol_mm3": 276.02,
@@ -1486,6 +2497,7 @@
  },
  {
   "name": "STUB-L",
+  "body": "STUB-L",
   "path": "Pod/Pod_Hard",
   "material": "Carbon",
   "vol_mm3": 276.02,
@@ -1501,6 +2513,7 @@
  },
  {
   "name": "DOWEL",
+  "body": "DOWEL",
   "path": "Pod/Pod_Hard",
   "material": "Birch dowel",
   "vol_mm3": 1556.51,
@@ -1516,299 +2529,367 @@
  },
  {
   "name": "W-C",
+  "body": "W-C-1",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7834.49,
-  "mass_g": 1.097,
+  "vol_mm3": 5876.78,
+  "mass_g": 0.823,
   "bb": [
    5.58,
    256.16,
-   -1.0,
-   1.0,
+   0.0,
+   1.5,
+   -21.21,
+   28.48
+  ]
+ },
+ {
+  "name": "W-C",
+  "body": "W-C-2",
+  "path": "Wing/Wing_Ribs",
+  "material": "Balsa medium",
+  "vol_mm3": 5876.59,
+  "mass_g": 0.823,
+  "bb": [
+   5.58,
+   256.16,
+   -1.5,
+   0.0,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-R055-R",
+  "body": "W-R055-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7833.01,
-  "mass_g": 1.097,
+  "vol_mm3": 5873.49,
+  "mass_g": 0.822,
   "bb": [
    5.58,
    256.16,
-   54.0,
-   56.0,
+   54.25,
+   55.75,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-R055-L",
+  "body": "W-R055-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7833.35,
-  "mass_g": 1.097,
+  "vol_mm3": 5873.84,
+  "mass_g": 0.822,
   "bb": [
    5.58,
    256.16,
-   -56.0,
-   -54.0,
+   -55.75,
+   -54.25,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-R110-R",
+  "body": "W-R110-R-1",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 15096.07,
-  "mass_g": 2.113,
+  "vol_mm3": 7547.42,
+  "mass_g": 1.057,
   "bb": [
    5.58,
    256.16,
-   108.5,
+   110.0,
    111.5,
    -21.21,
    28.48
   ]
  },
  {
-  "name": "W-R110-L",
+  "name": "W-R110-R",
+  "body": "W-R110-R-2",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 15096.53,
-  "mass_g": 2.114,
+  "vol_mm3": 7547.22,
+  "mass_g": 1.057,
   "bb": [
    5.58,
    256.16,
-   -111.5,
+   108.5,
+   110.0,
+   -21.21,
+   28.48
+  ]
+ },
+ {
+  "name": "W-R110-L",
+  "body": "W-R110-L-1",
+  "path": "Wing/Wing_Ribs",
+  "material": "Balsa medium",
+  "vol_mm3": 7547.76,
+  "mass_g": 1.057,
+  "bb": [
+   5.58,
+   256.16,
+   -110.0,
    -108.5,
    -21.21,
    28.48
   ]
  },
  {
-  "name": "W-R165-R",
+  "name": "W-R110-L",
+  "body": "W-R110-L-2",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 9508.12,
-  "mass_g": 1.331,
+  "vol_mm3": 7547.56,
+  "mass_g": 1.057,
+  "bb": [
+   5.58,
+   256.16,
+   -111.5,
+   -110.0,
+   -21.21,
+   28.48
+  ]
+ },
+ {
+  "name": "W-R165-R",
+  "body": "W-R165-R",
+  "path": "Wing/Wing_Ribs",
+  "material": "Balsa medium",
+  "vol_mm3": 6352.18,
+  "mass_g": 0.889,
   "bb": [
    5.58,
    209.22,
-   164.0,
-   166.0,
+   164.25,
+   165.75,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R165-L",
+  "body": "W-R165-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 9508.58,
-  "mass_g": 1.331,
+  "vol_mm3": 6352.18,
+  "mass_g": 0.889,
   "bb": [
    5.58,
    209.22,
-   -166.0,
-   -164.0,
+   -165.75,
+   -164.25,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R220-R",
+  "body": "W-R220-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7208.86,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.09,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   219.0,
-   221.0,
+   219.25,
+   220.75,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R220-L",
+  "body": "W-R220-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7209.01,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.24,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   -221.0,
-   -219.0,
+   -220.75,
+   -219.25,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R275-R",
+  "body": "W-R275-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7208.92,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.15,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   274.0,
-   276.0,
+   274.25,
+   275.75,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R275-L",
+  "body": "W-R275-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7209.07,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.3,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   -276.0,
-   -274.0,
+   -275.75,
+   -274.25,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R330-R",
+  "body": "W-R330-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7208.88,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.11,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   329.0,
-   331.0,
+   329.25,
+   330.75,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R330-L",
+  "body": "W-R330-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7209.03,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.26,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   -331.0,
-   -329.0,
+   -330.75,
+   -329.25,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R385-R",
+  "body": "W-R385-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7208.83,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.06,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   384.0,
-   386.0,
+   384.25,
+   385.75,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R385-L",
+  "body": "W-R385-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7208.98,
-  "mass_g": 1.009,
+  "vol_mm3": 5406.21,
+  "mass_g": 0.757,
   "bb": [
    5.58,
    209.22,
-   -386.0,
-   -384.0,
+   -385.75,
+   -384.25,
    -18.75,
    28.48
   ]
  },
  {
   "name": "W-R440-R",
+  "body": "W-R440-R",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7860.12,
-  "mass_g": 1.1,
+  "vol_mm3": 5893.85,
+  "mass_g": 0.825,
   "bb": [
    5.58,
    256.16,
-   438.5,
-   440.5,
+   438.75,
+   440.25,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-R440-L",
+  "body": "W-R440-L",
   "path": "Wing/Wing_Ribs",
   "material": "Balsa medium",
-  "vol_mm3": 7860.46,
-  "mass_g": 1.1,
+  "vol_mm3": 5894.19,
+  "mass_g": 0.825,
   "bb": [
    5.58,
    256.16,
-   -440.5,
-   -438.5,
+   -440.25,
+   -438.75,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-TIP-R",
+  "body": "W-TIP-R",
   "path": "Wing/Wing_Ribs",
-  "material": "Balsa light",
-  "vol_mm3": 17837.68,
-  "mass_g": 1.784,
+  "material": "Balsa medium",
+  "vol_mm3": 8916.09,
+  "mass_g": 1.248,
   "bb": [
    5.58,
    256.16,
-   489.0,
    492.0,
+   493.5,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-TIP-L",
+  "body": "W-TIP-L",
   "path": "Wing/Wing_Ribs",
-  "material": "Balsa light",
-  "vol_mm3": 17838.14,
-  "mass_g": 1.784,
+  "material": "Balsa medium",
+  "vol_mm3": 8916.55,
+  "mass_g": 1.248,
   "bb": [
    5.58,
    256.16,
+   -493.5,
    -492.0,
-   -489.0,
    -21.21,
    28.48
   ]
  },
  {
   "name": "W-TIPCAP-R",
+  "body": "W-TIPCAP-R",
   "path": "Wing/Wing_Ribs",
-  "material": "Balsa light",
-  "vol_mm3": 13928.91,
-  "mass_g": 1.393,
+  "material": "Balsa medium",
+  "vol_mm3": 6963.5,
+  "mass_g": 0.975,
   "bb": [
    -0.48,
    281.21,
-   492.0,
+   493.5,
    495.0,
    -24.07,
    30.34
@@ -1816,134 +2897,255 @@
  },
  {
   "name": "W-TIPCAP-L",
+  "body": "W-TIPCAP-L",
   "path": "Wing/Wing_Ribs",
-  "material": "Balsa light",
-  "vol_mm3": 13929.09,
-  "mass_g": 1.393,
+  "material": "Balsa medium",
+  "vol_mm3": 6963.68,
+  "mass_g": 0.975,
   "bb": [
    -0.48,
    281.21,
    -495.0,
-   -492.0,
+   -493.5,
    -24.07,
    30.34
   ]
  },
  {
   "name": "FSP-C",
+  "body": "FSP-C-1",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 13589.82,
-  "mass_g": 1.903,
+  "vol_mm3": 6688.68,
+  "mass_g": 0.936,
   "bb": [
    204.67,
+   207.0,
+   -146.0,
+   146.0,
+   -11.74,
+   4.29
+  ]
+ },
+ {
+  "name": "FSP-C",
+  "body": "FSP-C-2",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 6688.49,
+  "mass_g": 0.936,
+  "bb": [
+   206.17,
    208.5,
-   -145.0,
-   149.0,
+   -146.0,
+   146.0,
    -11.82,
+   4.21
+  ]
+ },
+ {
+  "name": "FSP-R1",
+  "body": "FSP-R1-1",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 5040.7,
+  "mass_g": 0.706,
+  "bb": [
+   204.67,
+   207.0,
+   142.0,
+   361.5,
+   -11.74,
    4.29
   ]
  },
  {
   "name": "FSP-R1",
+  "body": "FSP-R1-2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 9893.19,
-  "mass_g": 1.385,
+  "vol_mm3": 5040.51,
+  "mass_g": 0.706,
   "bb": [
-   204.67,
+   206.17,
    208.5,
-   145.0,
+   142.0,
    361.5,
    -11.82,
+   4.21
+  ]
+ },
+ {
+  "name": "FSP-L1",
+  "body": "FSP-L1-1",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 5041.04,
+  "mass_g": 0.706,
+  "bb": [
+   204.67,
+   207.0,
+   -361.5,
+   -142.0,
+   -11.74,
    4.29
   ]
  },
  {
   "name": "FSP-L1",
+  "body": "FSP-L1-2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 9893.53,
-  "mass_g": 1.385,
+  "vol_mm3": 5040.85,
+  "mass_g": 0.706,
   "bb": [
-   204.67,
+   206.17,
    208.5,
    -361.5,
-   -145.0,
+   -142.0,
    -11.82,
+   4.21
+  ]
+ },
+ {
+  "name": "FSP-R2",
+  "body": "FSP-R2-1",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 3138.6,
+  "mass_g": 0.439,
+  "bb": [
+   204.67,
+   207.0,
+   357.5,
+   493.5,
+   -11.74,
    4.29
   ]
  },
  {
   "name": "FSP-R2",
+  "body": "FSP-R2-2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 6149.09,
-  "mass_g": 0.861,
+  "vol_mm3": 3138.4,
+  "mass_g": 0.439,
   "bb": [
-   204.67,
+   206.17,
    208.5,
    357.5,
-   492.0,
+   493.5,
    -11.82,
+   4.21
+  ]
+ },
+ {
+  "name": "FSP-L2",
+  "body": "FSP-L2-1",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 3138.94,
+  "mass_g": 0.439,
+  "bb": [
+   204.67,
+   207.0,
+   -493.5,
+   -357.5,
+   -11.74,
    4.29
   ]
  },
  {
   "name": "FSP-L2",
+  "body": "FSP-L2-2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 6149.43,
-  "mass_g": 0.861,
+  "vol_mm3": 3138.74,
+  "mass_g": 0.439,
   "bb": [
-   204.67,
+   206.17,
    208.5,
-   -492.0,
+   -493.5,
    -357.5,
    -11.82,
-   4.29
+   4.21
   ]
  },
  {
   "name": "WF-R1",
+  "body": "WF-R1",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2885.88,
-  "mass_g": 0.404,
-  "bb": [
-   70.61,
-   73.99,
-   0.0,
-   56.0,
-   -11.38,
-   24.75
-  ]
- },
- {
-  "name": "WF-L1",
-  "path": "Wing/Wing_Spars",
-  "material": "Balsa medium",
-  "vol_mm3": 2886.12,
-  "mass_g": 0.404,
-  "bb": [
-   70.61,
-   73.99,
-   -56.0,
-   0.0,
-   -11.38,
-   24.75
-  ]
- },
- {
-  "name": "WF-R2",
-  "path": "Wing/Wing_Spars",
-  "material": "Balsa medium",
-  "vol_mm3": 2870.67,
+  "vol_mm3": 2872.34,
   "mass_g": 0.402,
   "bb": [
    70.61,
    73.99,
-   54.0,
+   0.0,
+   55.75,
+   -11.38,
+   24.75
+  ]
+ },
+ {
+  "name": "WF-R1D",
+  "body": "WF-R1D",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2839.9,
+  "mass_g": 0.398,
+  "bb": [
+   69.11,
+   72.49,
+   1.6,
+   54.15,
+   -11.34,
+   24.74
+  ]
+ },
+ {
+  "name": "WF-L1",
+  "body": "WF-L1",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2872.58,
+  "mass_g": 0.402,
+  "bb": [
+   70.61,
+   73.99,
+   -55.75,
+   0.0,
+   -11.38,
+   24.75
+  ]
+ },
+ {
+  "name": "WF-L1D",
+  "body": "WF-L1D",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2840.13,
+  "mass_g": 0.398,
+  "bb": [
+   69.11,
+   72.49,
+   -54.15,
+   -1.6,
+   -11.34,
+   24.74
+  ]
+ },
+ {
+  "name": "WF-R2",
+  "body": "WF-R2",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2881.21,
+  "mass_g": 0.403,
+  "bb": [
+   70.61,
+   73.99,
+   54.25,
    111.5,
    -11.38,
    24.75
@@ -1951,44 +3153,47 @@
  },
  {
   "name": "WF-L2",
+  "body": "WF-L2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2870.91,
-  "mass_g": 0.402,
+  "vol_mm3": 2881.45,
+  "mass_g": 0.403,
   "bb": [
    70.61,
    73.99,
    -111.5,
-   -54.0,
+   -54.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R3",
+  "body": "WF-R3",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2870.69,
-  "mass_g": 0.402,
+  "vol_mm3": 2881.22,
+  "mass_g": 0.403,
   "bb": [
    70.61,
    73.99,
    108.5,
-   166.0,
+   165.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L3",
+  "body": "WF-L3",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2870.92,
-  "mass_g": 0.402,
+  "vol_mm3": 2881.46,
+  "mass_g": 0.403,
   "bb": [
    70.61,
    73.99,
-   -166.0,
+   -165.75,
    -108.5,
    -11.38,
    24.75
@@ -1996,209 +3201,223 @@
  },
  {
   "name": "WF-R4",
+  "body": "WF-R4",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.76,
-  "mass_g": 0.405,
+  "vol_mm3": 2912.83,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   164.0,
-   221.0,
+   164.25,
+   220.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L4",
+  "body": "WF-L4",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2892.0,
-  "mass_g": 0.405,
+  "vol_mm3": 2913.07,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   -221.0,
-   -164.0,
+   -220.75,
+   -164.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R5",
+  "body": "WF-R5",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.73,
-  "mass_g": 0.405,
+  "vol_mm3": 2912.8,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   219.0,
-   276.0,
+   219.25,
+   275.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L5",
+  "body": "WF-L5",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.96,
-  "mass_g": 0.405,
+  "vol_mm3": 2913.03,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   -276.0,
-   -219.0,
+   -275.75,
+   -219.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R6",
+  "body": "WF-R6",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.69,
-  "mass_g": 0.405,
+  "vol_mm3": 2912.76,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   274.0,
-   331.0,
+   274.25,
+   330.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L6",
+  "body": "WF-L6",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.93,
-  "mass_g": 0.405,
+  "vol_mm3": 2913.0,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   -331.0,
-   -274.0,
+   -330.75,
+   -274.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R7",
+  "body": "WF-R7",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2891.83,
-  "mass_g": 0.405,
+  "vol_mm3": 2912.9,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   329.0,
-   386.0,
+   329.25,
+   385.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L7",
+  "body": "WF-L7",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2892.07,
-  "mass_g": 0.405,
+  "vol_mm3": 2913.14,
+  "mass_g": 0.408,
   "bb": [
    70.61,
    73.99,
-   -386.0,
-   -329.0,
+   -385.75,
+   -329.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R8",
+  "body": "WF-R8",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2864.61,
-  "mass_g": 0.401,
+  "vol_mm3": 2885.68,
+  "mass_g": 0.404,
   "bb": [
    70.61,
    73.99,
-   384.0,
-   440.5,
+   384.25,
+   440.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L8",
+  "body": "WF-L8",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2864.85,
-  "mass_g": 0.401,
+  "vol_mm3": 2885.92,
+  "mass_g": 0.404,
   "bb": [
    70.61,
    73.99,
-   -440.5,
-   -384.0,
+   -440.25,
+   -384.25,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-R9",
+  "body": "WF-R9",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2654.06,
-  "mass_g": 0.372,
+  "vol_mm3": 2818.02,
+  "mass_g": 0.395,
   "bb": [
    70.61,
    73.99,
-   438.5,
-   492.0,
+   438.75,
+   493.5,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WF-L9",
+  "body": "WF-L9",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2654.29,
-  "mass_g": 0.372,
+  "vol_mm3": 2818.25,
+  "mass_g": 0.395,
   "bb": [
    70.61,
    73.99,
-   -492.0,
-   -438.5,
+   -493.5,
+   -438.75,
    -11.38,
    24.75
   ]
  },
  {
   "name": "WR-R1",
+  "body": "WR-R1",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2888.44,
-  "mass_g": 0.404,
+  "vol_mm3": 2874.89,
+  "mass_g": 0.402,
   "bb": [
    78.11,
    81.5,
    0.0,
-   56.0,
+   55.75,
    -11.52,
    24.64
   ]
  },
  {
   "name": "WR-L1",
+  "body": "WR-L1",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2888.68,
-  "mass_g": 0.404,
+  "vol_mm3": 2875.13,
+  "mass_g": 0.403,
   "bb": [
    78.11,
    81.5,
-   -56.0,
+   -55.75,
    0.0,
    -11.52,
    24.64
@@ -2206,14 +3425,15 @@
  },
  {
   "name": "WR-R2",
+  "body": "WR-R2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2873.21,
-  "mass_g": 0.402,
+  "vol_mm3": 2883.76,
+  "mass_g": 0.404,
   "bb": [
    78.11,
    81.5,
-   54.0,
+   54.25,
    111.5,
    -11.52,
    24.64
@@ -2221,160 +3441,171 @@
  },
  {
   "name": "WR-L2",
+  "body": "WR-L2",
   "path": "Wing/Wing_Spars",
   "material": "Balsa medium",
-  "vol_mm3": 2873.45,
-  "mass_g": 0.402,
+  "vol_mm3": 2883.99,
+  "mass_g": 0.404,
   "bb": [
    78.11,
    81.5,
    -111.5,
-   -54.0,
-   -11.52,
-   24.64
-  ]
- },
- {
-  "name": "WR-R3",
-  "path": "Wing/Wing_Spars",
-  "material": "Balsa medium",
-  "vol_mm3": 2873.22,
-  "mass_g": 0.402,
-  "bb": [
-   78.11,
-   81.5,
-   108.5,
-   166.0,
-   -11.52,
-   24.64
-  ]
- },
- {
-  "name": "WR-L3",
-  "path": "Wing/Wing_Spars",
-  "material": "Balsa medium",
-  "vol_mm3": 2873.46,
-  "mass_g": 0.402,
-  "bb": [
-   78.11,
-   81.5,
-   -166.0,
-   -108.5,
+   -54.25,
    -11.52,
    24.64
   ]
  },
  {
   "name": "CAP-C-TOP",
+  "body": "CAP-C-TOP",
   "path": "Wing/Wing_Spars",
   "material": "Carbon",
-  "vol_mm3": 2952.0,
-  "mass_g": 4.576,
+  "vol_mm3": 2961.0,
+  "mass_g": 4.59,
   "bb": [
    73.97,
    79.99,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    23.93,
    24.74
   ]
  },
  {
   "name": "CAP-B-TOP",
+  "body": "CAP-B-TOP",
   "path": "Wing/Wing_Spars",
-  "material": "Balsa hard",
-  "vol_mm3": 17712.0,
-  "mass_g": 2.834,
+  "material": "Balsa medium",
+  "vol_mm3": 17766.0,
+  "mass_g": 2.487,
   "bb": [
    73.81,
    79.96,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    20.93,
    24.24
   ]
  },
  {
   "name": "CAP-C-BOT",
+  "body": "CAP-C-BOT",
   "path": "Wing/Wing_Spars",
   "material": "Carbon",
-  "vol_mm3": 2952.0,
-  "mass_g": 4.576,
+  "vol_mm3": 2961.0,
+  "mass_g": 4.59,
   "bb": [
    72.11,
    78.13,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    -11.5,
    -10.68
   ]
  },
  {
   "name": "CAP-B-BOT",
+  "body": "CAP-B-BOT",
   "path": "Wing/Wing_Spars",
-  "material": "Balsa hard",
-  "vol_mm3": 17712.0,
-  "mass_g": 2.834,
+  "material": "Balsa medium",
+  "vol_mm3": 17766.0,
+  "mass_g": 2.487,
   "bb": [
    72.14,
    78.29,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    -11.0,
    -7.69
   ]
  },
  {
+  "name": "WR-R3",
+  "body": "WR-R3",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2883.77,
+  "mass_g": 0.404,
+  "bb": [
+   78.11,
+   81.5,
+   108.5,
+   165.75,
+   -11.52,
+   24.64
+  ]
+ },
+ {
+  "name": "WR-L3",
+  "body": "WR-L3",
+  "path": "Wing/Wing_Spars",
+  "material": "Balsa medium",
+  "vol_mm3": 2884.01,
+  "mass_g": 0.404,
+  "bb": [
+   78.11,
+   81.5,
+   -165.75,
+   -108.5,
+   -11.52,
+   24.64
+  ]
+ },
+ {
   "name": "LE",
+  "body": "LE",
   "path": "Wing/Wing_Sheeting",
   "material": "Balsa medium",
-  "vol_mm3": 65283.31,
-  "mass_g": 9.14,
+  "vol_mm3": 65482.35,
+  "mass_g": 9.168,
   "bb": [
    -0.28,
    6.56,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    -5.81,
    10.76
   ]
  },
  {
   "name": "DBOX-TOP",
+  "body": "DBOX-TOP",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
-  "vol_mm3": 115298.09,
-  "mass_g": 11.53,
+  "material": "Balsa medium",
+  "vol_mm3": 115649.61,
+  "mass_g": 16.191,
   "bb": [
    6.44,
    81.48,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    4.46,
    29.97
   ]
  },
  {
   "name": "DBOX-BOT",
+  "body": "DBOX-BOT",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
-  "vol_mm3": 109651.78,
-  "mass_g": 10.965,
+  "material": "Balsa medium",
+  "vol_mm3": 109986.09,
+  "mass_g": 15.398,
   "bb": [
    5.5,
    79.68,
-   -492.0,
-   492.0,
+   -493.5,
+   493.5,
    -13.6,
    -4.24
   ]
  },
  {
   "name": "TE-C",
+  "body": "TE-C",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa hard",
+  "material": "Balsa medium",
   "vol_mm3": 11250.25,
-  "mass_g": 1.8,
+  "mass_g": 1.575,
   "bb": [
    254.65,
    279.89,
@@ -2386,29 +3617,31 @@
  },
  {
   "name": "TE-O-R",
+  "body": "TE-O-R",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa hard",
-  "vol_mm3": 2699.05,
-  "mass_g": 0.432,
+  "material": "Balsa medium",
+  "vol_mm3": 2774.73,
+  "mass_g": 0.388,
   "bb": [
    254.65,
    279.89,
    438.5,
-   492.0,
+   493.5,
    -14.65,
    -8.2
   ]
  },
  {
   "name": "TE-O-L",
+  "body": "TE-O-L",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa hard",
-  "vol_mm3": 2699.05,
-  "mass_g": 0.432,
+  "material": "Balsa medium",
+  "vol_mm3": 2774.73,
+  "mass_g": 0.388,
   "bb": [
    254.65,
    279.89,
-   -492.0,
+   -493.5,
    -438.5,
    -14.65,
    -8.2
@@ -2416,10 +3649,11 @@
  },
  {
   "name": "CS-TF-R",
+  "body": "CS-TF-R",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 10589.0,
-  "mass_g": 1.059,
+  "mass_g": 1.482,
   "bb": [
    80.63,
    206.31,
@@ -2431,10 +3665,11 @@
  },
  {
   "name": "CS-TF-L",
+  "body": "CS-TF-L",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 10589.0,
-  "mass_g": 1.059,
+  "mass_g": 1.482,
   "bb": [
    80.63,
    206.31,
@@ -2446,10 +3681,11 @@
  },
  {
   "name": "CS-BF-R",
+  "body": "CS-BF-R",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 10513.22,
-  "mass_g": 1.051,
+  "mass_g": 1.472,
   "bb": [
    79.43,
    204.74,
@@ -2461,10 +3697,11 @@
  },
  {
   "name": "CS-BF-L",
+  "body": "CS-BF-L",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 10513.22,
-  "mass_g": 1.051,
+  "mass_g": 1.472,
   "bb": [
    79.43,
    204.74,
@@ -2476,10 +3713,11 @@
  },
  {
   "name": "CS-TA-R",
+  "body": "CS-TA-R",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 4034.42,
-  "mass_g": 0.403,
+  "mass_g": 0.565,
   "bb": [
    207.9,
    255.44,
@@ -2491,10 +3729,11 @@
  },
  {
   "name": "CS-TA-L",
+  "body": "CS-TA-L",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 4034.42,
-  "mass_g": 0.403,
+  "mass_g": 0.565,
   "bb": [
    207.9,
    255.44,
@@ -2506,10 +3745,11 @@
  },
  {
   "name": "CS-BA-R",
+  "body": "CS-BA-R",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 3948.06,
-  "mass_g": 0.395,
+  "mass_g": 0.553,
   "bb": [
    207.67,
    254.76,
@@ -2521,10 +3761,11 @@
  },
  {
   "name": "CS-BA-L",
+  "body": "CS-BA-L",
   "path": "Wing/Wing_Sheeting",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 3948.06,
-  "mass_g": 0.395,
+  "mass_g": 0.553,
   "bb": [
    207.67,
    254.76,
@@ -2536,10 +3777,11 @@
  },
  {
   "name": "CAPS-R110-TF-R",
+  "body": "CAPS-R110-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2551,10 +3793,11 @@
  },
  {
   "name": "CAPS-R110-TF-L",
+  "body": "CAPS-R110-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2566,10 +3809,11 @@
  },
  {
   "name": "CAPS-R110-TA-R",
+  "body": "CAPS-R110-TA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
@@ -2581,10 +3825,11 @@
  },
  {
   "name": "CAPS-R110-TA-L",
+  "body": "CAPS-R110-TA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
@@ -2596,10 +3841,11 @@
  },
  {
   "name": "CAPS-R110-BF-R",
+  "body": "CAPS-R110-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2611,10 +3857,11 @@
  },
  {
   "name": "CAPS-R110-BF-L",
+  "body": "CAPS-R110-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2626,10 +3873,11 @@
  },
  {
   "name": "CAPS-R110-BA-R",
+  "body": "CAPS-R110-BA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
@@ -2641,10 +3889,11 @@
  },
  {
   "name": "CAPS-R110-BA-L",
+  "body": "CAPS-R110-BA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
@@ -2656,10 +3905,11 @@
  },
  {
   "name": "CAPS-R165-TF-R",
+  "body": "CAPS-R165-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2671,10 +3921,11 @@
  },
  {
   "name": "CAPS-R165-TF-L",
+  "body": "CAPS-R165-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2686,10 +3937,11 @@
  },
  {
   "name": "CAPS-R165-BF-R",
+  "body": "CAPS-R165-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2701,10 +3953,11 @@
  },
  {
   "name": "CAPS-R165-BF-L",
+  "body": "CAPS-R165-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2716,10 +3969,11 @@
  },
  {
   "name": "CAPS-R220-TF-R",
+  "body": "CAPS-R220-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2731,10 +3985,11 @@
  },
  {
   "name": "CAPS-R220-TF-L",
+  "body": "CAPS-R220-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2746,10 +4001,11 @@
  },
  {
   "name": "CAPS-R220-BF-R",
+  "body": "CAPS-R220-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2761,10 +4017,11 @@
  },
  {
   "name": "CAPS-R220-BF-L",
+  "body": "CAPS-R220-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2776,10 +4033,11 @@
  },
  {
   "name": "CAPS-R275-TF-R",
+  "body": "CAPS-R275-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2791,10 +4049,11 @@
  },
  {
   "name": "CAPS-R275-TF-L",
+  "body": "CAPS-R275-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2806,10 +4065,11 @@
  },
  {
   "name": "CAPS-R275-BF-R",
+  "body": "CAPS-R275-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2821,10 +4081,11 @@
  },
  {
   "name": "CAPS-R275-BF-L",
+  "body": "CAPS-R275-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2836,10 +4097,11 @@
  },
  {
   "name": "CAPS-R330-TF-R",
+  "body": "CAPS-R330-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2851,10 +4113,11 @@
  },
  {
   "name": "CAPS-R330-TF-L",
+  "body": "CAPS-R330-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2866,10 +4129,11 @@
  },
  {
   "name": "CAPS-R330-BF-R",
+  "body": "CAPS-R330-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2881,10 +4145,11 @@
  },
  {
   "name": "CAPS-R330-BF-L",
+  "body": "CAPS-R330-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2896,10 +4161,11 @@
  },
  {
   "name": "CAPS-R385-TF-R",
+  "body": "CAPS-R385-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2911,10 +4177,11 @@
  },
  {
   "name": "CAPS-R385-TF-L",
+  "body": "CAPS-R385-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2926,10 +4193,11 @@
  },
  {
   "name": "CAPS-R385-BF-R",
+  "body": "CAPS-R385-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2941,10 +4209,11 @@
  },
  {
   "name": "CAPS-R385-BF-L",
+  "body": "CAPS-R385-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -2956,10 +4225,11 @@
  },
  {
   "name": "CAPS-R440-TF-R",
+  "body": "CAPS-R440-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2971,10 +4241,11 @@
  },
  {
   "name": "CAPS-R440-TF-L",
+  "body": "CAPS-R440-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
@@ -2986,40 +4257,43 @@
  },
  {
   "name": "CAPS-R440-TA-R",
+  "body": "CAPS-R440-TA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
-   438.5,
-   444.5,
+   438.75,
+   444.75,
    -9.73,
    4.14
   ]
  },
  {
   "name": "CAPS-R440-TA-L",
+  "body": "CAPS-R440-TA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
-   -444.5,
-   -438.5,
+   -444.75,
+   -438.75,
    -9.73,
    4.14
   ]
  },
  {
   "name": "CAPS-R440-BF-R",
+  "body": "CAPS-R440-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -3031,10 +4305,11 @@
  },
  {
   "name": "CAPS-R440-BF-L",
+  "body": "CAPS-R440-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
@@ -3046,430 +4321,299 @@
  },
  {
   "name": "CAPS-R440-BA-R",
+  "body": "CAPS-R440-BA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
-   438.5,
-   444.5,
+   438.75,
+   444.75,
    -14.28,
    -8.75
   ]
  },
  {
   "name": "CAPS-R440-BA-L",
+  "body": "CAPS-R440-BA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
-   -444.5,
-   -438.5,
+   -444.75,
+   -438.75,
    -14.28,
    -8.75
   ]
  },
  {
   "name": "CAPS-TIP-TF-R",
+  "body": "CAPS-TIP-TF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
-   486.0,
-   492.0,
+   487.5,
+   493.5,
    3.37,
    26.15
   ]
  },
  {
   "name": "CAPS-TIP-TF-L",
+  "body": "CAPS-TIP-TF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1134.56,
-  "mass_g": 0.113,
+  "mass_g": 0.159,
   "bb": [
    80.63,
    206.31,
-   -492.0,
-   -486.0,
+   -493.5,
+   -487.5,
    3.37,
    26.15
   ]
  },
  {
   "name": "CAPS-TIP-TA-R",
+  "body": "CAPS-TIP-TA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
-   486.0,
-   492.0,
+   487.5,
+   493.5,
    -9.73,
    4.14
   ]
  },
  {
   "name": "CAPS-TIP-TA-L",
+  "body": "CAPS-TIP-TA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 432.26,
-  "mass_g": 0.043,
+  "mass_g": 0.061,
   "bb": [
    207.9,
    255.44,
-   -492.0,
-   -486.0,
+   -493.5,
+   -487.5,
    -9.73,
    4.14
   ]
  },
  {
   "name": "CAPS-TIP-BF-R",
+  "body": "CAPS-TIP-BF-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
-   486.0,
-   492.0,
+   487.5,
+   493.5,
    -19.56,
    -3.78
   ]
  },
  {
   "name": "CAPS-TIP-BF-L",
+  "body": "CAPS-TIP-BF-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 1126.41,
-  "mass_g": 0.113,
+  "mass_g": 0.158,
   "bb": [
    79.43,
    204.74,
-   -492.0,
-   -486.0,
+   -493.5,
+   -487.5,
    -19.56,
    -3.78
   ]
  },
  {
   "name": "CAPS-TIP-BA-R",
+  "body": "CAPS-TIP-BA-R",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
-   486.0,
-   492.0,
+   487.5,
+   493.5,
    -14.28,
    -8.75
   ]
  },
  {
   "name": "CAPS-TIP-BA-L",
+  "body": "CAPS-TIP-BA-L",
   "path": "Wing/Wing_Caps",
-  "material": "Balsa light",
+  "material": "Balsa medium",
   "vol_mm3": 423.01,
-  "mass_g": 0.042,
+  "mass_g": 0.059,
   "bb": [
    207.67,
    254.76,
-   -492.0,
-   -486.0,
+   -493.5,
+   -487.5,
    -14.28,
    -8.75
   ]
  },
  {
-  "name": "AIL-LE-R",
+  "name": "HINGE-AIL-R1",
+  "body": "HINGE-AIL-R1",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 11003.71,
-  "mass_g": 1.541,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   209.67,
-   213.46,
-   112.5,
-   437.5,
-   -11.9,
-   3.33
+   200.08,
+   218.08,
+   120.0,
+   140.0,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "AIL-LE-L",
+  "name": "HINGE-AIL-R2",
+  "body": "HINGE-AIL-R2",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 11003.71,
-  "mass_g": 1.541,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   209.67,
-   213.46,
-   -437.5,
-   -112.5,
-   -11.9,
-   3.33
+   200.08,
+   218.08,
+   237.5,
+   257.5,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "AIL-TE-R",
+  "name": "HINGE-AIL-R3",
+  "body": "HINGE-AIL-R3",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 16396.11,
-  "mass_g": 2.295,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   254.65,
-   279.89,
-   112.5,
-   437.5,
-   -14.65,
-   -8.2
+   200.08,
+   218.08,
+   292.5,
+   312.5,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "AIL-TE-L",
+  "name": "HINGE-AIL-R4",
+  "body": "HINGE-AIL-R4",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 16396.11,
-  "mass_g": 2.295,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   254.65,
-   279.89,
-   -437.5,
-   -112.5,
-   -14.65,
-   -8.2
+   200.08,
+   218.08,
+   410.0,
+   430.0,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "A112-R",
+  "name": "HINGE-AIL-L1",
+  "body": "HINGE-AIL-L1",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.1,
-  "mass_g": 0.111,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   212.67,
-   255.38,
-   112.5,
-   114.5,
-   -14.02,
-   2.85
+   200.08,
+   218.08,
+   -140.0,
+   -120.0,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "A112-L",
+  "name": "HINGE-AIL-L2",
+  "body": "HINGE-AIL-L2",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.33,
-  "mass_g": 0.111,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   212.67,
-   255.38,
-   -114.5,
-   -112.5,
-   -14.02,
-   2.85
+   200.08,
+   218.08,
+   -257.5,
+   -237.5,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "A165-R",
+  "name": "HINGE-AIL-L3",
+  "body": "HINGE-AIL-L3",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.89,
-  "mass_g": 0.111,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   212.67,
-   255.38,
-   164.0,
-   166.0,
-   -14.02,
-   2.85
+   200.08,
+   218.08,
+   -312.5,
+   -292.5,
+   -4.69,
+   -3.25
   ]
  },
  {
-  "name": "A165-L",
+  "name": "HINGE-AIL-L4",
+  "body": "HINGE-AIL-L4",
   "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.12,
-  "mass_g": 0.111,
+  "material": "PET bottle",
+  "vol_mm3": 180.0,
+  "mass_g": 0.248,
   "bb": [
-   212.67,
-   255.38,
-   -166.0,
-   -164.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A220-R",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.81,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   219.0,
-   221.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A220-L",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.04,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   -221.0,
-   -219.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A275-R",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.9,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   274.0,
-   276.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A275-L",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.13,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   -276.0,
-   -274.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A330-R",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.84,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   329.0,
-   331.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A330-L",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.07,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   -331.0,
-   -329.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A385-R",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.76,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   384.0,
-   386.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A385-L",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.99,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   -386.0,
-   -384.0,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A437-R",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 792.95,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   435.5,
-   437.5,
-   -14.02,
-   2.85
-  ]
- },
- {
-  "name": "A437-L",
-  "path": "Wing/Wing_Aileron",
-  "material": "Balsa medium",
-  "vol_mm3": 793.18,
-  "mass_g": 0.111,
-  "bb": [
-   212.67,
-   255.38,
-   -437.5,
-   -435.5,
-   -14.02,
-   2.85
+   200.08,
+   218.08,
+   -430.0,
+   -410.0,
+   -4.69,
+   -3.25
   ]
  },
  {
   "name": "SERVO-HATCH-R",
+  "body": "SERVO-HATCH-R",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
-  "vol_mm3": 1803.2,
-  "mass_g": 2.29,
+  "vol_mm3": 1736.32,
+  "mass_g": 2.205,
   "bb": [
    109.46,
    155.6,
@@ -3481,6 +4625,7 @@
  },
  {
   "name": "SERVO-FRAME-R",
+  "body": "SERVO-FRAME-R",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
   "vol_mm3": 500.0,
@@ -3496,6 +4641,7 @@
  },
  {
   "name": "SERVO-FRAME-R",
+  "body": "Body2",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
   "vol_mm3": 196.0,
@@ -3511,10 +4657,11 @@
  },
  {
   "name": "SERVO-HATCH-L",
+  "body": "SERVO-HATCH-L",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
-  "vol_mm3": 1803.2,
-  "mass_g": 2.29,
+  "vol_mm3": 1736.32,
+  "mass_g": 2.205,
   "bb": [
    109.46,
    155.6,
@@ -3526,6 +4673,7 @@
  },
  {
   "name": "SERVO-FRAME-L",
+  "body": "SERVO-FRAME-L",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
   "vol_mm3": 500.0,
@@ -3541,6 +4689,7 @@
  },
  {
   "name": "SERVO-FRAME-L",
+  "body": "Body2",
   "path": "Wing/Wing_Servo",
   "material": "PETG",
   "vol_mm3": 196.0,
@@ -3556,6 +4705,7 @@
  },
  {
   "name": "SERVO-W-R",
+  "body": "SERVO-W-R",
   "path": "Wing/Wing_Servo",
   "material": "Electronics (lumped)",
   "vol_mm3": 6314.23,
@@ -3571,6 +4721,7 @@
  },
  {
   "name": "SERVO-W-L",
+  "body": "SERVO-W-L",
   "path": "Wing/Wing_Servo",
   "material": "Electronics (lumped)",
   "vol_mm3": 6314.23,
@@ -3585,97 +4736,552 @@
   ]
  },
  {
+  "name": "SERVO-ARM-W-R",
+  "body": "SERVO-ARM-W-R",
+  "path": "Wing/Wing_Servo",
+  "material": "Electronics (lumped)",
+  "vol_mm3": 136.47,
+  "mass_g": 0.136,
+  "bb": [
+   134.21,
+   142.15,
+   147.2,
+   149.0,
+   -18.91,
+   -0.41
+  ]
+ },
+ {
+  "name": "SERVO-ARM-W-L",
+  "body": "SERVO-ARM-W-L",
+  "path": "Wing/Wing_Servo",
+  "material": "Electronics (lumped)",
+  "vol_mm3": 136.47,
+  "mass_g": 0.136,
+  "bb": [
+   134.21,
+   142.15,
+   -149.0,
+   -147.2,
+   -18.91,
+   -0.41
+  ]
+ },
+ {
+  "name": "PUSHROD-AIL-R",
+  "body": "PUSHROD-AIL-R",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 79.61,
+  "mass_g": 0.625,
+  "bb": [
+   137.78,
+   208.25,
+   149.1,
+   150.3,
+   -21.02,
+   -16.13
+  ]
+ },
+ {
+  "name": "ZBEND-AIL-SERVO-R",
+  "body": "ZBEND-AIL-SERVO-R",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 3.05,
+  "mass_g": 0.024,
+  "bb": [
+   137.18,
+   138.44,
+   146.4,
+   149.1,
+   -17.36,
+   -16.1
+  ]
+ },
+ {
+  "name": "ZBEND-AIL-HORN-R",
+  "body": "ZBEND-AIL-HORN-R",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 2.88,
+  "mass_g": 0.023,
+  "bb": [
+   207.59,
+   208.85,
+   146.55,
+   149.1,
+   -21.05,
+   -19.79
+  ]
+ },
+ {
+  "name": "PUSHROD-AIL-L",
+  "body": "PUSHROD-AIL-L",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 79.61,
+  "mass_g": 0.625,
+  "bb": [
+   137.78,
+   208.25,
+   -150.3,
+   -149.1,
+   -21.02,
+   -16.13
+  ]
+ },
+ {
+  "name": "ZBEND-AIL-SERVO-L",
+  "body": "ZBEND-AIL-SERVO-L",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 3.05,
+  "mass_g": 0.024,
+  "bb": [
+   137.18,
+   138.44,
+   -149.1,
+   -146.4,
+   -17.36,
+   -16.1
+  ]
+ },
+ {
+  "name": "ZBEND-AIL-HORN-L",
+  "body": "ZBEND-AIL-HORN-L",
+  "path": "Wing/Wing_Servo",
+  "material": "Steel",
+  "vol_mm3": 2.88,
+  "mass_g": 0.023,
+  "bb": [
+   207.59,
+   208.85,
+   -149.1,
+   -146.55,
+   -21.05,
+   -19.79
+  ]
+ },
+ {
+  "name": "WC1R-F",
+  "body": "WC1R-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.84,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   21.5,
+   33.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC1R-R",
+  "body": "WC1R-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.04,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   21.5,
+   33.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC1L-F",
+  "body": "WC1L-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15412.18,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   -33.5,
+   -21.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC1L-R",
+  "body": "WC1L-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.36,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   -33.5,
+   -21.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC2R-F",
+  "body": "WC2R-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.65,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   131.5,
+   143.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC2R-R",
+  "body": "WC2R-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17190.85,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   131.5,
+   143.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC2L-F",
+  "body": "WC2L-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.99,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   -143.5,
+   -131.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC2L-R",
+  "body": "WC2L-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.17,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   -143.5,
+   -131.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC3R-F",
+  "body": "WC3R-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.67,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   241.5,
+   253.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC3R-R",
+  "body": "WC3R-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17190.87,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   241.5,
+   253.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC3L-F",
+  "body": "WC3L-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15412.01,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   -253.5,
+   -241.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC3L-R",
+  "body": "WC3L-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.19,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   -253.5,
+   -241.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC4R-F",
+  "body": "WC4R-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.67,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   351.5,
+   363.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC4R-R",
+  "body": "WC4R-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17190.87,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   351.5,
+   363.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC4L-F",
+  "body": "WC4L-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15412.01,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   -363.5,
+   -351.5,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC4L-R",
+  "body": "WC4L-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.19,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   -363.5,
+   -351.5,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC5R-F",
+  "body": "WC5R-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.62,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   459.0,
+   471.0,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC5R-R",
+  "body": "WC5R-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17190.82,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   459.0,
+   471.0,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
+  "name": "WC5L-F",
+  "body": "WC5L-F",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 15411.96,
+  "mass_g": 5.733,
+  "bb": [
+   -8.83,
+   145.9,
+   -471.0,
+   -459.0,
+   -23.62,
+   2.42
+  ]
+ },
+ {
+  "name": "WC5L-R",
+  "body": "WC5L-R",
+  "path": "Wing/Jigs_Wing",
+  "material": "PLA jig",
+  "vol_mm3": 17191.14,
+  "mass_g": 6.395,
+  "bb": [
+   138.97,
+   279.64,
+   -471.0,
+   -459.0,
+   -30.63,
+   -6.78
+  ]
+ },
+ {
   "name": "STAB-R",
+  "body": "STAB-R-1",
   "path": "Tail/Tail_Surfaces",
   "material": "Balsa medium",
-  "vol_mm3": 18781.67,
-  "mass_g": 2.629,
+  "vol_mm3": 9248.34,
+  "mass_g": 1.295,
   "bb": [
    647.0,
    739.4,
    -1.5,
    245.0,
    43.5,
+   45.0
+  ]
+ },
+ {
+  "name": "STAB-R",
+  "body": "STAB-R-2",
+  "path": "Tail/Tail_Surfaces",
+  "material": "Balsa medium",
+  "vol_mm3": 9248.34,
+  "mass_g": 1.295,
+  "bb": [
+   647.0,
+   739.4,
+   -1.5,
+   245.0,
+   45.0,
    46.5
   ]
  },
  {
   "name": "STAB-L",
+  "body": "STAB-L-1",
   "path": "Tail/Tail_Surfaces",
   "material": "Balsa medium",
-  "vol_mm3": 18782.82,
-  "mass_g": 2.63,
+  "vol_mm3": 9248.34,
+  "mass_g": 1.295,
   "bb": [
    647.0,
    739.4,
    -245.0,
    1.5,
    43.5,
-   46.5
+   45.0
   ]
  },
  {
-  "name": "ELEV-R",
+  "name": "STAB-L",
+  "body": "STAB-L-2",
   "path": "Tail/Tail_Surfaces",
-  "material": "Balsa light",
-  "vol_mm3": 9494.29,
-  "mass_g": 0.949,
+  "material": "Balsa medium",
+  "vol_mm3": 9248.34,
+  "mass_g": 1.295,
   "bb": [
-   739.9,
-   779.0,
-   5.5,
-   245.0,
-   43.5,
-   46.5
-  ]
- },
- {
-  "name": "ELEV-L",
-  "path": "Tail/Tail_Surfaces",
-  "material": "Balsa light",
-  "vol_mm3": 9494.63,
-  "mass_g": 0.949,
-  "bb": [
-   739.9,
-   779.0,
+   647.0,
+   739.4,
    -245.0,
-   -5.5,
-   43.5,
+   1.5,
+   45.0,
    46.5
   ]
  },
  {
   "name": "FIN",
+  "body": "FIN-1",
   "path": "Tail/Tail_Surfaces",
   "material": "Balsa medium",
-  "vol_mm3": 11325.03,
-  "mass_g": 1.586,
+  "vol_mm3": 5519.65,
+  "mass_g": 0.773,
   "bb": [
    667.9,
    739.4,
-   -1.5,
+   0.0,
    1.5,
    -31.6,
    135.0
   ]
  },
  {
-  "name": "RUDDER",
+  "name": "FIN",
+  "body": "FIN-2",
   "path": "Tail/Tail_Surfaces",
-  "material": "Balsa light",
-  "vol_mm3": 7957.85,
-  "mass_g": 0.796,
+  "material": "Balsa medium",
+  "vol_mm3": 5519.65,
+  "mass_g": 0.773,
   "bb": [
-   739.9,
-   778.04,
+   667.9,
+   739.4,
    -1.5,
-   1.5,
-   -28.0,
+   0.0,
+   -31.6,
    135.0
   ]
  },
  {
   "name": "TAILBLOCK",
+  "body": "TAILBLOCK",
   "path": "Tail/Tail_Block",
   "material": "PETG",
   "vol_mm3": 4902.4,
@@ -3691,6 +5297,7 @@
  },
  {
   "name": "TB-WEB-R",
+  "body": "TB-WEB-R",
   "path": "Tail/Tail_Block",
   "material": "PETG",
   "vol_mm3": 110.7,
@@ -3706,6 +5313,7 @@
  },
  {
   "name": "TB-WEB-L",
+  "body": "TB-WEB-L",
   "path": "Tail/Tail_Block",
   "material": "PETG",
   "vol_mm3": 110.7,
@@ -3721,6 +5329,7 @@
  },
  {
   "name": "TB-COLLAR-R",
+  "body": "TB-COLLAR-R",
   "path": "Tail/Tail_Block",
   "material": "PETG",
   "vol_mm3": 1984.93,
@@ -3736,6 +5345,7 @@
  },
  {
   "name": "TB-COLLAR-L",
+  "body": "TB-COLLAR-L",
   "path": "Tail/Tail_Block",
   "material": "PETG",
   "vol_mm3": 1984.93,
@@ -3750,112 +5360,344 @@
   ]
  },
  {
-  "name": "HORN-E",
+  "name": "SERVO-ARM-RUD",
+  "body": "SERVO-ARM-RUD",
   "path": "Tail/Tail_Hardware",
-  "material": "Birch ply",
-  "vol_mm3": 195.93,
-  "mass_g": 0.127,
+  "material": "Electronics (lumped)",
+  "vol_mm3": 75.8,
+  "mass_g": 0.076,
   "bb": [
-   739.4,
-   753.9,
-   -25.75,
-   -24.25,
-   28.0,
-   43.5
+   219.0,
+   226.0,
+   24.5,
+   38.0,
+   -70.5,
+   -69.0
   ]
  },
  {
-  "name": "HORN-R",
+  "name": "SERVO-ARM-ELEV",
+  "body": "SERVO-ARM-ELEV",
   "path": "Tail/Tail_Hardware",
-  "material": "Birch ply",
-  "vol_mm3": 170.43,
-  "mass_g": 0.111,
+  "material": "Electronics (lumped)",
+  "vol_mm3": 75.8,
+  "mass_g": 0.076,
   "bb": [
-   739.4,
-   753.9,
-   1.5,
-   15.0,
-   19.25,
-   20.75
+   219.0,
+   226.0,
+   -38.0,
+   -24.5,
+   -70.5,
+   -69.0
   ]
  },
  {
   "name": "PUSHROD-RUD",
+  "body": "PUSHROD-RUD",
   "path": "Tail/Tail_Hardware",
   "material": "Carbon",
-  "vol_mm3": 1633.62,
-  "mass_g": 2.532,
+  "vol_mm3": 1614.8,
+  "mass_g": 2.503,
   "bb": [
-   222.29,
+   228.2,
    735.7,
    11.76,
-   37.01,
-   -68.99,
+   36.74,
+   -67.98,
    19.98
   ]
  },
  {
+  "name": "ROD-END-RUD-SERVO",
+  "body": "ROD-END-RUD-SERVO",
+  "path": "Tail/Tail_Hardware",
+  "material": "Steel",
+  "vol_mm3": 6.77,
+  "mass_g": 0.053,
+  "bb": [
+   222.37,
+   228.54,
+   35.13,
+   36.6,
+   -68.59,
+   -66.41
+  ]
+ },
+ {
+  "name": "ROD-END-RUD-HORN",
+  "body": "ROD-END-RUD-HORN",
+  "path": "Tail/Tail_Hardware",
+  "material": "Steel",
+  "vol_mm3": 5.08,
+  "mass_g": 0.04,
+  "bb": [
+   735.36,
+   740.05,
+   11.96,
+   13.37,
+   18.41,
+   20.34
+  ]
+ },
+ {
+  "name": "ZBEND-RUD-SERVO",
+  "body": "ZBEND-RUD-SERVO",
+  "path": "Tail/Tail_Hardware",
+  "material": "Steel",
+  "vol_mm3": 3.05,
+  "mass_g": 0.024,
+  "bb": [
+   221.9,
+   223.1,
+   35.4,
+   36.6,
+   -71.3,
+   -68.6
+  ]
+ },
+ {
+  "name": "ZBEND-RUD-HORN",
+  "body": "ZBEND-RUD-HORN",
+  "path": "Tail/Tail_Hardware",
+  "material": "Steel",
+  "vol_mm3": 3.61,
+  "mass_g": 0.028,
+  "bb": [
+   740.8,
+   742.0,
+   11.9,
+   13.1,
+   18.4,
+   21.6
+  ]
+ },
+ {
   "name": "PUSHROD-ELEV",
+  "body": "PUSHROD-ELEV",
   "path": "Tail/Tail_Hardware",
   "material": "Carbon",
-  "vol_mm3": 1638.16,
-  "mass_g": 2.539,
+  "vol_mm3": 1619.34,
+  "mass_g": 2.51,
   "bb": [
-   222.29,
+   228.19,
    735.71,
-   -37.0,
+   -36.88,
    -24.12,
-   -68.98,
+   -67.86,
    30.36
   ]
  },
  {
-  "name": "JOINER",
+  "name": "ROD-END-ELEV-SERVO",
+  "body": "ROD-END-ELEV-SERVO",
   "path": "Tail/Tail_Hardware",
   "material": "Steel",
-  "vol_mm3": 176.43,
-  "mass_g": 1.385,
+  "vol_mm3": 6.77,
+  "mass_g": 0.053,
   "bb": [
-   742.75,
-   744.25,
-   -50.0,
-   50.0,
-   44.25,
-   45.75
+   222.38,
+   228.52,
+   -36.6,
+   -35.27,
+   -68.59,
+   -66.29
   ]
  },
  {
-  "name": "JOINER-LEG-R",
+  "name": "ROD-END-ELEV-HORN",
+  "body": "ROD-END-ELEV-HORN",
   "path": "Tail/Tail_Hardware",
   "material": "Steel",
-  "vol_mm3": 25.14,
-  "mass_g": 0.197,
+  "vol_mm3": 5.08,
+  "mass_g": 0.04,
   "bb": [
-   744.25,
-   758.5,
-   49.25,
-   50.75,
-   44.25,
-   45.75
+   735.38,
+   740.05,
+   -25.73,
+   -24.43,
+   28.79,
+   30.81
   ]
  },
  {
-  "name": "JOINER-LEG-L",
+  "name": "ZBEND-ELEV-SERVO",
+  "body": "ZBEND-ELEV-SERVO",
   "path": "Tail/Tail_Hardware",
   "material": "Steel",
-  "vol_mm3": 25.14,
-  "mass_g": 0.197,
+  "vol_mm3": 3.05,
+  "mass_g": 0.024,
   "bb": [
-   744.25,
-   758.5,
-   -50.75,
-   -49.25,
-   44.25,
-   45.75
+   221.9,
+   223.1,
+   -36.6,
+   -35.4,
+   -71.3,
+   -68.6
+  ]
+ },
+ {
+  "name": "ZBEND-ELEV-HORN",
+  "body": "ZBEND-ELEV-HORN",
+  "path": "Tail/Tail_Hardware",
+  "material": "Steel",
+  "vol_mm3": 3.61,
+  "mass_g": 0.028,
+  "bb": [
+   740.8,
+   742.0,
+   -26.6,
+   -23.4,
+   29.9,
+   31.1
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-R1",
+  "body": "HINGE-ELEV-R1",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   65.0,
+   85.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-R2",
+  "body": "HINGE-ELEV-R2",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   140.0,
+   160.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-R3",
+  "body": "HINGE-ELEV-R3",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   205.0,
+   225.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-L1",
+  "body": "HINGE-ELEV-L1",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -85.0,
+   -65.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-L2",
+  "body": "HINGE-ELEV-L2",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -160.0,
+   -140.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-ELEV-L3",
+  "body": "HINGE-ELEV-L3",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -225.0,
+   -205.0,
+   44.75,
+   45.25
+  ]
+ },
+ {
+  "name": "HINGE-RUD-1",
+  "body": "HINGE-RUD-1",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -0.25,
+   0.25,
+   -20.0,
+   0.0
+  ]
+ },
+ {
+  "name": "HINGE-RUD-2",
+  "body": "HINGE-RUD-2",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -0.25,
+   0.25,
+   60.0,
+   80.0
+  ]
+ },
+ {
+  "name": "HINGE-RUD-3",
+  "body": "HINGE-RUD-3",
+  "path": "Tail/Tail_Hardware",
+  "material": "PET bottle",
+  "vol_mm3": 105.0,
+  "mass_g": 0.145,
+  "bb": [
+   733.4,
+   743.9,
+   -0.25,
+   0.25,
+   110.0,
+   130.0
   ]
  },
  {
   "name": "BOOM-R",
+  "body": "BOOM-R",
   "path": "Tail/Tail_Booms",
   "material": "Carbon",
   "vol_mm3": 13789.82,
@@ -3871,6 +5713,7 @@
  },
  {
   "name": "BOOM-L",
+  "body": "BOOM-L",
   "path": "Tail/Tail_Booms",
   "material": "Carbon",
   "vol_mm3": 13789.82,
@@ -3886,6 +5729,7 @@
  },
  {
   "name": "BOTTLE",
+  "body": "BOTTLE",
   "path": "Reservoir",
   "material": "PET bottle",
   "vol_mm3": 17883.26,
@@ -3901,6 +5745,7 @@
  },
  {
   "name": "BOTTLE-CAP",
+  "body": "BOTTLE-CAP",
   "path": "Reservoir",
   "material": "PETG",
   "vol_mm3": 5075.1,
@@ -3916,6 +5761,7 @@
  },
  {
   "name": "OUTLET-PLATE",
+  "body": "OUTLET-PLATE",
   "path": "Reservoir",
   "material": "PETG",
   "vol_mm3": 3843.15,
@@ -3931,6 +5777,7 @@
  },
  {
   "name": "FLAP",
+  "body": "FLAP",
   "path": "Reservoir",
   "material": "PETG",
   "vol_mm3": 2266.16,
@@ -3946,6 +5793,7 @@
  },
  {
   "name": "FILL-UNIT",
+  "body": "FILL-UNIT",
   "path": "Reservoir",
   "material": "PETG",
   "vol_mm3": 3277.38,
@@ -3961,6 +5809,7 @@
  },
  {
   "name": "MOTOR",
+  "body": "MOTOR",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 28817.04,
@@ -3976,6 +5825,7 @@
  },
  {
   "name": "COLLET",
+  "body": "COLLET",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 1580.82,
@@ -3991,6 +5841,7 @@
  },
  {
   "name": "PROP-DISC",
+  "body": "PROP-DISC",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 50476.29,
@@ -4006,13 +5857,14 @@
  },
  {
   "name": "BATTERY",
+  "body": "BATTERY",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 43350.0,
   "mass_g": 43.35,
   "bb": [
-   -133.5,
-   -58.5,
+   -157.5,
+   -82.5,
    -17.0,
    17.0,
    -80.0,
@@ -4021,6 +5873,7 @@
  },
  {
   "name": "ESC",
+  "body": "ESC",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 12000.0,
@@ -4030,27 +5883,29 @@
    -32.0,
    -12.5,
    12.5,
-   -89.5,
-   -81.5
+   -91.0,
+   -83.0
   ]
  },
  {
   "name": "RECEIVER",
+  "body": "RECEIVER",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 13500.0,
   "mass_g": 13.5,
   "bb": [
-   174.0,
-   199.0,
-   -22.5,
-   22.5,
-   -115.5,
-   -103.5
+   -76.0,
+   -31.0,
+   -12.5,
+   12.5,
+   -80.0,
+   -68.0
   ]
  },
  {
   "name": "TSERVO-R",
+  "body": "TSERVO-R",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 8137.4,
@@ -4066,6 +5921,7 @@
  },
  {
   "name": "TSERVO-TAB1-R",
+  "body": "TSERVO-TAB1-R",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 137.25,
@@ -4081,6 +5937,7 @@
  },
  {
   "name": "TSERVO-TAB2-R",
+  "body": "TSERVO-TAB2-R",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 137.25,
@@ -4096,6 +5953,7 @@
  },
  {
   "name": "TSERVO-L",
+  "body": "TSERVO-L",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 8137.4,
@@ -4111,6 +5969,7 @@
  },
  {
   "name": "TSERVO-TAB1-L",
+  "body": "TSERVO-TAB1-L",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 137.25,
@@ -4126,6 +5985,7 @@
  },
  {
   "name": "TSERVO-TAB2-L",
+  "body": "TSERVO-TAB2-L",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 137.25,
@@ -4141,6 +6001,7 @@
  },
  {
   "name": "RELEASE-SERVO",
+  "body": "RELEASE-SERVO",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 6314.23,
@@ -4156,6 +6017,7 @@
  },
  {
   "name": "RELEASE-SERVO-TAB1",
+  "body": "RELEASE-SERVO-TAB1",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 147.93,
@@ -4171,6 +6033,7 @@
  },
  {
   "name": "RELEASE-SERVO-TAB2",
+  "body": "RELEASE-SERVO-TAB2",
   "path": "Electronics",
   "material": "Electronics (lumped)",
   "vol_mm3": 147.92,
@@ -4182,6 +6045,1206 @@
    51.0,
    -101.4,
    -98.9
+  ]
+ },
+ {
+  "name": "AIL-LE-R",
+  "body": "AIL-LE-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 10814.2,
+  "mass_g": 1.514,
+  "bb": [
+   209.67,
+   213.46,
+   112.5,
+   437.5,
+   -11.9,
+   3.33
+  ]
+ },
+ {
+  "name": "AIL-TE-R",
+  "body": "AIL-TE-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 16396.11,
+  "mass_g": 2.295,
+  "bb": [
+   254.65,
+   279.89,
+   112.5,
+   437.5,
+   -14.65,
+   -8.2
+  ]
+ },
+ {
+  "name": "A112-R",
+  "body": "A112-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 594.21,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   112.5,
+   114.0,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A165-R",
+  "body": "A165-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 594.0,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   164.25,
+   165.75,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A220-R",
+  "body": "A220-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 593.92,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   219.25,
+   220.75,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A275-R",
+  "body": "A275-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 594.0,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   274.25,
+   275.75,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A330-R",
+  "body": "A330-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 593.94,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   329.25,
+   330.75,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A385-R",
+  "body": "A385-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 593.87,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   384.25,
+   385.75,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A437-R",
+  "body": "A437-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 594.05,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   436.0,
+   437.5,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "AIL-HORN-R",
+  "body": "AIL-HORN-R",
+  "path": "Aileron-R",
+  "material": "PETG",
+  "vol_mm3": 328.36,
+  "mass_g": 0.417,
+  "bb": [
+   205.56,
+   232.0,
+   147.35,
+   148.85,
+   -24.62,
+   -4.82
+  ]
+ },
+ {
+  "name": "AH-R",
+  "body": "AH-R",
+  "path": "Aileron-R",
+  "material": "Balsa medium",
+  "vol_mm3": 593.42,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   148.85,
+   150.35,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "AIL-LE-L",
+  "body": "AIL-LE-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 10814.2,
+  "mass_g": 1.514,
+  "bb": [
+   209.67,
+   213.46,
+   -437.5,
+   -112.5,
+   -11.9,
+   3.33
+  ]
+ },
+ {
+  "name": "AIL-TE-L",
+  "body": "AIL-TE-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 16396.11,
+  "mass_g": 2.295,
+  "bb": [
+   254.65,
+   279.89,
+   -437.5,
+   -112.5,
+   -14.65,
+   -8.2
+  ]
+ },
+ {
+  "name": "A112-L",
+  "body": "A112-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.44,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -114.0,
+   -112.5,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A165-L",
+  "body": "A165-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.23,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -165.75,
+   -164.25,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A220-L",
+  "body": "A220-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.15,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -220.75,
+   -219.25,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A275-L",
+  "body": "A275-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.24,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -275.75,
+   -274.25,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A330-L",
+  "body": "A330-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.18,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -330.75,
+   -329.25,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A385-L",
+  "body": "A385-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.1,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -385.75,
+   -384.25,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "A437-L",
+  "body": "A437-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 594.29,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -437.5,
+   -436.0,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "AIL-HORN-L",
+  "body": "AIL-HORN-L",
+  "path": "Aileron-L",
+  "material": "PETG",
+  "vol_mm3": 328.36,
+  "mass_g": 0.417,
+  "bb": [
+   205.56,
+   232.0,
+   -148.85,
+   -147.35,
+   -24.62,
+   -4.82
+  ]
+ },
+ {
+  "name": "AH-L",
+  "body": "AH-L",
+  "path": "Aileron-L",
+  "material": "Balsa medium",
+  "vol_mm3": 593.57,
+  "mass_g": 0.083,
+  "bb": [
+   212.67,
+   255.38,
+   -150.35,
+   -148.85,
+   -14.02,
+   2.85
+  ]
+ },
+ {
+  "name": "ELEV-R",
+  "body": "ELEV-R-1",
+  "path": "Elevator",
+  "material": "Balsa medium",
+  "vol_mm3": 4652.54,
+  "mass_g": 0.651,
+  "bb": [
+   739.9,
+   779.0,
+   5.5,
+   245.0,
+   43.5,
+   45.0
+  ]
+ },
+ {
+  "name": "ELEV-R",
+  "body": "ELEV-R-2",
+  "path": "Elevator",
+  "material": "Balsa medium",
+  "vol_mm3": 4652.54,
+  "mass_g": 0.651,
+  "bb": [
+   739.9,
+   779.0,
+   5.5,
+   245.0,
+   45.0,
+   46.5
+  ]
+ },
+ {
+  "name": "ELEV-L",
+  "body": "ELEV-L-1",
+  "path": "Elevator",
+  "material": "Balsa medium",
+  "vol_mm3": 4652.54,
+  "mass_g": 0.651,
+  "bb": [
+   739.9,
+   779.0,
+   -245.0,
+   -5.5,
+   43.5,
+   45.0
+  ]
+ },
+ {
+  "name": "ELEV-L",
+  "body": "ELEV-L-2",
+  "path": "Elevator",
+  "material": "Balsa medium",
+  "vol_mm3": 4652.54,
+  "mass_g": 0.651,
+  "bb": [
+   739.9,
+   779.0,
+   -245.0,
+   -5.5,
+   45.0,
+   46.5
+  ]
+ },
+ {
+  "name": "JOINER",
+  "body": "JOINER",
+  "path": "Elevator",
+  "material": "Steel",
+  "vol_mm3": 176.43,
+  "mass_g": 1.385,
+  "bb": [
+   742.75,
+   744.25,
+   -50.0,
+   50.0,
+   44.25,
+   45.75
+  ]
+ },
+ {
+  "name": "JOINER-LEG-R",
+  "body": "JOINER-LEG-R",
+  "path": "Elevator",
+  "material": "Steel",
+  "vol_mm3": 25.14,
+  "mass_g": 0.197,
+  "bb": [
+   744.25,
+   758.5,
+   49.25,
+   50.75,
+   44.25,
+   45.75
+  ]
+ },
+ {
+  "name": "JOINER-LEG-L",
+  "body": "JOINER-LEG-L",
+  "path": "Elevator",
+  "material": "Steel",
+  "vol_mm3": 25.14,
+  "mass_g": 0.197,
+  "bb": [
+   744.25,
+   758.5,
+   -50.75,
+   -49.25,
+   44.25,
+   45.75
+  ]
+ },
+ {
+  "name": "HORN-E",
+  "body": "HORN-E",
+  "path": "Elevator",
+  "material": "Birch ply",
+  "vol_mm3": 195.93,
+  "mass_g": 0.127,
+  "bb": [
+   739.4,
+   753.9,
+   -25.75,
+   -24.25,
+   28.0,
+   43.5
+  ]
+ },
+ {
+  "name": "RUDDER",
+  "body": "RUDDER-1",
+  "path": "Rudder",
+  "material": "Balsa medium",
+  "vol_mm3": 3880.84,
+  "mass_g": 0.543,
+  "bb": [
+   739.9,
+   778.04,
+   0.0,
+   1.5,
+   -28.0,
+   135.0
+  ]
+ },
+ {
+  "name": "RUDDER",
+  "body": "RUDDER-2",
+  "path": "Rudder",
+  "material": "Balsa medium",
+  "vol_mm3": 3880.84,
+  "mass_g": 0.543,
+  "bb": [
+   739.9,
+   778.04,
+   -1.5,
+   0.0,
+   -28.0,
+   135.0
+  ]
+ },
+ {
+  "name": "HORN-R",
+  "body": "HORN-R",
+  "path": "Rudder",
+  "material": "Birch ply",
+  "vol_mm3": 170.43,
+  "mass_g": 0.111,
+  "bb": [
+   739.4,
+   753.9,
+   1.5,
+   15.0,
+   19.25,
+   20.75
+  ]
+ },
+ {
+  "name": "J5a-SEAT-GAUGE",
+  "body": "J5a-SEAT-GAUGE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 69211.33,
+  "mass_g": 25.747,
+  "bb": [
+   0.0,
+   140.0,
+   -58.0,
+   58.0,
+   -14.1,
+   7.0
+  ]
+ },
+ {
+  "name": "J5b-SEAT-GAUGE",
+  "body": "J5b-SEAT-GAUGE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 69211.29,
+  "mass_g": 25.747,
+  "bb": [
+   140.0,
+   280.0,
+   -58.0,
+   58.0,
+   -15.7,
+   -0.9
+  ]
+ },
+ {
+  "name": "J1a-NOSE-WEDGE",
+  "body": "J1a-NOSE-WEDGE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 111409.19,
+  "mass_g": 41.444,
+  "bb": [
+   -169.5,
+   -40.05,
+   -26.0,
+   26.0,
+   -117.0,
+   -78.14
+  ]
+ },
+ {
+  "name": "J1b-TAIL-WEDGE",
+  "body": "J1b-TAIL-WEDGE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 95301.44,
+  "mass_g": 35.452,
+  "bb": [
+   239.76,
+   304.5,
+   -26.0,
+   26.0,
+   -117.0,
+   -62.4
+  ]
+ },
+ {
+  "name": "J2-1R-SQUARE",
+  "body": "J2-1R-SQUARE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 8415.17,
+  "mass_g": 3.13,
+  "bb": [
+   8.0,
+   28.0,
+   55.0,
+   85.0,
+   -117.0,
+   -77.0
+  ]
+ },
+ {
+  "name": "J2-1L-SQUARE",
+  "body": "J2-1L-SQUARE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 8415.25,
+  "mass_g": 3.13,
+  "bb": [
+   8.0,
+   28.0,
+   -85.0,
+   -55.0,
+   -117.0,
+   -77.0
+  ]
+ },
+ {
+  "name": "J2-2R-SQUARE",
+  "body": "J2-2R-SQUARE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 8415.06,
+  "mass_g": 3.13,
+  "bb": [
+   140.0,
+   160.0,
+   55.0,
+   85.0,
+   -117.0,
+   -77.0
+  ]
+ },
+ {
+  "name": "J2-2L-SQUARE",
+  "body": "J2-2L-SQUARE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 8415.15,
+  "mass_g": 3.13,
+  "bb": [
+   140.0,
+   160.0,
+   -85.0,
+   -55.0,
+   -117.0,
+   -77.0
+  ]
+ },
+ {
+  "name": "J3-R-NOSE-TAPER",
+  "body": "J3-R-NOSE-TAPER",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 69654.76,
+  "mass_g": 25.912,
+  "bb": [
+   -165.0,
+   -35.0,
+   29.26,
+   66.19,
+   -117.0,
+   -45.0
+  ]
+ },
+ {
+  "name": "J3-L-NOSE-TAPER",
+  "body": "J3-L-NOSE-TAPER",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 69655.36,
+  "mass_g": 25.912,
+  "bb": [
+   -165.0,
+   -35.0,
+   -66.19,
+   -29.26,
+   -117.0,
+   -45.0
+  ]
+ },
+ {
+  "name": "J4a-BOOM-CRADLE",
+  "body": "J4a-BOOM-CRADLE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 63602.15,
+  "mass_g": 23.66,
+  "bb": [
+   305.0,
+   330.0,
+   -30.0,
+   30.0,
+   -117.0,
+   -34.0
+  ]
+ },
+ {
+  "name": "J4b-BOOM-CRADLE",
+  "body": "J4b-BOOM-CRADLE",
+  "path": "Jigs/Jigs_Pod",
+  "material": "PLA jig",
+  "vol_mm3": 49919.76,
+  "mass_g": 18.57,
+  "bb": [
+   600.0,
+   620.0,
+   -30.0,
+   30.0,
+   -117.0,
+   -34.0
+  ]
+ },
+ {
+  "name": "TJ1-RU-SQUARE",
+  "body": "TJ1-RU-SQUARE",
+  "path": "Jigs/Jigs_Tail",
+  "material": "PLA jig",
+  "vol_mm3": 13599.55,
+  "mass_g": 5.059,
+  "bb": [
+   680.0,
+   730.0,
+   1.5,
+   26.5,
+   46.5,
+   71.5
+  ]
+ },
+ {
+  "name": "TJ1-RD-SQUARE",
+  "body": "TJ1-RD-SQUARE",
+  "path": "Jigs/Jigs_Tail",
+  "material": "PLA jig",
+  "vol_mm3": 13599.48,
+  "mass_g": 5.059,
+  "bb": [
+   680.0,
+   730.0,
+   1.5,
+   26.5,
+   18.5,
+   43.5
+  ]
+ },
+ {
+  "name": "TJ1-LU-SQUARE",
+  "body": "TJ1-LU-SQUARE",
+  "path": "Jigs/Jigs_Tail",
+  "material": "PLA jig",
+  "vol_mm3": 13599.73,
+  "mass_g": 5.059,
+  "bb": [
+   680.0,
+   730.0,
+   -26.5,
+   -1.5,
+   46.5,
+   71.5
+  ]
+ },
+ {
+  "name": "TJ1-LD-SQUARE",
+  "body": "TJ1-LD-SQUARE",
+  "path": "Jigs/Jigs_Tail",
+  "material": "PLA jig",
+  "vol_mm3": 13599.66,
+  "mass_g": 5.059,
+  "bb": [
+   680.0,
+   730.0,
+   -26.5,
+   -1.5,
+   18.5,
+   43.5
+  ]
+ },
+ {
+  "name": "TJ2-STAB-LEVEL",
+  "body": "TJ2-STAB-LEVEL",
+  "path": "Jigs/Jigs_Tail",
+  "material": "PLA jig",
+  "vol_mm3": 92868.67,
+  "mass_g": 34.547,
+  "bb": [
+   650.0,
+   665.0,
+   -120.0,
+   120.0,
+   -46.0,
+   43.5
+  ]
+ },
+ {
+  "name": "JB-A",
+  "body": "JB-A",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 172581.93,
+  "mass_g": 64.2,
+  "bb": [
+   -178.0,
+   -5.0,
+   -88.0,
+   88.0,
+   -123.0,
+   -117.0
+  ]
+ },
+ {
+  "name": "JB-B",
+  "body": "JB-B",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 116812.08,
+  "mass_g": 43.454,
+  "bb": [
+   -15.0,
+   175.0,
+   -88.0,
+   88.0,
+   -123.0,
+   -117.0
+  ]
+ },
+ {
+  "name": "JB-C",
+  "body": "JB-C",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 154530.57,
+  "mass_g": 57.485,
+  "bb": [
+   165.0,
+   355.0,
+   -88.0,
+   88.0,
+   -123.0,
+   -117.0
+  ]
+ },
+ {
+  "name": "JB-D1",
+  "body": "JB-D1",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 23514.21,
+  "mass_g": 8.747,
+  "bb": [
+   345.0,
+   495.0,
+   -14.0,
+   14.0,
+   -123.0,
+   -117.0
+  ]
+ },
+ {
+  "name": "JB-D2",
+  "body": "JB-D2",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 32041.98,
+  "mass_g": 11.92,
+  "bb": [
+   485.0,
+   630.0,
+   -35.0,
+   35.0,
+   -123.0,
+   -117.0
+  ]
+ },
+ {
+  "name": "PIN-01",
+  "body": "PIN-01",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -160.95,
+   -155.05,
+   -2.95,
+   2.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-02",
+  "body": "PIN-02",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -64.95,
+   -59.05,
+   -2.95,
+   2.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-03",
+  "body": "PIN-03",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   247.05,
+   252.95,
+   -2.95,
+   2.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-04",
+  "body": "PIN-04",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   289.05,
+   294.95,
+   -2.95,
+   2.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-05",
+  "body": "PIN-05",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   15.05,
+   20.95,
+   64.05,
+   69.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-06",
+  "body": "PIN-06",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   15.05,
+   20.95,
+   77.05,
+   82.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-07",
+  "body": "PIN-07",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   15.05,
+   20.95,
+   -69.95,
+   -64.05,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-08",
+  "body": "PIN-08",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   15.05,
+   20.95,
+   -82.95,
+   -77.05,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-09",
+  "body": "PIN-09",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   147.05,
+   152.95,
+   64.05,
+   69.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-10",
+  "body": "PIN-10",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   147.05,
+   152.95,
+   77.05,
+   82.95,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-11",
+  "body": "PIN-11",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   147.05,
+   152.95,
+   -69.95,
+   -64.05,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-12",
+  "body": "PIN-12",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   147.05,
+   152.95,
+   -82.95,
+   -77.05,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-13",
+  "body": "PIN-13",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -151.95,
+   -146.05,
+   35.38,
+   41.28,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-14",
+  "body": "PIN-14",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -53.95,
+   -48.05,
+   54.17,
+   60.07,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-15",
+  "body": "PIN-15",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -151.95,
+   -146.05,
+   -41.28,
+   -35.38,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-16",
+  "body": "PIN-16",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   -53.95,
+   -48.05,
+   -60.07,
+   -54.17,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-17",
+  "body": "PIN-17",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   314.55,
+   320.45,
+   20.55,
+   26.45,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-18",
+  "body": "PIN-18",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   314.55,
+   320.45,
+   -26.45,
+   -20.55,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-19",
+  "body": "PIN-19",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   607.05,
+   612.95,
+   20.55,
+   26.45,
+   -123.0,
+   -112.0
+  ]
+ },
+ {
+  "name": "PIN-20",
+  "body": "PIN-20",
+  "path": "Jigs/Jigs_Base",
+  "material": "PLA jig",
+  "vol_mm3": 300.25,
+  "mass_g": 0.112,
+  "bb": [
+   607.05,
+   612.95,
+   -26.45,
+   -20.55,
+   -123.0,
+   -112.0
   ]
  }
 ]

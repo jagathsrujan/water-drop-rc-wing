@@ -122,8 +122,11 @@ NOT_LASER = ("Keel", "Longeron", "Capstrip", "Ledge", "LE", "DBOX", "CAP-", "TE-
              "SERVO-", "TB-", "TAILBLOCK", "NOSE-RING")
 
 
-def grain_axis(name):
-    """'u', 'v' or None (ply: any). Balsa grain runs along this local axis of the part outline."""
+def grain_axis(name, p=None):
+    """'u', 'v' or None (ply: any). Balsa grain runs along this local axis of the part outline. A laminate layer piece
+    (lam.py) carries its own grain - also for birch ply, so that crossed ply layers are cut with crossed face grain."""
+    if p is not None and p.get("grain"):
+        return p["grain"]
     n = name
     if n[:3] in ("RO-", "LO-") or n.startswith(("HN-", "FSP-", "W-", "A1", "A2", "A3", "A4", "AH-")):
         return "u"
@@ -138,8 +141,9 @@ def laser_parts():
     import tail
     out = []
     import linkage
+    import lam
     for src in (pod.all_parts()[0], wing.all_parts()[0], tail.all_parts()[0], linkage.wing_parts()[0]):
-        for p in src:
+        for p in lam.flat(src):
             if p["mat"] not in LASER_MATS or p["name"].startswith(NOT_LASER):
                 continue
             out.append(p)
@@ -202,6 +206,59 @@ def clip_cutters_to_outline(geo):
     geo["polys"] = keep
 
 
+def _maxrects(items, SW, SH):
+    """MaxRects bin packing (best short-side fit over every open sheet). Each part takes its bounding box plus GAP;
+    rotation is fixed beforehand (grain). Returns sheets as dict(parts=[(name, geo, x, y, rot)])."""
+    W, H = SW - 2 * MARGIN + GAP, SH - 2 * MARGIN + GAP
+    sheets = []
+    for name, geo, w, h, rot in items:
+        ww, hh = w + GAP, h + GAP
+        best = None
+        for si, sh in enumerate(sheets):
+            for fr in sh["free"]:
+                if ww <= fr[2] + 1e-9 and hh <= fr[3] + 1e-9:
+                    sc = (min(fr[2] - ww, fr[3] - hh), max(fr[2] - ww, fr[3] - hh), si)
+                    if best is None or sc < best[0]:
+                        best = (sc, si, fr)
+        if best is None:
+            sheets.append(dict(free=[(0.0, 0.0, W, H)], parts=[]))
+            best = (None, len(sheets) - 1, (0.0, 0.0, W, H))
+        _, si, fr = best
+        sh = sheets[si]
+        x, y = fr[0], fr[1]
+        sh["parts"].append((name, geo, MARGIN + x, MARGIN + y, rot))
+        new = []
+        for f in sh["free"]:                       # split every free rectangle the part overlaps
+            if x >= f[0] + f[2] or x + ww <= f[0] or y >= f[1] + f[3] or y + hh <= f[1]:
+                new.append(f)
+                continue
+            if x > f[0]:
+                new.append((f[0], f[1], x - f[0], f[3]))
+            if x + ww < f[0] + f[2]:
+                new.append((x + ww, f[1], f[0] + f[2] - x - ww, f[3]))
+            if y > f[1]:
+                new.append((f[0], f[1], f[2], y - f[1]))
+            if y + hh < f[1] + f[3]:
+                new.append((f[0], y + hh, f[2], f[1] + f[3] - y - hh))
+        new = [f for f in new if f[2] > 1e-6 and f[3] > 1e-6]
+        sh["free"] = [f for i, f in enumerate(new) if not any(
+            j != i and g[0] <= f[0] and g[1] <= f[1] and g[0] + g[2] >= f[0] + f[2] and g[1] + g[3] >= f[1] + f[3]
+            and (g != f or j < i) for j, g in enumerate(new))]
+    return sheets
+
+
+def pack(items, SW, SH):
+    """fewest sheets over a few part orders (MaxRects); ties go to the order listed first."""
+    orders = [lambda it: (-it[2] * it[3],), lambda it: (-it[3], -it[2]), lambda it: (-it[2], -it[3]),
+              lambda it: (-max(it[2], it[3]), -min(it[2], it[3])), lambda it: (-(it[2] + it[3]),)]
+    best = None
+    for key in orders:
+        sh = _maxrects(sorted(items, key=key), SW, SH)
+        if best is None or len(sh) < len(best):
+            best = sh
+    return best
+
+
 def nest():
     os.makedirs(OUT, exist_ok=True)
     for f in os.listdir(OUT):
@@ -217,7 +274,7 @@ def nest():
         SW, SH = SHEETS[kind]
         items = []
         for p in parts:
-            ga = grain_axis(p["name"]) if kind == "balsa" else None
+            ga = grain_axis(p["name"], p) if (kind == "balsa" or p.get("grain")) else None
             opts = [0, 1] if ga is None else ([0] if ga == "u" else [1])
             best = None
             for rot in opts:
@@ -231,31 +288,7 @@ def nest():
             if not LOOPS:
                 clip_cutters_to_outline(best[0])
             items.append((p["name"], *best))
-        # shelf packing, tallest first
-        items.sort(key=lambda it: (-it[3], -it[2]))
-        sheets = []
-        for it in items:
-            name, geo, w, h, rot = it
-            placed = False
-            for sh in sheets:
-                for shelf in sh["shelves"]:
-                    if h <= shelf["h"] and shelf["x"] + w <= SW - MARGIN:
-                        sh["parts"].append((name, geo, shelf["x"], shelf["y"], rot))
-                        shelf["x"] += w + GAP
-                        placed = True
-                        break
-                if placed:
-                    break
-                if sh["top"] + h <= SH - MARGIN:
-                    shelf = dict(y=sh["top"], h=h, x=MARGIN + w + GAP)
-                    sh["shelves"].append(shelf)
-                    sh["parts"].append((name, geo, MARGIN, sh["top"], rot))
-                    sh["top"] += h + GAP
-                    placed = True
-                    break
-            if not placed:
-                sh = dict(shelves=[dict(y=MARGIN, h=h, x=MARGIN + w + GAP)], parts=[(name, geo, MARGIN, MARGIN, rot)], top=MARGIN + h + GAP)
-                sheets.append(sh)
+        sheets = pack(items, SW, SH)
         tag = "%s_%gmm" % (LASER_MATS[mat].replace(" ", "-"), t)
         for k, sh in enumerate(sheets):
             dx = DXF()

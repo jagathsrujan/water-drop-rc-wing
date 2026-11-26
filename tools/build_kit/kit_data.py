@@ -28,9 +28,7 @@ import tail              # noqa: E402
 import linkage           # noqa: E402
 import jigs              # noqa: E402
 import laser             # noqa: E402
-import wing_params as WP  # noqa: E402
-import fus_params as FP   # noqa: E402
-import bal_params as BP   # noqa: E402
+from revb_params import WP, FP, BP   # noqa: E402  (FreeCAD parameters + the optimisation overrides)
 
 MAT_LABEL = {
     "balsa_med": ("balsa", "medium"), "balsa_light": ("balsa", "light"), "balsa_hard": ("balsa", "hard"),
@@ -189,7 +187,7 @@ def build_registry():
     for p in pparts:
         kind = "laser" if (p["mat"] in laser.LASER_MATS and not p["name"].startswith(laser.NOT_LASER)) else \
             ("print" if p["mat"] == "petg" else "strip")
-        R.add(p["name"], **plate_entry(p, "Pod", kind))
+        add_part(R, p, "Pod", kind)
     for _, name, a, b, ro, ri, mat in hard:
         R.add(name, assembly="Pod", grp="Pod_Hard", kind="round", mat=mat, p0=[r1(c) for c in a], p1=[r1(c) for c in b],
               r=ro, ri=ri)
@@ -198,11 +196,11 @@ def build_registry():
     for p in wparts:
         kind = "laser" if (p["mat"] in laser.LASER_MATS and not p["name"].startswith(laser.NOT_LASER)) else \
             ("print" if p["mat"] == "petg" else "strip")
-        R.add(p["name"], **plate_entry(p, "Wing", kind))
+        add_part(R, p, "Wing", kind)
     lp, lr = linkage.wing_parts()
     for p in lp:
         kind = "laser" if p["mat"] in laser.LASER_MATS else ("print" if p["mat"] == "petg" else "bought")
-        R.add(p["name"], **plate_entry(p, "Wing", kind))
+        add_part(R, p, "Wing", kind)
     for name, a, b, ro, ri, mat, grp in lr:
         R.add(name, assembly="Wing", grp=grp, kind="round", mat=mat, p0=[r1(c) for c in a], p1=[r1(c) for c in b], r=ro, ri=ri)
     for kind_, name, box in wboxes:
@@ -212,7 +210,7 @@ def build_registry():
     for p in tparts:
         kind = "laser" if (p["mat"] in laser.LASER_MATS and not p["name"].startswith(laser.NOT_LASER)) else \
             ("print" if p["mat"] == "petg" else "strip")
-        R.add(p["name"], **plate_entry(p, "Tail", kind))
+        add_part(R, p, "Tail", kind)
     for name, a, b, ro, ri, mat, grp in rounds:
         kind = "print" if mat == "petg" else "round"
         R.add(name, assembly="Tail", grp=grp, kind=kind, mat=mat, p0=[r1(c) for c in a], p1=[r1(c) for c in b], r=ro, ri=ri)
@@ -262,7 +260,18 @@ def build_registry():
         R[m]["print_in"] = "TAIL-BLOCK"
     # --- mirror twins, masses
     names = set(R.parts)
-    bodies = {b["name"]: b for b in json.load(open(os.path.join(MODEL, "check", "bodies.json")))}
+    bodies = {}
+    for b in json.load(open(os.path.join(MODEL, "check", "bodies.json"))):
+        # a laminated part is one component with one body per layer piece: index the pieces by body name and sum the
+        # part (component) over its bodies
+        keys = [b["name"]] + ([b["body"]] if b.get("body") and b["body"] != b["name"] else [])
+        for k in keys:
+            if k in bodies:
+                o = bodies[k]
+                o["mass_g"] += b["mass_g"]
+                o["bb"] = [min(o["bb"][i], b["bb"][i]) if i % 2 == 0 else max(o["bb"][i], b["bb"][i]) for i in range(6)]
+            else:
+                bodies[k] = dict(mass_g=b["mass_g"], bb=list(b["bb"]))
     for n, e in R.parts.items():
         e["mirror"] = mirror_name(n, names)
         b = bodies.get(n)
@@ -270,6 +279,22 @@ def build_registry():
             e["mass_g"] = round(b["mass_g"], 2)
             e["bb"] = [r1(c) for c in b["bb"]]
     return R
+
+
+def add_part(R, p, assembly, kind):
+    """A part of the part data; a laminated part (lam.py) becomes a 'laminate' entry (built in the steps) and one
+    'laser' entry per layer piece (on the sheets), linked by piece_of / pieces."""
+    if p.get("layers") and kind == "laser":
+        import lam
+        e = R.add(p["name"], **plate_entry(p, assembly, "laminate"))
+        e["pieces"] = []
+        e["layers"] = len(p["layers"])
+        for q in lam.expand(p):
+            qe = R.add(q["name"], **plate_entry(q, assembly, "laser"))
+            qe.update(piece_of=p["name"], layer=q["layer"], grain=q["grain"])
+            e["pieces"].append(q["name"])
+        return e
+    return R.add(p["name"], **plate_entry(p, assembly, kind))
 
 
 # ---------------------------------------------------------------- laser data
@@ -299,7 +324,7 @@ def laser_sheets(R):
 # ---------------------------------------------------------------- strip stock (cut to length, not laser)
 STRIP_RULES = [
     # prefix, stock description, how the dimensions are read
-    ("Keel", "strip", "keel"), ("Longeron", "triangle strip", "len_t"), ("Capstrip", "strip", "capstrip"),
+    ("Keel", "strip", "keel"), ("Longeron", "L of two strips", "len_t"), ("Capstrip", "strip", "capstrip"),
     ("Ledge", "strip", "ledge"), ("LE", "leading-edge strip (shaped)", "len_t"), ("DBOX", "sheet", "sheet_span"),
     ("CS-", "sheet (grain chord-wise)", "sheet_chord"), ("CAPS-", "cap strip", "capstrip_w"),
     ("CAP-C", "carbon strip", "len_t"), ("CAP-B", "strip", "len_t"), ("TE-", "trailing-edge stock (wedge)", "len_t"),
@@ -350,7 +375,28 @@ def strips(R):
             continue
         desc, th, w, L = strip_dims(n, e)
         mat, grade = MAT_LABEL[e["mat"]]
+        layers = strip_layers(n, e["mat"], th, w)
+        if layers and len(layers) > 1:
+            desc = "%s, %d x 1.5 strips laminated" % (desc, len(layers))
         rows.append(dict(name=n, assembly=e["assembly"], material=mat, grade=grade, stock=desc,
-                         t=round(th, 1), w=round(w, 1), length=round(L, 1)))
+                         t=round(th, 1), w=round(w, 1), length=round(L, 1), layers=layers))
         e["strip"] = rows[-1]
     return rows
+
+
+STOCK_T = 1.5
+
+
+def strip_layers(name, mat, th, w):
+    """P1 single stock: every balsa strip is cut from the 1.5 mm sheet; the widths of its 1.5 mm layers (None for
+    carbon). Thicker strips are laminated from n strips; the TE wedges from staggered strips sanded to the wedge."""
+    if not mat.startswith("balsa"):
+        return None
+    if name.startswith(("DBOX", "CS-", "CAPS-")):
+        return [w]
+    if name.startswith("Longeron"):
+        return [6.0, 4.5]
+    n = max(1, int(round(th / STOCK_T + 0.49)))           # 5.2 -> 4, 3 -> 2, 6 -> 4
+    if name.startswith(("TE-", "AIL-TE")):
+        return [round(w * (1.0 - k / float(n)), 2) for k in range(n)]
+    return [w] * n

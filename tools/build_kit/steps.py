@@ -42,7 +42,7 @@ L_IN = ["LI-N1", "LI-N2", "LI-M1", "LI-M2U", "LI-M2G", "LI-M3U", "LI-M4", "LI-M5
 FORMERS = ["N1", "N2", "FS", "B1", "B2-R", "B2-L", "B4", "BH", "EF"]
 RIB_Y = ["055", "110", "165", "220", "275", "330", "385", "440"]
 RIBS = ["W-C"] + ["W-R%s-%s" % (y, s) for s in "RL" for y in RIB_Y] + ["W-TIP-R", "W-TIP-L"]
-WEBS = ["WF-%s%d" % (s, i) for s in "RL" for i in range(1, 10)] + ["WR-%s%d" % (s, i) for s in "RL" for i in range(1, 4)]
+WEBS = ["WF-%s%d" % (s, i) for s in "RL" for i in range(1, 10)] + ["WR-%s%d" % (s, i) for s in "RL" for i in range(1, 4)] +     ["WF-R1D", "WF-L1D"]                   # P2 item 11: root-bay web doublers
 CAPS_STATIONS = ["R110", "R165", "R220", "R275", "R330", "R385", "R440", "TIP"]
 
 
@@ -74,13 +74,13 @@ def laminate(side, outer, inner, doubler):
     items += [P(n, needs=[("pva-" + side, "glue", "Spread the PVA on the outer layer before you lay the inner pieces.")],
                 slot=False) for n in inner]
     items.append(P(doubler, needs=[(inner[2], "order", "The stub doubler sits on the inner layer over the band-stub hole: lay %s first." % inner[2])],
-                   slot=False, why="3 mm ply doubler that carries the front rubber-band stub."))
+                   slot=False, why="Birch doubler (2 x 1.5 mm laminated) that carries the front rubber-band stub."))
     items.append(A("weights-" + side, "Cover with wax paper, a flat board and weights; leave it flat overnight",
                    needs=[(n, "order", "Every piece must be in place before the weights go on.") for n in inner + [doubler]]))
     return dict(
         id="laminate-" + side, phase="Pod", title="Laminate the %s side layers" % S, view="flat-" + side, mode="place",
         intro=("The %s side is two layers: an outer 1.5 mm balsa skin (grain along the pod, lower and upper strips joined at "
-               "Z -40) and an inner 1.0 mm layer (grain vertical, pieces no wider than 100 mm). Every joint in one layer is "
+               "Z -40) and an inner 1.5 mm layer (grain vertical, pieces no wider than 100 mm), both from the one 1.5 mm stock. Every joint in one layer is "
                "bridged by the other layer. The nose (N), middle (M) and tail-cone (T) panels are separate: they meet at the "
                "kinks later. Lay each piece engraved face UP, arrow pointing to the nose (%s): the engraved faces end up "
                "inside the pod.") % (S, "'< FWD'" if side == "R" else "'FWD >'"),
@@ -92,7 +92,7 @@ def laminate(side, outer, inner, doubler):
                  "The pieces are cut with the grain already set: outer skin along X, inner layer vertical. Turning them "
                  "puts both grains the same way and the side loses its cross-laminate stiffness.",
                  "Lay each piece as cut, with its engraved arrow to the nose.")],
-        tip="Weigh the 1.0 mm and 1.5 mm sheets before cutting: the light ones go to the inner layer.",
+        tip="Weigh every 1.5 mm sheet before cutting: the lightest go to the D-box, sheeting and tail, the heaviest to formers and the bulkhead.",
         other_side=other)
 
 
@@ -101,6 +101,22 @@ def steps(names):
     S = []
     S.append(laminate("R", R_OUT, R_IN, "SD-R"))
     S.append(laminate("L", L_OUT, L_IN, "SD-L"))
+    S.append(dict(id="laminate-parts", phase="Pod", title="Laminate the thick parts from 1.5 mm layers", view="pod-iso", mode="place",
+                  intro="Everything is cut from one 1.5 mm stock. The thicker parts are 2-4 layers glued flat: the formers "
+                        "N1, N2, B1, B2, B4 and EF (3 layers, grain crossed), the bulkhead BH (4 layers), the saddle layers, "
+                        "the trays and strap bridges (2 layers), W-C, W-R110 and the false spar (2 layers), and the tail "
+                        "surfaces (2 layers); in birch ply the front stop FS, firewall, stub doublers and tube rings (2 "
+                        "layers, face grain crossed). Each layer piece is engraved <part>-<layer><piece> (e.g. B1-2a): "
+                        "layer 1 at the bottom, the joints of the pieces of one layer are bridged by the next layer.",
+                  items=[A("lam-pva", "Spread thinned PVA thinly on one face of each layer; stack the layers in number order, "
+                                      "edges and holes lined up (push toothpicks or 2 mm rod through two holes)"),
+                         A("lam-press", "Press flat between wax paper and boards under weights overnight; do not sand or slot "
+                                        "the parts until fully dry", needs=[("lam-pva", "order", "Stack the layers first.")])],
+                  traps=[T("lam-ca", "Laminate the layers with thin CA",
+                           "CA sets before the layers lie flat and adds hard, heavy glue lines.",
+                           "Thinned PVA, a thin even coat, rolled or brushed, then weights on a flat board.")],
+                  tip="Weigh one 100 x 100 mm test laminate of 2 x 1.5 mm: the glue should add about 0.4 g (40 g/m2); "
+                      "more means too much glue."))
 
     # ---------------------------------------------------------------- jig base
     jb = ["JB-A", "JB-B", "JB-C", "JB-D1", "JB-D2"]
@@ -163,7 +179,7 @@ def steps(names):
     items = [P(n) for n in FORMERS]
     items.append(P("TRAY", needs=[("N1", "order", "The battery tray's tabs go into notches in the N1 and N2 legs: N1 first."),
                                   ("N2", "order", "The battery tray's tabs go into notches in the N1 and N2 legs: N2 first.")],
-                   why="1.5 mm lite-ply battery tray."))
+                   why="Battery tray, 2 x 1.5 mm balsa laminated (grain crossed)."))
     items.append(A("formers-square", "Check each former square to the floor (set square), then wick thin CA into the floor tabs",
                    needs=[(n, "order", "Drop every former in before gluing.") for n in FORMERS]))
     S.append(dict(id="formers", phase="Pod", title="Drop the formers into their floor slots", view="pod-iso", mode="slot",
@@ -179,7 +195,7 @@ def steps(names):
                       ["Keel-R", "Keel-L", "Longeron-R1", "Longeron-R2", "Longeron-L1", "Longeron-L2"]])]
     S.append(dict(id="strips", phase="Pod", title="Keels and longerons", view="pod-iso", mode="slot",
                   intro="Two 3 x 5 mm keels run along the floor through notches in the formers (FS to BH). The 6 x 6 mm "
-                        "triangle longerons sit in the floor/side corners, in two pieces per side (gaps at the release "
+                        "L-section longerons (two 1.5 mm strips, 6 and 4.5 wide, glued in the corner) sit in the floor/side corners, in two pieces per side (gaps at the release "
                         "servo and the grip). Strip stock, cut to the lengths in the BOM.",
                   items=items,
                   traps=[T("keel-sides-first", "Leave the longerons out until the sides are on",
@@ -217,7 +233,7 @@ def steps(names):
         items.append(K(gid, "%s (%s)" % (label, ", ".join(mem)), mem, needs=needs))
         if gid == "LAM-RM":
             items.append(P("TST", needs=[("LAM-RM", "order", "TST's right tabs go into the slots in the right middle panel: put that panel on first.")],
-                           why="3 mm lite-ply tail-servo tray between the sides."))
+                           why="Tail-servo tray, 2 x 1.5 mm balsa laminated (grain crossed)."))
     items.append(A("sides-ca", "Wick thin CA into the finger joints and along every former tab, J2 and J3 still in place",
                    needs=[(g, "order", "All six panels must be on their tabs before gluing.") for g, _, _ in lam]))
     S.append(dict(id="sides", phase="Pod", title="Sides onto the tabs, J2 and J3 in place", view="pod-top", mode="slot",
@@ -237,7 +253,7 @@ def steps(names):
                                    ("epoxy-mix-1", "glue", "The PETG ring is glued with epoxy (CA does not hold PETG well).")],
                why="Printed PETG: front lip, collar for the firewall, glue sleeve inside the panels."),
              P("FW", needs=[("NOSE-RING", "order", "The firewall sits in the nose-ring collar against the lip: the motor pulls it "
-                                                    "forward onto the lip. Ring first.")], why="3 mm birch-ply firewall, 'UP ^' up."),
+                                                    "forward onto the lip. Ring first.")], why="Firewall, 2 x 1.5 mm birch ply laminated (face grain crossed), 'UP ^' up."),
              P("SERVO-MOUNT", needs=[("LAM-RM", "order", "The release-servo mount fits through the window in the right ply insert RO-MP: right middle panel first.")],
                why="Printed PETG arm pocket and servo shelves (D-059)."),
              P("STUB-R", needs=[("LAM-RM", "order", "The band stub goes through the right side and its doubler SD-R.")],
@@ -248,7 +264,7 @@ def steps(names):
                                ("LAM-LT", "order", "The rear band dowel passes through both tail-cone panels.")],
                why="Birch dowel, rear rubber-band anchor.")]
     S.append(dict(id="nose", phase="Pod", title="Nose ring, firewall and hard points", view="pod-iso", mode="slot",
-                  intro="The printed nose ring takes the motor load into the nose panels; the 3 mm ply firewall sits in its "
+                  intro="The printed nose ring takes the motor load into the nose panels; the laminated birch firewall sits in its "
                         "collar. The release-servo mount, the band stubs and the rear dowel are the other hard points.",
                   items=items,
                   traps=[T("fw-ca", "Glue the nose ring with thin CA only",
@@ -278,7 +294,7 @@ def steps(names):
         if it["id"] in ("TR2R", "TR2L"):
             it["needs"] = [("EF", "order", "Tube ring on the end former's front face.")]
     S.append(dict(id="booms", phase="Pod", title="Booms through the bulkhead on the J4 cradles", view="pod-iso", mode="slot",
-                  intro="Two 10/8 mm carbon tubes pass through the bulkhead BH and end former EF, with 3 mm ply tube rings "
+                  intro="Two 10/8 mm carbon tubes pass through the bulkhead BH and end former EF, with birch tube rings (2 x 1.5 mm) "
                         "on BH's aft face and EF's front face. The J4 cradles hold them parallel at Y +-16, Z -40. This "
                         "is the step that sets the tail incidence.",
                   items=items,
@@ -314,7 +330,9 @@ def steps(names):
                            "Glue HN-R to HN-L (and HF) only; the hatch is held by the 4 magnet pairs.")]))
 
     # ---------------------------------------------------------------- saddles
-    items = [A("cling", "Wrap the bottle in cling film"),
+    items = [P("PAD-S1", why="Birch bearing pad under saddle S1: spreads the landing load over the skid (floor crushing, P2)."),
+             P("PAD-S2", why="Birch bearing pad under saddle S2."),
+             A("cling", "Wrap the bottle in cling film"),
              P("S1a", needs=[("cling", "order", "Wrap the bottle first, or the saddle layers glue themselves to the bottle.")], slot=False),
              P("S1b", needs=[("S1a", "order", "Stack the layers in order a, b, c, d.")], slot=False),
              P("S1c", needs=[("S1b", "order", "Stack the layers in order a, b, c, d.")], slot=False),
@@ -325,8 +343,10 @@ def steps(names):
              P("S2d", needs=[("S2c", "order", "Stack the layers in order a, b, c, d.")], slot=False),
              A("toothpicks", "Push three 2 mm toothpicks through the pin holes of each stack and glue the layers together (PVA)",
                needs=[("S1d", "order", "All four layers of S1 first."), ("S2d", "order", "All four layers of S2 first.")]),
-             A("saddles-in", "Lower the wrapped bottle with both stacks into the pod: saddle tabs into the floor slots; glue to the floor",
-               needs=[("toothpicks", "order", "Pin and glue each stack before it goes in.")]),
+             A("saddles-in", "Lower the wrapped bottle with both stacks into the pod: saddle tabs into the floor slots, the notch in each stack over its pad; glue to the floor",
+               needs=[("toothpicks", "order", "Pin and glue each stack before it goes in."),
+                      ("PAD-S1", "order", "Glue the bearing pads on the floor first: the saddles sit on them."),
+                      ("PAD-S2", "order", "Glue the bearing pads on the floor first.")]),
              P("S1BR", needs=[("saddles-in", "order", "The strap bridges go in after the saddles.")], slot=False),
              P("S1BL", needs=[("saddles-in", "order", "The strap bridges go in after the saddles.")], slot=False),
              P("S2BR", needs=[("saddles-in", "order", "The strap bridges go in after the saddles.")], slot=False),
@@ -334,7 +354,7 @@ def steps(names):
              A("bottle-out", "When the glue is hard, lift the bottle out and peel off the cling film",
                needs=[("saddles-in", "cure", "Let the saddles cure on the bottle first.")])]
     S.append(dict(id="saddles", phase="Pod", title="Saddle stacks on the bottle", view="pod-iso", mode="place",
-                  intro="Each saddle is 4 layers (a and d 3 mm lite-ply with the floor tabs, b and c 3 mm balsa), with "
+                  intro="Each saddle is 4 layers (a to d, each 2 x 1.5 mm balsa laminated with crossed grain), with "
                         "lightening windows, keel notches and 3 pin holes. Building them on the real bottle gives a perfect "
                         "fit. Strap bridges S1BR/S1BL/S2BR/S2BL drop their legs through floor slots.",
                   items=items,
@@ -360,17 +380,17 @@ def steps(names):
                            "Use the straight LE line and a steel rule; measure each station from the centre (27.5, 137.5, 247.5, 357.5, 465 mm).")]))
 
     # ---------------------------------------------------------------- wing bottom
-    items = [P("DBOX-BOT", why="1.5 mm light balsa, the lower D-box skin."),
+    items = [P("DBOX-BOT", why="1.5 mm balsa (use the lightest sheets), the lower D-box skin."),
              P("CAP-C-BOT", needs=[("DBOX-BOT", "order", "Lay the bottom D-box sheet first; the spar cap sits on it at X 72.6-78.6.")],
                why="0.5 x 6 mm carbon (two 3 x 0.5 strips side by side): the outer face of the bottom spar cap."),
-             P("CAP-B-BOT", needs=[("CAP-C-BOT", "order", "The carbon is the OUTER face of the bottom cap: carbon first, hard balsa on top of it.")],
-               why="3 x 6 mm hard balsa."),
+             P("CAP-B-BOT", needs=[("CAP-C-BOT", "order", "The carbon is the OUTER face of the bottom cap: carbon first, the balsa cap on top of it.")],
+               why="3 x 6 mm balsa: two 1.5 x 6 strips laminated."),
              P("CS-BF-R"), P("CS-BF-L"), P("CS-BA-R"), P("CS-BA-L"),
              A("epoxy-caps", "Slow epoxy between the carbon and the balsa cap; pin or tape the sheeting into the cradles",
                needs=[("CAP-B-BOT", "order", "Both cap layers in first.")])]
     S.append(dict(id="wing-bottom", phase="Wing", title="Bottom sheeting and spar cap", view="wing-iso", mode="slot",
                   intro="The wing is built upside-up, lower surface down in the cradles. First the lower D-box sheet, the "
-                        "bottom spar cap (carbon outside, hard balsa inside) and the four bottom centre-sheeting panels "
+                        "bottom spar cap (carbon outside, balsa inside) and the four bottom centre-sheeting panels "
                         "(grain chord-wise).",
                   items=items, traps=[]))
 
@@ -381,8 +401,8 @@ def steps(names):
         it["needs"] = [("CAP-B-BOT", "order", "The ribs' notches drop over the bottom spar cap: cap first.")]
     S.append(dict(id="wing-ribs", phase="Wing", title="Ribs onto the spar cap", view="wing-top", mode="slot",
                   intro="19 one-piece ribs from the LE stock to the TE stock (aileron-span ribs stop at the false spar). Each "
-                        "rib's notch drops over the bottom cap; '< LE' to the front. W-R110 is 3 mm (wing bolt-down "
-                        "and servo bay), the tip ribs are light 3 mm.",
+                        "rib's notch drops over the bottom cap; '< LE' to the front. The ribs are 1.5 mm; W-C and W-R110 are 2 x 1.5 mm laminated (wing bolt-down "
+                        "and servo bay), the tip ribs are one 1.5 mm layer.",
                   items=items, traps=[]))
 
     # ---------------------------------------------------------------- false spar, webs, servo frames
@@ -396,7 +416,7 @@ def steps(names):
               A("webs-glue", "PVA on the web faces against the caps; thin CA on the egg-crate joints",
                 needs=[(n, "order", "All webs in first.") for n in WEBS])]
     S.append(dict(id="wing-spar", phase="Wing", title="Egg-crate false spar and shear webs", view="wing-top", mode="slot",
-                  intro="The 3 mm false spar (grain span-wise) is 5 pieces keyed with dovetails; it is slotted from below "
+                  intro="The 3 mm false spar (2 x 1.5 mm laminated, grain span-wise) is 5 pieces keyed with dovetails; it is slotted from below "
                         "and the ribs from above, so they lock together (egg-crate). The CA-hinge slots in it are laser cut. "
                         "The 1.5 mm shear webs (grain vertical) sit between the ribs in front of (WF) and behind (WR) the "
                         "spar caps; their end tabs lock into the rib slots.",
@@ -405,7 +425,7 @@ def steps(names):
     # ---------------------------------------------------------------- top
     capR, capL = caps("R", "T", names), caps("L", "T", names)
     items = [P("CAP-B-TOP", needs=[("webs-glue", "order", "The webs must be in before the top cap closes the spar box.")]),
-             P("CAP-C-TOP", needs=[("CAP-B-TOP", "order", "The carbon is the OUTER (top) face: hard balsa first, carbon on top.")]),
+             P("CAP-C-TOP", needs=[("CAP-B-TOP", "order", "The carbon is the OUTER (top) face: balsa cap first, carbon on top.")]),
              P("LE"), P("TE-C"), P("TE-O-R"), P("TE-O-L"),
              P("DBOX-TOP", needs=[("CAP-C-TOP", "order", "The top D-box sheet covers the spar cap: cap first."),
                                   ("LE", "order", "The top D-box sheet runs from the LE stock: LE first.")]),
@@ -418,7 +438,7 @@ def steps(names):
         if it["id"] in ("LE", "TE-C", "TE-O-R", "TE-O-L"):
             it["needs"] = [("webs-glue", "order", "Glue the webs and egg-crate joints first, so the frame is square.")]
     S.append(dict(id="wing-top", phase="Wing", title="Top cap, LE, TE and top sheeting", view="wing-iso", mode="slot",
-                  intro="Top spar cap (hard balsa, then carbon), the 6 mm LE stock, the hard-balsa TE wedges, then the top "
+                  intro="Top spar cap (balsa, then carbon), the 6 mm LE (4 x 1.5 mm laminated and shaped), the TE wedges (staggered 1.5 mm strips sanded to the wedge), then the top "
                         "sheeting last: D-box, centre sheeting and the 1.5 x 6 mm cap strips on every rib.",
                   items=items, traps=[]))
 
