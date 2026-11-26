@@ -1,0 +1,28 @@
+Floor pad: bearing length needed over the 15 mm skid = 36.6 mm (ultimate, margin 1)
+Boom 10x8: I 290 mm4, limit tip deflection 37 mm at E 28 GPa (R3 lower bound)
+Boom 8x6: I 137 mm4, limit tip deflection 78 mm at E 28 GPa (R3 lower bound)
+
+Part                 Check (ultimate)                                   laminate        sigma     allow  margin
+FS                   4 spokes 10 wide, W/n at 7.5 mm                    birch3_par      19.03     14.85    0.78 LOW
+FS                   4 spokes 14 wide, W/n at 7.5 mm                    birch3_par      13.59     14.85    1.09 OK
+FS                   6 spokes 10 wide, W/n at 7.5 mm                    birch3_par      12.69     14.85    1.17 OK
+FS                   6 spokes 14 wide, W/n at 7.5 mm                    birch3_par       9.06     14.85    1.64 OK
+FS                   full plate (no spokes), ring load r 32             birch3_par      12.00     14.85    1.24 OK
+FS                   4 spokes 10 wide, W/n at 7.5 mm                    birch3_x        19.03     21.30    1.12 OK
+FS                   4 spokes 14 wide, W/n at 7.5 mm                    birch3_x        13.59     21.30    1.57 OK
+FS                   6 spokes 10 wide, W/n at 7.5 mm                    birch3_x        12.69     21.30    1.68 OK
+FS                   6 spokes 14 wide, W/n at 7.5 mm                    birch3_x         9.06     21.30    2.35 OK
+FS                   full plate (no spokes), ring load r 32             birch3_x        12.00     21.30    1.77 OK
+Floor under saddle   today: foot 15 long over the skid                  balsa 1.5        0.34      0.14    0.41 LOW
+Floor under saddle   with 40 x 15 birch 1.5 pad on the floor            balsa 1.5        0.13      0.14    1.09 OK
+Saddle pad           pad 1.5 birch, overhang bending                    birch15         26.43     60.42    2.29 OK
+Side panel           Navier 67x95, patch 15x15 (defl 0.4 mm)            side_grip        1.00      2.09    2.09 OK
+Side panel           Navier 67x95, patch 15x15 (defl 1.0 mm)            side_bb          1.00      1.28    1.28 OK
+Side panel           Navier 20x95, patch 15x15 (defl 0.3 mm)            side_out         1.00      0.75    0.75 LOW
+Boom                 10x8 tube, root bending (compression)              carbon          97.05    200.00    2.06 OK
+Boom                 8x6 tube, root bending (compression)               carbon         163.70    200.00    1.22 OK
+Wing web             root bay web 1 x 1.5                               balsa            1.16      1.21    1.04 OK
+Wing web             root bay web 2 x 1.5 (y 0-110)                     balsa            0.58      1.21    2.09 OK
+Aft cone             bending, side solidity 1.0, flange compression     balsa            0.53      7.87   14.83 OK
+Aft cone             bending, side solidity 0.6, flange compression     balsa            0.63      7.87   12.41 OK
+(Navier rows: sigma = 1, allow = margin)

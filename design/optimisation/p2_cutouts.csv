@@ -1,0 +1,13 @@
+group,parts,cells,area_cm2,saved_g,cell,note
+"Pod side laminate (hex, both layers)",RO-/LO-/RI-/LI-,157,87.0,3.76,8 / 2.5,both layers 1.5 + 1.5 (P1); film inner face 30 g/m2 counted
+"Floor (between formers, outside saddles and skids)",FL-N1 FL-N2 FL-M1 FL-M2 FL-M3 FL-M4 FL-T1,20,17.3,0.4,10 / 3,
+Aft deck,DECK,16,13.9,0.32,10 / 3,
+Formers N1 N2 B1 B2 B4 EF (3 x 1.5),N1 N2 B1 B2-R B2-L B4 EF,0,0.0,0.0,8 / 3,
+Bulkhead BH (4 x 1.5),BH,0,0.0,0.0,10 / 3,tube rings and tabs solid
+Saddle layers and bridges,S1a S1b S1c S1d S1BR S1BL S2a S2b S2c S2d S2BR S2BL,0,0.0,0.0,8 / 3,already windowed
+Tail-servo tray and battery tray,TRAY TST,15,13.0,0.6,10 / 3,
+"Hatch HN-R/L, HF",HN-R HN-L HF,67,37.1,0.86,8 / 2.5,
+"Stab, fin (2 x 1.5): open frame",STAB-R STAB-L FIN,0,0.0,0.0,20 / 4,frame 6 mm + 4 mm lattice; film over the holes is already on the surface
+"Elevators, rudder (2 x 1.5): open frame",ELEV-R ELEV-L RUDDER,0,0.0,0.0,20 / 4,; film over the holes is already on the surface
+Wing tips and tip caps (2 x 1.5),W-TIP-R W-TIP-L W-TIPCAP-R W-TIPCAP-L,8,10.0,0.42,12 / 3,; film over the holes is already on the surface
+Wing ribs 1.5 (W-R055..W-R440): extra cells,W-R055-R W-R055-L W-R165-R W-R165-L W-R220-R W-R220-L W-R275-R W-R275-L W-R330-R W-R330-L W-R385-R W-R385-L W-R440-R W-R440-L,12,10.4,0.22,10 / 3,beside the existing holes; film over the holes is already on the surface
