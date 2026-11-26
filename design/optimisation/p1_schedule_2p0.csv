@@ -1,0 +1,230 @@
+name,assembly,kind,mat_today,t_today,mass_today,new,n,t_new,mass_wood,mass_glue,mass_new,note
+RO-NL,Pod,laser,balsa_med,1.5,1.66,1 x 2.0,1,2.0,2.21,0.0,2.21,thicker
+RO-NU,Pod,laser,balsa_med,1.5,0.78,1 x 2.0,1,2.0,1.04,0.0,1.04,thicker
+RI-N1,Pod,laser,balsa_med,1.0,0.76,1 x 2.0,1,2.0,1.52,0.0,1.52,thicker
+RI-N2,Pod,laser,balsa_med,1.0,0.87,1 x 2.0,1,2.0,1.74,0.0,1.74,thicker
+RO-M1L,Pod,laser,balsa_med,1.5,1.14,1 x 2.0,1,2.0,1.52,0.0,1.52,thicker
+RO-M1U,Pod,laser,balsa_med,1.5,0.48,1 x 2.0,1,2.0,0.64,0.0,0.64,thicker
+RO-MP,Pod,laser,ply,1.5,4.9,keep ply,1,1.5,4.9,0.0,4.9,grip / servo zone (hand launch)
+RO-M3L,Pod,laser,balsa_med,1.5,2.19,1 x 2.0,1,2.0,2.92,0.0,2.92,thicker
+RO-M3U,Pod,laser,balsa_med,1.5,0.77,1 x 2.0,1,2.0,1.03,0.0,1.03,thicker
+RI-M1,Pod,laser,balsa_med,1.0,0.89,1 x 2.0,1,2.0,1.78,0.0,1.78,thicker
+RI-M2U,Pod,laser,balsa_med,1.0,0.11,1 x 2.0,1,2.0,0.22,0.0,0.22,thicker
+RI-M2G,Pod,laser,ply,1.0,0.4,keep ply,1,1.0,0.4,0.0,0.4,grip zone inner
+RI-M3U,Pod,laser,balsa_med,1.0,0.26,1 x 2.0,1,2.0,0.52,0.0,0.52,thicker
+RI-M3G,Pod,laser,ply,1.0,0.98,keep ply,1,1.0,0.98,0.0,0.98,grip zone inner
+RI-M4,Pod,laser,balsa_med,1.0,0.92,1 x 2.0,1,2.0,1.84,0.0,1.84,thicker
+RI-M5,Pod,laser,balsa_med,1.0,0.58,1 x 2.0,1,2.0,1.16,0.0,1.16,thicker
+RO-TL,Pod,laser,balsa_med,1.5,0.69,1 x 2.0,1,2.0,0.92,0.0,0.92,thicker
+RO-TU,Pod,laser,balsa_med,1.5,0.36,1 x 2.0,1,2.0,0.48,0.0,0.48,thicker
+RI-T1,Pod,laser,balsa_med,1.0,0.7,1 x 2.0,1,2.0,1.4,0.0,1.4,thicker
+LO-NL,Pod,laser,balsa_med,1.5,1.66,1 x 2.0,1,2.0,2.21,0.0,2.21,thicker
+LO-NU,Pod,laser,balsa_med,1.5,0.78,1 x 2.0,1,2.0,1.04,0.0,1.04,thicker
+LI-N1,Pod,laser,balsa_med,1.0,0.76,1 x 2.0,1,2.0,1.52,0.0,1.52,thicker
+LI-N2,Pod,laser,balsa_med,1.0,0.87,1 x 2.0,1,2.0,1.74,0.0,1.74,thicker
+LO-ML,Pod,laser,balsa_med,1.5,4.14,1 x 2.0,1,2.0,5.52,0.0,5.52,thicker
+LO-MU,Pod,laser,balsa_med,1.5,1.53,1 x 2.0,1,2.0,2.04,0.0,2.04,thicker
+LI-M1,Pod,laser,balsa_med,1.0,0.89,1 x 2.0,1,2.0,1.78,0.0,1.78,thicker
+LI-M2U,Pod,laser,balsa_med,1.0,0.39,1 x 2.0,1,2.0,0.78,0.0,0.78,thicker
+LI-M2G,Pod,laser,ply,1.0,2.87,keep ply,1,1.0,2.87,0.0,2.87,grip zone inner
+LI-M3U,Pod,laser,balsa_med,1.0,0.38,1 x 2.0,1,2.0,0.76,0.0,0.76,thicker
+LI-M4,Pod,laser,balsa_med,1.0,0.92,1 x 2.0,1,2.0,1.84,0.0,1.84,thicker
+LI-M5,Pod,laser,balsa_med,1.0,0.58,1 x 2.0,1,2.0,1.16,0.0,1.16,thicker
+LO-TL,Pod,laser,balsa_med,1.5,0.69,1 x 2.0,1,2.0,0.92,0.0,0.92,thicker
+LO-TU,Pod,laser,balsa_med,1.5,0.36,1 x 2.0,1,2.0,0.48,0.0,0.48,thicker
+LI-T1,Pod,laser,balsa_med,1.0,0.7,1 x 2.0,1,2.0,1.4,0.0,1.4,thicker
+FL-N1,Pod,laser,balsa_med,1.5,0.8,1 x 2.0,1,2.0,1.07,0.0,1.07,thicker
+FL-N2,Pod,laser,balsa_med,1.5,1.66,1 x 2.0,1,2.0,2.21,0.0,2.21,thicker
+FL-M1,Pod,laser,balsa_med,1.5,1.28,1 x 2.0,1,2.0,1.71,0.0,1.71,thicker
+FL-M2,Pod,laser,balsa_med,1.5,1.4,1 x 2.0,1,2.0,1.87,0.0,1.87,thicker
+FL-M3,Pod,laser,balsa_med,1.5,1.9,1 x 2.0,1,2.0,2.53,0.0,2.53,thicker
+FL-M4,Pod,laser,balsa_med,1.5,0.78,1 x 2.0,1,2.0,1.04,0.0,1.04,thicker
+FL-T1,Pod,laser,balsa_med,1.5,1.46,1 x 2.0,1,2.0,1.95,0.0,1.95,thicker
+N1,Pod,laser,liteply,3.0,2.59,balsa 3 x 2.0 X-lam,3,6.0,1.61,0.15,1.77,former: U-frame leg check margin 1.9 at 0/90/0 4.5 mm
+N2,Pod,laser,liteply,3.0,4.77,balsa 3 x 2.0 X-lam,3,6.0,2.97,0.28,3.25,former
+FS,Pod,laser,liteply,3.0,8.6,keep liteply,1,3.0,8.6,0.0,8.6,front stop: balsa fails the spoke check in both directions (P2 FEA decides lite-ply 3 vs birch 2 x 1.5)
+B1,Pod,laser,liteply,3.0,5.01,balsa 3 x 2.0 X-lam,3,6.0,3.12,0.3,3.41,former
+B2-R,Pod,laser,liteply,3.0,2.06,balsa 3 x 2.0 X-lam,3,6.0,1.29,0.12,1.41,former
+B2-L,Pod,laser,liteply,3.0,2.06,balsa 3 x 2.0 X-lam,3,6.0,1.29,0.12,1.41,former
+B4,Pod,laser,liteply,3.0,4.96,balsa 3 x 2.0 X-lam,3,6.0,3.08,0.29,3.38,former
+BH,Pod,laser,ply,3.0,7.65,balsa 4 x 2.0 X-lam,4,8.0,4.39,0.47,4.86,bulkhead 4 x 1.5 X-lam with birch tube rings TR1: bearing margins >= 2.8
+EF,Pod,laser,liteply,3.0,2.93,balsa 3 x 2.0 X-lam,3,6.0,1.82,0.17,2.0,end former (with birch tube rings TR2)
+S1a,Pod,laser,liteply,3.0,1.77,balsa 2 x 2.0 X-lam,2,4.0,0.73,0.05,0.79,saddle face: bottle bearing margin 62
+S1b,Pod,laser,balsa_med,3.0,0.55,1 x 2.0,1,2.0,0.37,0.0,0.37,thinner (check)
+S1c,Pod,laser,balsa_med,3.0,0.55,1 x 2.0,1,2.0,0.37,0.0,0.37,thinner (check)
+S1d,Pod,laser,liteply,3.0,1.77,balsa 2 x 2.0 X-lam,2,4.0,0.73,0.05,0.79,saddle face
+S1BR,Pod,laser,liteply,3.0,0.13,balsa 2 x 2.0 X-lam,2,4.0,0.06,0.0,0.06,strap bridge
+S1BL,Pod,laser,liteply,3.0,0.13,balsa 2 x 2.0 X-lam,2,4.0,0.06,0.0,0.06,strap bridge
+S2a,Pod,laser,liteply,3.0,1.77,balsa 2 x 2.0 X-lam,2,4.0,0.73,0.05,0.79,saddle face
+S2b,Pod,laser,balsa_med,3.0,0.55,1 x 2.0,1,2.0,0.37,0.0,0.37,thinner (check)
+S2c,Pod,laser,balsa_med,3.0,0.55,1 x 2.0,1,2.0,0.37,0.0,0.37,thinner (check)
+S2d,Pod,laser,liteply,3.0,1.77,balsa 2 x 2.0 X-lam,2,4.0,0.73,0.05,0.79,saddle face
+S2BR,Pod,laser,liteply,3.0,0.13,balsa 2 x 2.0 X-lam,2,4.0,0.06,0.0,0.06,strap bridge
+S2BL,Pod,laser,liteply,3.0,0.13,balsa 2 x 2.0 X-lam,2,4.0,0.06,0.0,0.06,strap bridge
+Keel-R,Pod,strip,balsa_med,3.0,0.55,"2 x 2.0 laminated, sanded",2,3.0,0.55,0.05,0.6,sand to 3.0
+Longeron-R1,Pod,strip,balsa_med,6.0,0.18,L-section 2 legs 1 x 2.0,1,2.0,0.2,0.01,0.21,L instead of triangle
+Longeron-R2,Pod,strip,balsa_med,6.0,0.35,L-section 2 legs 1 x 2.0,1,2.0,0.39,0.01,0.4,L instead of triangle
+Capstrip-R,Pod,strip,balsa_med,3.0,0.59,"2 x 2.0 laminated, sanded",2,3.0,0.59,0.06,0.65,sand to 3.0
+Ledge-R1,Pod,strip,balsa_med,3.0,0.17,"2 x 2.0 laminated, sanded",2,3.0,0.17,0.02,0.19,sand to 3.0
+Ledge-R2,Pod,strip,balsa_med,3.0,0.03,"2 x 2.0 laminated, sanded",2,3.0,0.03,0.0,0.03,sand to 3.0
+Keel-L,Pod,strip,balsa_med,3.0,0.55,"2 x 2.0 laminated, sanded",2,3.0,0.55,0.05,0.6,sand to 3.0
+Longeron-L1,Pod,strip,balsa_med,6.0,0.17,L-section 2 legs 1 x 2.0,1,2.0,0.19,0.01,0.19,L instead of triangle
+Longeron-L2,Pod,strip,balsa_med,6.0,0.42,L-section 2 legs 1 x 2.0,1,2.0,0.47,0.01,0.48,L instead of triangle
+Capstrip-L,Pod,strip,balsa_med,3.0,0.59,"2 x 2.0 laminated, sanded",2,3.0,0.59,0.06,0.65,sand to 3.0
+Ledge-L1,Pod,strip,balsa_med,3.0,0.17,"2 x 2.0 laminated, sanded",2,3.0,0.17,0.02,0.19,sand to 3.0
+Ledge-L2,Pod,strip,balsa_med,3.0,0.03,"2 x 2.0 laminated, sanded",2,3.0,0.03,0.0,0.03,sand to 3.0
+HN-R,Pod,laser,balsa_light,1.5,0.9,1 x 2.0,1,2.0,1.68,0.0,1.68,thicker
+HN-L,Pod,laser,balsa_light,1.5,0.86,1 x 2.0,1,2.0,1.6,0.0,1.6,thicker
+HF,Pod,laser,balsa_light,1.5,0.43,1 x 2.0,1,2.0,0.8,0.0,0.8,thicker
+DECK,Pod,laser,balsa_med,1.5,1.13,1 x 2.0,1,2.0,1.51,0.0,1.51,thicker
+TRAY,Pod,laser,liteply,1.5,3.29,balsa 2 x 2.0 X-lam,2,4.0,2.73,0.19,2.92,battery tray (judgement)
+TST,Pod,laser,liteply,3.0,3.55,balsa 2 x 2.0 X-lam,2,4.0,1.47,0.11,1.58,tail-servo tray (judgement: CA-hardened screw holes)
+FW,Pod,laser,ply,3.0,5.1,keep ply,1,3.0,5.1,0.0,5.1,firewall: screw clamp crushes balsa across the grain
+FLAPSTOP,Pod,laser,ply,1.5,0.47,keep ply,1,1.5,0.47,0.0,0.47,flap stop (water load)
+SD-R,Pod,laser,ply,3.0,0.75,keep ply,1,3.0,0.75,0.0,0.75,stub doubler: band stub bearing
+SD-L,Pod,laser,ply,3.0,0.75,keep ply,1,3.0,0.75,0.0,0.75,stub doubler: band stub bearing
+TR1R,Pod,laser,ply,3.0,0.58,keep ply,1,3.0,0.58,0.0,0.58,boom tube rings (bearing)
+TR1L,Pod,laser,ply,3.0,0.58,keep ply,1,3.0,0.58,0.0,0.58,boom tube rings (bearing)
+TR2R,Pod,laser,ply,3.0,0.58,keep ply,1,3.0,0.58,0.0,0.58,boom tube rings (bearing)
+TR2L,Pod,laser,ply,3.0,0.58,keep ply,1,3.0,0.58,0.0,0.58,boom tube rings (bearing)
+SK1,Pod,laser,ply,1.5,1.07,keep ply,1,1.5,1.07,0.0,1.07,skids (landing wear)
+SK2,Pod,laser,ply,1.5,1.0,keep ply,1,1.5,1.0,0.0,1.0,skids (landing wear)
+SK3,Pod,laser,ply,1.5,1.6,keep ply,1,1.5,1.6,0.0,1.6,skids (landing wear)
+W-C,Wing,laser,balsa_med,2.0,1.1,1 x 2.0,1,2.0,1.1,0.0,1.1,
+W-R055-R,Wing,laser,balsa_med,2.0,1.1,1 x 2.0,1,2.0,1.1,0.0,1.1,
+W-R055-L,Wing,laser,balsa_med,2.0,1.1,1 x 2.0,1,2.0,1.1,0.0,1.1,
+W-R110-R,Wing,laser,balsa_med,3.0,2.11,2 x 2.0,2,4.0,2.81,0.2,3.01,thicker
+W-R110-L,Wing,laser,balsa_med,3.0,2.11,2 x 2.0,2,4.0,2.81,0.2,3.01,thicker
+W-R165-R,Wing,laser,balsa_med,2.0,1.33,1 x 2.0,1,2.0,1.33,0.0,1.33,
+W-R165-L,Wing,laser,balsa_med,2.0,1.33,1 x 2.0,1,2.0,1.33,0.0,1.33,
+W-R220-R,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R220-L,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R275-R,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R275-L,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R330-R,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R330-L,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R385-R,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R385-L,Wing,laser,balsa_med,2.0,1.01,1 x 2.0,1,2.0,1.01,0.0,1.01,
+W-R440-R,Wing,laser,balsa_med,2.0,1.1,1 x 2.0,1,2.0,1.1,0.0,1.1,
+W-R440-L,Wing,laser,balsa_med,2.0,1.1,1 x 2.0,1,2.0,1.1,0.0,1.1,
+W-TIP-R,Wing,laser,balsa_light,3.0,1.78,1 x 2.0,1,2.0,1.66,0.0,1.66,thinner (check)
+W-TIP-L,Wing,laser,balsa_light,3.0,1.78,1 x 2.0,1,2.0,1.66,0.0,1.66,thinner (check)
+W-TIPCAP-R,Wing,laser,balsa_light,3.0,1.39,1 x 2.0,1,2.0,1.3,0.0,1.3,thinner (check)
+W-TIPCAP-L,Wing,laser,balsa_light,3.0,1.39,1 x 2.0,1,2.0,1.3,0.0,1.3,thinner (check)
+FSP-C,Wing,laser,balsa_med,3.0,1.9,2 x 2.0,2,4.0,2.53,0.18,2.71,thicker
+FSP-R1,Wing,laser,balsa_med,3.0,1.39,2 x 2.0,2,4.0,1.85,0.13,1.99,thicker
+FSP-L1,Wing,laser,balsa_med,3.0,1.39,2 x 2.0,2,4.0,1.85,0.13,1.99,thicker
+FSP-R2,Wing,laser,balsa_med,3.0,0.86,2 x 2.0,2,4.0,1.15,0.08,1.23,thicker
+FSP-L2,Wing,laser,balsa_med,3.0,0.86,2 x 2.0,2,4.0,1.15,0.08,1.23,thicker
+WF-R1,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-L1,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-R2,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-L2,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-R3,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-L3,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-R4,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-L4,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-R5,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-L5,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-R6,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-L6,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-R7,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-L7,Wing,laser,balsa_med,1.5,0.41,1 x 2.0,1,2.0,0.55,0.0,0.55,thicker
+WF-R8,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-L8,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WF-R9,Wing,laser,balsa_med,1.5,0.37,1 x 2.0,1,2.0,0.49,0.0,0.49,thicker
+WF-L9,Wing,laser,balsa_med,1.5,0.37,1 x 2.0,1,2.0,0.49,0.0,0.49,thicker
+WR-R1,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WR-L1,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WR-R2,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WR-L2,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WR-R3,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+WR-L3,Wing,laser,balsa_med,1.5,0.4,1 x 2.0,1,2.0,0.53,0.0,0.53,thicker
+LE,Wing,strip,balsa_med,6.0,9.14,3 x 2.0 laminated,3,6.0,9.14,1.28,10.42,
+DBOX-TOP,Wing,strip,balsa_light,1.5,11.53,1 x 2.0 sheet,1,2.0,21.52,0.0,21.52,thicker: +mass
+DBOX-BOT,Wing,strip,balsa_light,1.5,10.96,1 x 2.0 sheet,1,2.0,20.46,0.0,20.46,thicker: +mass
+CAP-B-TOP,Wing,strip,balsa_hard,3.0,2.83,"2 x 2.0 laminated, sanded",2,3.0,2.48,0.24,2.71,sand to 3.0
+CAP-B-BOT,Wing,strip,balsa_hard,3.0,2.83,"2 x 2.0 laminated, sanded",2,3.0,2.48,0.24,2.71,sand to 3.0
+TE-C,Wing,strip,balsa_hard,5.2,1.8,"3 x 2.0 laminated, sanded",3,5.2,1.58,0.22,1.8,sand to 5.2
+TE-O-R,Wing,strip,balsa_hard,5.2,0.43,"3 x 2.0 laminated, sanded",3,5.2,0.38,0.05,0.43,sand to 5.2
+TE-O-L,Wing,strip,balsa_hard,5.2,0.43,"3 x 2.0 laminated, sanded",3,5.2,0.38,0.05,0.43,sand to 5.2
+CS-TF-R,Wing,strip,balsa_light,1.5,1.06,1 x 2.0 sheet,1,2.0,1.98,0.0,1.98,thicker: +mass
+CS-TF-L,Wing,strip,balsa_light,1.5,1.06,1 x 2.0 sheet,1,2.0,1.98,0.0,1.98,thicker: +mass
+CS-BF-R,Wing,strip,balsa_light,1.5,1.05,1 x 2.0 sheet,1,2.0,1.96,0.0,1.96,thicker: +mass
+CS-BF-L,Wing,strip,balsa_light,1.5,1.05,1 x 2.0 sheet,1,2.0,1.96,0.0,1.96,thicker: +mass
+CS-TA-R,Wing,strip,balsa_light,1.5,0.4,1 x 2.0 sheet,1,2.0,0.75,0.0,0.75,thicker: +mass
+CS-TA-L,Wing,strip,balsa_light,1.5,0.4,1 x 2.0 sheet,1,2.0,0.75,0.0,0.75,thicker: +mass
+CS-BA-R,Wing,strip,balsa_light,1.5,0.4,1 x 2.0 sheet,1,2.0,0.75,0.0,0.75,thicker: +mass
+CS-BA-L,Wing,strip,balsa_light,1.5,0.4,1 x 2.0 sheet,1,2.0,0.75,0.0,0.75,thicker: +mass
+CAPS-R110-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R110-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R110-TA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R110-TA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R110-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R110-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R110-BA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R110-BA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R165-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R165-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R165-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R165-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R220-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R220-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R220-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R220-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R275-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R275-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R275-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R275-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R330-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R330-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R330-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R330-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R385-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R385-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R385-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R385-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R440-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R440-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R440-TA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R440-TA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R440-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R440-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-R440-BA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-R440-BA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-TIP-TF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-TIP-TF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-TIP-TA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-TIP-TA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-TIP-BF-R,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-TIP-BF-L,Wing,strip,balsa_light,1.5,0.11,1 x 2.0 sheet,1,2.0,0.2,0.0,0.2,thicker: +mass
+CAPS-TIP-BA-R,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+CAPS-TIP-BA-L,Wing,strip,balsa_light,1.5,0.04,1 x 2.0 sheet,1,2.0,0.08,0.0,0.08,thicker: +mass
+AIL-LE-R,Wing,strip,balsa_med,3.0,1.54,"2 x 2.0 laminated, sanded",2,3.0,1.54,0.2,1.74,sand to 3.0
+AIL-LE-L,Wing,strip,balsa_med,3.0,1.54,"2 x 2.0 laminated, sanded",2,3.0,1.54,0.2,1.74,sand to 3.0
+AIL-TE-R,Wing,strip,balsa_med,5.2,2.29,"3 x 2.0 laminated, sanded",3,5.2,2.29,0.33,2.62,sand to 5.2
+AIL-TE-L,Wing,strip,balsa_med,5.2,2.29,"3 x 2.0 laminated, sanded",3,5.2,2.29,0.33,2.62,sand to 5.2
+A112-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A112-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A165-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A165-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A220-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A220-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A275-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A275-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A330-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A330-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A385-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A385-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A437-R,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+A437-L,Wing,laser,balsa_med,2.0,0.11,1 x 2.0,1,2.0,0.11,0.0,0.11,
+AH-R,Wing,laser,balsa_med,2.0,0.0,1 x 2.0,1,2.0,0.0,0.0,0.0,
+AH-L,Wing,laser,balsa_med,2.0,0.0,1 x 2.0,1,2.0,0.0,0.0,0.0,
+STAB-R,Tail,laser,balsa_med,3.0,2.63,2 x 2.0,2,4.0,3.51,0.25,3.76,thicker
+STAB-L,Tail,laser,balsa_med,3.0,2.63,2 x 2.0,2,4.0,3.51,0.25,3.76,thicker
+ELEV-R,Tail,laser,balsa_light,3.0,0.95,1 x 2.0,1,2.0,0.89,0.0,0.89,thinner (check)
+ELEV-L,Tail,laser,balsa_light,3.0,0.95,1 x 2.0,1,2.0,0.89,0.0,0.89,thinner (check)
+FIN,Tail,laser,balsa_med,3.0,1.59,2 x 2.0,2,4.0,2.12,0.15,2.27,thicker
+RUDDER,Tail,laser,balsa_light,3.0,0.8,1 x 2.0,1,2.0,0.75,0.0,0.75,thinner (check)
+HORN-E,Tail,laser,ply,1.5,0.13,keep ply,1,1.5,0.13,0.0,0.13,tail horns
+HORN-R,Tail,laser,ply,1.5,0.11,keep ply,1,1.5,0.11,0.0,0.11,tail horns

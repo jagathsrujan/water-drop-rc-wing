@@ -1,0 +1,230 @@
+name,assembly,grp,kind,mat,t_mm,w_mm,len_mm,stock,mass_g,area_cm2,load,role
+RO-NL,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,1.66,79.0,P,outer side laminate: pod bending shear
+RO-NU,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.78,37.1,P,outer side laminate: pod bending shear
+RI-N1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.76,54.3,P,inner side laminate
+RI-N2,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.87,62.1,P,inner side laminate
+RO-M1L,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,1.14,54.3,P,outer side laminate: pod bending shear
+RO-M1U,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.48,22.9,P,outer side laminate: pod bending shear
+RO-MP,Pod,Pod_Sides,laser,ply,1.5,,,laser sheet,4.9,50.3,P,side grip zone ply insert (hand launch)
+RO-M3L,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,2.19,104.3,P,outer side laminate: pod bending shear
+RO-M3U,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.77,36.7,P,outer side laminate: pod bending shear
+RI-M1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.89,63.6,P,inner side laminate
+RI-M2U,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.11,7.9,P,inner side laminate
+RI-M2G,Pod,Pod_Sides,laser,ply,1.0,,,laser sheet,0.4,6.2,P,inner side laminate
+RI-M3U,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.26,18.6,P,inner side laminate
+RI-M3G,Pod,Pod_Sides,laser,ply,1.0,,,laser sheet,0.98,15.1,P,inner side laminate
+RI-M4,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.92,65.7,P,inner side laminate
+RI-M5,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.58,41.4,P,inner side laminate
+RO-TL,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.69,32.9,P,outer side laminate: pod bending shear
+RO-TU,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.36,17.1,P,outer side laminate: pod bending shear
+RI-T1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.7,50.0,P,inner side laminate
+LO-NL,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,1.66,79.0,P,outer side laminate
+LO-NU,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.78,37.1,P,outer side laminate
+LI-N1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.76,54.3,P,inner side laminate
+LI-N2,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.87,62.1,P,inner side laminate
+LO-ML,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,4.14,197.1,P,outer side laminate
+LO-MU,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,1.53,72.9,P,outer side laminate
+LI-M1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.89,63.6,P,inner side laminate
+LI-M2U,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.39,27.9,P,inner side laminate
+LI-M2G,Pod,Pod_Sides,laser,ply,1.0,,,laser sheet,2.87,44.2,P,inner side laminate
+LI-M3U,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.38,27.1,P,inner side laminate
+LI-M4,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.92,65.7,P,inner side laminate
+LI-M5,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.58,41.4,P,inner side laminate
+LO-TL,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.69,32.9,P,outer side laminate
+LO-TU,Pod,Pod_Sides,laser,balsa_med,1.5,,,laser sheet,0.36,17.1,P,outer side laminate
+LI-T1,Pod,Pod_Sides,laser,balsa_med,1.0,,,laser sheet,0.7,50.0,P,inner side laminate
+FL-N1,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,0.8,38.1,P,"floor: water bottle bearing, landing"
+FL-N2,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,1.66,79.0,P,"floor: water bottle bearing, landing"
+FL-M1,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,1.28,61.0,P,"floor: water bottle bearing, landing"
+FL-M2,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,1.4,66.7,P,"floor: water bottle bearing, landing"
+FL-M3,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,1.9,90.5,P,"floor: water bottle bearing, landing"
+FL-M4,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,0.78,37.1,P,"floor: water bottle bearing, landing"
+FL-T1,Pod,Pod_Floor,laser,balsa_med,1.5,,,laser sheet,1.46,69.5,P,"floor: water bottle bearing, landing"
+N1,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,2.59,19.2,S,nose former
+N2,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,4.77,35.3,S,nose former
+FS,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,8.6,63.7,P,front stop: 1 L water nose-in decel (10 g) + launch grip
+B1,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,5.01,37.1,P,"former: wing band loads, side shear"
+B2-R,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,2.06,15.3,P,former: hatch / wing seat
+B2-L,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,2.06,15.3,P,former: hatch / wing seat
+B4,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,4.96,36.7,P,former: saddle 2 / bottle
+BH,Pod,Pod_Formers,laser,ply,3.0,,,laser sheet,7.65,39.2,P,"bulkhead: boom root bending/torsion, tail loads"
+EF,Pod,Pod_Formers,laser,liteply,3.0,,,laser sheet,2.93,21.7,P,end former: boom second support
+S1a,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,1.77,13.1,L,saddle layer (bottle cradle; bottle mass in bearing)
+S1b,Pod,Pod_Saddles,laser,balsa_med,3.0,,,laser sheet,0.55,13.1,L,saddle layer (bottle cradle; bottle mass in bearing)
+S1c,Pod,Pod_Saddles,laser,balsa_med,3.0,,,laser sheet,0.55,13.1,L,saddle layer (bottle cradle; bottle mass in bearing)
+S1d,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,1.77,13.1,L,saddle layer (bottle cradle; bottle mass in bearing)
+S1BR,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,0.13,1.0,L,saddle layer (bottle cradle; bottle mass in bearing)
+S1BL,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,0.13,1.0,L,saddle layer (bottle cradle; bottle mass in bearing)
+S2a,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,1.77,13.1,L,saddle layer
+S2b,Pod,Pod_Saddles,laser,balsa_med,3.0,,,laser sheet,0.55,13.1,L,saddle layer
+S2c,Pod,Pod_Saddles,laser,balsa_med,3.0,,,laser sheet,0.55,13.1,L,saddle layer
+S2d,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,1.77,13.1,L,saddle layer
+S2BR,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,0.13,1.0,L,saddle layer
+S2BL,Pod,Pod_Saddles,laser,liteply,3.0,,,laser sheet,0.13,1.0,L,saddle layer
+Keel-R,Pod,Pod_Strips,strip,balsa_med,3.0,5.0,261.7,strip,0.55,13.1,P,keel strips: pod bending flange
+Longeron-R1,Pod,Pod_Strips,strip,balsa_med,6.0,6.0,72.2,triangle strip,0.18,2.1,P,longerons: pod bending flange
+Longeron-R2,Pod,Pod_Strips,strip,balsa_med,6.0,6.0,139.0,triangle strip,0.35,4.2,P,longerons: pod bending flange
+Capstrip-R,Pod,Pod_Strips,strip,balsa_med,3.0,6.0,237.0,strip,0.59,14.0,P,side top flange / wing seat
+Ledge-R1,Pod,Pod_Strips,strip,balsa_med,3.0,3.0,138.2,strip,0.17,4.0,S,floor ledge
+Ledge-R2,Pod,Pod_Strips,strip,balsa_med,3.0,3.0,23.7,strip,0.03,0.7,S,floor ledge
+Keel-L,Pod,Pod_Strips,strip,balsa_med,3.0,5.0,261.7,strip,0.55,13.1,P,keel strips: pod bending flange
+Longeron-L1,Pod,Pod_Strips,strip,balsa_med,6.0,6.0,65.7,triangle strip,0.17,2.0,P,longerons: pod bending flange
+Longeron-L2,Pod,Pod_Strips,strip,balsa_med,6.0,6.0,165.0,triangle strip,0.42,5.0,P,longerons: pod bending flange
+Capstrip-L,Pod,Pod_Strips,strip,balsa_med,3.0,6.0,237.0,strip,0.59,14.0,P,side top flange / wing seat
+Ledge-L1,Pod,Pod_Strips,strip,balsa_med,3.0,3.0,138.3,strip,0.17,4.0,S,floor ledge
+Ledge-L2,Pod,Pod_Strips,strip,balsa_med,3.0,3.0,23.7,strip,0.03,0.7,S,floor ledge
+HN-R,Pod,Pod_Top,laser,balsa_light,1.5,,,laser sheet,0.9,60.0,S,hatch
+HN-L,Pod,Pod_Top,laser,balsa_light,1.5,,,laser sheet,0.86,57.3,S,hatch
+HF,Pod,Pod_Top,laser,balsa_light,1.5,,,laser sheet,0.43,28.7,S,hatch frame
+DECK,Pod,Pod_Top,laser,balsa_med,1.5,,,laser sheet,1.13,53.8,S,aft deck
+TRAY,Pod,Pod_Parts,laser,liteply,1.5,,,laser sheet,3.29,48.7,S,battery tray
+TST,Pod,Pod_Parts,laser,liteply,3.0,,,laser sheet,3.55,26.3,S,tail-servo tray
+FW,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,5.1,26.2,P,"firewall: motor thrust + torque, nose-in impact"
+FLAPSTOP,Pod,Pod_Parts,laser,ply,1.5,,,laser sheet,0.47,4.8,P,release-flap stop (water load on flap)
+SD-R,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.75,3.8,P,stub doubler: front wing-band stub bearing
+SD-L,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.75,3.8,P,stub doubler: front wing-band stub bearing
+TR1R,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.58,3.0,P,boom tube ring (boom bearing)
+TR1L,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.58,3.0,P,boom tube ring (boom bearing)
+TR2R,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.58,3.0,P,boom tube ring (boom bearing)
+TR2L,Pod,Pod_Parts,laser,ply,3.0,,,laser sheet,0.58,3.0,P,boom tube ring (boom bearing)
+SK1,Pod,Pod_Parts,laser,ply,1.5,,,laser sheet,1.07,11.0,S,skid
+SK2,Pod,Pod_Parts,laser,ply,1.5,,,laser sheet,1.0,10.3,S,skid
+SK3,Pod,Pod_Parts,laser,ply,1.5,,,laser sheet,1.6,16.4,S,skid
+W-C,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.1,39.3,P,centre rib (band seat)
+W-R055-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.1,39.3,P,wing rib
+W-R055-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.1,39.3,P,wing rib
+W-R110-R,Wing,Wing_Ribs,laser,balsa_med,3.0,,,laser sheet,2.11,50.2,P,wing rib
+W-R110-L,Wing,Wing_Ribs,laser,balsa_med,3.0,,,laser sheet,2.11,50.2,P,wing rib
+W-R165-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.33,47.5,P,wing rib
+W-R165-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.33,47.5,P,wing rib
+W-R220-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R220-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R275-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R275-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R330-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R330-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R385-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R385-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.01,36.1,P,wing rib
+W-R440-R,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.1,39.3,P,wing rib
+W-R440-L,Wing,Wing_Ribs,laser,balsa_med,2.0,,,laser sheet,1.1,39.3,P,wing rib
+W-TIP-R,Wing,Wing_Ribs,laser,balsa_light,3.0,,,laser sheet,1.78,59.3,L,wing tip block
+W-TIP-L,Wing,Wing_Ribs,laser,balsa_light,3.0,,,laser sheet,1.78,59.3,L,wing tip block
+W-TIPCAP-R,Wing,Wing_Ribs,laser,balsa_light,3.0,,,laser sheet,1.39,46.3,L,wing tip block
+W-TIPCAP-L,Wing,Wing_Ribs,laser,balsa_light,3.0,,,laser sheet,1.39,46.3,L,wing tip block
+FSP-C,Wing,Wing_Spars,laser,balsa_med,3.0,,,laser sheet,1.9,45.2,P,"false spar (hinge line, aileron loads)"
+FSP-R1,Wing,Wing_Spars,laser,balsa_med,3.0,,,laser sheet,1.39,33.1,P,"false spar (hinge line, aileron loads)"
+FSP-L1,Wing,Wing_Spars,laser,balsa_med,3.0,,,laser sheet,1.39,33.1,P,"false spar (hinge line, aileron loads)"
+FSP-R2,Wing,Wing_Spars,laser,balsa_med,3.0,,,laser sheet,0.86,20.5,P,"false spar (hinge line, aileron loads)"
+FSP-L2,Wing,Wing_Spars,laser,balsa_med,3.0,,,laser sheet,0.86,20.5,P,"false spar (hinge line, aileron loads)"
+WF-R1,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-L1,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-R2,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-L2,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-R3,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-L3,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-R4,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-L4,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-R5,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-L5,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-R6,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-L6,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-R7,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-L7,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.41,19.5,P,front spar shear web
+WF-R8,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-L8,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,front spar shear web
+WF-R9,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.37,17.6,P,front spar shear web
+WF-L9,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.37,17.6,P,front spar shear web
+WR-R1,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+WR-L1,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+WR-R2,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+WR-L2,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+WR-R3,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+WR-L3,Wing,Wing_Spars,laser,balsa_med,1.5,,,laser sheet,0.4,19.0,P,rear shear web
+LE,Wing,Wing_Sheeting,strip,balsa_med,6.0,16.3,984.0,leading-edge strip (shaped),9.14,108.8,P,leading edge
+DBOX-TOP,Wing,Wing_Sheeting,strip,balsa_light,1.5,78.4,984.0,sheet,11.53,768.7,P,D-box skin (wing torsion)
+DBOX-BOT,Wing,Wing_Sheeting,strip,balsa_light,1.5,74.3,984.0,sheet,10.96,730.7,P,D-box skin (wing torsion)
+CAP-B-TOP,Wing,Wing_Spars,strip,balsa_hard,3.0,6.0,984.0,strip,2.83,59.0,P,spar cap (wing bending)
+CAP-B-BOT,Wing,Wing_Spars,strip,balsa_hard,3.0,6.0,984.0,strip,2.83,59.0,P,spar cap (wing bending)
+TE-C,Wing,Wing_Sheeting,strip,balsa_hard,5.2,25.0,223.0,trailing-edge stock (wedge),1.8,21.6,S,trailing edge
+TE-O-R,Wing,Wing_Sheeting,strip,balsa_hard,5.2,25.0,53.5,trailing-edge stock (wedge),0.43,5.2,S,trailing edge
+TE-O-L,Wing,Wing_Sheeting,strip,balsa_hard,5.2,25.0,53.5,trailing-edge stock (wedge),0.43,5.2,S,trailing edge
+CS-TF-R,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,126.1,sheet (grain chord-wise),1.06,70.7,S,centre-section sheeting (band bearing)
+CS-TF-L,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,126.1,sheet (grain chord-wise),1.06,70.7,S,centre-section sheeting (band bearing)
+CS-BF-R,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,125.2,sheet (grain chord-wise),1.05,70.0,S,centre-section sheeting (band bearing)
+CS-BF-L,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,125.2,sheet (grain chord-wise),1.05,70.0,S,centre-section sheeting (band bearing)
+CS-TA-R,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,48.0,sheet (grain chord-wise),0.4,26.7,S,centre-section sheeting (band bearing)
+CS-TA-L,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,48.0,sheet (grain chord-wise),0.4,26.7,S,centre-section sheeting (band bearing)
+CS-BA-R,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,47.0,sheet (grain chord-wise),0.4,26.7,S,centre-section sheeting (band bearing)
+CS-BA-L,Wing,Wing_Sheeting,strip,balsa_light,1.5,56.0,47.0,sheet (grain chord-wise),0.4,26.7,S,centre-section sheeting (band bearing)
+CAPS-R110-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R110-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R110-TA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R110-TA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R110-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R110-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R110-BA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R110-BA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R165-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R165-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R165-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R165-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R220-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R220-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R220-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R220-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R275-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R275-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R275-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R275-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R330-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R330-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R330-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R330-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R385-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R385-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R385-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R385-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R440-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R440-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R440-TA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R440-TA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R440-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R440-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-R440-BA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-R440-BA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-TIP-TF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-TIP-TF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,126.1,cap strip,0.11,7.3,S,rib cap strip
+CAPS-TIP-TA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-TIP-TA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,48.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-TIP-BF-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-TIP-BF-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,125.2,cap strip,0.11,7.3,S,rib cap strip
+CAPS-TIP-BA-R,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+CAPS-TIP-BA-L,Wing,Wing_Caps,strip,balsa_light,1.5,6.0,47.0,cap strip,0.04,2.7,S,rib cap strip
+AIL-LE-R,Wing,Wing_Aileron,strip,balsa_med,3.0,15.0,325.0,strip (bevelled),1.54,36.7,S,aileron
+AIL-LE-L,Wing,Wing_Aileron,strip,balsa_med,3.0,15.0,325.0,strip (bevelled),1.54,36.7,S,aileron
+AIL-TE-R,Wing,Wing_Aileron,strip,balsa_med,5.2,25.0,325.0,trailing-edge stock (wedge),2.29,31.5,S,aileron
+AIL-TE-L,Wing,Wing_Aileron,strip,balsa_med,5.2,25.0,325.0,trailing-edge stock (wedge),2.29,31.5,S,aileron
+A112-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A112-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A165-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A165-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A220-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A220-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A275-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A275-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A330-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A330-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A385-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A385-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A437-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+A437-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.11,3.9,S,aileron rib
+AH-R,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.0,0.0,S,aileron horn rib
+AH-L,Wing,Wing_Aileron,laser,balsa_med,2.0,,,laser sheet,0.0,0.0,S,aileron horn rib
+STAB-R,Tail,Tail_Surfaces,laser,balsa_med,3.0,,,laser sheet,2.63,62.6,P,stabiliser (tail load)
+STAB-L,Tail,Tail_Surfaces,laser,balsa_med,3.0,,,laser sheet,2.63,62.6,P,stabiliser (tail load)
+ELEV-R,Tail,Tail_Surfaces,laser,balsa_light,3.0,,,laser sheet,0.95,31.7,S,elevator
+ELEV-L,Tail,Tail_Surfaces,laser,balsa_light,3.0,,,laser sheet,0.95,31.7,S,elevator
+FIN,Tail,Tail_Surfaces,laser,balsa_med,3.0,,,laser sheet,1.59,37.9,P,fin
+RUDDER,Tail,Tail_Surfaces,laser,balsa_light,3.0,,,laser sheet,0.8,26.7,S,rudder
+HORN-E,Tail,Tail_Hardware,laser,ply,1.5,,,laser sheet,0.13,1.3,S,tail horn
+HORN-R,Tail,Tail_Hardware,laser,ply,1.5,,,laser sheet,0.11,1.1,S,tail horn
