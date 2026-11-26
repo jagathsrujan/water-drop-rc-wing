@@ -2,7 +2,7 @@
 # - every control surface (aileron R / L, elevator = both halves + joiner + horn, rudder + horn) becomes one component
 # - the fixed airframe (pod, wing, tail, reservoir, electronics) is one rigid group: drag any part, the aircraft moves
 # - each surface has an as-built revolute joint on its hinge line, limited to +-25 deg: drag it and it swings
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import math
 import adsk.core as ac
 import adsk.fusion as af

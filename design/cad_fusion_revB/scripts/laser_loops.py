@@ -1,11 +1,11 @@
 # Bridge job: exact cut geometry of every laser part = the loops of its bottom face (the face without the engraving),
 # in the part's own flat frame (u, v). Writes ../dxf/loops.json for laser.py.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import json
 import os
 import time
 F = rl("fxlib"); L = rl("laser")
-OUT = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\dxf\loops.json"
+OUT = os.path.join(MODEL, "dxf", "loops.json")
 t0 = time.time()
 want = {p["name"]: p for p in L.laser_parts()}
 root = F.design().rootComponent

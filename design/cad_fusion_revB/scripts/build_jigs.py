@@ -1,5 +1,5 @@
 # Bridge job: 3D-printed assembly jigs into the open rev B design, STL export, and a fit check against the aircraft.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import os, time, json
 import adsk.core as ac
 G = rl("geo"); F = rl("fxlib"); POD = rl("pod"); TL = rl("tail"); J = rl("jigs")
@@ -18,7 +18,7 @@ F.build_list(jigs, [p for p in parts if p["grp"] != "Jigs_Wing"], fails)
 F.build_list(wing, [p for p in parts if p["grp"] == "Jigs_Wing"], fails)
 print("jigs built:", len(parts), "in %.0f s; FAILED %s" % (time.time() - t0, fails))
 # STL (each jig in its own flat frame: lay it on its largest flat face in the slicer)
-out = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\jigs"
+out = os.path.join(MODEL, "jigs")
 os.makedirs(out, exist_ok=True)
 names = {p["name"] for p in parts}
 n = 0

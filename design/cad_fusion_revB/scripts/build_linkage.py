@@ -1,5 +1,5 @@
 # Bridge job: control linkages (aileron arms, horns, horn ribs, pushrods; tail arms, pushrods, Z-bends).
-exec(open(r"C:\\Projects\\water-drop-rc-wing\\design\\cad_fusion_revB\\scripts\\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 G = rl("geo"); F = rl("fxlib"); W = rl("wing"); LK = rl("linkage")
 root = F.design().rootComponent
 top = F.group(root, "WaterDrop_revB")

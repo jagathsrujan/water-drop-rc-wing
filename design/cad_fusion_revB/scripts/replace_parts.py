@@ -1,6 +1,6 @@
 # Bridge job: delete and rebuild the named pod / wing / tail parts in place (after a change in the part data).
 # Set REPLACE = ["FL-M1", ...] in the bridge namespace before running.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 G = rl("geo"); F = rl("fxlib"); POD = rl("pod"); W = rl("wing"); T = rl("tail")
 names = set(REPLACE)
 root = F.design().rootComponent
@@ -23,4 +23,4 @@ for n in names:
     done.append(n)
 print("rebuilt", done, "FAILED", fails)
 # rebuilt parts are new occurrences: renew the rigid groups and hinge joints so nothing is left loose
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\assemble.py").read())
+exec(open(os.path.join(SCRIPTS, "assemble.py")).read())

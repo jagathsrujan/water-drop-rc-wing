@@ -1,11 +1,11 @@
 # Bridge job: mass / volume / bounding box of every body, group totals, and (optionally) interference.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import json
 import time
 import adsk.core as ac
 import adsk.fusion as af
 F = rl("fxlib")
-OUT = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\check"
+OUT = os.path.join(MODEL, "check")
 import os
 os.makedirs(OUT, exist_ok=True)
 t0 = time.time()

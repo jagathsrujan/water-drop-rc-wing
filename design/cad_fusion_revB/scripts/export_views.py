@@ -1,9 +1,9 @@
 # Bridge job: pictures of the Fusion model, STEP + Fusion archive export.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import os
 import time
 F = rl("fxlib")
-BASE = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB"
+BASE = MODEL
 IMG = os.path.join(BASE, "img")
 EXP = os.path.join(BASE, "export")
 os.makedirs(IMG, exist_ok=True)

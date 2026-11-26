@@ -1,5 +1,5 @@
 # Bridge job: (re)build the pinned pod jigs, the 5-segment jig base and the locating pins; STL; fit check.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import os, json, time
 import adsk.core as ac
 G = rl("geo"); F = rl("fxlib"); POD = rl("pod"); TL = rl("tail"); J = rl("jigs")
@@ -22,7 +22,7 @@ for name, p0, p1, r, ri, mat, grp in J.pin_rounds():
     except Exception as e:
         fails.append((name, str(e)[:120]))
 print("built %d pod jigs + base + %d pins in %.0f s; FAILED %s" % (len(pod_jigs), len(J.pin_rounds()), time.time() - t0, fails))
-out = r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\jigs"
+out = os.path.join(MODEL, "jigs")
 for f in os.listdir(out):
     if f.startswith(("J1", "J2", "J3", "J4", "JB-", "PIN")) and f.endswith(".stl"):
         os.remove(os.path.join(out, f))

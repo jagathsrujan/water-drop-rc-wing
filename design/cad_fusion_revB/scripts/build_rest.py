@@ -1,5 +1,5 @@
 # Bridge job: tail, reservoir and electronics into the open rev B design.
-exec(open(r"C:\Projects\water-drop-rc-wing\design\cad_fusion_revB\scripts\boot.py").read())
+import os; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "boot.py")).read())
 import time
 G = rl("geo"); F = rl("fxlib"); POD = rl("pod"); T = rl("tail")
 t0 = time.time()
