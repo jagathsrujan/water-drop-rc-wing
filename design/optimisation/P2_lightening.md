@@ -150,3 +150,8 @@ range** (neutral point and static margin), so X 80 may not be a hard limit. The 
   free Ansys Student edition, which is limited to small models but enough for these parts.
 - Otherwise these cases move to the tool P4 picks: SolidWorks Simulation is installed with SolidWorks 2026.
 - The hand calcs above size every change in the list, so none of them waits for the FEA.
+
+## 7. Decision (gate P2)
+
+**2026-11-26, the user: "Approve 1–12".** P3 implements changes 1–12 of section 1. The booms stay 10 × 8 mm until
+P5/P6.
