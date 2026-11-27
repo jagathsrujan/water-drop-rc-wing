@@ -1,0 +1,1 @@
+{"bodies":[[0.047,-0.117,-0.0175,1.029,0.135,0.495]],"log":"cyl_x MOTOR: ok\r\nextrude POD: ok\r\ncut_top POD-PLAN: ok\r\nextrude WING: ok\r\ncyl_x BOOM: ok\r\nextrude TAILBLOCK: ok\r\nextrude STAB: ok\r\nextrude FIN: ok\r\nbody Boss-Extrude7: X 47.0..1029.0 Y -117.0..135.0 Z -17.5..495.0, volume 5918 cm3\r\n"}

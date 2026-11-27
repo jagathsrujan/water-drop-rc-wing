@@ -22,3 +22,19 @@ __pycache__/
 design/cad_fusion_revB/export/*.step
 # Fusion build progress (written while a bridge job runs)
 design/cad_fusion_revB/check/build_progress.txt
+# SOLIDWORKS Simulation solver files and parts (rebuilt by run_fea.ps1 from the case JSON)
+design/simulation/structure/cases/*.SLDPRT
+design/simulation/structure/cases/*-*.*
+!design/simulation/structure/cases/*.png
+!design/simulation/structure/cases/*.json
+design/simulation/structure/cases/*.dat
+# SOLIDWORKS scratch anywhere under design/simulation (lock files, logs, solver files, P4 benchmark)
+design/simulation/**/~$*
+design/simulation/**/PerformanceLog.txt
+design/simulation/**/*.CWR
+design/simulation/**/*.gsz
+design/simulation/**/*-BenchMark-Solver.txt
+design/simulation/p4/*.SLDPRT
+# CFD geometry parts (rebuilt by design/simulation/aero/run_cfd_geom.ps1)
+design/simulation/aero/cfd/*.SLDPRT
+# AVL run output is summarised in design/simulation/aero/results.json

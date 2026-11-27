@@ -1,0 +1,359 @@
+{
+ "name": "side_panel_grip",
+ "bodies": [
+  {
+   "name": "IN-V1",
+   "loops": [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      67.0,
+      0.0
+     ],
+     [
+      67.0,
+      95.0
+     ],
+     [
+      0.0,
+      95.0
+     ]
+    ]
+   ],
+   "depth": 0.5,
+   "z0": 0.0,
+   "material": {
+    "name": "birch veneer, grain Y",
+    "model": "ortho",
+    "EX": 550000000.0,
+    "EY": 11000000000.0,
+    "EZ": 858000000.0,
+    "NUXY": 0.024,
+    "NUYZ": 0.426,
+    "NUXZ": 0.426,
+    "GXY": 748000000.0,
+    "GYZ": 814000000.0,
+    "GXZ": 187000000.0,
+    "rho": 650.0
+   }
+  },
+  {
+   "name": "IN-V2",
+   "loops": [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      67.0,
+      0.0
+     ],
+     [
+      67.0,
+      95.0
+     ],
+     [
+      0.0,
+      95.0
+     ]
+    ]
+   ],
+   "depth": 0.5,
+   "z0": 0.5,
+   "material": {
+    "name": "birch veneer, grain X",
+    "model": "ortho",
+    "EX": 11000000000.0,
+    "EY": 550000000.0,
+    "EZ": 858000000.0,
+    "NUXY": 0.451,
+    "NUYZ": 0.426,
+    "NUXZ": 0.426,
+    "GXY": 748000000.0,
+    "GYZ": 187000000.0,
+    "GXZ": 814000000.0,
+    "rho": 650.0
+   }
+  },
+  {
+   "name": "IN-V3",
+   "loops": [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      67.0,
+      0.0
+     ],
+     [
+      67.0,
+      95.0
+     ],
+     [
+      0.0,
+      95.0
+     ]
+    ]
+   ],
+   "depth": 0.5,
+   "z0": 1.0,
+   "material": {
+    "name": "birch veneer, grain Y",
+    "model": "ortho",
+    "EX": 550000000.0,
+    "EY": 11000000000.0,
+    "EZ": 858000000.0,
+    "NUXY": 0.024,
+    "NUYZ": 0.426,
+    "NUXZ": 0.426,
+    "GXY": 748000000.0,
+    "GYZ": 814000000.0,
+    "GXZ": 187000000.0,
+    "rho": 650.0
+   }
+  },
+  {
+   "name": "OUT",
+   "loops": [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      67.0,
+      0.0
+     ],
+     [
+      67.0,
+      95.0
+     ],
+     [
+      0.0,
+      95.0
+     ]
+    ]
+   ],
+   "depth": 1.5,
+   "z0": 1.5,
+   "material": {
+    "name": "balsa, grain X",
+    "model": "ortho",
+    "EX": 2550000000.0,
+    "EY": 38250000.0,
+    "EZ": 117300000.0,
+    "NUXY": 0.488,
+    "NUYZ": 0.231,
+    "NUXZ": 0.229,
+    "GXY": 94350000.0,
+    "GYZ": 12750000.0,
+    "GXZ": 137700000.0,
+    "rho": 120.0
+   }
+  },
+  {
+   "name": "PAD",
+   "loops": [
+    [
+     [
+      26.0,
+      40.0
+     ],
+     [
+      41.0,
+      40.0
+     ],
+     [
+      41.0,
+      55.0
+     ],
+     [
+      26.0,
+      55.0
+     ]
+    ]
+   ],
+   "depth": 0.5,
+   "z0": 3.0,
+   "material": {
+    "name": "soft pad (finger)",
+    "model": "iso",
+    "E": 100000000.0,
+    "nu": 0.3,
+    "rho": 100.0
+   }
+  }
+ ],
+ "fixtures": [
+  {
+   "faces": [
+    {
+     "body": "*",
+     "at": [
+      0,
+      0.0
+     ]
+    },
+    {
+     "body": "*",
+     "at": [
+      0,
+      67.0
+     ]
+    },
+    {
+     "body": "*",
+     "at": [
+      1,
+      0.0
+     ]
+    },
+    {
+     "body": "*",
+     "at": [
+      1,
+      95.0
+     ]
+    }
+   ]
+  }
+ ],
+ "loads": [
+  {
+   "total_N": 30.0,
+   "faces": [
+    {
+     "body": "PAD",
+     "at": [
+      2,
+      3.5
+     ]
+    }
+   ]
+  }
+ ],
+ "mesh": {
+  "size": 0.75
+ },
+ "probes": [
+  {
+   "label": "IN-V1 (birch, 90 deg) stress along grain (MPa)",
+   "kind": "stress",
+   "component": 1,
+   "faces": [
+    {
+     "body": "IN-V1",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "IN-V1 (birch, 90 deg) stress across grain (MPa)",
+   "kind": "stress",
+   "component": 0,
+   "faces": [
+    {
+     "body": "IN-V1",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "IN-V2 (birch, 0 deg) stress along grain (MPa)",
+   "kind": "stress",
+   "component": 0,
+   "faces": [
+    {
+     "body": "IN-V2",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "IN-V2 (birch, 0 deg) stress across grain (MPa)",
+   "kind": "stress",
+   "component": 1,
+   "faces": [
+    {
+     "body": "IN-V2",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "IN-V3 (birch, 90 deg) stress along grain (MPa)",
+   "kind": "stress",
+   "component": 1,
+   "faces": [
+    {
+     "body": "IN-V3",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "IN-V3 (birch, 90 deg) stress across grain (MPa)",
+   "kind": "stress",
+   "component": 0,
+   "faces": [
+    {
+     "body": "IN-V3",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "OUT (balsa, 0 deg) stress along grain (MPa)",
+   "kind": "stress",
+   "component": 0,
+   "faces": [
+    {
+     "body": "OUT",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "OUT (balsa, 0 deg) stress across grain (MPa)",
+   "kind": "stress",
+   "component": 1,
+   "faces": [
+    {
+     "body": "OUT",
+     "all": 1
+    }
+   ]
+  },
+  {
+   "label": "centre UZ (mm)",
+   "kind": "disp",
+   "component": 2,
+   "faces": [
+    {
+     "body": "PAD",
+     "at": [
+      2,
+      3.5
+     ]
+    }
+   ]
+  }
+ ],
+ "hand": {
+  "load_N": 30.0,
+  "margin_P2": 2.09,
+  "deflection_P2_mm": 0.4,
+  "balsa_f_along_MPa": 11.936160000000003,
+  "balsa_f_across_MPa": 0.4774464000000001,
+  "birch_f_along_MPa": 62.628,
+  "birch_f_across_MPa": 2.50512,
+  "note": "P2: Navier, simply supported, first-ply failure"
+ },
+ "part": "C:\\Projects\\water-drop-rc-wing\\.claude\\worktrees\\optimisation-490645\\design\\simulation\\structure\\cases\\side_panel_grip.SLDPRT"
+}

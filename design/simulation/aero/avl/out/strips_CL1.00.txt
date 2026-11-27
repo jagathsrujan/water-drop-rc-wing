@@ -1,0 +1,518 @@
+
+ ===================================================
+  Athena Vortex Lattice  Program      Version  3.52
+  Copyright (C) 2002   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ ==========================================================
+   Quit    Exit program
+
+  .OPER    Compute operating-point run cases
+  .MODE    Eigenvalue analysis of run cases
+  .TIME    Time-domain calculations
+
+   LOAD f  Read configuration input file
+   MASS f  Read mass distribution file
+   MSHO    Show mass distribution
+   CASE f  Read run case file
+
+   CINI    Clear and initialize run cases
+   MSET i  Apply mass file data to stored run case(s)
+
+  .PLOP    Plotting options
+   NAME s  Specify new configuration name
+
+ AVL   c>  
+ Reading file: revB.avl  ...
+
+ Configuration: WaterDrop rev B (Fusion model, optimisation P5)             
+
+   Building surface: Wing                                    
+ ** Polar data for surface (all sections)
+    Reading CD(CL) data for surface
+     CLneg    =    0.031  CD@CLneg =    0.01600
+     CL@CDmin =    0.555  CDmin    =    0.01190
+     CLpos    =    1.443  CD@CLpos =    0.02320
+     Reading airfoil from file: sd7062.dat
+     Reading airfoil from file: sd7062.dat
+     Reading airfoil from file: sd7062.dat
+     Reading airfoil from file: sd7062.dat
+  
+   Building duplicate image-surface: Wing (YDUP)                             
+
+   Building surface: Stab                                    
+ ** Polar data for surface (all sections)
+    Reading CD(CL) data for surface
+     CLneg    =   -0.600  CD@CLneg =    0.02000
+     CL@CDmin =    0.000  CDmin    =    0.01200
+     CLpos    =    0.600  CD@CLpos =    0.02000
+  
+   Building duplicate image-surface: Stab (YDUP)                             
+
+   Building surface: Fin                                     
+ ** Polar data for surface (all sections)
+    Reading CD(CL) data for surface
+     CLneg    =   -0.600  CD@CLneg =    0.02000
+     CL@CDmin =    0.000  CDmin    =    0.01200
+     CLpos    =    0.600  CD@CLpos =    0.02000
+
+   Building body: Pod                                     
+     Reading body shape from file: revB_pod.dat
+
+ Mach =    0.0000
+
+    1 Bodies
+    5 Solid surfaces
+  110 Strips
+ 1228 Vortices
+
+    3 Control variables
+    0 Design parameters
+
+ Initializing run cases...
+
+ AVL   c>  
+ Operation of run case 1/1:   -unnamed-                              
+ ==========================================================
+
+  variable          constraint              
+  ------------      ------------------------
+  A lpha        ->  alpha       =   0.000         
+  B eta         ->  beta        =   0.000         
+  R oll  rate   ->  pb/2V       =   0.000         
+  P itch rate   ->  qc/2V       =   0.000         
+  Y aw   rate   ->  rb/2V       =   0.000         
+  D1  aileron   ->  aileron     =   0.000         
+  D2  elevator  ->  elevator    =   0.000         
+  D3  rudder    ->  rudder      =   0.000         
+  ------------      ------------------------
+
+  C1  set level or banked  horizontal flight constraints
+  C2  set steady pitch rate (looping) flight constraints
+  M odify parameters                                    
+
+ "#" select  run case          L ist defined run cases   
+  +  add new run case          S ave run cases to file   
+  -  delete  run case          F etch run cases from file
+  N ame current run case       W rite forces to file     
+
+ eX ecute run case             I nitialize variables     
+
+  G eometry plot               T refftz Plane plot       
+
+  ST  stability derivatives    FT  total   forces        
+  SB  body-axis derivatives    FN  surface forces        
+  RE  reference quantities     FS  strip   forces (FSB bodyaxes)
+  DE  design changes           FE  element forces        
+  O ptions                     FB  body forces           
+                               HM  hinge moments         
+  OB offbody flow survey       VM  strip shear,moment    
+  MRF  machine-readable format CPOM OML surface pressures
+
+ .OPER (case 1/1)   c>  
+ Operation of run case 1/1:   -unnamed-                              
+ ==========================================================
+
+  variable          constraint              
+  ------------      ------------------------
+  A lpha        ->  CL          =   1.000         
+  B eta         ->  beta        =   0.000         
+  R oll  rate   ->  pb/2V       =   0.000         
+  P itch rate   ->  qc/2V       =   0.000         
+  Y aw   rate   ->  rb/2V       =   0.000         
+  D1  aileron   ->  aileron     =   0.000         
+  D2  elevator  ->  elevator    =   0.000         
+  D3  rudder    ->  rudder      =   0.000         
+  ------------      ------------------------
+
+  C1  set level or banked  horizontal flight constraints
+  C2  set steady pitch rate (looping) flight constraints
+  M odify parameters                                    
+
+ "#" select  run case          L ist defined run cases   
+  +  add new run case          S ave run cases to file   
+  -  delete  run case          F etch run cases from file
+  N ame current run case       W rite forces to file     
+
+ eX ecute run case             I nitialize variables     
+
+  G eometry plot               T refftz Plane plot       
+
+  ST  stability derivatives    FT  total   forces        
+  SB  body-axis derivatives    FN  surface forces        
+  RE  reference quantities     FS  strip   forces (FSB bodyaxes)
+  DE  design changes           FE  element forces        
+  O ptions                     FB  body forces           
+                               HM  hinge moments         
+  OB offbody flow survey       VM  strip shear,moment    
+  MRF  machine-readable format CPOM OML surface pressures
+
+ .OPER (case 1/1)   c>  
+ Operation of run case 1/1:   -unnamed-                              
+ ==========================================================
+
+  variable          constraint              
+  ------------      ------------------------
+  A lpha        ->  CL          =   1.000         
+  B eta         ->  beta        =   0.000         
+  R oll  rate   ->  pb/2V       =   0.000         
+  P itch rate   ->  qc/2V       =   0.000         
+  Y aw   rate   ->  rb/2V       =   0.000         
+  D1  aileron   ->  aileron     =   0.000         
+  D2  elevator  ->  Cm pitchmom =   0.000         
+  D3  rudder    ->  rudder      =   0.000         
+  ------------      ------------------------
+
+  C1  set level or banked  horizontal flight constraints
+  C2  set steady pitch rate (looping) flight constraints
+  M odify parameters                                    
+
+ "#" select  run case          L ist defined run cases   
+  +  add new run case          S ave run cases to file   
+  -  delete  run case          F etch run cases from file
+  N ame current run case       W rite forces to file     
+
+ eX ecute run case             I nitialize variables     
+
+  G eometry plot               T refftz Plane plot       
+
+  ST  stability derivatives    FT  total   forces        
+  SB  body-axis derivatives    FN  surface forces        
+  RE  reference quantities     FS  strip   forces (FSB bodyaxes)
+  DE  design changes           FE  element forces        
+  O ptions                     FB  body forces           
+                               HM  hinge moments         
+  OB offbody flow survey       VM  strip shear,moment    
+  MRF  machine-readable format CPOM OML surface pressures
+
+ .OPER (case 1/1)   c>    Building normalwash AIC matrix...
+  Factoring normalwash AIC matrix...
+  Building source+doublet strength AIC matrix...
+  Building source+doublet velocity AIC matrix...
+  Building bound-vortex velocity matrix...
+
+ iter d(alpha)   d(beta)    d(pb/2V)   d(qc/2V)   d(rb/2V)   aileron    elevator   rudder     
+   1  0.963E+01 -0.000E+00  0.000E+00 -0.000E+00 -0.000E+00 -0.000E+00 -0.144E+01 -0.000E+00
+   2  0.389E+00 -0.000E+00  0.000E+00 -0.000E+00 -0.000E+00 -0.000E+00 -0.232E+00 -0.000E+00
+   3  0.187E-02 -0.000E+00  0.000E+00 -0.000E+00 -0.000E+00 -0.000E+00 -0.117E-02 -0.000E+00
+   4  0.404E-05 -0.000E+00  0.000E+00 -0.000E+00 -0.000E+00 -0.000E+00 -0.172E-05 -0.000E+00
+ ---------------------------------------------------------------
+ Vortex Lattice Output -- Total Forces
+
+ Configuration: WaterDrop rev B (Fusion model, optimisation P5)             
+     # Surfaces =   5
+     # Strips   = 110
+     # Vortices =1228
+
+  Sref = 0.27720       Cref = 0.28000       Bref = 0.99000    
+  Xref = 0.81000E-01   Yref =  0.0000       Zref =  0.0000    
+
+ Standard axis orientation,  X fwd, Z down         
+
+ Run case:  -unnamed-                              
+
+  Alpha =  10.02503     pb/2V =  -0.00000     p'b/2V =  -0.00000
+  Beta  =   0.00000     qc/2V =   0.00000
+  Mach  =     0.000     rb/2V =  -0.00000     r'b/2V =  -0.00000
+
+  CXtot =   0.05887     Cltot =   0.00000     Cl'tot =   0.00000
+  CYtot =  -0.00000     Cmtot =  -0.00000
+  CZtot =  -1.00510     Cntot =   0.00000     Cn'tot =  -0.00000
+
+  CLtot =   1.00000
+  CDtot =   0.11699
+  CDvis =   0.01891     CDind = 0.0980842
+  CLff  =   1.00732     CDff  = 0.0923710    | Trefftz
+  CYff  =  -0.00000         e =    0.9890    | Plane  
+
+   aileron         =   0.00000
+   elevator        =  -1.67729
+   rudder          =   0.00000
+
+ ---------------------------------------------------------------
+
+ Operation of run case 1/1:   -unnamed-                              
+ ==========================================================
+
+  variable          constraint              
+  ------------      ------------------------
+  A lpha        ->  CL          =   1.000         
+  B eta         ->  beta        =   0.000         
+  R oll  rate   ->  pb/2V       =   0.000         
+  P itch rate   ->  qc/2V       =   0.000         
+  Y aw   rate   ->  rb/2V       =   0.000         
+  D1  aileron   ->  aileron     =   0.000         
+  D2  elevator  ->  Cm pitchmom =   0.000         
+  D3  rudder    ->  rudder      =   0.000         
+  ------------      ------------------------
+
+  C1  set level or banked  horizontal flight constraints
+  C2  set steady pitch rate (looping) flight constraints
+  M odify parameters                                    
+
+ "#" select  run case          L ist defined run cases   
+  +  add new run case          S ave run cases to file   
+  -  delete  run case          F etch run cases from file
+  N ame current run case       W rite forces to file     
+
+ eX ecute run case             I nitialize variables     
+
+  G eometry plot               T refftz Plane plot       
+
+  ST  stability derivatives    FT  total   forces        
+  SB  body-axis derivatives    FN  surface forces        
+  RE  reference quantities     FS  strip   forces (FSB bodyaxes)
+  DE  design changes           FE  element forces        
+  O ptions                     FB  body forces           
+                               HM  hinge moments         
+  OB offbody flow survey       VM  strip shear,moment    
+  MRF  machine-readable format CPOM OML surface pressures
+
+ .OPER (case 1/1)   c>  
+Enter filename, or <return> for screen output   s>   ---------------------------------------------------------------
+ Surface and Strip Forces by surface
+
+  Sref = 0.27720       Cref = 0.28000       Bref = 0.99000    
+  Xref = 0.81000E-01   Yref =  0.0000       Zref =  0.0000    
+
+  Surface # 1     Wing                                    
+     # Chordwise = 12   # Spanwise = 32     First strip =  1
+     Surface area Ssurf =    0.138600     Ave. chord Cave =    0.280000
+
+ Forces referred to Sref, Cref, Bref about Xref, Yref, Zref
+ Standard axis orientation,  X fwd, Z down         
+     CLsurf  =   0.49402     Clsurf  =  -0.10948
+     CYsurf  =   0.00000     Cmsurf  =  -0.00799
+     CDsurf  =   0.05294     Cnsurf  =  -0.00625
+     CDisurf =   0.04524     CDvsurf =   0.00770
+
+ Forces referred to Ssurf, Cave 
+     CLsurf  =   0.98803     CDsurf  =   0.10589
+
+ Strip Forces referred to Strip Area, Chord
+    j     Xle      Yle      Zle      Chord    Area     c_cl     ai     cl_norm    cl       cd       cdv    cm_c/4     cm_LE   C.P.x/c
+     1   0.0000   0.0114   0.0000   0.2800   0.0064   0.3186   0.1007   1.1446   1.1446   0.0779   0.0169  -0.0471  -0.3323    0.291
+     2   0.0000   0.0341   0.0000   0.2800   0.0063   0.3211   0.1212   1.1517   1.1517   0.0891   0.0170  -0.0495  -0.3369    0.293
+     3   0.0000   0.0567   0.0000   0.2800   0.0063   0.3243   0.1438   1.1613   1.1613   0.1019   0.0172  -0.0530  -0.3433    0.296
+     4   0.0000   0.0792   0.0000   0.2800   0.0063   0.3268   0.1592   1.1689   1.1689   0.1105   0.0173  -0.0565  -0.3491    0.298
+     5   0.0000   0.1014   0.0000   0.2800   0.0062   0.3281   0.1683   1.1728   1.1728   0.1152   0.0174  -0.0596  -0.3533    0.301
+     6   0.0000   0.1246   0.0000   0.2800   0.0067   0.3282   0.1738   1.1725   1.1725   0.1175   0.0174  -0.0622  -0.3560    0.303
+     7   0.0000   0.1485   0.0000   0.2800   0.0066   0.3269   0.1767   1.1676   1.1676   0.1186   0.0173  -0.0642  -0.3568    0.305
+     8   0.0000   0.1720   0.0000   0.2800   0.0065   0.3244   0.1780   1.1585   1.1585   0.1190   0.0171  -0.0655  -0.3559    0.307
+     9   0.0000   0.1950   0.0000   0.2800   0.0064   0.3209   0.1790   1.1456   1.1456   0.1191   0.0169  -0.0662  -0.3534    0.308
+    10   0.0000   0.2176   0.0000   0.2800   0.0062   0.3164   0.1812   1.1294   1.1294   0.1190   0.0166  -0.0664  -0.3496    0.309
+    11   0.0000   0.2396   0.0000   0.2800   0.0061   0.3110   0.1852   1.1098   1.1098   0.1188   0.0163  -0.0661  -0.3445    0.310
+    12   0.0000   0.2610   0.0000   0.2800   0.0059   0.3047   0.1902   1.0871   1.0871   0.1183   0.0160  -0.0654  -0.3382    0.310
+    13   0.0000   0.2818   0.0000   0.2800   0.0057   0.2976   0.1948   1.0613   1.0613   0.1177   0.0156  -0.0644  -0.3308    0.311
+    14   0.0000   0.3018   0.0000   0.2800   0.0055   0.2896   0.1992   1.0324   1.0324   0.1168   0.0152  -0.0630  -0.3222    0.311
+    15   0.0000   0.3211   0.0000   0.2800   0.0053   0.2807   0.2038   1.0004   1.0004   0.1156   0.0147  -0.0613  -0.3126    0.311
+    16   0.0000   0.3396   0.0000   0.2800   0.0051   0.2710   0.2086   0.9652   0.9652   0.1141   0.0143  -0.0593  -0.3019    0.311
+    17   0.0000   0.3573   0.0000   0.2800   0.0048   0.2604   0.2137   0.9269   0.9269   0.1123   0.0139  -0.0571  -0.2901    0.312
+    18   0.0000   0.3741   0.0000   0.2800   0.0046   0.2488   0.2191   0.8854   0.8854   0.1100   0.0135  -0.0545  -0.2773    0.312
+    19   0.0000   0.3899   0.0000   0.2800   0.0043   0.2364   0.2246   0.8406   0.8406   0.1072   0.0131  -0.0518  -0.2634    0.312
+    20   0.0000   0.4048   0.0000   0.2800   0.0040   0.2230   0.2303   0.7927   0.7927   0.1040   0.0127  -0.0488  -0.2484    0.312
+    21   0.0000   0.4186   0.0000   0.2800   0.0037   0.2087   0.2360   0.7415   0.7415   0.1001   0.0124  -0.0455  -0.2324    0.311
+    22   0.0000   0.4315   0.0000   0.2800   0.0034   0.1936   0.2418   0.6873   0.6873   0.0957   0.0122  -0.0421  -0.2155    0.311
+    23   0.0000   0.4430   0.0000   0.2800   0.0030   0.1778   0.2475   0.6308   0.6308   0.0907   0.0120  -0.0386  -0.1978    0.311
+    24   0.0000   0.4532   0.0000   0.2800   0.0027   0.1614   0.2530   0.5725   0.5725   0.0851   0.0119  -0.0349  -0.1796    0.311
+    25   0.0000   0.4624   0.0000   0.2800   0.0024   0.1444   0.2583   0.5119   0.5119   0.0790   0.0119  -0.0312  -0.1606    0.311
+    26   0.0000   0.4704   0.0000   0.2800   0.0021   0.1267   0.2635   0.4489   0.4489   0.0722   0.0121  -0.0273  -0.1410    0.311
+    27   0.0000   0.4774   0.0000   0.2800   0.0018   0.1084   0.2684   0.3838   0.3838   0.0649   0.0123  -0.0234  -0.1207    0.311
+    28   0.0000   0.4832   0.0000   0.2800   0.0015   0.0895   0.2729   0.3168   0.3168   0.0569   0.0127  -0.0193  -0.0998    0.311
+    29   0.0000   0.4878   0.0000   0.2800   0.0011   0.0702   0.2769   0.2482   0.2482   0.0485   0.0133  -0.0151  -0.0784    0.311
+    30   0.0000   0.4913   0.0000   0.2800   0.0008   0.0504   0.2803   0.1783   0.1783   0.0396   0.0140  -0.0109  -0.0565    0.311
+    31   0.0000   0.4937   0.0000   0.2800   0.0005   0.0304   0.2826   0.1074   0.1074   0.0304   0.0149  -0.0066  -0.0343    0.311
+    32   0.0000   0.4949   0.0000   0.2800   0.0002   0.0101   0.2837   0.0359   0.0359   0.0211   0.0159  -0.0022  -0.0119    0.311
+
+  Surface # 2     Wing (YDUP)                             
+     # Chordwise = 12   # Spanwise = 32     First strip = 33
+     Surface area Ssurf =    0.138600     Ave. chord Cave =    0.280000
+
+ Forces referred to Sref, Cref, Bref about Xref, Yref, Zref
+ Standard axis orientation,  X fwd, Z down         
+     CLsurf  =   0.49402     Clsurf  =   0.10948
+     CYsurf  =   0.00000     Cmsurf  =  -0.00799
+     CDsurf  =   0.05294     Cnsurf  =   0.00625
+     CDisurf =   0.04524     CDvsurf =   0.00770
+
+ Forces referred to Ssurf, Cave 
+     CLsurf  =   0.98803     CDsurf  =   0.10589
+
+ Strip Forces referred to Strip Area, Chord
+    j     Xle      Yle      Zle      Chord    Area     c_cl     ai     cl_norm    cl       cd       cdv    cm_c/4     cm_LE   C.P.x/c
+    33   0.0000  -0.0114   0.0000   0.2800   0.0064   0.3186   0.1007   1.1446   1.1446   0.0779   0.0169  -0.0471   0.3323    0.291
+    34   0.0000  -0.0341   0.0000   0.2800   0.0063   0.3211   0.1212   1.1517   1.1517   0.0891   0.0170  -0.0495   0.3369    0.293
+    35   0.0000  -0.0567   0.0000   0.2800   0.0063   0.3243   0.1438   1.1613   1.1613   0.1019   0.0172  -0.0530   0.3433    0.296
+    36   0.0000  -0.0792   0.0000   0.2800   0.0063   0.3268   0.1592   1.1689   1.1689   0.1105   0.0173  -0.0565   0.3491    0.298
+    37   0.0000  -0.1014   0.0000   0.2800   0.0062   0.3281   0.1683   1.1728   1.1728   0.1152   0.0174  -0.0596   0.3533    0.301
+    38   0.0000  -0.1246   0.0000   0.2800   0.0067   0.3282   0.1738   1.1725   1.1725   0.1175   0.0174  -0.0622   0.3560    0.303
+    39   0.0000  -0.1485   0.0000   0.2800   0.0066   0.3269   0.1767   1.1676   1.1676   0.1186   0.0173  -0.0642   0.3568    0.305
+    40   0.0000  -0.1720   0.0000   0.2800   0.0065   0.3244   0.1780   1.1585   1.1585   0.1190   0.0171  -0.0655   0.3559    0.307
+    41   0.0000  -0.1950   0.0000   0.2800   0.0064   0.3209   0.1790   1.1456   1.1456   0.1191   0.0169  -0.0662   0.3534    0.308
+    42   0.0000  -0.2176   0.0000   0.2800   0.0062   0.3164   0.1812   1.1294   1.1294   0.1190   0.0166  -0.0664   0.3496    0.309
+    43   0.0000  -0.2396   0.0000   0.2800   0.0061   0.3110   0.1852   1.1098   1.1098   0.1188   0.0163  -0.0661   0.3445    0.310
+    44   0.0000  -0.2610   0.0000   0.2800   0.0059   0.3047   0.1902   1.0871   1.0871   0.1183   0.0160  -0.0654   0.3382    0.310
+    45   0.0000  -0.2818   0.0000   0.2800   0.0057   0.2976   0.1948   1.0613   1.0613   0.1177   0.0156  -0.0644   0.3308    0.311
+    46   0.0000  -0.3018   0.0000   0.2800   0.0055   0.2896   0.1992   1.0324   1.0324   0.1168   0.0152  -0.0630   0.3222    0.311
+    47   0.0000  -0.3211   0.0000   0.2800   0.0053   0.2807   0.2038   1.0004   1.0004   0.1156   0.0147  -0.0613   0.3126    0.311
+    48   0.0000  -0.3396   0.0000   0.2800   0.0051   0.2710   0.2086   0.9652   0.9652   0.1141   0.0143  -0.0593   0.3019    0.311
+    49   0.0000  -0.3573   0.0000   0.2800   0.0048   0.2604   0.2137   0.9269   0.9269   0.1123   0.0139  -0.0571   0.2901    0.312
+    50   0.0000  -0.3741   0.0000   0.2800   0.0046   0.2488   0.2191   0.8854   0.8854   0.1100   0.0135  -0.0545   0.2773    0.312
+    51   0.0000  -0.3899   0.0000   0.2800   0.0043   0.2364   0.2246   0.8406   0.8406   0.1072   0.0131  -0.0518   0.2634    0.312
+    52   0.0000  -0.4048   0.0000   0.2800   0.0040   0.2230   0.2303   0.7927   0.7927   0.1040   0.0127  -0.0488   0.2484    0.312
+    53   0.0000  -0.4186   0.0000   0.2800   0.0037   0.2087   0.2360   0.7415   0.7415   0.1001   0.0124  -0.0455   0.2324    0.311
+    54   0.0000  -0.4315   0.0000   0.2800   0.0034   0.1936   0.2418   0.6873   0.6873   0.0957   0.0122  -0.0421   0.2155    0.311
+    55   0.0000  -0.4430   0.0000   0.2800   0.0030   0.1778   0.2475   0.6308   0.6308   0.0907   0.0120  -0.0386   0.1978    0.311
+    56   0.0000  -0.4532   0.0000   0.2800   0.0027   0.1614   0.2530   0.5725   0.5725   0.0851   0.0119  -0.0349   0.1796    0.311
+    57   0.0000  -0.4624   0.0000   0.2800   0.0024   0.1444   0.2583   0.5119   0.5119   0.0790   0.0119  -0.0312   0.1606    0.311
+    58   0.0000  -0.4704   0.0000   0.2800   0.0021   0.1267   0.2635   0.4489   0.4489   0.0722   0.0121  -0.0273   0.1410    0.311
+    59   0.0000  -0.4774   0.0000   0.2800   0.0018   0.1084   0.2684   0.3838   0.3838   0.0649   0.0123  -0.0234   0.1207    0.311
+    60   0.0000  -0.4832   0.0000   0.2800   0.0015   0.0895   0.2729   0.3168   0.3168   0.0569   0.0127  -0.0193   0.0998    0.311
+    61   0.0000  -0.4878   0.0000   0.2800   0.0011   0.0702   0.2769   0.2482   0.2482   0.0485   0.0133  -0.0151   0.0784    0.311
+    62   0.0000  -0.4913   0.0000   0.2800   0.0008   0.0504   0.2803   0.1783   0.1783   0.0396   0.0140  -0.0109   0.0565    0.311
+    63   0.0000  -0.4937   0.0000   0.2800   0.0005   0.0304   0.2826   0.1074   0.1074   0.0304   0.0149  -0.0066   0.0343    0.311
+    64   0.0000  -0.4949   0.0000   0.2800   0.0002   0.0101   0.2837   0.0359   0.0359   0.0211   0.0159  -0.0022   0.0119    0.311
+
+  Surface # 3     Stab                                    
+     # Chordwise = 10   # Spanwise = 16     First strip = 65
+     Surface area Ssurf =    0.032340     Ave. chord Cave =    0.132000
+
+ Forces referred to Sref, Cref, Bref about Xref, Yref, Zref
+ Standard axis orientation,  X fwd, Z down         
+     CLsurf  =   0.00160     Clsurf  =  -0.00006
+     CYsurf  =  -0.00000     Cmsurf  =  -0.00294
+     CDsurf  =   0.00165     Cnsurf  =   0.00017
+     CDisurf =   0.00025     CDvsurf =   0.00140
+
+ Forces referred to Ssurf, Cave 
+     CLsurf  =   0.01375     CDsurf  =   0.01414
+
+ Strip Forces referred to Strip Area, Chord
+    j     Xle      Yle      Zle      Chord    Area     c_cl     ai     cl_norm    cl       cd       cdv    cm_c/4     cm_LE   C.P.x/c
+    65   0.6470   0.0006   0.0450   0.1320   0.0003   0.0070   0.1409   0.0523   0.0523   0.0196   0.0121   0.0193   0.0055   -0.118
+    66   0.6470   0.0053   0.0450   0.1320   0.0009   0.0069   0.1409   0.0521   0.0521   0.0196   0.0121   0.0192   0.0056   -0.119
+    67   0.6470   0.0145   0.0450   0.1320   0.0015   0.0068   0.1409   0.0508   0.0508   0.0194   0.0121   0.0191   0.0057   -0.126
+    68   0.6470   0.0278   0.0450   0.1320   0.0020   0.0063   0.1410   0.0469   0.0469   0.0189   0.0120   0.0187   0.0063   -0.148
+    69   0.6470   0.0448   0.0450   0.1320   0.0025   0.0052   0.1411   0.0388   0.0388   0.0179   0.0120   0.0178   0.0074   -0.208
+    70   0.6470   0.0648   0.0450   0.1320   0.0028   0.0036   0.1414   0.0266   0.0266   0.0163   0.0120   0.0164   0.0091   -0.366
+    71   0.6470   0.0869   0.0450   0.1320   0.0030   0.0020   0.1417   0.0147   0.0147   0.0146   0.0120   0.0152   0.0109   -0.782
+    72   0.6470   0.1105   0.0450   0.1320   0.0032   0.0017   0.1420   0.0124   0.0124   0.0141   0.0120   0.0157   0.0121  999.000
+    73   0.6470   0.1345   0.0450   0.1320   0.0032   0.0017   0.1423   0.0130   0.0130   0.0140   0.0120   0.0168   0.0130  999.000
+    74   0.6470   0.1581   0.0450   0.1320   0.0030   0.0006   0.1425   0.0047   0.0047   0.0128   0.0120   0.0160   0.0142  999.000
+    75   0.6470   0.1802   0.0450   0.1320   0.0028  -0.0007   0.1423  -0.0050  -0.0050   0.0113   0.0120   0.0146   0.0153  999.000
+    76   0.6470   0.2002   0.0450   0.1320   0.0025  -0.0015   0.1418  -0.0113  -0.0113   0.0103   0.0120   0.0132   0.0155    1.414
+    77   0.6470   0.2172   0.0450   0.1320   0.0020  -0.0018   0.1408  -0.0138  -0.0138   0.0099   0.0120   0.0115   0.0145    1.080
+    78   0.6470   0.2305   0.0450   0.1320   0.0015  -0.0017   0.1396  -0.0129  -0.0129   0.0100   0.0120   0.0091   0.0119    0.958
+    79   0.6470   0.2397   0.0450   0.1320   0.0009  -0.0012   0.1384  -0.0091  -0.0091   0.0106   0.0120   0.0059   0.0077    0.905
+    80   0.6470   0.2444   0.0450   0.1320   0.0003  -0.0004   0.1377  -0.0033  -0.0033   0.0115   0.0120   0.0021   0.0024    0.885
+
+  Surface # 4     Stab (YDUP)                             
+     # Chordwise = 10   # Spanwise = 16     First strip = 81
+     Surface area Ssurf =    0.032340     Ave. chord Cave =    0.132000
+
+ Forces referred to Sref, Cref, Bref about Xref, Yref, Zref
+ Standard axis orientation,  X fwd, Z down         
+     CLsurf  =   0.00160     Clsurf  =   0.00006
+     CYsurf  =   0.00000     Cmsurf  =  -0.00294
+     CDsurf  =   0.00165     Cnsurf  =  -0.00017
+     CDisurf =   0.00025     CDvsurf =   0.00140
+
+ Forces referred to Ssurf, Cave 
+     CLsurf  =   0.01375     CDsurf  =   0.01414
+
+ Strip Forces referred to Strip Area, Chord
+    j     Xle      Yle      Zle      Chord    Area     c_cl     ai     cl_norm    cl       cd       cdv    cm_c/4     cm_LE   C.P.x/c
+    81   0.6470  -0.0006   0.0450   0.1320   0.0003   0.0070   0.1409   0.0523   0.0523   0.0196   0.0121   0.0193  -0.0055   -0.118
+    82   0.6470  -0.0053   0.0450   0.1320   0.0009   0.0069   0.1409   0.0521   0.0521   0.0196   0.0121   0.0192  -0.0056   -0.119
+    83   0.6470  -0.0145   0.0450   0.1320   0.0015   0.0068   0.1409   0.0508   0.0508   0.0194   0.0121   0.0191  -0.0057   -0.126
+    84   0.6470  -0.0278   0.0450   0.1320   0.0020   0.0063   0.1410   0.0469   0.0469   0.0189   0.0120   0.0187  -0.0063   -0.148
+    85   0.6470  -0.0448   0.0450   0.1320   0.0025   0.0052   0.1411   0.0388   0.0388   0.0179   0.0120   0.0178  -0.0074   -0.208
+    86   0.6470  -0.0648   0.0450   0.1320   0.0028   0.0036   0.1414   0.0266   0.0266   0.0163   0.0120   0.0164  -0.0091   -0.366
+    87   0.6470  -0.0869   0.0450   0.1320   0.0030   0.0020   0.1417   0.0147   0.0147   0.0146   0.0120   0.0152  -0.0109   -0.782
+    88   0.6470  -0.1105   0.0450   0.1320   0.0032   0.0017   0.1420   0.0124   0.0124   0.0141   0.0120   0.0157  -0.0121  999.000
+    89   0.6470  -0.1345   0.0450   0.1320   0.0032   0.0017   0.1423   0.0130   0.0130   0.0140   0.0120   0.0168  -0.0130  999.000
+    90   0.6470  -0.1581   0.0450   0.1320   0.0030   0.0006   0.1425   0.0047   0.0047   0.0128   0.0120   0.0160  -0.0142  999.000
+    91   0.6470  -0.1802   0.0450   0.1320   0.0028  -0.0007   0.1423  -0.0050  -0.0050   0.0113   0.0120   0.0146  -0.0153  999.000
+    92   0.6470  -0.2002   0.0450   0.1320   0.0025  -0.0015   0.1418  -0.0113  -0.0113   0.0103   0.0120   0.0132  -0.0155    1.414
+    93   0.6470  -0.2172   0.0450   0.1320   0.0020  -0.0018   0.1408  -0.0138  -0.0138   0.0099   0.0120   0.0115  -0.0145    1.080
+    94   0.6470  -0.2305   0.0450   0.1320   0.0015  -0.0017   0.1396  -0.0129  -0.0129   0.0100   0.0120   0.0091  -0.0119    0.958
+    95   0.6470  -0.2397   0.0450   0.1320   0.0009  -0.0012   0.1384  -0.0091  -0.0091   0.0106   0.0120   0.0059  -0.0077    0.905
+    96   0.6470  -0.2444   0.0450   0.1320   0.0003  -0.0004   0.1377  -0.0033  -0.0033   0.0115   0.0120   0.0021  -0.0024    0.885
+
+  Surface # 5     Fin                                     
+     # Chordwise = 10   # Spanwise = 14     First strip = 97
+     Surface area Ssurf =    0.016088     Ave. chord Cave =    0.097500
+
+ Forces referred to Sref, Cref, Bref about Xref, Yref, Zref
+ Standard axis orientation,  X fwd, Z down         
+     CLsurf  =   0.00000     Clsurf  =  -0.00000
+     CYsurf  =  -0.00000     Cmsurf  =  -0.00015
+     CDsurf  =   0.00070     Cnsurf  =   0.00000
+     CDisurf =  -0.00000     CDvsurf =   0.00070
+
+ Forces referred to Ssurf, Cave 
+     CLsurf  =   0.00000     CDsurf  =   0.01200
+
+ Strip Forces referred to Strip Area, Chord
+    j     Xle      Yle      Zle      Chord    Area     c_cl     ai     cl_norm    cl       cd       cdv    cm_c/4     cm_LE   C.P.x/c
+    97   0.6683   0.0000  -0.0295   0.1099   0.0002   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120  -0.0000  -0.0000    0.511
+    98   0.6687   0.0000  -0.0254   0.1093   0.0007   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120  -0.0000  -0.0000    0.535
+    99   0.6694   0.0000  -0.0174   0.1081   0.0011   0.0000  -0.0000   0.0000   0.0000   0.0120   0.0120  -0.0000  -0.0000    0.342
+   100   0.6706   0.0000  -0.0058   0.1063   0.0014   0.0000  -0.0000   0.0000   0.0000   0.0120   0.0120  -0.0000  -0.0000    0.298
+   101   0.6720   0.0000   0.0086   0.1042   0.0016   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000  -0.0000    0.245
+   102   0.6736   0.0000   0.0253   0.1016   0.0018   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000  -0.0000    0.158
+   103   0.6754   0.0000   0.0433   0.0989   0.0018   0.0000  -0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.027
+   104   0.6772   0.0000   0.0617   0.0961   0.0018   0.0000  -0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.098
+   105   0.6790   0.0000   0.0797   0.0934   0.0016   0.0000  -0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.061
+   106   0.6806   0.0000   0.0964   0.0908   0.0014   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.115
+   107   0.6820   0.0000   0.1108   0.0887   0.0012   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000  -0.0000    0.061
+   108   0.6832   0.0000   0.1224   0.0869   0.0009   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.380
+   109   0.6839   0.0000   0.1304   0.0857   0.0005   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.392
+   110   0.6843   0.0000   0.1345   0.0851   0.0002   0.0000   0.0000   0.0000   0.0000   0.0120   0.0120   0.0000   0.0000   -0.019
+ ---------------------------------------------------------------
+
+ Operation of run case 1/1:   -unnamed-                              
+ ==========================================================
+
+  variable          constraint              
+  ------------      ------------------------
+  A lpha        ->  CL          =   1.000         
+  B eta         ->  beta        =   0.000         
+  R oll  rate   ->  pb/2V       =   0.000         
+  P itch rate   ->  qc/2V       =   0.000         
+  Y aw   rate   ->  rb/2V       =   0.000         
+  D1  aileron   ->  aileron     =   0.000         
+  D2  elevator  ->  Cm pitchmom =   0.000         
+  D3  rudder    ->  rudder      =   0.000         
+  ------------      ------------------------
+
+  C1  set level or banked  horizontal flight constraints
+  C2  set steady pitch rate (looping) flight constraints
+  M odify parameters                                    
+
+ "#" select  run case          L ist defined run cases   
+  +  add new run case          S ave run cases to file   
+  -  delete  run case          F etch run cases from file
+  N ame current run case       W rite forces to file     
+
+ eX ecute run case             I nitialize variables     
+
+  G eometry plot               T refftz Plane plot       
+
+  ST  stability derivatives    FT  total   forces        
+  SB  body-axis derivatives    FN  surface forces        
+  RE  reference quantities     FS  strip   forces (FSB bodyaxes)
+  DE  design changes           FE  element forces        
+  O ptions                     FB  body forces           
+                               HM  hinge moments         
+  OB offbody flow survey       VM  strip shear,moment    
+  MRF  machine-readable format CPOM OML surface pressures
+
+ .OPER (case 1/1)   c>  
+ AVL   c>  
+ AVL   c>  

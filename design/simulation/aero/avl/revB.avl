@@ -1,0 +1,96 @@
+WaterDrop rev B (Fusion model, optimisation P5)
+#Mach
+0.0
+#IYsym IZsym Zsym
+0 0 0.0
+#Sref Cref Bref
+0.27720 0.2800 0.9900
+#Xref Yref Zref  (CG)
+0.0810 0.0 0.0
+#CDp (booms, wires, gaps: estimate)
+0.0
+
+SURFACE
+Wing
+#Nchord Cspace Nspan Sspace
+12 1.0 32 -2.0
+YDUPLICATE
+0.0
+CDCL
+0.031 0.0160 0.555 0.0119 1.443 0.0232
+
+SECTION
+#Xle Yle Zle Chord Ainc
+0.0 0.0000 0.0 0.2800 3.00
+AFILE
+sd7062.dat
+
+SECTION
+#Xle Yle Zle Chord Ainc
+0.0 0.1125 0.0 0.2800 3.00
+AFILE
+sd7062.dat
+CONTROL
+#name gain Xhinge XYZhvec SgnDup
+aileron 1.0 0.750 0 0 0 -1
+
+SECTION
+#Xle Yle Zle Chord Ainc
+0.0 0.4375 0.0 0.2800 3.00
+AFILE
+sd7062.dat
+CONTROL
+#name gain Xhinge XYZhvec SgnDup
+aileron 1.0 0.750 0 0 0 -1
+
+SECTION
+#Xle Yle Zle Chord Ainc
+0.0 0.4950 0.0 0.2800 3.00
+AFILE
+sd7062.dat
+
+SURFACE
+Stab
+10 1.0 16 1.0
+YDUPLICATE
+0.0
+CDCL
+-0.6 0.020 0.0 0.012 0.6 0.020
+
+SECTION
+0.6470 0.0000 0.0450 0.1320 0.0
+CONTROL
+elevator 1.0 0.702 0 0 0 1
+
+SECTION
+0.6470 0.2450 0.0450 0.1320 0.0
+CONTROL
+elevator 1.0 0.702 0 0 0 1
+
+SURFACE
+Fin
+10 1.0 14 1.0
+CDCL
+-0.6 0.020 0.0 0.012 0.6 0.020
+
+SECTION
+0.6682 0.0 -0.0300 0.1100 0.0
+CONTROL
+rudder 1.0 0.65 0 0 0 1
+
+SECTION
+0.6844 0.0 0.1350 0.0850 0.0
+CONTROL
+rudder 1.0 0.65 0 0 0 1
+
+BODY
+Pod
+#Nbody Bspace
+24 1.0
+SCALE
+0.4750 0.4750 0.4750
+TRANSLATE
+-0.1700 0.0 -0.0655
+BFILE
+revB_pod.dat
+
